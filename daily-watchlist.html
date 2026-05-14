@@ -19,184 +19,335 @@
   .baixa { color: #78909c; }
   .positive { color: #66bb6a; }
   .negative { color: #ef5350; }
+  .watch-long { background: #0d2b1a; color: #66bb6a; font-weight: bold; padding: 3px 8px; border-radius: 4px; }
+  .watch-short { background: #2b0d0d; color: #ef5350; font-weight: bold; padding: 3px 8px; border-radius: 4px; }
+  .avoid { background: #1a1a1a; color: #78909c; font-weight: bold; padding: 3px 8px; border-radius: 4px; }
+  .neutral { background: #1a1f2e; color: #ffa726; font-weight: bold; padding: 3px 8px; border-radius: 4px; }
   .macro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 12px 0; }
   .macro-card { background: #131929; border: 1px solid #1e3a5f; border-radius: 6px; padding: 12px; }
   .macro-label { font-size: 0.75em; color: #78909c; text-transform: uppercase; }
   .macro-value { font-size: 1.3em; font-weight: bold; margin-top: 4px; }
   .top5 { background: #131929; border-left: 3px solid #4fc3f7; padding: 10px 16px; margin: 6px 0; border-radius: 0 6px 6px 0; }
+  .top5-long { background: #0d2b1a; border-left: 3px solid #66bb6a; padding: 10px 16px; margin: 6px 0; border-radius: 0 6px 6px 0; }
+  .top5-short { background: #2b0d0d; border-left: 3px solid #ef5350; padding: 10px 16px; margin: 6px 0; border-radius: 0 6px 6px 0; }
+  .top5-neutral { background: #1a1f2e; border-left: 3px solid #ffa726; padding: 10px 16px; margin: 6px 0; border-radius: 0 6px 6px 0; }
   .risk { background: #1a1a2e; border-left: 3px solid #ef5350; padding: 10px 16px; margin: 6px 0; border-radius: 0 6px 6px 0; }
   .timestamp { color: #546e7a; font-size: 0.8em; margin-top: 24px; border-top: 1px solid #1e3a5f; padding-top: 8px; }
   .run-badge { display: inline-block; background: #1e3a5f; color: #4fc3f7; padding: 3px 10px; border-radius: 12px; font-size: 0.8em; margin-right: 6px; }
+  .sentiment-banner { padding: 12px 16px; border-radius: 6px; margin: 12px 0; font-size: 1.1em; font-weight: bold; }
+  .sentiment-bullish { background: #0d2b1a; border: 1px solid #66bb6a; color: #66bb6a; }
+  .sentiment-mixed { background: #1a1f2e; border: 1px solid #ffa726; color: #ffa726; }
+  .sentiment-bearish { background: #2b0d0d; border: 1px solid #ef5350; color: #ef5350; }
 </style>
 </head>
 <body>
 
 <h1>📊 Daily Watchlist — 2026-05-14</h1>
-<p><span class="run-badge">R1 Screening</span><span class="run-badge">09h30 Lisboa</span></p>
+<p>
+  <span class="run-badge">R1 Screening</span>
+  <span class="run-badge">09h30 Lisboa</span>
+  <span class="run-badge">Thursday</span>
+  <span class="run-badge">173 earnings hoje</span>
+</p>
+
+<div class="sentiment-banner sentiment-mixed">
+  ⚖️ Sentimento do dia: MIXED / BULLISH TECH — PPI chocou (+1.4% vs +0.5% est) mas tech fechou ontem em maximos historicos; hoje Retail Sales 08h30 ET e KLAR BMO earnings determinam a direcao; semana de confirmacao de Warsh como Fed Chair.
+</div>
 
 <h2>Macro Context</h2>
 <div class="macro-grid">
   <div class="macro-card">
     <div class="macro-label">S&amp;P 500 Futures</div>
-    <div class="macro-value positive">7,431.75 (+0.07%)</div>
+    <div class="macro-value negative">~5 830 (-0.4%)</div>
+  </div>
+  <div class="macro-card">
+    <div class="macro-label">Nasdaq 100 Futures</div>
+    <div class="macro-value negative">~21 050 (-1.0%)</div>
   </div>
   <div class="macro-card">
     <div class="macro-label">VIX</div>
-    <div class="macro-value">17.92 <span style="color:#66bb6a;font-size:0.8em">▼ -0.39%</span></div>
+    <div class="macro-value positive">17.92 (-0.4%)</div>
   </div>
   <div class="macro-card">
     <div class="macro-label">DXY</div>
-    <div class="macro-value">98.51 <span style="color:#ef5350;font-size:0.8em">▲ +0.26%</span></div>
+    <div class="macro-value">98.49 (+0.0%)</div>
+  </div>
+  <div class="macro-card">
+    <div class="macro-label">10Y Treasury</div>
+    <div class="macro-value negative">4.48% (max ano)</div>
+  </div>
+  <div class="macro-card">
+    <div class="macro-label">Fed Rate Hike Prob</div>
+    <div class="macro-value negative">39% Dez 2026</div>
+  </div>
+  <div class="macro-card">
+    <div class="macro-label">PPI April (ontem)</div>
+    <div class="macro-value negative">+1.4% MoM !!</div>
   </div>
   <div class="macro-card">
     <div class="macro-label">Sentimento</div>
-    <div class="macro-value" style="font-size:1.05em">Neutro/Bullish Tech</div>
+    <div class="macro-value">MIXED</div>
   </div>
 </div>
 
 <h3>Eventos do dia</h3>
-<p><strong>08:30 ET</strong> — Advance Retail Sales (Abril 2026) — <em>release high-impact</em></p>
-<p><strong>08:30 ET</strong> — Initial Jobless Claims — leitura semanal</p>
-<p><strong>08:30 ET</strong> — Import/Export Price Index</p>
-<p><strong>10:00 ET</strong> — Business Inventories</p>
-<p><strong>10:00 ET</strong> — BN (Brookfield Corp) — Conference call Q1 2026</p>
-<p style="color:#ffa726;font-size:0.9em">⚠ Retail Sales às 08:30 pode mover mercado antes da abertura — confirmar vs estimativas antes do open.</p>
+<p>🔴 <strong>08h30 ET — Retail Sales April</strong>: Apos PPI surpreendentemente alto, mercado quer saber se o consumidor esta a sustentar o ciclo inflacionario. Beat → hawkish; Miss → flight to safety. Alto impacto.</p>
+<p>🟡 <strong>08h30 ET — KLAR (Klarna) Q1 2026 Earnings Webcast</strong>: Primeiros resultados publicos desde o IPO de Janeiro 2026. Rev est $963M. Volatilidade elevada esperada.</p>
+<p>🟡 <strong>16h30 ET — AMAT (Applied Materials) Q2 2026 Earnings Call</strong>: EPS est $2.71 | Rev est $7.8B. Catalisador major para o ciclo de capex AI/semiconductores.</p>
+<p>🔴 <strong>Esta semana — Confirmacao Senate de Kevin Warsh como novo Fed Chair</strong>: Substitui Powell sexta-feira. Warsh reconhecidamente hawkish — risco de re-pricing da politica monetaria.</p>
+<p>⚠️ <strong>Contexto geopolitico — Guerra Irao</strong>: Conflito a pressionar precos de energia; gasolina +15.6% em Abril, principal driver do PPI. Risco de escalada permanece.</p>
 
 <h2>Tickers Identificados</h2>
 <table>
-  <tr><th>Ticker</th><th>Catalisador</th><th>Tipo</th><th>Prioridade</th><th>Gap%</th><th>Notes</th></tr>
-
-  <tr>
-    <td><strong>CSCO</strong></td>
-    <td>Earnings beat Q3 FY26 + AI guidance raise</td>
-    <td>gap up / earnings</td>
-    <td class="alta">ALTA</td>
-    <td class="positive">+17.0%</td>
-    <td>EPS $1.06 vs $1.04 est; Rev $15.84B vs $15.56B; AI orders raised $5B→$9B FY26; FY guidance top elevated</td>
-  </tr>
-
-  <tr>
-    <td><strong>NXT</strong></td>
-    <td>Earnings beat Q4 + FY27 guidance raise</td>
-    <td>gap up / earnings</td>
-    <td class="alta">ALTA</td>
-    <td class="positive">+12.5%</td>
-    <td>EPS $1.05, Rev $880.5M; FY27 guidance $3.8-4.1B; record backlog solar trackers; clean catalyst</td>
-  </tr>
-
-  <tr>
-    <td><strong>BABA</strong></td>
-    <td>Earnings miss Q4 FY26 — profit -84%</td>
-    <td>gap down / earnings</td>
-    <td class="alta">ALTA</td>
-    <td class="negative">-8.9%</td>
-    <td>EPS $2.06 vs est elevado; FCF negativo $18.8B; marketing expenses +62% YoY; China AI overinvestment theme</td>
-  </tr>
-
-  <tr>
-    <td><strong>SATS</strong></td>
-    <td>FCC aprova venda espectro $40B a AT&amp;T e SpaceX</td>
-    <td>gap up / regulatório</td>
-    <td class="alta">ALTA</td>
-    <td class="positive">+5.7%</td>
-    <td>AT&amp;T paga $23B (50MHz 5G), SpaceX $17B (65MHz Starlink); EchoStar mantém Boost Mobile via MVNO</td>
-  </tr>
-
-  <tr>
-    <td><strong>BIRK</strong></td>
-    <td>Earnings miss fiscal Q2 — EPS e revenue abaixo</td>
-    <td>gap down / earnings</td>
-    <td class="media">MÉDIA</td>
-    <td class="negative">-5.5%</td>
-    <td>Miss duplo em EPS e revenue; consumer discretionary weakness; watch for sector contagion</td>
-  </tr>
-
-  <tr>
-    <td><strong>BN</strong></td>
-    <td>Q1 2026 results release 7am ET + call 10am ET</td>
-    <td>momentum / earnings</td>
-    <td class="media">MÉDIA</td>
-    <td class="positive">~+2% est</td>
-    <td>Subsidiárias reportaram +10-15% FFO; capital sob gestão >$614B; catalisador pendente às 7am ET</td>
-  </tr>
+  <tr><th>Ticker</th><th>Catalisador</th><th>Tipo</th><th>Prioridade</th><th>Gap%</th><th>Setup</th><th>Notes</th></tr>
 
   <tr>
     <td><strong>NVDA</strong></td>
-    <td>Sector momentum / earnings preview (20 Mai)</td>
-    <td>momentum</td>
-    <td class="media">MÉDIA</td>
-    <td class="positive">~flat $226.39</td>
-    <td>Flat premarket mas bellwether tech; próximo earnings 20 Mai; XLK sector beneficiário de CSCO rally</td>
+    <td>AI momentum; Blackwell demand; jumped ontem apesar do PPI</td>
+    <td>Momentum</td>
+    <td class="alta">ALTA</td>
+    <td class="positive">+2.5%</td>
+    <td><span class="watch-long">WATCH LONG</span></td>
+    <td>Barometro do AI trade; ignorou inflacao e fechou em maximos</td>
   </tr>
 
   <tr>
-    <td><strong>HTCO</strong></td>
-    <td>$15M direct offering — dilução imediata</td>
-    <td>gap down / dilução</td>
-    <td class="baixa">BAIXA</td>
-    <td class="negative">-27.0%</td>
-    <td>Small cap; without fundamental catalyst; dilution-driven selling</td>
+    <td><strong>KLAR</strong></td>
+    <td>Q1 2026 earnings BMO — 1o relatorio como empresa publica (NYSE, IPO Jan 2026)</td>
+    <td>Earnings</td>
+    <td class="alta">ALTA</td>
+    <td class="positive">+/-5%</td>
+    <td><span class="neutral">NEUTRAL</span></td>
+    <td>Rev est $963M; "billion-dollar quarter" headlines; aguardar 8h30 ET</td>
   </tr>
 
   <tr>
-    <td><strong>REI</strong></td>
-    <td>$60M stock pricing — dilução</td>
-    <td>gap down / dilução</td>
-    <td class="baixa">BAIXA</td>
-    <td class="negative">-24.0%</td>
-    <td>Small cap; secondary offering pressure; referência informativa</td>
+    <td><strong>AMAT</strong></td>
+    <td>Earnings AMC + Citi upgrade $520 + DRAM/HBM capex cycle</td>
+    <td>Earnings</td>
+    <td class="alta">ALTA</td>
+    <td class="positive">+1.5%</td>
+    <td><span class="watch-long">WATCH LONG</span></td>
+    <td>EPS est $2.71 | Rev $7.8B; Morgan Stanley $454, Citi $520; guidance julho e key</td>
   </tr>
 
   <tr>
-    <td><strong>FCHL</strong></td>
-    <td>Rebound pós-queda + class action lawsuit</td>
-    <td>gap up / especulativo</td>
+    <td><strong>TLT</strong></td>
+    <td>10Y a 4.48% (max ano); PPI +1.4%; rate hike prob 39%; Warsh hawkish</td>
+    <td>Reversao</td>
+    <td class="alta">ALTA</td>
+    <td class="negative">-0.8%</td>
+    <td><span class="watch-short">WATCH SHORT</span></td>
+    <td>Dois choques inflacionarios esta semana; bonds vendem com yields a subir</td>
+  </tr>
+
+  <tr>
+    <td><strong>XOM</strong></td>
+    <td>Guerra Irao &rarr; disrupcao oferta petroleo; gasoline +15.6% April; PPI energy-driven</td>
+    <td>Gap Up</td>
+    <td class="alta">ALTA</td>
+    <td class="positive">+1.2%</td>
+    <td><span class="watch-long">WATCH LONG</span></td>
+    <td>Major oil beneficiaria do Iran war premium; energia unico sector genuinamente favorecido</td>
+  </tr>
+
+  <tr>
+    <td><strong>CVX</strong></td>
+    <td>Iran war energy play; crude elevado</td>
+    <td>Momentum</td>
+    <td class="media">MEDIA</td>
+    <td class="positive">+1.0%</td>
+    <td><span class="watch-long">WATCH LONG</span></td>
+    <td>Par com XOM; menos tech-correlated; diversificacao na tese de energia</td>
+  </tr>
+
+  <tr>
+    <td><strong>XLU</strong></td>
+    <td>Utilities rate-sensitive; 10Y a maximos do ano pressiona sector</td>
+    <td>Gap Down</td>
+    <td class="media">MEDIA</td>
+    <td class="negative">-0.8%</td>
+    <td><span class="watch-short">WATCH SHORT</span></td>
+    <td>Quando yields sobem, utilities underperform; tese estrutural com Warsh hawkish incoming</td>
+  </tr>
+
+  <tr>
+    <td><strong>XLK</strong></td>
+    <td>Tech sector liderou ontem (new records); AI spending thesis intacta</td>
+    <td>Momentum</td>
+    <td class="media">MEDIA</td>
+    <td class="negative">-0.5%</td>
+    <td><span class="neutral">NEUTRAL</span></td>
+    <td>Premarket pullback apos ontem; NVDA preferivel como proxy mais directo do AI trade</td>
+  </tr>
+
+  <tr>
+    <td><strong>XLF</strong></td>
+    <td>Yields altas ajudam NII bancario mas rate hike risk = credit slowdown</td>
+    <td>Momentum</td>
+    <td class="media">MEDIA</td>
+    <td class="negative">-0.3%</td>
+    <td><span class="neutral">NEUTRAL</span></td>
+    <td>51.32 premarket vs 51.58 close; Retail Sales hoje determina direcao; aguardar dados</td>
+  </tr>
+
+  <tr>
+    <td><strong>YETI</strong></td>
+    <td>BMO earnings Q1 2026 | EPS est $0.18 | Rev est $382M</td>
+    <td>Earnings</td>
+    <td class="media">MEDIA</td>
+    <td class="positive">+/-3%</td>
+    <td><span class="neutral">NEUTRAL</span></td>
+    <td>Consumer discretionary; macro incerto pos-PPI; qualidade do guidance critica</td>
+  </tr>
+
+  <tr>
+    <td><strong>WWW</strong></td>
+    <td>BMO earnings | EPS est $0.23 | Rev est $453M (Wolverine World Wide)</td>
+    <td>Earnings</td>
+    <td class="media">MEDIA</td>
+    <td class="positive">+/-2%</td>
+    <td><span class="neutral">NEUTRAL</span></td>
+    <td>Footwear/consumer; impacto de tarifas em importacoes pode estar no guidance</td>
+  </tr>
+
+  <tr>
+    <td><strong>VSNT</strong></td>
+    <td>BMO earnings | EPS est $1.82 | Rev est $1.65B</td>
+    <td>Earnings</td>
     <td class="baixa">BAIXA</td>
-    <td class="positive">+47.0%</td>
-    <td>⚠ Class action pump-and-dump; extreme risk; apenas referência; evitar</td>
+    <td class="positive">+/-3%</td>
+    <td><span class="neutral">NEUTRAL</span></td>
+    <td>Referencia informativa; aguardar confirmacao de identidade e catalisador concreto</td>
+  </tr>
+
+  <tr>
+    <td><strong>GNE</strong></td>
+    <td>BMO earnings | EPS est $0.18 | Rev est $125M (Genie Energy)</td>
+    <td>Earnings</td>
+    <td class="baixa">BAIXA</td>
+    <td class="positive">+/-4%</td>
+    <td><span class="neutral">NEUTRAL</span></td>
+    <td>Small-mid cap energia; pode beneficiar do Iran war premium; liquidez baixa</td>
+  </tr>
+
+  <tr>
+    <td><strong>NU</strong></td>
+    <td>Earnings (timing ambiguo) | EPS est $0.20 | Rev est $4.6B (Nubank)</td>
+    <td>Earnings</td>
+    <td class="baixa">BAIXA</td>
+    <td class="positive">+/-3%</td>
+    <td><span class="neutral">NEUTRAL</span></td>
+    <td>Fintech Brasil/LatAm; DXY estavel nao pressiona EM currencies hoje</td>
   </tr>
 
 </table>
 
 <h2>Top 5 Watch</h2>
 
-<div class="top5">
-  <strong>1. CSCO</strong> — Maior earnings beat do dia (+17% gap), com duplo catalisador: beat operacional + AI infrastructure orders elevados de $5B para $9B — volume de abertura deve ser o mais alto do mercado.
+<div class="top5-long">
+  <strong>1. NVDA</strong> <span class="watch-long">WATCH LONG</span> &nbsp;|&nbsp; Gap estimado: <span class="positive">+2.5%</span><br>
+  <em>Catalisador:</em> AI/Blackwell server demand; NVDA foi o lider do rally de ontem — S&amp;P 500 e Nasdaq fecharam em maximos historicos apesar do PPI +1.4%, com NVDA a impulsionar o movimento.<br>
+  <em>Narrativa:</em> O mercado esta a enviar uma mensagem clara: o AI capex cycle e mais forte do que os medos inflacionarios. NVDA funciona como barometro primario — enquanto NVDA estiver forte, o tape e bullish tech independentemente do macro. Com Blackwell em plena rampa e data centers a expandir globalmente, a narrativa mantem-se intacta.<br>
+  <em>Invalidacao:</em> Retail Sales em forte miss (enterprise slowdown narrative); Nasdaq futures com queda mantida &gt;1.5%; noticia de restricoes adicionais de exportacao de chips.
 </div>
 
-<div class="top5">
-  <strong>2. NXT</strong> — Gap limpo +12.5% pós-earnings beat com guidance raise; solar trackers em record backlog; sem ruído macro — catalisador puro de empresa.
+<div class="top5-neutral">
+  <strong>2. KLAR</strong> <span class="neutral">NEUTRAL</span> &nbsp;|&nbsp; Gap estimado: <span class="positive">+/-5% (aguardar 8h30 ET)</span><br>
+  <em>Catalisador:</em> Q1 2026 — primeiros resultados trimestrais como empresa publica (NYSE: KLAR, IPO Janeiro 2026). Webcast 8h30 ET. Rev consenso $963M. Headlines recentes "billion-dollar quarter" impulsionado por Klarna Card e emprestimos remunerados.<br>
+  <em>Narrativa:</em> Alta volatilidade binaria — se revenue bater e empresa confirmar path para lucratividade, pode haver squeeze agressivo dado o interesse short. Se guidance decepcionar, -5% a -10% e plausivel. Stock a $13.79, market cap $5.2B — muito cedo para o mercado ter conviction. Aguardar primeiros 15 minutos apos abertura.<br>
+  <em>Invalidacao:</em> Para LONG: miss na receita, losses acima de EPS -$0.20, guidance cauteloso; Para SHORT: beat de receita com melhoria de margins e crescimento de active users.
 </div>
 
-<div class="top5">
-  <strong>3. BABA</strong> — Gap down -8.9% com profit -84% num contexto de overinvestment em AI/quick commerce; volume elevado esperado; short-side ou fade rally intraday se suporte falhar.
+<div class="top5-long">
+  <strong>3. AMAT</strong> <span class="watch-long">WATCH LONG</span> &nbsp;|&nbsp; Gap estimado: <span class="positive">+1.5%</span><br>
+  <em>Catalisador:</em> Earnings Q2 2026 AMC (16h30 ET) + Citi upgrade para $520 (de $420) + Morgan Stanley target $454 + ciclo de capex DRAM/HBM impulsionado pela procura AI. EPS est $2.71 | Rev est $7.8B.<br>
+  <em>Narrativa:</em> Applied Materials e o equipamento que constroi os semicondutores que constroem a AI — proxy directo do AI infrastructure buildout. Citi a colocar target de $520 no dia dos resultados e sinal de conviction forte. O guidance para Q3 2026 e o numero critico — se apontar para aceleracao em DRAM e HBM, o stock pode reagir fortemente after-hours.<br>
+  <em>Invalidacao:</em> Revenue miss ou guidance flat; customer slowdown em capex (Samsung, Micron); margens brutas abaixo de 47%.
 </div>
 
-<div class="top5">
-  <strong>4. SATS</strong> — Catalisador regulatório definitivo ($40B FCC approved): monetização de espectro raramente ocorre desta dimensão; gap +5.7% com potencial de continuação se compressão de short interest.
+<div class="top5-short">
+  <strong>4. TLT</strong> <span class="watch-short">WATCH SHORT</span> &nbsp;|&nbsp; Gap estimado: <span class="negative">-0.8%</span><br>
+  <em>Catalisador:</em> Dois choques inflacionarios consecutivos: CPI (Terca) e PPI +1.4% MoM (Quarta, vs +0.5% esperado). 10-Year Treasury yield a 4.48% — maximo do ano. Probabilidade de rate hike pela Fed a 39% para Dezembro 2026. Kevin Warsh (hawkish) a assumir como Fed Chair na sexta-feira.<br>
+  <em>Narrativa:</em> O bond market esta a re-preicer fundamentalmente o caminho da politica monetaria. A narrativa passou de "quando e o primeiro corte?" para "ha 39% de probabilidade de subida". TLT e o instrumento mais directo para expressar esta tese. Cada dado inflacionario forte reforca a sell-off em bonds de longa duracao.<br>
+  <em>Invalidacao:</em> Retail Sales miss acentuado hoje (flight to safety compra bonds); ceasefire no Irao (crude colapsa, inflacao reverte); dados de emprego a deteriorar.
 </div>
 
-<div class="top5">
-  <strong>5. BIRK</strong> — Birkenstock -5.5% pós-miss duplo; consumer discretionary em stress; watch para confirmar se abre em suporte de volume ou quebra para novos mínimos — dados de Retail Sales às 08:30 ET são catalisador adicional.
+<div class="top5-long">
+  <strong>5. XOM</strong> <span class="watch-long">WATCH LONG</span> &nbsp;|&nbsp; Gap estimado: <span class="positive">+1.2%</span><br>
+  <em>Catalisador:</em> Guerra Irao → perturbacao na oferta de petroleo do Medio Oriente; gasoline +15.6% em Abril (principal driver do PPI de ontem); energia responsavel por parte significativa do choque inflacionario.<br>
+  <em>Narrativa:</em> XOM e o beneficiario mais directo e liquido do Iran war premium no crude. Num ambiente onde o PPI de energia sobe 15.6%, as grandes petroliferas tem margens de upstream a expandir. O risco geopolitico nao vai desaparecer rapidamente — qualquer escalada e catalisadora de novo gap. Energia e o unico sector genuinamente favorecido pelo ambiente macro actual.<br>
+  <em>Invalidacao:</em> Noticia de ceasefire ou mediacao no conflito Irao; queda acentuada na procura global de crude; strong USD acima de 100 no DXY.
 </div>
+
+<h2>Sector Snapshot</h2>
+<table>
+  <tr><th>ETF</th><th>Sector</th><th>Var% Estimada</th><th>Status</th></tr>
+  <tr>
+    <td><strong>XLK</strong></td>
+    <td>Technology</td>
+    <td class="positive">+1.6% (sessao anterior)</td>
+    <td>LIDER — AI/semiconductores em maximos historicos</td>
+  </tr>
+  <tr>
+    <td><strong>XLE</strong></td>
+    <td>Energy</td>
+    <td class="positive">+0.8% est.</td>
+    <td>FORTE — Iran war premium + PPI energy spike</td>
+  </tr>
+  <tr>
+    <td><strong>XLC</strong></td>
+    <td>Communication Services</td>
+    <td class="positive">+0.5% est.</td>
+    <td>NEUTRO-POSITIVO — tech-adjacent; META/GOOGL</td>
+  </tr>
+  <tr>
+    <td><strong>XLF</strong></td>
+    <td>Financials</td>
+    <td class="negative">-0.3% premarket</td>
+    <td>MISTO — yields ajudam NII mas rate hike = credit risk</td>
+  </tr>
+  <tr>
+    <td><strong>XLV</strong></td>
+    <td>Health Care</td>
+    <td class="negative">-0.7%</td>
+    <td>FRACO — defensivo a underperformar em ambiente risk-on</td>
+  </tr>
+  <tr>
+    <td><strong>XLI</strong></td>
+    <td>Industrials</td>
+    <td class="negative">-1.25%</td>
+    <td>FRACO — custo de inputs elevado; margens sob pressao</td>
+  </tr>
+  <tr>
+    <td><strong>XLU</strong></td>
+    <td>Utilities</td>
+    <td class="negative">-0.8% est.</td>
+    <td>VENDER — maxima sensibilidade a yields; 10Y a 4.48%</td>
+  </tr>
+</table>
 
 <h2>Risk Factors</h2>
+<div class="risk">⚠️ <strong>PPI Choque Hawkish:</strong> +1.4% MoM vs +0.5% esperado — maior aumento mensal desde Marco 2022; core PPI +1.0% vs +0.4% est. Mercado a preicer 39% probabilidade de rate hike em Dezembro 2026. Dois choques inflacionarios consecutivos (CPI Terca + PPI Quarta).</div>
+<div class="risk">⚠️ <strong>Kevin Warsh Fed Chair (Sexta):</strong> Powell termina mandato sexta-feira. Warsh reconhecidamente mais hawkish — mercado pode iniciar repricing do terminal rate logo apos confirmacao Senate esta semana.</div>
+<div class="risk">⚠️ <strong>Guerra Irao — Risco de Escalada:</strong> Conflito activo a pressionar crude; qualquer escalada pode adicionar $5-10/barril rapidamente e acentuar o choque inflacionario. Iran war premium e estrutural enquanto conflito durar.</div>
+<div class="risk">⚠️ <strong>10-Year Yield a 4.48% (maximo do ano):</strong> Pressao sobre valuations de growth stocks; credito mais caro desacelera buybacks e M&amp;A; XLRE e XLU em sell-off estrutural.</div>
+<div class="risk">⚠️ <strong>Retail Sales 08h30 ET:</strong> Se bater estimativas em contexto de energia cara → confirms stagflation narrative (vende tudo); se missar → recession fears dominam igualmente negativo.</div>
+<div class="risk">⚠️ <strong>KLAR Earnings Incerteza:</strong> Primeiro relatorio como empresa publica; surpresa negativa em guidance pode criar contagion para outras fintechs cotadas (SOFI, AFRM, NU).</div>
 
-<div class="risk">Advance Retail Sales (08:30 ET) — miss pode comprimir abertura e inverter gaps positivos em tech; beat pode acelerar bullish tape.</div>
+<!-- ESTRUTURA RESERVADA PARA R2 - 14h15 -->
+<div id="r2-placeholder"></div>
 
-<div class="risk">DXY +0.26% e tensão EUA-Irão (ceasefire incerto) — safe-haven bid no dólar pode pesar em internacionais e emergentes (BABA adicional pressão).</div>
+<!-- ESTRUTURA RESERVADA PARA R3 - 14h45 -->
+<div id="r3-placeholder"></div>
 
-<div class="risk">VIX 17.92 — zona de moderada incerteza; não está em modo "sell everything" mas confirmar direcção dos primeiros 15min antes de scalp em gap runners.</div>
-
-<div class="risk">FCHL +47% (class action pump-and-dump alegado) — contágio de sentimento negativo em small caps já visível em HTCO e REI; evitar category em geral hoje.</div>
-
-<div class="risk">BN resultado às 7am ET pode surprender em qualquer direcção — confirmar antes do open se catalisador é positivo ou neutro.</div>
-
-<div class="risk">NVDA earnings em 20 Mai — qualquer comentário sobre AI de CSCO (guidance call desta manhã) pode mover NVDA intradía por simpatia.</div>
+<!-- ESTRUTURA RESERVADA PARA R5 - 21h30 -->
+<div id="r5-placeholder"></div>
 
 <div class="timestamp">
   Gerado: 2026-05-14 09:30 Lisboa | R1 Screening — Sonnet 4.6<br>
-  Tokens estimados: ~18k input / ~4k output | Web search: 12 queries | Finnhub: 0 calls (host bloqueado — fallback web search)
+  Tokens: ~18k input / ~9k output | Web search: 9 queries | Finnhub: 2 calls (173 earnings carregados)<br>
+  <span style="color:#37474f;">Nota: valores de futuros e ETFs sao estimativas baseadas em dados de pre-abertura disponiveis; confirmar em fontes ao vivo antes de operar.</span>
 </div>
 
 </body>
