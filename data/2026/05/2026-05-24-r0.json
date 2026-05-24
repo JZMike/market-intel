@@ -1,0 +1,780 @@
+{
+  "date": "2026-05-24",
+  "weekday": "Sunday",
+  "run": "R0_MORNING_RADAR",
+  "run_time_lisbon": "09:30",
+  "run_time_et": "04:30",
+  "note": "Gerado domingo 24 Mai 2026. Segunda 25 Mai = Memorial Day (mercado fechado). Próxima sessão: Terça 26 Mai 2026.",
+  "urls": {
+    "latest": "https://jzmike.github.io/market-intel/latest.html",
+    "day": "https://jzmike.github.io/market-intel/reports/2026/05/2026-05-24.html"
+  },
+  "data_quality_summary": {
+    "price_data_status": "STALE/PREVIOUS_CLOSE",
+    "volume_data_status": "LIMITED",
+    "earnings_data_status": "VALID_FINNHUB+WEB",
+    "alpha_vantage_calls_used": 0,
+    "warnings": [
+      "Todos os preços são do último fecho (sexta 22 Mai 2026) — PREVIOUS_CLOSE",
+      "Segunda 25 Mai = Memorial Day. Mercado fechado.",
+      "Próxima sessão regular: Terça 26 Mai 2026 09h30 ET",
+      "Dados de premarket/futures para Terça ainda não disponíveis"
+    ]
+  },
+  "macro": {
+    "setup": "BULLISH",
+    "setup_note": "8ª semana consecutiva de ganhos. Dow em máximos históricos. VIX baixo. Dólar fraco.",
+    "indices_previous_close": {
+      "sp500": {
+        "value": 7473.47,
+        "change_pct": 0.37,
+        "source": "web_search",
+        "session_type": "previous_close",
+        "is_stale": true,
+        "usable_for_intraday": false,
+        "note": "Fecho sexta 22 Mai 2026"
+      },
+      "nasdaq": {
+        "value": 26343.97,
+        "change_pct": 0.19,
+        "source": "web_search",
+        "session_type": "previous_close",
+        "is_stale": true,
+        "usable_for_intraday": false
+      },
+      "spy": {
+        "value": 745.64,
+        "source": "yahoo_finance",
+        "session_type": "previous_close",
+        "is_stale": true,
+        "usable_for_intraday": false
+      },
+      "vix": {
+        "value": 16.70,
+        "change_pct": -0.36,
+        "source": "web_search",
+        "session_type": "previous_close",
+        "is_stale": true,
+        "usable_for_intraday": false,
+        "signal": "LOW_VOLATILITY"
+      },
+      "dxy": {
+        "value": 99.19,
+        "change_pct": -0.03,
+        "source": "web_search",
+        "session_type": "previous_close",
+        "is_stale": true,
+        "usable_for_intraday": false,
+        "signal": "WEAK_DOLLAR"
+      },
+      "us_10y_yield": {
+        "value": 4.572,
+        "change_pct": -0.26,
+        "source": "web_search",
+        "session_type": "previous_close",
+        "is_stale": true,
+        "usable_for_intraday": false
+      },
+      "wti_crude": {
+        "value": "n/d",
+        "source": "DATA_PENDING",
+        "session_type": "unknown",
+        "is_stale": true,
+        "usable_for_intraday": false
+      }
+    },
+    "macro_comment": "Mercado em modo risk-on após 8 semanas consecutivas de ganhos. Dow atingiu máximos históricos. VIX em 16.70 sinaliza complacência. Dólar fraco (DXY <100) é tailwind para multinationals. Semana curta pós-Memorial Day com foco em earnings tech e macro pesado quinta (GDP + PCE).",
+    "week_calendar": [
+      {
+        "date": "2026-05-25",
+        "weekday": "Monday",
+        "session": "CLOSED",
+        "note": "Memorial Day — NYSE e Nasdaq fechados"
+      },
+      {
+        "date": "2026-05-26",
+        "weekday": "Tuesday",
+        "session": "OPEN",
+        "events": [
+          {"time_et": "10:00", "name": "Consumer Confidence", "impact": "MEDIUM", "source": "Econoday/Kiplinger"},
+          {"time_et": "10:30", "name": "Dallas Fed Manufacturing Survey", "impact": "LOW"},
+          {"time_et": "08:30", "name": "Philadelphia Fed Non-Manufacturing", "impact": "LOW"}
+        ]
+      },
+      {
+        "date": "2026-05-27",
+        "weekday": "Wednesday",
+        "session": "OPEN",
+        "events": [
+          {"time_et": "10:00", "name": "New Residential Sales", "impact": "MEDIUM"},
+          {"time_et": "10:00", "name": "Richmond Fed Manufacturing Survey", "impact": "LOW"}
+        ]
+      },
+      {
+        "date": "2026-05-28",
+        "weekday": "Thursday",
+        "session": "OPEN",
+        "events": [
+          {"time_et": "08:30", "name": "GDP 2nd Release Q1 2026", "impact": "HIGH"},
+          {"time_et": "08:30", "name": "PCE Price Index (Personal Consumption Expenditures)", "impact": "HIGH", "note": "Fed preferred inflation measure"},
+          {"time_et": "08:30", "name": "Initial Jobless Claims", "impact": "MEDIUM"},
+          {"time_et": "08:30", "name": "Advance Durable Goods", "impact": "MEDIUM"}
+        ]
+      },
+      {
+        "date": "2026-05-29",
+        "weekday": "Friday",
+        "session": "OPEN",
+        "events": [
+          {"time_et": "10:00", "name": "Multivariate Core Trend Inflation", "impact": "LOW"}
+        ]
+      }
+    ]
+  },
+  "top5_earnings_bmo": [
+    {
+      "rank": 1,
+      "ticker": "AZO",
+      "company": "AutoZone",
+      "date": "2026-05-26",
+      "time": "BMO",
+      "eps_estimate": 36.60,
+      "revenue_estimate_bn": 4.87,
+      "sector": "Consumer Discretionary",
+      "market_cap_approx": "~$47B",
+      "importance": "HIGH",
+      "why_it_matters": "S&P 500 large cap, auto parts bellwether. Indicador de saúde do consumidor na manutenção de viaturas. Histórico de surpresas positivas. Primeira publicação relevante da semana curta.",
+      "source": "finnhub"
+    },
+    {
+      "rank": 2,
+      "ticker": "M",
+      "company": "Macy's",
+      "date": "2026-05-26",
+      "time": "UNKNOWN",
+      "eps_estimate": 0.03,
+      "revenue_estimate_bn": 4.70,
+      "sector": "Consumer Discretionary / Retail",
+      "market_cap_approx": "~$3-4B",
+      "importance": "HIGH",
+      "why_it_matters": "Barómetro do consumidor médio americano. Resultados refletem saúde do retalho físico e pressão de desconto. Timing não confirmado (BMO provável histórico).",
+      "source": "finnhub",
+      "data_warning": "Hora exata não confirmada pela fonte"
+    },
+    {
+      "rank": 3,
+      "ticker": "SKY",
+      "company": "Skyline Champion",
+      "date": "2026-05-26",
+      "time": "BMO",
+      "eps_estimate": 0.61,
+      "revenue_estimate_bn": 0.61,
+      "sector": "Consumer Discretionary / Manufactured Housing",
+      "market_cap_approx": "~$4B",
+      "importance": "MEDIUM",
+      "why_it_matters": "Housing asequível como proxy do mercado imobiliário. Setor sensível a taxas de juro. Useful indicator num ciclo de Fed em pausa.",
+      "source": "finnhub"
+    },
+    {
+      "rank": 4,
+      "ticker": "ANF",
+      "company": "Abercrombie & Fitch",
+      "date": "2026-05-26",
+      "time": "UNKNOWN",
+      "eps_estimate": 1.30,
+      "revenue_estimate_bn": 1.14,
+      "sector": "Consumer Discretionary / Apparel",
+      "market_cap_approx": "~$4-5B",
+      "importance": "MEDIUM",
+      "why_it_matters": "Specialty retail. Indica saúde do consumidor jovem. Timing não confirmado (BMO provável).",
+      "source": "finnhub",
+      "data_warning": "Hora exata não confirmada"
+    },
+    {
+      "rank": 5,
+      "ticker": "CSW",
+      "company": "CSW Industrials",
+      "date": "2026-05-26",
+      "time": "BMO",
+      "eps_estimate": 2.43,
+      "revenue_estimate_bn": 0.30,
+      "sector": "Industrials",
+      "market_cap_approx": "~$3B",
+      "importance": "MEDIUM",
+      "why_it_matters": "Mid-cap industrials diversificado. HVAC, plombing. Proxy de atividade industrial e construção.",
+      "source": "finnhub"
+    }
+  ],
+  "top5_earnings_amc": [
+    {
+      "rank": 1,
+      "ticker": "ZS",
+      "company": "Zscaler",
+      "date": "2026-05-26",
+      "time": "AMC",
+      "eps_estimate": 1.04,
+      "revenue_estimate_bn": 0.86,
+      "sector": "Technology / Cybersecurity",
+      "market_cap_approx": "~$25-30B",
+      "importance": "HIGH",
+      "why_it_matters": "Líder em cloud security zero-trust. Primeiro grande resultado AMC da semana. Indicador de gastos corporativos em cibersegurança. Impacto em CrowdStrike, Palo Alto Networks.",
+      "source": "finnhub"
+    },
+    {
+      "rank": 2,
+      "ticker": "CRM",
+      "company": "Salesforce",
+      "date": "2026-05-27",
+      "time": "AMC",
+      "eps_estimate": 3.15,
+      "revenue_estimate_bn": 11.16,
+      "sector": "Technology / Enterprise SaaS",
+      "market_cap_approx": "~$230B",
+      "importance": "HIGH",
+      "why_it_matters": "Dow Jones component. Mega-cap SaaS. Guidance sobre AI agents (Agentforce) é catalisador chave do setor. Impacto em toda a vertical enterprise software.",
+      "source": "finnhub+web"
+    },
+    {
+      "rank": 3,
+      "ticker": "MRVL",
+      "company": "Marvell Technology",
+      "date": "2026-05-27",
+      "time": "AMC",
+      "eps_estimate": 0.81,
+      "revenue_estimate_bn": 2.45,
+      "sector": "Technology / Semiconductors / AI Infrastructure",
+      "market_cap_approx": "~$65-70B",
+      "importance": "HIGH",
+      "why_it_matters": "Custom AI chips e networking. Barómetro da procura por infraestrutura AI custom silicon. Seguido de perto após NVDA beat. Impacto setorial em semicondutores AI.",
+      "source": "finnhub+web"
+    },
+    {
+      "rank": 4,
+      "ticker": "COST",
+      "company": "Costco",
+      "date": "2026-05-28",
+      "time": "AMC",
+      "eps_estimate": 5.02,
+      "revenue_estimate_bn": 71.05,
+      "sector": "Consumer Staples",
+      "market_cap_approx": "~$400B",
+      "importance": "HIGH",
+      "why_it_matters": "Mega-cap consumer staples. Membership growth e comparable sales são os principais indicadores. Barómetro do consumidor americano premium. Considerado um dos relatórios mais importantes de cada trimestre.",
+      "source": "finnhub"
+    },
+    {
+      "rank": 5,
+      "ticker": "DELL",
+      "company": "Dell Technologies",
+      "date": "2026-05-28",
+      "time": "AMC",
+      "eps_estimate": 2.98,
+      "revenue_estimate_bn": 36.12,
+      "sector": "Technology / AI Servers / Infrastructure",
+      "market_cap_approx": "~$55-60B",
+      "importance": "HIGH",
+      "why_it_matters": "Servidor AI e infra de data center. Importante sinal de demanda pós-NVDA beat. Confirma ou contesta a narrativa de AI capex cycle. PowerEdge AI orders são o principal catalyst watch.",
+      "source": "finnhub"
+    }
+  ],
+  "portfolio_sentinel": [
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "alert_level": "MATERIAL",
+      "alert_type": "PORTFOLIO ALERT",
+      "impact_direction": "Bullish for thesis",
+      "summary": "NVDA reportou Q1 FY2027 em 20 Mai 2026 com resultado histórico. Revenue $81.6B (+85% YoY), Data Center $75.2B (+92% YoY). Guidance Q2: $91B vs estimate $86.84B. Margem bruta GAAP 74.9%. Dividendo aumentado de $0.01 para $0.25/trimestre. Recompra adicional $80B autorizada. 58 de 61 analistas em BUY.",
+      "catalyst": "Earnings beat + guidance beat + dividend increase + buyback expansion",
+      "event_date": "2026-05-20",
+      "data_quality": "HIGH — confirmado por SEC 8-K e fontes múltiplas",
+      "is_rumor": false,
+      "action_note": "Sem ação imediata — próxima sessão terça 26 Mai. Monitorizar abertura e reaction institucional."
+    },
+    {
+      "symbol": "MU",
+      "name": "Micron",
+      "alert_level": "INFO",
+      "alert_type": "CATALYST WATCH",
+      "impact_direction": "Bullish for thesis (indirect)",
+      "summary": "NVDA beat e forte procura por Data Center sinalizam ciclo positivo para HBM/DRAM. Micron reporta a 24 Jun 2026. EPS estimate $19.25 (+907% YoY), Revenue $33.8B (+263% YoY). Antecipação positiva do ciclo de memória AI.",
+      "catalyst": "NVDA Q1 beat como sinal indireto de procura HBM/DRAM para AI infrastructure",
+      "event_date": "2026-06-24",
+      "data_quality": "MEDIUM — estimate confirmado; notícia NVDA é facto; ligação MU é contextual",
+      "is_rumor": false
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "alert_level": "INFO",
+      "alert_type": "CALENDAR WATCH",
+      "impact_direction": "Bullish for thesis",
+      "summary": "MSFT integra grupo de hyperscalers com capex conjunto estimado em $725B para 2026 (+77% YoY). Azure/AI continua a ser tema central. Sem earnings imediatos. Próximo relatório esperado Julho 2026.",
+      "catalyst": "AI capex cycle — MSFT parte dos quatro maiores hyperscalers",
+      "data_quality": "MEDIUM — capex aggregate confirmado; detalhes MSFT específicos pendentes",
+      "is_rumor": false
+    },
+    {
+      "symbol": "CVX",
+      "name": "Chevron",
+      "alert_level": "NONE",
+      "alert_type": "DATA PENDING",
+      "impact_direction": "Neutral",
+      "summary": "Sem notícias materiais identificadas nas últimas 48h. Preço WTI pendente de validação. Contexto OPEC+ e geopolítico em monitorização.",
+      "catalyst": "n/d",
+      "data_quality": "LOW — preço petróleo não confirmado nesta run",
+      "is_rumor": false
+    },
+    {
+      "symbol": "VUUA",
+      "name": "Vanguard S&P 500 ETF (EUR)",
+      "alert_level": "INFO",
+      "alert_type": "SECTOR REFERENCE",
+      "impact_direction": "Bullish for thesis",
+      "summary": "S&P 500 fechou 8ª semana consecutiva em alta. SPX em 7.473. Dow em máximos históricos. VIX 16.7 — low vol. Próxima sessão terça 26 Mai pós-Memorial Day.",
+      "catalyst": "Momentum de mercado positivo",
+      "data_quality": "MEDIUM — dados previous_close",
+      "is_rumor": false
+    },
+    {
+      "symbol": "VWCE",
+      "name": "Vanguard FTSE All-World ETF",
+      "alert_level": "INFO",
+      "alert_type": "SECTOR REFERENCE",
+      "impact_direction": "Bullish for thesis",
+      "summary": "Global equities em modo risk-on alinhado com mercado americano. DXY <100 é tailwind para activos globais denominados em USD. Sem catalisadores adversos identificados para mercados emergentes.",
+      "catalyst": "Risk-on global, DXY fraco",
+      "data_quality": "LOW — dados indirectos",
+      "is_rumor": false
+    }
+  ],
+  "morning_radar_table": [
+    {
+      "rank": 1,
+      "ticker": "NVDA",
+      "company": "NVIDIA",
+      "bucket": "Mega (>200B)",
+      "type": "Stock",
+      "timing": "Ongoing catalyst",
+      "catalyst": "Post-earnings beat Q1 FY27. Revenue $81.6B +85% YoY. Data Center $75.2B. Q2 guide $91B >> $86.84B est. Dividendo 25x. Buyback $80B.",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 78,
+      "confidence": "HIGH",
+      "classification": "PORTFOLIO ALERT",
+      "data_quality": "GOOD — earnings confirmados SEC",
+      "price_stale": true,
+      "session_type": "unknown",
+      "note": "Monitorizar reação na abertura terça 26 Mai"
+    },
+    {
+      "rank": 2,
+      "ticker": "CRM",
+      "company": "Salesforce",
+      "bucket": "Mega (>200B)",
+      "type": "Stock",
+      "timing": "AMC Quarta 27 Mai",
+      "catalyst": "Earnings AMC 27 Mai. Rev est $11.16B. Guidance AI Agentforce. Dow component. Impacto em enterprise SaaS.",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 65,
+      "confidence": "MEDIUM",
+      "classification": "CALENDAR WATCH",
+      "data_quality": "PARTIAL — estimates confirmados, preço stale",
+      "price_stale": true
+    },
+    {
+      "rank": 3,
+      "ticker": "COST",
+      "company": "Costco",
+      "bucket": "Mega (>200B)",
+      "type": "Stock",
+      "timing": "AMC Quinta 28 Mai",
+      "catalyst": "Earnings AMC 28 Mai. Rev est $71.05B. Membership growth e comp sales são KPIs principais. Barómetro consumidor premium.",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 66,
+      "confidence": "MEDIUM",
+      "classification": "CALENDAR WATCH",
+      "data_quality": "PARTIAL — estimates confirmados",
+      "price_stale": true
+    },
+    {
+      "rank": 4,
+      "ticker": "MRVL",
+      "company": "Marvell Technology",
+      "bucket": "Large (10B-200B)",
+      "type": "Stock",
+      "timing": "AMC Quarta 27 Mai",
+      "catalyst": "Earnings AMC 27 Mai. Rev est $2.45B. Custom AI chips e networking. Catalisador sectorial pós-NVDA. Impacto em semicondutores AI.",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 64,
+      "confidence": "MEDIUM",
+      "classification": "CALENDAR WATCH",
+      "data_quality": "PARTIAL",
+      "price_stale": true
+    },
+    {
+      "rank": 5,
+      "ticker": "AZO",
+      "company": "AutoZone",
+      "bucket": "Large (10B-200B)",
+      "type": "Stock",
+      "timing": "BMO Terça 26 Mai",
+      "catalyst": "Earnings BMO 26 Mai. Rev est $4.87B. EPS est $36.60. S&P 500. Primeiro resultado relevante da semana. Consumer bellwether.",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 60,
+      "confidence": "MEDIUM",
+      "classification": "CALENDAR WATCH",
+      "data_quality": "PARTIAL — estimates confirmados Finnhub",
+      "price_stale": true
+    },
+    {
+      "rank": 6,
+      "ticker": "DELL",
+      "company": "Dell Technologies",
+      "bucket": "Large (10B-200B)",
+      "type": "Stock",
+      "timing": "AMC Quinta 28 Mai",
+      "catalyst": "Earnings AMC 28 Mai. Rev est $36.12B. AI server demand signal pós-NVDA. PowerEdge AI orders como catalisador.",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 62,
+      "confidence": "MEDIUM",
+      "classification": "CALENDAR WATCH",
+      "data_quality": "PARTIAL",
+      "price_stale": true
+    },
+    {
+      "rank": 7,
+      "ticker": "ZS",
+      "company": "Zscaler",
+      "bucket": "Large (10B-200B)",
+      "type": "Stock",
+      "timing": "AMC Terça 26 Mai",
+      "catalyst": "Earnings AMC 26 Mai. Rev est $860M. Cloud security zero-trust. Primeiro AMC tech da semana. Impacto em CRWD, PANW.",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 57,
+      "confidence": "MEDIUM",
+      "classification": "CALENDAR WATCH",
+      "data_quality": "PARTIAL",
+      "price_stale": true
+    },
+    {
+      "rank": 8,
+      "ticker": "SNOW",
+      "company": "Snowflake",
+      "bucket": "Large (10B-200B)",
+      "type": "Stock",
+      "timing": "AMC Quarta 27 Mai",
+      "catalyst": "Earnings AMC 27 Mai. Rev est $1.35B. Data cloud / AI. Acompanha narrativa AI platform adoption.",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 54,
+      "confidence": "MEDIUM",
+      "classification": "CALENDAR WATCH",
+      "data_quality": "PARTIAL",
+      "price_stale": true
+    },
+    {
+      "rank": 9,
+      "ticker": "SNPS",
+      "company": "Synopsys",
+      "bucket": "Large (10B-200B)",
+      "type": "Stock",
+      "timing": "AMC Quarta 27 Mai",
+      "catalyst": "Earnings AMC 27 Mai. Rev est $2.30B. EDA software para design de chips. Proxy de saúde do ecosistema de semicondutores.",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 54,
+      "confidence": "MEDIUM",
+      "classification": "CALENDAR WATCH",
+      "data_quality": "PARTIAL",
+      "price_stale": true
+    },
+    {
+      "rank": 10,
+      "ticker": "MU",
+      "company": "Micron Technology",
+      "bucket": "Large (10B-200B)",
+      "type": "Stock",
+      "timing": "Earnings 24 Jun",
+      "catalyst": "NVDA beat sinaliza procura AI/HBM forte. MU é principal beneficiário HBM. Earnings 24 Jun est $19.25 EPS (+907% YoY), rev $33.8B (+263% YoY).",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 53,
+      "confidence": "MEDIUM",
+      "classification": "PORTFOLIO ALERT",
+      "data_quality": "PARTIAL — estimate confirmado, preço stale",
+      "price_stale": true
+    },
+    {
+      "rank": 11,
+      "ticker": "MSFT",
+      "company": "Microsoft",
+      "bucket": "Mega (>200B)",
+      "type": "Stock",
+      "timing": "Ongoing / Earnings Julho",
+      "catalyst": "Parte do grupo hyperscaler com $725B capex 2026. Azure AI. Sem earnings imediatos.",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 53,
+      "confidence": "MEDIUM",
+      "classification": "PORTFOLIO ALERT",
+      "data_quality": "LOW",
+      "price_stale": true
+    },
+    {
+      "rank": 12,
+      "ticker": "DLTR",
+      "company": "Dollar Tree",
+      "bucket": "Large (10B-200B)",
+      "type": "Stock",
+      "timing": "BMO Quinta 28 Mai",
+      "catalyst": "Earnings BMO 28 Mai. Rev est $5.07B. Value retail. Proxy consumidor de baixo rendimento. Sensível a tariffs e inflação.",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 50,
+      "confidence": "MEDIUM",
+      "classification": "CALENDAR WATCH",
+      "data_quality": "PARTIAL",
+      "price_stale": true
+    },
+    {
+      "rank": 13,
+      "ticker": "M",
+      "company": "Macys",
+      "bucket": "Mid (2B-10B)",
+      "type": "Stock",
+      "timing": "UNKNOWN 26 Mai (prov. BMO)",
+      "catalyst": "Earnings 26 Mai. Rev est $4.70B. Retail físico. Proxy consumidor médio americano. Timing não confirmado.",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 44,
+      "confidence": "LOW",
+      "classification": "DATA PENDING",
+      "data_quality": "LOW — hora não confirmada",
+      "price_stale": true
+    },
+    {
+      "rank": 14,
+      "ticker": "HPQ",
+      "company": "HP Inc",
+      "bucket": "Large (10B-200B)",
+      "type": "Stock",
+      "timing": "AMC Quarta 27 Mai",
+      "catalyst": "Earnings AMC 27 Mai. Rev est $14.18B. PC + printing. Proxy de ciclo PC e gastos corporativos em hardware.",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 47,
+      "confidence": "MEDIUM",
+      "classification": "CALENDAR WATCH",
+      "data_quality": "PARTIAL",
+      "price_stale": true
+    },
+    {
+      "rank": 15,
+      "ticker": "ADSK",
+      "company": "Autodesk",
+      "bucket": "Large (10B-200B)",
+      "type": "Stock",
+      "timing": "AMC Quinta 28 Mai",
+      "catalyst": "Earnings AMC 28 Mai. Rev est $1.93B. Design/CAD software. AI integration em AEC.",
+      "price_prev_close": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "score": 46,
+      "confidence": "MEDIUM",
+      "classification": "CALENDAR WATCH",
+      "data_quality": "PARTIAL",
+      "price_stale": true
+    }
+  ],
+  "week_earnings_overview": {
+    "tuesday_may_26": {
+      "bmo_highlights": ["AZO", "SKY", "CSW"],
+      "amc_highlights": ["ZS", "ICLR", "QFIN", "BOX"],
+      "timing_unknown": ["M", "ANF"]
+    },
+    "wednesday_may_27": {
+      "bmo_highlights": ["DY"],
+      "amc_highlights": ["CRM", "MRVL", "SNPS", "SNOW", "HPQ", "NTNX"],
+      "timing_unknown": ["BBY", "GAP", "KSS", "BURL"]
+    },
+    "thursday_may_28": {
+      "bmo_highlights": ["DLTR", "HRL"],
+      "amc_highlights": ["COST", "DELL", "ADSK", "NTAP", "OKTA", "MDB", "PATH"],
+      "timing_unknown": []
+    }
+  },
+  "speculative_avoid": [
+    {
+      "ticker": "PONY",
+      "reason": "EPS negativo, Rev $23M — micro cap. Dados insuficientes.",
+      "classification": "SPECULATIVE / AVOID"
+    },
+    {
+      "ticker": "CRGO",
+      "reason": "EPS negativo, Rev $8M — micro cap freight. Dados fracos.",
+      "classification": "SPECULATIVE / AVOID"
+    },
+    {
+      "ticker": "VNET",
+      "reason": "China data center, EPS negativo, Rev n/d. Risco regulatório + dados fracos.",
+      "classification": "SPECULATIVE / AVOID"
+    },
+    {
+      "ticker": "ARBE",
+      "reason": "EPS negativo, Rev $510K — micro cap LIDAR. Dados muito fracos.",
+      "classification": "SPECULATIVE / AVOID"
+    }
+  ],
+  "sector_snapshot": [
+    {
+      "sector": "Technology / AI",
+      "etf_ref": "XLK",
+      "stance": "BULLISH",
+      "note": "NVDA beat histórico. MRVL, CRM, SNOW, SNPS esta semana. AI capex $725B hyperscalers.",
+      "data_quality": "MEDIUM"
+    },
+    {
+      "sector": "Consumer Discretionary",
+      "etf_ref": "XLY",
+      "stance": "MIXED",
+      "note": "AZO, M, ANF, COST esta semana. Consumidor em foco. Taxa de juro 10Y em 4.57% mantém pressão.",
+      "data_quality": "PARTIAL"
+    },
+    {
+      "sector": "Consumer Staples",
+      "etf_ref": "XLP",
+      "stance": "NEUTRAL",
+      "note": "COST (Costco) quinta AMC é o principal evento. DLTR BMO quinta.",
+      "data_quality": "PARTIAL"
+    },
+    {
+      "sector": "Financials",
+      "etf_ref": "XLF",
+      "stance": "NEUTRAL",
+      "note": "XLF em 51.74 (sexta). Sem earnings financeiros grandes esta semana. Fed policy em background.",
+      "data_quality": "LOW"
+    },
+    {
+      "sector": "Energy",
+      "etf_ref": "XLE",
+      "stance": "MIXED",
+      "note": "CVX em carteira. Preço WTI pendente. OPEC+ contexto em monitorização. Sem earnings energia esta semana.",
+      "data_quality": "LOW"
+    },
+    {
+      "sector": "Cybersecurity",
+      "etf_ref": "CIBR",
+      "stance": "BULLISH",
+      "note": "ZS reporta AMC terça. CRWD, PANW em watch. Gastos corporativos em segurança cloud resilientes.",
+      "data_quality": "PARTIAL"
+    }
+  ],
+  "risk_factors": [
+    {
+      "risk": "GDP 2nd Release + PCE quinta 28 Mai",
+      "severity": "HIGH",
+      "note": "PCE é o indicador de inflação preferido da Fed. Dado acima do esperado pode reavivar preocupações hawkish e inverter rally."
+    },
+    {
+      "risk": "Memorial Day liquidity gap",
+      "severity": "MEDIUM",
+      "note": "Mercado fechado segunda. Abertura terça pode ter gaps por acumulação de notícias weekend e posicionamento de curto prazo."
+    },
+    {
+      "risk": "Earnings season concentration",
+      "severity": "MEDIUM",
+      "note": "CRM, MRVL, SNOW quarta e COST, DELL quinta são muito esperados. Qualquer deceção pode reverter momentum do índice."
+    },
+    {
+      "risk": "NVDA post-earnings reaction desconhecida",
+      "severity": "LOW-MEDIUM",
+      "note": "NVDA reportou na quinta 20 Mai após fecho. Reação de mercado na abertura terça ainda não observada nesta run. Histórico de sell-the-news após beats expressivos."
+    },
+    {
+      "risk": "DXY < 100 — risco de reversão",
+      "severity": "LOW",
+      "note": "Dólar fraco beneficia multinationals. Reversão para >100 seria headwind para NVDA, MSFT, COST (exposição global)."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Finnhub Earnings Calendar",
+      "url": "https://finnhub.io/api/v1/calendar/earnings",
+      "type": "API",
+      "timestamp": "2026-05-24",
+      "reliability": "HIGH"
+    },
+    {
+      "name": "Web Search — Macro/S&P/VIX/DXY/10Y",
+      "url": "web_search",
+      "type": "Aggregated",
+      "timestamp": "2026-05-24",
+      "reliability": "MEDIUM"
+    },
+    {
+      "name": "CNBC/Bloomberg — NVDA Q1 FY2027",
+      "url": "web_search",
+      "type": "News",
+      "timestamp": "2026-05-20",
+      "reliability": "HIGH"
+    },
+    {
+      "name": "SEC EDGAR — NVIDIA Form 8-K Q1FY27",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000051/q1fy27pr.htm",
+      "type": "Regulatory Filing",
+      "timestamp": "2026-05-20",
+      "reliability": "HIGH"
+    },
+    {
+      "name": "Kiplinger / Econoday — Economic Calendar",
+      "url": "web_search",
+      "type": "News/Data",
+      "timestamp": "2026-05-24",
+      "reliability": "MEDIUM"
+    },
+    {
+      "name": "Yahoo Finance — SPY price",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY",
+      "type": "API",
+      "timestamp": "2026-05-22",
+      "reliability": "MEDIUM",
+      "warning": "Timestamp da resposta pode ser stale"
+    }
+  ]
+}

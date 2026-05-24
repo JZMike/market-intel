@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Intel — R0 Morning Radar — 24 Mai 2026</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1c2128;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --green: #3fb950;
+    --red: #f85149;
+    --yellow: #d29922;
+    --blue: #58a6ff;
+    --orange: #f0883e;
+    --purple: #bc8cff;
+    --cyan: #39d353;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; line-height: 1.6; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 24px 16px; }
+
+  /* Header */
+  .header { border-bottom: 2px solid var(--blue); padding-bottom: 16px; margin-bottom: 24px; }
+  .header h1 { font-size: 22px; font-weight: 700; color: var(--blue); }
+  .header .meta { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .header .badges { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-left: 3px solid var(--blue); padding-left: 10px; margin-bottom: 14px; color: var(--blue); }
+
+  /* Badge */
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.03em; }
+  .badge-green { background: rgba(63,185,80,0.15); color: var(--green); border: 1px solid var(--green); }
+  .badge-red { background: rgba(248,81,73,0.15); color: var(--red); border: 1px solid var(--red); }
+  .badge-yellow { background: rgba(210,153,34,0.15); color: var(--yellow); border: 1px solid var(--yellow); }
+  .badge-blue { background: rgba(88,166,255,0.15); color: var(--blue); border: 1px solid var(--blue); }
+  .badge-orange { background: rgba(240,136,62,0.15); color: var(--orange); border: 1px solid var(--orange); }
+  .badge-purple { background: rgba(188,140,255,0.15); color: var(--purple); border: 1px solid var(--purple); }
+  .badge-muted { background: rgba(139,148,158,0.15); color: var(--muted); border: 1px solid var(--muted); }
+
+  /* Macro grid */
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-bottom: 16px; }
+  .macro-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+  .macro-card .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .macro-card .value { font-size: 18px; font-weight: 700; margin-top: 2px; }
+  .macro-card .change { font-size: 12px; margin-top: 2px; }
+  .macro-card .stale-badge { font-size: 10px; color: var(--yellow); margin-top: 4px; }
+  .val-green { color: var(--green); }
+  .val-red { color: var(--red); }
+  .val-blue { color: var(--blue); }
+  .val-muted { color: var(--muted); }
+
+  /* Alert box */
+  .alert-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 10px; }
+  .alert-box.warning { border-left: 3px solid var(--yellow); }
+  .alert-box.info { border-left: 3px solid var(--blue); }
+  .alert-box.positive { border-left: 3px solid var(--green); }
+  .alert-box.negative { border-left: 3px solid var(--red); }
+  .alert-box.neutral { border-left: 3px solid var(--muted); }
+
+  /* Earnings cards */
+  .earnings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+  .earnings-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+  .earnings-card .rank { font-size: 11px; color: var(--muted); }
+  .earnings-card .ticker { font-size: 20px; font-weight: 800; color: var(--blue); }
+  .earnings-card .company { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+  .earnings-card .row { display: flex; justify-content: space-between; font-size: 12px; margin-top: 4px; }
+  .earnings-card .row .k { color: var(--muted); }
+  .earnings-card .why { font-size: 12px; color: var(--text); margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--border); }
+
+  /* Portfolio cards */
+  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+  .portfolio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+  .portfolio-card .pticker { font-size: 18px; font-weight: 800; }
+  .portfolio-card .pname { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+  .portfolio-card .psummary { font-size: 12px; color: var(--text); margin-top: 8px; }
+
+  /* Radar table */
+  .radar-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .radar-table th { background: var(--surface2); color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  .radar-table td { padding: 8px 10px; border-bottom: 1px solid rgba(48,54,61,0.5); vertical-align: top; }
+  .radar-table tr:hover td { background: var(--surface2); }
+  .radar-table .ticker-cell { font-weight: 800; font-size: 14px; color: var(--blue); }
+  .radar-table .nd { color: var(--muted); font-style: italic; }
+  .score-high { color: var(--green); font-weight: 700; }
+  .score-med { color: var(--yellow); font-weight: 700; }
+  .score-low { color: var(--red); font-weight: 700; }
+
+  /* Week calendar */
+  .week-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .day-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+  .day-card .day-name { font-size: 13px; font-weight: 700; }
+  .day-card .day-date { font-size: 11px; color: var(--muted); margin-bottom: 8px; }
+  .day-card .event-item { font-size: 11px; padding: 3px 0; border-bottom: 1px solid rgba(48,54,61,0.4); }
+  .day-card.closed { opacity: 0.5; border-color: var(--red); }
+
+  /* Risk factors */
+  .risk-list { display: flex; flex-direction: column; gap: 8px; }
+  .risk-item { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px; display: flex; gap: 12px; align-items: flex-start; }
+  .risk-item .sev { min-width: 60px; }
+
+  /* Placeholder */
+  .placeholder { background: var(--surface); border: 1px dashed var(--border); border-radius: 8px; padding: 20px; text-align: center; color: var(--muted); font-style: italic; margin-bottom: 10px; }
+  .placeholder .ptime { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+
+  /* Source list */
+  .source-list { display: flex; flex-direction: column; gap: 6px; }
+  .source-item { font-size: 12px; color: var(--muted); display: flex; gap: 8px; }
+  .source-item .s-name { color: var(--text); min-width: 200px; }
+
+  .data-quality-bar { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; }
+  .dq-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+  .dq-item { font-size: 12px; }
+  .dq-item .dq-k { color: var(--muted); }
+
+  footer { text-align: center; color: var(--muted); font-size: 11px; margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--border); }
+
+  @media (max-width: 640px) {
+    .macro-grid { grid-template-columns: repeat(2, 1fr); }
+    .radar-table { font-size: 11px; }
+    .radar-table th, .radar-table td { padding: 6px 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>📊 Market Intel — R0 Morning Radar</h1>
+    <div class="meta">
+      Data: <strong>Domingo, 24 Maio 2026</strong> &nbsp;|&nbsp;
+      Hora Lisboa: <strong>09:30</strong> &nbsp;|&nbsp;
+      Hora ET: <strong>04:30</strong> &nbsp;|&nbsp;
+      Run: <strong>R0_MORNING_RADAR</strong>
+    </div>
+    <div class="badges" style="margin-top:10px;">
+      <span class="badge badge-green">BULLISH</span>
+      <span class="badge badge-yellow">⚠️ Memorial Day — Mercado fechado segunda 25 Mai</span>
+      <span class="badge badge-blue">Próxima sessão: Terça 26 Mai 09h30 ET</span>
+      <span class="badge badge-muted">Dados: Previous Close (22 Mai 2026)</span>
+    </div>
+  </div>
+
+  <!-- DATA QUALITY -->
+  <div class="section">
+    <div class="section-title">Data Quality</div>
+    <div class="data-quality-bar">
+      <div class="dq-row">
+        <div class="dq-item"><span class="dq-k">Preços: </span><span class="badge badge-yellow">STALE / PREVIOUS_CLOSE</span></div>
+        <div class="dq-item"><span class="dq-k">Volume: </span><span class="badge badge-muted">LIMITED</span></div>
+        <div class="dq-item"><span class="dq-k">Earnings: </span><span class="badge badge-green">VÁLIDO — Finnhub + Web</span></div>
+        <div class="dq-item"><span class="dq-k">Alpha Vantage: </span><span class="badge badge-muted">0 calls usados</span></div>
+        <div class="dq-item"><span class="dq-k">Macro: </span><span class="badge badge-yellow">PARTIAL — web search</span></div>
+      </div>
+    </div>
+    <div class="alert-box warning">
+      ⚠️ <strong>Aviso de dados:</strong> Todos os preços são do último fecho (sexta 22 Mai 2026). Segunda 25 Mai = Memorial Day (mercado fechado). Esta rotina é radar de preparação — não são apresentados dados intraday. Classificações CONFIRMA / ENFRAQUECEU / INVERTEU ficam para R1/R2.
+    </div>
+  </div>
+
+  <!-- MACRO SNAPSHOT -->
+  <div class="section">
+    <div class="section-title">Macro Snapshot — Fecho Sexta 22 Mai 2026</div>
+
+    <div class="macro-grid">
+      <div class="macro-card">
+        <div class="label">S&P 500</div>
+        <div class="value val-green">7.473</div>
+        <div class="change val-green">+0.37% (+27.75)</div>
+        <div class="stale-badge">🕐 PREVIOUS CLOSE</div>
+      </div>
+      <div class="macro-card">
+        <div class="label">Nasdaq</div>
+        <div class="value val-green">26.344</div>
+        <div class="change val-green">+0.19% (+50.87)</div>
+        <div class="stale-badge">🕐 PREVIOUS CLOSE</div>
+      </div>
+      <div class="macro-card">
+        <div class="label">SPY ETF</div>
+        <div class="value val-green">$745.64</div>
+        <div class="change val-muted">n/d</div>
+        <div class="stale-badge">🕐 PREVIOUS CLOSE</div>
+      </div>
+      <div class="macro-card">
+        <div class="label">VIX</div>
+        <div class="value val-green">16.70</div>
+        <div class="change val-green">-0.36%</div>
+        <div class="stale-badge">🟢 LOW VOL</div>
+      </div>
+      <div class="macro-card">
+        <div class="label">DXY</div>
+        <div class="value val-green">99.19</div>
+        <div class="change val-green">-0.03%</div>
+        <div class="stale-badge">🟡 DÓLAR FRACO</div>
+      </div>
+      <div class="macro-card">
+        <div class="label">US 10Y Yield</div>
+        <div class="value val-yellow">4.572%</div>
+        <div class="change val-green">-0.26%</div>
+        <div class="stale-badge">🕐 PREVIOUS CLOSE</div>
+      </div>
+      <div class="macro-card">
+        <div class="label">WTI Crude</div>
+        <div class="value val-muted">n/d</div>
+        <div class="change val-muted">DATA PENDING</div>
+        <div class="stale-badge">⚠️ VALIDAR</div>
+      </div>
+    </div>
+
+    <div class="alert-box positive">
+      🟢 <strong>MACRO_SETUP: BULLISH</strong> — S&P 500 encerrou a 8ª semana consecutiva em alta. Dow atingiu máximos históricos. VIX em 16.70 reflete complacência de mercado. DXY abaixo de 100 é tailwind para multinationals e ativos globais. US 10Y yield em ligeira descida.
+    </div>
+
+    <!-- CALENDAR SEMANAL -->
+    <div style="margin-top:16px;">
+      <div style="font-size:13px; font-weight:600; margin-bottom:10px; color:var(--muted);">CALENDÁRIO MACRO — SEMANA 26-29 MAI 2026</div>
+      <div class="week-grid">
+        <div class="day-card closed">
+          <div class="day-name" style="color:var(--red);">Segunda-feira</div>
+          <div class="day-date">25 Mai 2026</div>
+          <div class="badge badge-red">MEMORIAL DAY — FECHADO</div>
+        </div>
+        <div class="day-card">
+          <div class="day-name">Terça-feira</div>
+          <div class="day-date">26 Mai 2026 — 1ª Sessão</div>
+          <div class="event-item">10:00 ET — Consumer Confidence <span class="badge badge-yellow" style="font-size:9px;">MEDIUM</span></div>
+          <div class="event-item">10:30 ET — Dallas Fed Manufacturing <span class="badge badge-muted" style="font-size:9px;">LOW</span></div>
+        </div>
+        <div class="day-card">
+          <div class="day-name">Quarta-feira</div>
+          <div class="day-date">27 Mai 2026</div>
+          <div class="event-item">10:00 ET — New Residential Sales <span class="badge badge-yellow" style="font-size:9px;">MEDIUM</span></div>
+          <div class="event-item">10:00 ET — Richmond Fed Mfg <span class="badge badge-muted" style="font-size:9px;">LOW</span></div>
+        </div>
+        <div class="day-card" style="border-color:var(--red);">
+          <div class="day-name" style="color:var(--orange);">Quinta-feira ⚡</div>
+          <div class="day-date">28 Mai 2026 — MACRO PESADO</div>
+          <div class="event-item">08:30 ET — <strong>GDP 2nd Release Q1</strong> <span class="badge badge-red" style="font-size:9px;">HIGH</span></div>
+          <div class="event-item">08:30 ET — <strong>PCE Price Index</strong> <span class="badge badge-red" style="font-size:9px;">HIGH — Fed preferred</span></div>
+          <div class="event-item">08:30 ET — Initial Claims <span class="badge badge-yellow" style="font-size:9px;">MEDIUM</span></div>
+          <div class="event-item">08:30 ET — Durable Goods <span class="badge badge-yellow" style="font-size:9px;">MEDIUM</span></div>
+        </div>
+        <div class="day-card">
+          <div class="day-name">Sexta-feira</div>
+          <div class="day-date">29 Mai 2026</div>
+          <div class="event-item">10:00 ET — Core Trend Inflation <span class="badge badge-muted" style="font-size:9px;">LOW</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EARNINGS RADAR -->
+  <div class="section">
+    <div class="section-title">Earnings Radar</div>
+
+    <div style="font-size:13px; font-weight:600; color:var(--orange); margin-bottom:12px;">TOP 5 — EARNINGS BMO (Sessão Terça 26 Mai)</div>
+    <div class="earnings-grid">
+
+      <div class="earnings-card">
+        <div class="rank">#1 · BMO · 26 Mai</div>
+        <div class="ticker">AZO</div>
+        <div class="company">AutoZone</div>
+        <div class="row"><span class="k">EPS est:</span><span>$36.60</span></div>
+        <div class="row"><span class="k">Rev est:</span><span>$4.87B</span></div>
+        <div class="row"><span class="k">Sector:</span><span>Consumer Disc.</span></div>
+        <div class="row"><span class="k">Mkt Cap:</span><span>~$47B</span></div>
+        <div class="row"><span class="k">Importância:</span><span><span class="badge badge-red">HIGH</span></span></div>
+        <div class="why">S&P 500 large cap. Primeiro resultado relevante da semana. Barómetro auto parts e consumidor. Histórico de surpresas positivas.</div>
+      </div>
+
+      <div class="earnings-card">
+        <div class="rank">#2 · UNKNOWN (prov. BMO) · 26 Mai</div>
+        <div class="ticker">M</div>
+        <div class="company">Macy's</div>
+        <div class="row"><span class="k">EPS est:</span><span>$0.03</span></div>
+        <div class="row"><span class="k">Rev est:</span><span>$4.70B</span></div>
+        <div class="row"><span class="k">Sector:</span><span>Consumer Disc. / Retail</span></div>
+        <div class="row"><span class="k">Importância:</span><span><span class="badge badge-red">HIGH</span></span></div>
+        <div class="row"><span class="k">Data:</span><span><span class="badge badge-yellow">Hora não confirmada</span></span></div>
+        <div class="why">Barómetro do consumidor médio americano. Retail físico. Indicador de saúde da classe média e gastos discricionários.</div>
+      </div>
+
+      <div class="earnings-card">
+        <div class="rank">#3 · BMO · 26 Mai</div>
+        <div class="ticker">SKY</div>
+        <div class="company">Skyline Champion</div>
+        <div class="row"><span class="k">EPS est:</span><span>$0.61</span></div>
+        <div class="row"><span class="k">Rev est:</span><span>$613M</span></div>
+        <div class="row"><span class="k">Sector:</span><span>Housing / Manufactured</span></div>
+        <div class="row"><span class="k">Importância:</span><span><span class="badge badge-yellow">MEDIUM</span></span></div>
+        <div class="why">Habitação asequível como proxy do mercado imobiliário. Sensível a taxas de juro.</div>
+      </div>
+
+      <div class="earnings-card">
+        <div class="rank">#4 · UNKNOWN · 26 Mai</div>
+        <div class="ticker">ANF</div>
+        <div class="company">Abercrombie & Fitch</div>
+        <div class="row"><span class="k">EPS est:</span><span>$1.30</span></div>
+        <div class="row"><span class="k">Rev est:</span><span>$1.14B</span></div>
+        <div class="row"><span class="k">Sector:</span><span>Consumer Disc. / Apparel</span></div>
+        <div class="row"><span class="k">Importância:</span><span><span class="badge badge-yellow">MEDIUM</span></span></div>
+        <div class="row"><span class="k">Data:</span><span><span class="badge badge-yellow">Hora não confirmada</span></span></div>
+        <div class="why">Specialty retail. Consumidor jovem / discricional. Sensível a gastos de moda e turismo.</div>
+      </div>
+
+      <div class="earnings-card">
+        <div class="rank">#5 · BMO · 26 Mai</div>
+        <div class="ticker">CSW</div>
+        <div class="company">CSW Industrials</div>
+        <div class="row"><span class="k">EPS est:</span><span>$2.43</span></div>
+        <div class="row"><span class="k">Rev est:</span><span>$304M</span></div>
+        <div class="row"><span class="k">Sector:</span><span>Industrials</span></div>
+        <div class="row"><span class="k">Importância:</span><span><span class="badge badge-yellow">MEDIUM</span></span></div>
+        <div class="why">Mid-cap industrial diversificado (HVAC, plombing, construção). Proxy atividade industrial e construção.</div>
+      </div>
+
+    </div>
+
+    <div style="font-size:13px; font-weight:600; color:var(--blue); margin:20px 0 12px;">TOP 5 — EARNINGS AMC (Semana 26-28 Mai)</div>
+    <div class="earnings-grid">
+
+      <div class="earnings-card">
+        <div class="rank">#1 · AMC · 26 Mai</div>
+        <div class="ticker">ZS</div>
+        <div class="company">Zscaler</div>
+        <div class="row"><span class="k">EPS est:</span><span>$1.04</span></div>
+        <div class="row"><span class="k">Rev est:</span><span>$860M</span></div>
+        <div class="row"><span class="k">Sector:</span><span>Tech / Cybersecurity</span></div>
+        <div class="row"><span class="k">Mkt Cap:</span><span>~$25-30B</span></div>
+        <div class="row"><span class="k">Importância:</span><span><span class="badge badge-red">HIGH</span></span></div>
+        <div class="why">Líder cloud security zero-trust. Primeiro grande AMC tech da semana. Guidance sobre SASE/AI security são os KPIs principais. Impacto em CRWD, PANW.</div>
+      </div>
+
+      <div class="earnings-card">
+        <div class="rank">#2 · AMC · Quarta 27 Mai</div>
+        <div class="ticker">CRM</div>
+        <div class="company">Salesforce</div>
+        <div class="row"><span class="k">EPS est:</span><span>$3.15</span></div>
+        <div class="row"><span class="k">Rev est:</span><span>$11.16B</span></div>
+        <div class="row"><span class="k">Sector:</span><span>Tech / Enterprise SaaS</span></div>
+        <div class="row"><span class="k">Mkt Cap:</span><span>~$230B (Dow)</span></div>
+        <div class="row"><span class="k">Importância:</span><span><span class="badge badge-red">HIGH</span></span></div>
+        <div class="why">Dow Jones component. Mega-cap SaaS. AI Agentforce: adoção e monetização são os catalisadores chave. Impacto em toda a vertical enterprise software.</div>
+      </div>
+
+      <div class="earnings-card">
+        <div class="rank">#3 · AMC · Quarta 27 Mai</div>
+        <div class="ticker">MRVL</div>
+        <div class="company">Marvell Technology</div>
+        <div class="row"><span class="k">EPS est:</span><span>$0.81</span></div>
+        <div class="row"><span class="k">Rev est:</span><span>$2.45B</span></div>
+        <div class="row"><span class="k">Sector:</span><span>Semis / AI Infra</span></div>
+        <div class="row"><span class="k">Mkt Cap:</span><span>~$65-70B</span></div>
+        <div class="row"><span class="k">Importância:</span><span><span class="badge badge-red">HIGH</span></span></div>
+        <div class="why">Custom AI chips e networking. Barómetro de custom silicon para AI. Pós-NVDA beat, confirmação ou desvio da narrativa AI demand. Impacto setorial alto.</div>
+      </div>
+
+      <div class="earnings-card">
+        <div class="rank">#4 · AMC · Quinta 28 Mai</div>
+        <div class="ticker">COST</div>
+        <div class="company">Costco</div>
+        <div class="row"><span class="k">EPS est:</span><span>$5.02</span></div>
+        <div class="row"><span class="k">Rev est:</span><span>$71.05B</span></div>
+        <div class="row"><span class="k">Sector:</span><span>Consumer Staples</span></div>
+        <div class="row"><span class="k">Mkt Cap:</span><span>~$400B</span></div>
+        <div class="row"><span class="k">Importância:</span><span><span class="badge badge-red">HIGH</span></span></div>
+        <div class="why">Mega-cap consumer staples. Membership growth e comparable sales são os KPIs. Um dos relatórios mais antecipados de cada trimestre. Barómetro do consumidor premium.</div>
+      </div>
+
+      <div class="earnings-card">
+        <div class="rank">#5 · AMC · Quinta 28 Mai</div>
+        <div class="ticker">DELL</div>
+        <div class="company">Dell Technologies</div>
+        <div class="row"><span class="k">EPS est:</span><span>$2.98</span></div>
+        <div class="row"><span class="k">Rev est:</span><span>$36.12B</span></div>
+        <div class="row"><span class="k">Sector:</span><span>Tech / AI Servers</span></div>
+        <div class="row"><span class="k">Mkt Cap:</span><span>~$55-60B</span></div>
+        <div class="row"><span class="k">Importância:</span><span><span class="badge badge-red">HIGH</span></span></div>
+        <div class="why">AI server demand signal. PowerEdge AI orders confirmam ou contestam narrativa AI capex pós-NVDA. Importante barómetro infra AI de lado servidor.</div>
+      </div>
+
+    </div>
+
+    <!-- OUTROS EARNINGS DA SEMANA -->
+    <div style="margin-top:20px;" class="alert-box info">
+      <strong>📅 Outros earnings notáveis da semana:</strong><br>
+      <strong>Quarta 27 AMC:</strong> SNPS ($2.30B rev, EDA chips), SNOW ($1.35B rev, data cloud), HPQ ($14.18B, PC/printing), NTNX ($700M, cloud infra)<br>
+      <strong>Quarta 27 timing?):</strong> BBY ($8.92B, Best Buy), GAP ($3.56B), BURL ($2.85B, Burlington Coat), KSS ($3.02B, Kohl's)<br>
+      <strong>Quinta 28 BMO:</strong> DLTR ($5.07B, Dollar Tree), HRL ($2.98B, Hormel Foods)<br>
+      <strong>Quinta 28 AMC:</strong> ADSK ($1.93B, Autodesk), NTAP ($1.91B, NetApp), OKTA ($767M, cybersec), MDB ($674M, MongoDB), PATH ($406M, UiPath)
+    </div>
+  </div>
+
+  <!-- PORTFOLIO SENTINEL -->
+  <div class="section">
+    <div class="section-title">Portfolio Sentinel</div>
+    <div class="portfolio-grid">
+
+      <div class="portfolio-card" style="border-left: 3px solid var(--green);">
+        <div class="pticker" style="color:var(--green);">NVDA</div>
+        <div class="pname">NVIDIA · HIGH priority</div>
+        <div><span class="badge badge-green">MATERIAL</span> <span class="badge badge-green">PORTFOLIO ALERT</span> <span class="badge badge-green">Bullish for thesis</span></div>
+        <div class="psummary">NVDA reportou Q1 FY2027 (20 Mai 2026): Revenue <strong>$81.6B</strong> (+85% YoY). Data Center <strong>$75.2B</strong> (+92% YoY). Guidance Q2: <strong>$91.0B</strong> vs est $86.84B. Margem bruta GAAP 74.9%. Dividendo 25x ($0.01→$0.25/trimestre). Buyback adicional $80B. 58/61 analistas BUY. Dados confirmados por SEC 8-K.</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--muted);">⏱ Monitorizar abertura terça 26 Mai. Sell-the-news possível após gap expressivo.</div>
+      </div>
+
+      <div class="portfolio-card" style="border-left: 3px solid var(--blue);">
+        <div class="pticker" style="color:var(--blue);">MU</div>
+        <div class="pname">Micron Technology · HIGH priority</div>
+        <div><span class="badge badge-blue">INFO</span> <span class="badge badge-blue">CATALYST WATCH</span> <span class="badge badge-green">Bullish for thesis (indirect)</span></div>
+        <div class="psummary">NVDA beat histórico sinaliza ciclo de procura AI/HBM forte. MU reporta a <strong>24 Jun 2026</strong>. Estimates: EPS $19.25 (+907% YoY), Rev $33.8B (+263% YoY). Sem notícias materiais diretas esta semana.</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--muted);">⏱ CALENDAR WATCH para 24 Jun. Contexto positivo via NVDA.</div>
+      </div>
+
+      <div class="portfolio-card" style="border-left: 3px solid var(--blue);">
+        <div class="pticker" style="color:var(--blue);">MSFT</div>
+        <div class="pname">Microsoft · HIGH priority</div>
+        <div><span class="badge badge-blue">INFO</span> <span class="badge badge-blue">CALENDAR WATCH</span> <span class="badge badge-green">Bullish for thesis</span></div>
+        <div class="psummary">MSFT parte do grupo hyperscalers com capex conjunto ~$725B em 2026 (+77% YoY). Azure/AI é o motor de crescimento. Sem earnings imediatos — próximo relatório esperado Julho 2026.</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--muted);">⏱ CRM quarta AMC pode dar sinal sobre gastos enterprise cloud.</div>
+      </div>
+
+      <div class="portfolio-card" style="border-left: 3px solid var(--muted);">
+        <div class="pticker" style="color:var(--muted);">CVX</div>
+        <div class="pname">Chevron · MEDIUM priority</div>
+        <div><span class="badge badge-muted">NONE</span> <span class="badge badge-muted">DATA PENDING</span></div>
+        <div class="psummary">Sem notícias materiais identificadas nas últimas 48h. Preço WTI petróleo não confirmado nesta run. Contexto OPEC+ e geopolítico em monitorização passiva.</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--muted);">⏱ Validar preço WTI em R1.</div>
+      </div>
+
+      <div class="portfolio-card" style="border-left: 3px solid var(--green);">
+        <div class="pticker" style="color:var(--green);">VUUA</div>
+        <div class="pname">Vanguard S&P 500 ETF · MEDIUM priority</div>
+        <div><span class="badge badge-green">INFO</span> <span class="badge badge-green">SECTOR REFERENCE</span></div>
+        <div class="psummary">S&P 500 fechou 8ª semana em alta. SPX 7.473. Dow em máximos históricos. VIX 16.7. Contexto macro favorável.</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--muted);">⏱ Monitorizar abertura terça pós-Memorial Day.</div>
+      </div>
+
+      <div class="portfolio-card" style="border-left: 3px solid var(--green);">
+        <div class="pticker" style="color:var(--green);">VWCE</div>
+        <div class="pname">Vanguard FTSE All-World ETF · MEDIUM priority</div>
+        <div><span class="badge badge-green">INFO</span> <span class="badge badge-green">SECTOR REFERENCE</span></div>
+        <div class="psummary">Global equities em risk-on. DXY abaixo de 100 é tailwind para ativos globais denominados em USD. Sem catalisadores adversos emergentes identificados.</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--muted);">⏱ Contexto positivo. Dados indiretos.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MORNING RADAR TABLE -->
+  <div class="section">
+    <div class="section-title">Morning Radar — Master Table</div>
+    <div style="overflow-x:auto;">
+      <table class="radar-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Ticker</th>
+            <th>Bucket</th>
+            <th>Tipo</th>
+            <th>Timing</th>
+            <th>Catalisador</th>
+            <th>Preço</th>
+            <th>Gap</th>
+            <th>Vol</th>
+            <th>RVOL</th>
+            <th>Score</th>
+            <th>Conf.</th>
+            <th>Classificação</th>
+            <th>Data Q.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td class="ticker-cell">NVDA</td>
+            <td>Mega</td>
+            <td>Stock</td>
+            <td>Post-earnings</td>
+            <td>Beat Q1 FY27. Rev $81.6B +85%. DC $75.2B. Guide $91B. Buyback $80B. Div 25x.</td>
+            <td class="nd">n/d <span class="badge badge-yellow" style="font-size:9px;">STALE</span></td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-high">78</td>
+            <td><span class="badge badge-green">HIGH</span></td>
+            <td><span class="badge badge-green">PORTFOLIO ALERT</span></td>
+            <td>GOOD</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td class="ticker-cell">CRM</td>
+            <td>Mega</td>
+            <td>Stock</td>
+            <td>AMC Qua 27</td>
+            <td>Earnings AMC. Rev est $11.16B. AI Agentforce. Dow component.</td>
+            <td class="nd">n/d <span class="badge badge-yellow" style="font-size:9px;">STALE</span></td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-med">65</td>
+            <td><span class="badge badge-yellow">MEDIUM</span></td>
+            <td><span class="badge badge-blue">CALENDAR WATCH</span></td>
+            <td>PARTIAL</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td class="ticker-cell">COST</td>
+            <td>Mega</td>
+            <td>Stock</td>
+            <td>AMC Qui 28</td>
+            <td>Earnings AMC. Rev est $71.05B. Membership + comp sales KPIs.</td>
+            <td class="nd">n/d <span class="badge badge-yellow" style="font-size:9px;">STALE</span></td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-med">66</td>
+            <td><span class="badge badge-yellow">MEDIUM</span></td>
+            <td><span class="badge badge-blue">CALENDAR WATCH</span></td>
+            <td>PARTIAL</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td class="ticker-cell">DELL</td>
+            <td>Large</td>
+            <td>Stock</td>
+            <td>AMC Qui 28</td>
+            <td>Earnings AMC. Rev est $36.12B. AI server orders. Pós-NVDA signal.</td>
+            <td class="nd">n/d <span class="badge badge-yellow" style="font-size:9px;">STALE</span></td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-med">62</td>
+            <td><span class="badge badge-yellow">MEDIUM</span></td>
+            <td><span class="badge badge-blue">CALENDAR WATCH</span></td>
+            <td>PARTIAL</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td class="ticker-cell">MRVL</td>
+            <td>Large</td>
+            <td>Stock</td>
+            <td>AMC Qua 27</td>
+            <td>Earnings AMC. Rev est $2.45B. Custom AI chips. Semis catalyst.</td>
+            <td class="nd">n/d <span class="badge badge-yellow" style="font-size:9px;">STALE</span></td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-med">64</td>
+            <td><span class="badge badge-yellow">MEDIUM</span></td>
+            <td><span class="badge badge-blue">CALENDAR WATCH</span></td>
+            <td>PARTIAL</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td class="ticker-cell">AZO</td>
+            <td>Large</td>
+            <td>Stock</td>
+            <td>BMO Ter 26</td>
+            <td>Earnings BMO. Rev est $4.87B. EPS $36.60. S&P 500 bellwether.</td>
+            <td class="nd">n/d <span class="badge badge-yellow" style="font-size:9px;">STALE</span></td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-med">60</td>
+            <td><span class="badge badge-yellow">MEDIUM</span></td>
+            <td><span class="badge badge-blue">CALENDAR WATCH</span></td>
+            <td>PARTIAL</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td class="ticker-cell">ZS</td>
+            <td>Large</td>
+            <td>Stock</td>
+            <td>AMC Ter 26</td>
+            <td>Earnings AMC. Rev est $860M. Cloud security. 1º AMC tech semana.</td>
+            <td class="nd">n/d <span class="badge badge-yellow" style="font-size:9px;">STALE</span></td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-med">57</td>
+            <td><span class="badge badge-yellow">MEDIUM</span></td>
+            <td><span class="badge badge-blue">CALENDAR WATCH</span></td>
+            <td>PARTIAL</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td class="ticker-cell">MU</td>
+            <td>Large</td>
+            <td>Stock</td>
+            <td>Earnings 24 Jun</td>
+            <td>Contexto NVDA beat → HBM/DRAM demand. Est: EPS $19.25 (+907%), Rev $33.8B (+263%).</td>
+            <td class="nd">n/d <span class="badge badge-yellow" style="font-size:9px;">STALE</span></td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-med">53</td>
+            <td><span class="badge badge-yellow">MEDIUM</span></td>
+            <td><span class="badge badge-green">PORTFOLIO ALERT</span></td>
+            <td>PARTIAL</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td class="ticker-cell">MSFT</td>
+            <td>Mega</td>
+            <td>Stock</td>
+            <td>Ongoing</td>
+            <td>Hyperscaler $725B capex cycle. Azure/AI. Sem earnings imediatos.</td>
+            <td class="nd">n/d <span class="badge badge-yellow" style="font-size:9px;">STALE</span></td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-med">53</td>
+            <td><span class="badge badge-yellow">MEDIUM</span></td>
+            <td><span class="badge badge-green">PORTFOLIO ALERT</span></td>
+            <td>LOW</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td class="ticker-cell">SNOW</td>
+            <td>Large</td>
+            <td>Stock</td>
+            <td>AMC Qua 27</td>
+            <td>Earnings AMC. Rev est $1.35B. Data cloud / AI platform adoption.</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-med">54</td>
+            <td><span class="badge badge-yellow">MEDIUM</span></td>
+            <td><span class="badge badge-blue">CALENDAR WATCH</span></td>
+            <td>PARTIAL</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td class="ticker-cell">SNPS</td>
+            <td>Large</td>
+            <td>Stock</td>
+            <td>AMC Qua 27</td>
+            <td>Earnings AMC. Rev est $2.30B. EDA software semis ecosystem.</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-med">54</td>
+            <td><span class="badge badge-yellow">MEDIUM</span></td>
+            <td><span class="badge badge-blue">CALENDAR WATCH</span></td>
+            <td>PARTIAL</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td class="ticker-cell">DLTR</td>
+            <td>Large</td>
+            <td>Stock</td>
+            <td>BMO Qui 28</td>
+            <td>Earnings BMO. Rev est $5.07B. Dollar Tree. Value retail. Proxy consumidor baixo rendimento.</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-med">50</td>
+            <td><span class="badge badge-yellow">MEDIUM</span></td>
+            <td><span class="badge badge-blue">CALENDAR WATCH</span></td>
+            <td>PARTIAL</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td class="ticker-cell">HPQ</td>
+            <td>Large</td>
+            <td>Stock</td>
+            <td>AMC Qua 27</td>
+            <td>Earnings AMC. Rev est $14.18B. PC/printing. Gastos corporativos hardware.</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-med">47</td>
+            <td><span class="badge badge-yellow">MEDIUM</span></td>
+            <td><span class="badge badge-blue">CALENDAR WATCH</span></td>
+            <td>PARTIAL</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td class="ticker-cell">M</td>
+            <td>Mid</td>
+            <td>Stock</td>
+            <td>UNKNOWN 26</td>
+            <td>Earnings 26 Mai. Rev est $4.70B. Retail físico. Hora não confirmada.</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-low">44</td>
+            <td><span class="badge badge-red">LOW</span></td>
+            <td><span class="badge badge-muted">DATA PENDING</span></td>
+            <td>LOW</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td class="ticker-cell">CVX</td>
+            <td>Large</td>
+            <td>Stock</td>
+            <td>Ongoing</td>
+            <td>Sem notícias materiais. WTI pendente. Carteira — MEDIUM priority.</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="nd">n/d</td>
+            <td class="score-low">44</td>
+            <td><span class="badge badge-red">LOW</span></td>
+            <td><span class="badge badge-muted">DATA PENDING</span></td>
+            <td>LOW</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SPECULATIVE / AVOID -->
+  <div class="section">
+    <div class="section-title">Speculative / Avoid</div>
+    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+      <div class="alert-box warning" style="min-width:200px;flex:1;">
+        <strong>PONY</strong> — EPS negativo, Rev $23M. Micro cap. Dados insuficientes. <span class="badge badge-orange">SPECULATIVE / AVOID</span>
+      </div>
+      <div class="alert-box warning" style="min-width:200px;flex:1;">
+        <strong>CRGO</strong> — EPS negativo, Rev $8M. Micro cap freight. Dados fracos. <span class="badge badge-orange">SPECULATIVE / AVOID</span>
+      </div>
+      <div class="alert-box warning" style="min-width:200px;flex:1;">
+        <strong>VNET</strong> — EPS negativo, Rev n/d. China data center. Risco regulatório + dados fracos. <span class="badge badge-orange">SPECULATIVE / AVOID</span>
+      </div>
+      <div class="alert-box warning" style="min-width:200px;flex:1;">
+        <strong>ARBE</strong> — EPS negativo, Rev $510K. Micro cap LIDAR. Dados muito fracos. <span class="badge badge-orange">SPECULATIVE / AVOID</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTOR SNAPSHOT -->
+  <div class="section">
+    <div class="section-title">Sector Snapshot</div>
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap:10px;">
+      <div class="alert-box positive">
+        <strong>Tech / AI — XLK</strong> <span class="badge badge-green">BULLISH</span><br>
+        <small>NVDA beat histórico. MRVL, CRM, SNOW, SNPS esta semana. AI capex $725B hyperscalers. XLK +60% 12m.</small>
+      </div>
+      <div class="alert-box info">
+        <strong>Cybersecurity — CIBR</strong> <span class="badge badge-green">BULLISH</span><br>
+        <small>ZS reporta AMC terça. CRWD, PANW em watch. Gastos corporativos cloud security resilientes.</small>
+      </div>
+      <div class="alert-box neutral">
+        <strong>Consumer Disc. — XLY</strong> <span class="badge badge-yellow">MIXED</span><br>
+        <small>AZO, M, ANF, COST esta semana. 10Y em 4.57% mantém pressão sobre consumidor discricionário.</small>
+      </div>
+      <div class="alert-box neutral">
+        <strong>Consumer Staples — XLP</strong> <span class="badge badge-muted">NEUTRAL</span><br>
+        <small>COST quinta AMC é evento principal. DLTR BMO quinta. Setor defensivo estável.</small>
+      </div>
+      <div class="alert-box neutral">
+        <strong>Financials — XLF</strong> <span class="badge badge-muted">NEUTRAL</span><br>
+        <small>XLF $51.74 (prev close). Sem earnings financeiros grandes. Fed policy em background.</small>
+      </div>
+      <div class="alert-box neutral">
+        <strong>Energy — XLE</strong> <span class="badge badge-yellow">MIXED</span><br>
+        <small>CVX em carteira. WTI pendente de validação. Sem earnings energia esta semana.</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- RISK FACTORS -->
+  <div class="section">
+    <div class="section-title">Risk Factors</div>
+    <div class="risk-list">
+      <div class="risk-item" style="border-left:3px solid var(--red);">
+        <div class="sev"><span class="badge badge-red">HIGH</span></div>
+        <div><strong>GDP 2nd Release + PCE Quinta 28 Mai 08h30 ET</strong> — PCE é o indicador de inflação preferido da Fed. Surpresa hawkish pode reverter o rally e recalibrar expectativas de taxa.</div>
+      </div>
+      <div class="risk-item" style="border-left:3px solid var(--yellow);">
+        <div class="sev"><span class="badge badge-yellow">MEDIUM</span></div>
+        <div><strong>Abertura pós-Memorial Day com gap de liquidez</strong> — Acumulação de notícias weekend. Mercado fechado segunda pode ampliar moves na terça. Menor liquidez no open.</div>
+      </div>
+      <div class="risk-item" style="border-left:3px solid var(--yellow);">
+        <div class="sev"><span class="badge badge-yellow">MEDIUM</span></div>
+        <div><strong>Earnings season concentration quarta-quinta</strong> — CRM, MRVL, SNOW (quarta) e COST, DELL (quinta). Qualquer deceção num destes resultados pode reverter o momentum do índice.</div>
+      </div>
+      <div class="risk-item" style="border-left:3px solid var(--blue);">
+        <div class="sev"><span class="badge badge-blue">LOW-MED</span></div>
+        <div><strong>NVDA post-earnings sell-the-news</strong> — NVDA reportou após fecho quinta 20 Mai. Reação na abertura terça ainda não observada nesta run. Histórico de gap down após beats expressivos.</div>
+      </div>
+      <div class="risk-item" style="border-left:3px solid var(--muted);">
+        <div class="sev"><span class="badge badge-muted">LOW</span></div>
+        <div><strong>DXY reversão acima de 100</strong> — Dólar fraco beneficia multinationals. Reversão para >100 seria headwind para NVDA, MSFT, COST com exposição global.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLACEHOLDERS R1/R2/R3 -->
+  <div class="section">
+    <div class="section-title">Próximas Rotinas</div>
+    <div class="placeholder">
+      <div class="ptime">R1 — Pre-Open Final</div>
+      <div>Terça 26 Mai 2026 · 14h15 Lisboa (09h15 ET)</div>
+      <div style="margin-top:6px; font-size:11px;">Premarket final, gaps confirmados, earnings BMO validados, ajuste de scores</div>
+    </div>
+    <div class="placeholder">
+      <div class="ptime">R2 — Open Validation</div>
+      <div>Terça 26 Mai 2026 · 14h50 Lisboa (09h50 ET)</div>
+      <div style="margin-top:6px; font-size:11px;">Confirmação de moves no open, RVOL real, classificações CONFIRMA/ENFRAQUECEU</div>
+    </div>
+    <div class="placeholder">
+      <div class="ptime">R3 — EOD Learning</div>
+      <div>Terça 26 Mai 2026 · 22h15 Lisboa (17h15 ET)</div>
+      <div style="margin-top:6px; font-size:11px;">Resultado do dia, aprendizagem, auditoria de previsões R0/R1/R2</div>
+    </div>
+  </div>
+
+  <!-- SOURCES -->
+  <div class="section">
+    <div class="section-title">Fontes</div>
+    <div class="source-list">
+      <div class="source-item"><span class="s-name">Finnhub Earnings Calendar API</span><span>· finnhub.io · API call · Alta fiabilidade · 129 earnings recolhidos</span></div>
+      <div class="source-item"><span class="s-name">SEC EDGAR — NVDA Form 8-K Q1 FY27</span><span>· sec.gov · Filing regulatório · Alta fiabilidade · 20 Mai 2026</span></div>
+      <div class="source-item"><span class="s-name">Yahoo Finance — SPY price</span><span>· query1.finance.yahoo.com · API · Fiabilidade média · Stale warning</span></div>
+      <div class="source-item"><span class="s-name">Web Search — Macro / S&P / VIX / DXY / 10Y</span><span>· Agregado · CNBC, Investing.com · Fiabilidade média</span></div>
+      <div class="source-item"><span class="s-name">Web Search — NVDA Q1 FY27 results</span><span>· CNBC, Bloomberg, Kiplinger · Fiabilidade alta</span></div>
+      <div class="source-item"><span class="s-name">Web Search — Economic Calendar week 26 Mai</span><span>· Kiplinger, Econoday, BLS · Fiabilidade média</span></div>
+      <div class="source-item"><span class="s-name">Web Search — Memorial Day 2026</span><span>· Yahoo Finance, SIFMA · Fiabilidade alta</span></div>
+    </div>
+  </div>
+
+  <footer>
+    Market Intel · R0 Morning Radar · 24 Mai 2026 · Produzido para fins educativos e de aprendizagem.<br>
+    Este relatório não constitui recomendação de compra ou venda. Todos os dados são de sources públicas.<br>
+    <a href="https://jzmike.github.io/market-intel/latest.html" style="color:var(--blue);">latest.html</a> ·
+    <a href="https://jzmike.github.io/market-intel/reports/2026/05/2026-05-24.html" style="color:var(--blue);">permalink</a>
+  </footer>
+
+</div>
+</body>
+</html>

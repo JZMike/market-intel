@@ -1,0 +1,64 @@
+{
+  "portfolio_name": "Miguel Long-Term Portfolio",
+  "alert_policy": {
+    "send_telegram": true,
+    "include_in_daily_report": true,
+    "alpha_vantage_only_if_material_news": true
+  },
+  "positions": [
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "asset_type": "stock",
+      "horizon": "long_term",
+      "priority": "HIGH",
+      "themes": ["AI", "semiconductors", "data centers"],
+      "alert_on": ["earnings", "guidance", "export restrictions", "AI chip demand", "major customer news", "analyst downgrade", "margin pressure"]
+    },
+    {
+      "symbol": "MU",
+      "name": "Micron",
+      "asset_type": "stock",
+      "horizon": "long_term",
+      "priority": "HIGH",
+      "themes": ["memory", "HBM", "AI infrastructure"],
+      "alert_on": ["HBM demand", "DRAM pricing", "Samsung", "SK Hynix", "earnings", "guidance"]
+    },
+    {
+      "symbol": "CVX",
+      "name": "Chevron",
+      "asset_type": "stock",
+      "horizon": "long_term",
+      "priority": "MEDIUM",
+      "themes": ["energy", "oil", "dividend"],
+      "alert_on": ["oil price shock", "OPEC", "geopolitical risk", "dividend risk", "major acquisition"]
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "asset_type": "stock",
+      "horizon": "long_term",
+      "priority": "HIGH",
+      "themes": ["AI", "cloud", "Azure", "enterprise software"],
+      "alert_on": ["Azure growth", "OpenAI", "AI capex", "earnings", "regulatory risk"]
+    },
+    {
+      "symbol": "VUUA",
+      "name": "Vanguard S&P 500 ETF",
+      "asset_type": "ETF",
+      "horizon": "long_term",
+      "priority": "MEDIUM",
+      "themes": ["S&P 500", "US market"],
+      "alert_on": ["broad market selloff", "Fed", "inflation", "recession risk"]
+    },
+    {
+      "symbol": "VWCE",
+      "name": "Vanguard FTSE All-World ETF",
+      "asset_type": "ETF",
+      "horizon": "long_term",
+      "priority": "MEDIUM",
+      "themes": ["global equities", "diversification"],
+      "alert_on": ["global risk-off", "USD strength", "geopolitical risk", "emerging markets stress"]
+    }
+  ]
+}

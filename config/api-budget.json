@@ -1,0 +1,23 @@
+{
+  "alpha_vantage": {
+    "daily_limit": 25,
+    "planned_max_usage": 18,
+    "reserve": 7,
+    "r0_max_calls": 0,
+    "r1_max_calls": 5,
+    "r2_max_calls": 5,
+    "r3_max_calls": 5,
+    "allowed_use_cases": [
+      "top_observation_bullish",
+      "top_observation_bearish",
+      "portfolio_material_news",
+      "eod_validation"
+    ],
+    "blocked_use_cases": [
+      "neutral",
+      "avoid",
+      "speculative_without_liquidity",
+      "bulk_screening"
+    ]
+  }
+}
