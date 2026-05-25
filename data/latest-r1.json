@@ -1,0 +1,755 @@
+{
+  "date": "2026-05-25",
+  "weekday": "Monday",
+  "run": "R1_PRE_OPEN_FINAL",
+  "run_time_lisbon": "14:15",
+  "run_time_et": "09:15",
+  "session_type": "HOLIDAY",
+  "session_note": "Memorial Day — NYSE e Nasdaq FECHADOS. Londres também fechada (Spring Bank Holiday). Esta run serve como preparação avançada para Terça 26 Mai 2026.",
+  "next_session": "2026-05-26",
+  "r2_scheduled_et": "09:50",
+  "r2_scheduled_lisbon": "14:50",
+  "urls": {
+    "latest": "https://jzmike.github.io/market-intel/latest.html",
+    "day": "https://jzmike.github.io/market-intel/reports/2026/05/2026-05-25.html"
+  },
+  "data_quality_summary": {
+    "price_data_status": "STALE — previous close sexta 22 Mai (exceto NVDA: $215.33 confirmado)",
+    "volume_data_status": "UNAVAILABLE — mercado fechado",
+    "earnings_data_status": "PARTIAL — BMO Terça ainda não publicados. R0 estimates válidos.",
+    "alpha_vantage_calls_used": 0,
+    "overall": "DEGRADED/HOLIDAY",
+    "warnings": [
+      "Mercado fechado — Memorial Day. Sem premarket data real.",
+      "Londres também fechada (Spring Bank Holiday). Liquidez global reduzida.",
+      "R1 em modo HOLIDAY — preparação antecipada para Terça 26 Mai.",
+      "R0 de hoje não existe (data 2026-05-25). Usado latest-r0.json (2026-05-24) como base.",
+      "NVDA preço confirmado: $215.33 fecho sexta 22 Mai — sell-the-news após earnings beat.",
+      "NQ futures indicativos (sessão holiday): ~29.558 — sinal direcional para Terça.",
+      "AZO BMO Terça: estimate EPS atualizado para $36.13 (vs $36.60 em R0 — revisão analistas).",
+      "Alpha Vantage: 0 chamadas usadas. Mercado fechado = sem dados live para justificar."
+    ]
+  },
+  "macro_update": {
+    "setup": "WAIT/HOLIDAY",
+    "setup_note": "Mercado fechado. Setup de base mantém-se BULLISH (R0). Mas NVDA sell-the-news é dado novo material a monitorizar na abertura de Terça.",
+    "previous_close_fri_may22": {
+      "sp500": { "value": 7473.47, "change_pct": 0.37, "status": "PREVIOUS_CLOSE" },
+      "nasdaq_comp": { "value": 26343.97, "change_pct": 0.19, "status": "PREVIOUS_CLOSE" },
+      "spy": { "value": 745.64, "status": "PREVIOUS_CLOSE" },
+      "vix": { "value": 16.70, "change_pct": -0.36, "signal": "LOW_VOLATILITY", "status": "PREVIOUS_CLOSE" },
+      "dxy": { "value": 99.19, "change_pct": -0.03, "signal": "WEAK_DOLLAR", "status": "PREVIOUS_CLOSE" },
+      "us_10y_yield": { "value": 4.572, "change_pct": -0.26, "status": "PREVIOUS_CLOSE" }
+    },
+    "holiday_futures_indicative": {
+      "nq_futures": {
+        "value": 29558.75,
+        "range_session": "29436 - 29749",
+        "volume_session": 483471,
+        "direction": "POSITIVE",
+        "note": "Sessão de futuros holiday Monday. Sinal direcional positivo para Terça. Usar com cautela — liquidez reduzida.",
+        "source": "investing.com",
+        "reliability": "LOW-MEDIUM"
+      }
+    },
+    "macro_comment": "Feriado nos EUA e Londres. Nenhuma sessão de referência hoje. Contexto base: 8ª semana consecutiva de ganhos, VIX 16.7 (complacência), DXY <100 (tailwind multinationals), 10Y 4.57% (estável). NVDA sell-the-news é o dado novo crítico para contextualizar a abertura de Terça. Semana pesada: Consumer Confidence Terça, GDP Q1 + PCE Quinta.",
+    "week_macro_events": [
+      {
+        "date": "2026-05-26",
+        "events": [
+          { "time_et": "10:00", "name": "Consumer Confidence (Conference Board)", "impact": "MEDIUM" },
+          { "time_et": "10:30", "name": "Dallas Fed Manufacturing Survey", "impact": "LOW" }
+        ]
+      },
+      {
+        "date": "2026-05-27",
+        "events": [
+          { "time_et": "10:00", "name": "New Residential Sales", "impact": "MEDIUM" },
+          { "time_et": "10:00", "name": "Richmond Fed Manufacturing", "impact": "LOW" }
+        ]
+      },
+      {
+        "date": "2026-05-28",
+        "events": [
+          { "time_et": "08:30", "name": "GDP 2nd Release Q1 2026", "impact": "HIGH" },
+          { "time_et": "08:30", "name": "PCE Price Index", "impact": "HIGH", "note": "Medida de inflação preferida da Fed" },
+          { "time_et": "08:30", "name": "Initial Jobless Claims", "impact": "MEDIUM" },
+          { "time_et": "08:30", "name": "Advance Durable Goods", "impact": "MEDIUM" }
+        ]
+      }
+    ],
+    "changes_since_r0": [
+      {
+        "item": "NVDA sell-the-news confirmado",
+        "detail": "NVDA fechou a $215.33 na sexta 22 Mai (-1.90%). O mercado esperava reação de +/-5% — obteve -1.77% após beat histórico. Stock tinha subido 13.7% desde fevereiro. 'Buy the rumor, sell the news' materializado.",
+        "impact": "MATERIAL — portfólio",
+        "source": "Fortune / Kiplinger"
+      },
+      {
+        "item": "Cestrian Capital Research upgrade NVDA",
+        "detail": "Analysts upgraded NVDA pós-earnings, vendo o stock como undervalued apesar da reação negativa. Sentiment bullish de longo prazo mantém-se.",
+        "impact": "INFO — bullish offset ao sell-the-news",
+        "source": "Seeking Alpha"
+      },
+      {
+        "item": "AZO EPS estimate revisado",
+        "detail": "Consensus de 22 analistas agora em $36.13 EPS (vs $36.60 no R0). Revenue $4.86B (vs $4.87B). Revisão ligeira em baixa.",
+        "impact": "INFO — expectativas marginalmente mais baixas = barra menor",
+        "source": "Alphastreet / GuruFocus"
+      },
+      {
+        "item": "Londres também fechada hoje",
+        "detail": "London Stock Exchange encerrada por Spring Bank Holiday (25 Mai). Liquidez global reduzida hoje. Impacto mínimo pois NYSE também fechada.",
+        "impact": "INFO",
+        "source": "Yahoo Finance"
+      }
+    ]
+  },
+  "earnings_bmo_confirmed": [
+    {
+      "rank": 1,
+      "ticker": "AZO",
+      "company": "AutoZone",
+      "date_session": "2026-05-26",
+      "time": "BMO — confirmado",
+      "conference_call_et": "10:00",
+      "eps_estimate": 36.13,
+      "eps_estimate_note": "Revisão: 22 analistas consensus. R0 tinha $36.60.",
+      "revenue_estimate_bn": 4.86,
+      "status": "PENDING — resultados publicados antes de 09h30 ET",
+      "guidance_watch": "Comparáveis de loja, pressão de custos, ciclo de reparação automóvel",
+      "reaction_premarket": "n/d — disponível amanhã pré-abertura",
+      "data_quality": "MEDIUM — estimates confirmados, resultado pendente",
+      "source": "GlobeNewsWire / AlphaStreet / Finnhub"
+    },
+    {
+      "rank": 2,
+      "ticker": "M",
+      "company": "Macy's",
+      "date_session": "2026-05-26",
+      "time": "UNKNOWN — timing não confirmado (prov. BMO histórico)",
+      "eps_estimate": 0.03,
+      "revenue_estimate_bn": 4.70,
+      "status": "PENDING",
+      "data_quality": "LOW — hora não confirmada",
+      "source": "Finnhub"
+    },
+    {
+      "rank": 3,
+      "ticker": "SKY",
+      "company": "Skyline Champion",
+      "date_session": "2026-05-26",
+      "time": "BMO",
+      "eps_estimate": 0.61,
+      "revenue_estimate_bn": 0.61,
+      "status": "PENDING",
+      "data_quality": "MEDIUM",
+      "source": "Finnhub"
+    },
+    {
+      "rank": 4,
+      "ticker": "ANF",
+      "company": "Abercrombie & Fitch",
+      "date_session": "2026-05-26",
+      "time": "UNKNOWN",
+      "eps_estimate": 1.30,
+      "revenue_estimate_bn": 1.14,
+      "status": "PENDING",
+      "data_quality": "LOW — hora não confirmada",
+      "source": "Finnhub"
+    },
+    {
+      "rank": 5,
+      "ticker": "CSW",
+      "company": "CSW Industrials",
+      "date_session": "2026-05-26",
+      "time": "BMO",
+      "eps_estimate": 2.43,
+      "revenue_estimate_bn": 0.30,
+      "status": "PENDING",
+      "data_quality": "MEDIUM",
+      "source": "Finnhub"
+    }
+  ],
+  "earnings_amc_watch": [
+    {
+      "rank": 1,
+      "ticker": "ZS",
+      "company": "Zscaler",
+      "date_session": "2026-05-26",
+      "time": "AMC",
+      "eps_estimate": 1.04,
+      "revenue_estimate_bn": 0.86,
+      "importance": "HIGH",
+      "watch_note": "Primeiro grande AMC tech da semana. Impacto em CRWD, PANW. Gastos corporativos em cloud security.",
+      "classification": "CALENDAR WATCH"
+    },
+    {
+      "rank": 2,
+      "ticker": "CRM",
+      "company": "Salesforce",
+      "date_session": "2026-05-27",
+      "time": "AMC",
+      "eps_estimate": 3.15,
+      "revenue_estimate_bn": 11.16,
+      "importance": "HIGH",
+      "watch_note": "Dow Jones component. AI Agentforce guidance é catalisador chave. Impacto em enterprise SaaS.",
+      "classification": "CALENDAR WATCH"
+    },
+    {
+      "rank": 3,
+      "ticker": "MRVL",
+      "company": "Marvell Technology",
+      "date_session": "2026-05-27",
+      "time": "AMC",
+      "eps_estimate": 0.81,
+      "revenue_estimate_bn": 2.45,
+      "importance": "HIGH",
+      "watch_note": "Custom AI chips. Barómetro da procura AI infrastructure pós-NVDA. Impacto em semicondutores.",
+      "classification": "CALENDAR WATCH"
+    },
+    {
+      "rank": 4,
+      "ticker": "COST",
+      "company": "Costco",
+      "date_session": "2026-05-28",
+      "time": "AMC",
+      "eps_estimate": 5.02,
+      "revenue_estimate_bn": 71.05,
+      "importance": "HIGH",
+      "watch_note": "Mega-cap consumer staples. Membership growth e comp sales são os KPIs. Barómetro consumidor premium.",
+      "classification": "CALENDAR WATCH"
+    },
+    {
+      "rank": 5,
+      "ticker": "DELL",
+      "company": "Dell Technologies",
+      "date_session": "2026-05-28",
+      "time": "AMC",
+      "eps_estimate": 2.98,
+      "revenue_estimate_bn": 36.12,
+      "importance": "HIGH",
+      "watch_note": "AI server demand signal. PowerEdge AI orders como catalisador. Confirma narrativa de AI capex pós-NVDA.",
+      "classification": "CALENDAR WATCH"
+    }
+  ],
+  "portfolio_sentinel_update": [
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "alert_level": "MATERIAL",
+      "alert_type": "PORTFOLIO ALERT — SELL-THE-NEWS CONFIRMADO",
+      "alert_change_from_r0": "ESCALADO — R0 tinha reação desconhecida. Agora confirmado: -1.90% no fecho de sexta.",
+      "price_confirmed": 215.33,
+      "price_date": "2026-05-22",
+      "price_change_pct": -1.90,
+      "impact_direction": "Negativo a curto prazo / Positivo tese longa prazo",
+      "summary": "NVDA fechou a $215.33 na sexta 22 Mai, -1.90% após earnings beat histórico (Q1 FY27 Rev $81.6B +85%). Sell-the-news materializado: stock tinha subido 13.7% desde fevereiro, mercado esperava +/-5%, obteve -1.77%. Analista Cestrian Capital Research fez upgrade pós-earnings, vendo stock como undervalued. Tese de longo prazo intacta. Questão para Terça: rebound institucional ou continuação de pressão?",
+      "key_levels_watch": {
+        "support_1": 210.00,
+        "support_2": 200.00,
+        "resistance_1": 220.00,
+        "note": "Níveis estimados — sem dados intraday para validar"
+      },
+      "catalyst_confirmed": "Earnings Q1 FY27 beat + Dividend increase + $80B buyback",
+      "action_note": "Monitorizar abertura Terça: gap up acima $215 com volume = compra institucional. Gap down abaixo $210 = continuação selling. Não confundir movimentos intraday de holiday weekend com tendência.",
+      "data_quality": "HIGH — preço confirmado Yahoo/CNBC",
+      "is_rumor": false
+    },
+    {
+      "symbol": "MU",
+      "name": "Micron",
+      "alert_level": "INFO",
+      "alert_type": "CATALYST WATCH",
+      "alert_change_from_r0": "SEM ALTERAÇÃO",
+      "impact_direction": "Bullish indireto via NVDA/AI HBM demand",
+      "summary": "Sem notícias novas desde R0. NVDA beat confirma procura AI/HBM positiva. Earnings Micron em 24 Jun 2026. EPS est $19.25 (+907% YoY). Watchlist de médio prazo.",
+      "data_quality": "MEDIUM",
+      "is_rumor": false
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "alert_level": "INFO",
+      "alert_type": "CALENDAR WATCH",
+      "alert_change_from_r0": "SEM ALTERAÇÃO",
+      "impact_direction": "Bullish — AI capex cycle",
+      "summary": "Sem novidades materiais no fim de semana. Hyperscaler AI capex de $725B 2026 mantém tese. Earnings Julho.",
+      "data_quality": "LOW",
+      "is_rumor": false
+    },
+    {
+      "symbol": "CVX",
+      "name": "Chevron",
+      "alert_level": "NONE",
+      "alert_type": "DATA PENDING",
+      "alert_change_from_r0": "SEM ALTERAÇÃO",
+      "impact_direction": "Neutro",
+      "summary": "Sem notícias materiais. Preço WTI não atualizado (mercado fechado). OPEC+ contexto estável.",
+      "data_quality": "LOW",
+      "is_rumor": false
+    },
+    {
+      "symbol": "VUUA",
+      "name": "Vanguard S&P 500 ETF (EUR)",
+      "alert_level": "INFO",
+      "alert_type": "SECTOR REFERENCE",
+      "alert_change_from_r0": "SEM ALTERAÇÃO",
+      "impact_direction": "Bullish — base mantém",
+      "summary": "S&P 500 em 7473. 8 semanas consecutivas de ganhos. Memorial Day pause. NQ futures indicativos positivos (~29558). Terça: primeiro teste pós-feriado.",
+      "data_quality": "LOW",
+      "is_rumor": false
+    },
+    {
+      "symbol": "VWCE",
+      "name": "Vanguard FTSE All-World ETF",
+      "alert_level": "INFO",
+      "alert_type": "SECTOR REFERENCE",
+      "alert_change_from_r0": "SEM ALTERAÇÃO",
+      "impact_direction": "Bullish — DXY fraco mantém tailwind",
+      "summary": "Global equities risk-on. DXY 99.19 (<100). Londres fechada hoje. Sem catalisadores adversos identificados.",
+      "data_quality": "LOW",
+      "is_rumor": false
+    }
+  ],
+  "master_table": [
+    {
+      "rank": 1,
+      "ticker": "NVDA",
+      "company": "NVIDIA",
+      "bucket": "Mega (>200B)",
+      "classification": "PORTFOLIO ALERT",
+      "catalyst": "Post-earnings sell-the-news. Fecho $215.33 (-1.90% sexta). Primeiro open pós-Memorial Day = momento chave. Upgrade Cestrian pós-earnings.",
+      "price_confirmed": 215.33,
+      "price_date": "2026-05-22",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "scores": {
+        "catalyst": 20,
+        "price_action": 14,
+        "volume_rvol": 5,
+        "liquidity": 15,
+        "technical": 7,
+        "portfolio_relevance": 10,
+        "risk_penalty": -5,
+        "total": 66
+      },
+      "confidence": "MEDIUM",
+      "data_quality": "MEDIUM — preço confirmado, sem premarket holiday",
+      "price_stale": false,
+      "is_portfolio": true,
+      "session_relevance": "TERÇA_OPEN"
+    },
+    {
+      "rank": 2,
+      "ticker": "AZO",
+      "company": "AutoZone",
+      "bucket": "Large (10B-200B)",
+      "classification": "BULLISH OBSERVATION CONDITIONAL",
+      "catalyst": "BMO Terça 26 Mai. EPS est $36.13, Rev $4.86B. Resultado publicado antes de 09h30 ET — leitura antes do open. S&P 500 large cap, consumer bellwether.",
+      "price_confirmed": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "scores": {
+        "catalyst": 20,
+        "price_action": 0,
+        "volume_rvol": 0,
+        "liquidity": 12,
+        "technical": 5,
+        "portfolio_relevance": 0,
+        "risk_penalty": -3,
+        "total": 34,
+        "note": "Score pré-resultado. Pós beat: 75+. Pós miss: 30-."
+      },
+      "confidence": "LOW — pré-resultado",
+      "watch_score_post_result": "75+ se beat, <30 se miss",
+      "data_quality": "MEDIUM — estimates confirmados, resultado pendente",
+      "price_stale": true,
+      "session_relevance": "TERÇA_BMO"
+    },
+    {
+      "rank": 3,
+      "ticker": "CRM",
+      "company": "Salesforce",
+      "bucket": "Mega (>200B)",
+      "classification": "CALENDAR WATCH",
+      "catalyst": "AMC Quarta 27 Mai. Rev est $11.16B, EPS $3.15. AI Agentforce guidance é catalisador chave. Dow component. Impacto enterprise SaaS.",
+      "price_confirmed": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "scores": {
+        "catalyst": 18,
+        "price_action": 0,
+        "volume_rvol": 0,
+        "liquidity": 15,
+        "technical": 5,
+        "portfolio_relevance": 0,
+        "risk_penalty": -3,
+        "total": 35,
+        "note": "Score de relevância pré-earnings. Não é para trading Terça — é positioning watch."
+      },
+      "confidence": "MEDIUM",
+      "data_quality": "PARTIAL",
+      "price_stale": true,
+      "session_relevance": "QUARTA_AMC_WATCH"
+    },
+    {
+      "rank": 4,
+      "ticker": "MRVL",
+      "company": "Marvell Technology",
+      "bucket": "Large (10B-200B)",
+      "classification": "CALENDAR WATCH",
+      "catalyst": "AMC Quarta 27 Mai. Rev est $2.45B, EPS $0.81. Custom AI chips pós-NVDA — barómetro AI infrastructure demand.",
+      "price_confirmed": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "scores": {
+        "catalyst": 17,
+        "price_action": 0,
+        "volume_rvol": 0,
+        "liquidity": 13,
+        "technical": 5,
+        "portfolio_relevance": 0,
+        "risk_penalty": -3,
+        "total": 32
+      },
+      "confidence": "MEDIUM",
+      "data_quality": "PARTIAL",
+      "price_stale": true,
+      "session_relevance": "QUARTA_AMC_WATCH"
+    },
+    {
+      "rank": 5,
+      "ticker": "ZS",
+      "company": "Zscaler",
+      "bucket": "Large (10B-200B)",
+      "classification": "CALENDAR WATCH",
+      "catalyst": "AMC Terça 26 Mai. Rev est $860M, EPS $1.04. Primeiro AMC tech da semana. Impacto em CRWD, PANW.",
+      "price_confirmed": "n/d",
+      "gap_pct": "n/d",
+      "volume": "n/d",
+      "rvol": "n/d",
+      "scores": {
+        "catalyst": 14,
+        "price_action": 0,
+        "volume_rvol": 0,
+        "liquidity": 12,
+        "technical": 4,
+        "portfolio_relevance": 0,
+        "risk_penalty": -2,
+        "total": 28
+      },
+      "confidence": "MEDIUM",
+      "data_quality": "PARTIAL",
+      "price_stale": true,
+      "session_relevance": "TERÇA_AMC_WATCH"
+    },
+    {
+      "rank": 6,
+      "ticker": "COST",
+      "company": "Costco",
+      "bucket": "Mega (>200B)",
+      "classification": "CALENDAR WATCH",
+      "catalyst": "AMC Quinta 28 Mai. Rev est $71.05B. Membership growth e comp sales são KPIs. Barómetro consumidor premium.",
+      "scores": { "total": 30 },
+      "confidence": "MEDIUM",
+      "data_quality": "PARTIAL",
+      "price_stale": true,
+      "session_relevance": "QUINTA_AMC_WATCH"
+    },
+    {
+      "rank": 7,
+      "ticker": "DELL",
+      "company": "Dell Technologies",
+      "bucket": "Large (10B-200B)",
+      "classification": "CALENDAR WATCH",
+      "catalyst": "AMC Quinta 28 Mai. Rev est $36.12B. AI server demand pós-NVDA. PowerEdge AI orders catalisador.",
+      "scores": { "total": 28 },
+      "confidence": "MEDIUM",
+      "data_quality": "PARTIAL",
+      "price_stale": true,
+      "session_relevance": "QUINTA_AMC_WATCH"
+    },
+    {
+      "rank": 8,
+      "ticker": "MU",
+      "company": "Micron Technology",
+      "bucket": "Large (10B-200B)",
+      "classification": "PORTFOLIO ALERT",
+      "catalyst": "Earnings 24 Jun. NVDA beat sinaliza procura AI/HBM forte. EPS est $19.25 (+907% YoY).",
+      "scores": { "total": 42, "portfolio_relevance": 8 },
+      "confidence": "MEDIUM",
+      "data_quality": "PARTIAL",
+      "price_stale": true,
+      "is_portfolio": true,
+      "session_relevance": "MÉDIO_PRAZO"
+    },
+    {
+      "rank": 9,
+      "ticker": "SNOW",
+      "company": "Snowflake",
+      "bucket": "Large (10B-200B)",
+      "classification": "CALENDAR WATCH",
+      "catalyst": "AMC Quarta 27 Mai. Rev est $1.35B. Data cloud / AI platform adoption.",
+      "scores": { "total": 26 },
+      "confidence": "MEDIUM",
+      "data_quality": "PARTIAL",
+      "price_stale": true,
+      "session_relevance": "QUARTA_AMC_WATCH"
+    },
+    {
+      "rank": 10,
+      "ticker": "DLTR",
+      "company": "Dollar Tree",
+      "bucket": "Large (10B-200B)",
+      "classification": "CALENDAR WATCH",
+      "catalyst": "BMO Quinta 28 Mai. Rev est $5.07B. Value retail, proxy consumidor de baixo rendimento. Sensível a tariffs.",
+      "scores": { "total": 24 },
+      "confidence": "MEDIUM",
+      "data_quality": "PARTIAL",
+      "price_stale": true,
+      "session_relevance": "QUINTA_BMO_WATCH"
+    }
+  ],
+  "top_observation": [
+    {
+      "priority": 1,
+      "ticker": "NVDA",
+      "company": "NVIDIA",
+      "classification": "PORTFOLIO ALERT / WATCH",
+      "hypothesis": "Sell-the-news de sexta (-1.90%, $215.33) pode ceder a rebound institucional na abertura de Terça após o feriado. Cestrian upgrade pós-earnings é suporte bullish. Mas se abre abaixo de $210 com volume, a pressão pode continuar para $200.",
+      "score": 66,
+      "confidence": "MEDIUM",
+      "price_ref": 215.33,
+      "price_ref_date": "2026-05-22",
+      "gap_ref": "n/d — mercado fechado",
+      "volume_ref": "n/d",
+      "rvol_ref": "n/d",
+      "catalyst": "Post-earnings Q1 FY27. Rev $81.6B +85%. Q2 guide $91B. Sell-the-news reaction -1.90%. Upgrade Cestrian.",
+      "validate_at_open": [
+        "Abre acima de $215.33 (fecho sexta)? → sinal positivo",
+        "Mantém $210 como suporte? → necessário para tese bullish",
+        "Volume 09h30-09h50 ET acima da média? → confirmação institucional",
+        "Gap up > +1.5% com volume → BULLISH OBSERVATION confirmada",
+        "Abre abaixo $210 → invalidação, pressão de selling continua"
+      ],
+      "invalidation": "Abertura abaixo $210 com volume acima da média"
+    },
+    {
+      "priority": 2,
+      "ticker": "AZO",
+      "company": "AutoZone",
+      "classification": "BULLISH OBSERVATION CONDITIONAL",
+      "hypothesis": "AutoZone publica Q3 FY2026 antes das 09h30 ET. Se EPS > $36.13 e revenue > $4.86B com guidance positivo → gap up e BULLISH OBSERVATION para a sessão de Terça. Barra de expectativas ligeiramente reduzida (revision down de $36.60 → $36.13) facilita beat.",
+      "score_pre_result": 34,
+      "score_post_beat": "75-85",
+      "score_post_miss": "<30",
+      "confidence": "LOW pré-resultado / HIGH pós-beat confirmado",
+      "price_ref": "n/d — resultado não publicado",
+      "gap_ref": "n/d",
+      "catalyst": "Earnings BMO Terça. EPS est $36.13, Rev $4.86B. Conference call 10h00 ET. Consumer bellwether S&P 500.",
+      "validate_at_open": [
+        "Resultado publicado pré-open: EPS acima/abaixo de $36.13?",
+        "Gap > +3% com beat → BULLISH OBSERVATION",
+        "Volume 09h30-09h50 ET > 2x média → confirmação",
+        "Gap sem volume → fraqueza, não perseguir",
+        "Miss → possível gap down > -5%, BEARISH OBSERVATION"
+      ],
+      "invalidation": "Miss EPS/Revenue ou guidance negativo"
+    },
+    {
+      "priority": 3,
+      "ticker": "ZS",
+      "company": "Zscaler",
+      "classification": "CALENDAR WATCH — AMC Terça",
+      "hypothesis": "AMC Terça é o primeiro grande catalisador tech. Ao longo do dia, monitorizar RVOL e posicionamento em opções. Não é para observação no open — é para perceber sentimento do mercado antes do resultado.",
+      "score": 28,
+      "confidence": "MEDIUM",
+      "price_ref": "n/d",
+      "catalyst": "AMC Terça 26 Mai. EPS est $1.04, Rev $860M. Cloud security zero-trust. Impacto em CRWD, PANW.",
+      "validate_at_open": [
+        "Volume ao longo do dia acima de média? → interesse pré-AMC",
+        "RVOL > 1.5x às 10h00-11h00 ET → posicionamento bullish ou bearish",
+        "Não é para trade no open — é para positioning awareness"
+      ],
+      "invalidation": "N/A — é CALENDAR WATCH, não observation para trade"
+    },
+    {
+      "priority": 4,
+      "ticker": "CRM",
+      "company": "Salesforce",
+      "classification": "CALENDAR WATCH — AMC Quarta",
+      "hypothesis": "Terça é o dia de positioning para o grande evento de Quarta. CRM é Dow component e o relatório mais relevante da semana para enterprise SaaS. Monitorizar se sector já está a correr antecipação.",
+      "score": 35,
+      "confidence": "MEDIUM",
+      "price_ref": "n/d",
+      "catalyst": "AMC Quarta 27 Mai. Rev est $11.16B. AI Agentforce guidance catalisador.",
+      "validate_at_open": [
+        "XLK e setor SaaS: gap up ou down na abertura de Terça?",
+        "CRM volume acima de média às 09h30-10h00 ET?",
+        "Positioning context: o mercado já está bullish no CRM?"
+      ],
+      "invalidation": "N/A — CALENDAR WATCH para quarta"
+    },
+    {
+      "priority": 5,
+      "ticker": "MRVL",
+      "company": "Marvell Technology",
+      "classification": "CALENDAR WATCH — AMC Quarta",
+      "hypothesis": "Marvell é o barómetro de AI custom silicon pós-NVDA. O contexto NVDA sell-the-news pode criar setup interessante: se MRVL mantiver força apesar do NVDA down, é sinal de confiança no segmento. Earnings Quarta AMC.",
+      "score": 32,
+      "confidence": "MEDIUM",
+      "price_ref": "n/d",
+      "catalyst": "AMC Quarta 27 Mai. Rev est $2.45B. Custom AI chips networking.",
+      "validate_at_open": [
+        "MRVL comporta-se independentemente do NVDA sell-the-news?",
+        "Semicondutores AI (NVDA, AMD, MRVL) alinham ou divergem na abertura de Terça?",
+        "Volume acima de média na sessão de Terça = posicionamento pré-Quarta"
+      ],
+      "invalidation": "N/A — CALENDAR WATCH"
+    }
+  ],
+  "r2_tracking_list": [
+    {
+      "ticker": "NVDA",
+      "type": "PORTFOLIO ALERT",
+      "price_r1": 215.33,
+      "price_r1_date": "2026-05-22",
+      "hypothesis": "Rebound pós-sell-the-news: compra institucional na abertura pós-Memorial Day recupera parte do -1.90% de sexta.",
+      "hypothesis_bear": "Pressão continua: sem compradores institucionais suficientes, slide para $200-210.",
+      "validate_at_r2": [
+        "Preço às 09h50 ET vs fecho sexta $215.33",
+        "Volume acumulado 09h30-09h50 vs média 20 dias",
+        "Gap mantém? Gap fill? Inversão?",
+        "VWAP: acima ou abaixo?",
+        "Nivél $210 testado ou mantido?"
+      ],
+      "bull_confirmation": "Abre > $215, mantém VWAP, volume > 1.5x média, sem fill do gap",
+      "invalidation": "Abre < $210, volume acima da média de venda = continuar evitar até suporte"
+    },
+    {
+      "ticker": "AZO",
+      "type": "BMO EARNINGS WATCH",
+      "price_r1": "n/d",
+      "hypothesis": "Beat com EPS > $36.13 e revenue > $4.86B → gap up + momentum na abertura",
+      "hypothesis_bear": "Miss → gap down significativo",
+      "pre_validation": "Ler resultado publicado ANTES das 09h30 ET — EPS, revenue, guidance",
+      "validate_at_r2": [
+        "Gap % confirmado após abertura",
+        "Volume 09h30-09h50 vs média (confirmação ou fading)",
+        "VWAP: gap mantém acima?",
+        "Reação do setor auto parts (ORLY): confirma narrativa?"
+      ],
+      "bull_confirmation": "Beat + gap > 3% + volume > 2x + VWAP mantido",
+      "invalidation": "Miss ou gap sem volume"
+    },
+    {
+      "ticker": "ZS",
+      "type": "AMC PRE-POSITIONING",
+      "price_r1": "n/d",
+      "hypothesis": "Volume acima de média ao longo do dia sinaliza posicionamento pré-AMC",
+      "validate_at_r2": [
+        "RVOL às 09h50 ET vs média",
+        "Direção: up ou down no início da sessão?",
+        "Cybersecurity ETF (CIBR) como contexto setorial"
+      ],
+      "note": "Não é para observação no open — é awareness de sentimento"
+    }
+  ],
+  "risk_factors": [
+    {
+      "risk": "NVDA sell-the-news persiste na abertura de Terça",
+      "severity": "HIGH — portfólio",
+      "note": "Se NVDA não encontrar compradores institucionais no primeiro dia pós-feriado, pode testar $200-210. Dado que é posição de carteira, monitorizar com prioridade máxima.",
+      "source": "Fortune / Kiplinger"
+    },
+    {
+      "risk": "Liquidez reduzida — primeira sessão pós-holiday",
+      "severity": "MEDIUM",
+      "note": "Terça pode ter lower-than-normal volume nas primeiras barras. Gaps podem ser exagerados. RVOL como referência mais fiável que volume absoluto."
+    },
+    {
+      "risk": "GDP Q1 + PCE Quinta 28 Mai",
+      "severity": "HIGH",
+      "note": "PCE acima do esperado pode reacender preocupações hawkish e reverter o rally de 8 semanas. É o principal risco macro da semana."
+    },
+    {
+      "risk": "Earnings season — multiple catalysts em 48h",
+      "severity": "MEDIUM",
+      "note": "ZS terça AMC, CRM + MRVL quarta AMC, COST + DELL quinta AMC. Concentração de resultados pode amplificar volatilidade em qualquer direção."
+    },
+    {
+      "risk": "AZO miss ou guidance negativo",
+      "severity": "MEDIUM",
+      "note": "Primeiro resultado relevante da semana. Miss pode pesar no Consumer Discretionary e criar um tónus negativo para a sessão de Terça."
+    }
+  ],
+  "sources": [
+    {
+      "name": "R0 Morning Radar (2026-05-24)",
+      "url": "data/latest-r0.json",
+      "type": "Internal JSON",
+      "reliability": "HIGH"
+    },
+    {
+      "name": "Fortune — NVDA Q1 earnings reaction",
+      "url": "https://fortune.com/2026/05/20/nvidia-q1-earnings-forecast-dividend-stock-buybacks/",
+      "type": "News",
+      "timestamp": "2026-05-20",
+      "reliability": "HIGH"
+    },
+    {
+      "name": "Kiplinger — NVDA earnings live commentary May 2026",
+      "url": "https://www.kiplinger.com/investing/live/nvidia-earnings-live-updates-and-commentary-may-2026",
+      "type": "News/Analysis",
+      "timestamp": "2026-05-22",
+      "reliability": "HIGH"
+    },
+    {
+      "name": "Seeking Alpha — NVDA/META analyst upgrades",
+      "url": "https://seekingalpha.com/news/4596405-sa-analyst-upgrades-downgrades-nvda-meta-gdrx-jpm",
+      "type": "Analysis",
+      "timestamp": "2026-05-22",
+      "reliability": "MEDIUM"
+    },
+    {
+      "name": "GlobeNewsWire — AZO Q3 2026 earnings May 26",
+      "url": "https://www.globenewswire.com/news-release/2026/04/14/3273976/3935/en/AutoZone-to-Release-Third-Quarter-Fiscal-2026-Earnings-May-26-2026.html",
+      "type": "Press Release",
+      "timestamp": "2026-04-14",
+      "reliability": "HIGH"
+    },
+    {
+      "name": "AlphaStreet — AZO Q3 2026 preview",
+      "url": "https://news.alphastreet.com/autozone-azo-q3-2026-preview-eps-est-36-13-reports-on-may-26/amp/",
+      "type": "Earnings Preview",
+      "timestamp": "2026-05-25",
+      "reliability": "HIGH"
+    },
+    {
+      "name": "CNBC — Market Holiday Schedule Memorial Day 2026",
+      "url": "https://www.cnbc.com/2026/05/22/stock-market-next-week-outlook-for-may-25-29-2026.html",
+      "type": "News",
+      "timestamp": "2026-05-22",
+      "reliability": "HIGH"
+    },
+    {
+      "name": "Investing.com — Nasdaq Futures (NQ) session data",
+      "url": "https://www.investing.com/indices/nq-100-futures",
+      "type": "Market Data",
+      "timestamp": "2026-05-25",
+      "reliability": "MEDIUM — holiday session, lower liquidity"
+    },
+    {
+      "name": "Finnhub Earnings Calendar (R0 base)",
+      "url": "https://finnhub.io/api/v1/calendar/earnings",
+      "type": "API",
+      "timestamp": "2026-05-24",
+      "reliability": "HIGH"
+    }
+  ]
+}
