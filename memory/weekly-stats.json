@@ -1,0 +1,25 @@
+{
+  "week": "2026-W22",
+  "week_dates": "2026-05-25 / 2026-05-29",
+  "last_updated": "2026-05-25",
+  "sessions_run": 1,
+  "sessions_null_holiday": 1,
+  "total_tickers_validated": 2,
+  "worked": 0,
+  "partially_worked": 1,
+  "failed": 0,
+  "data_insufficient": 1,
+  "watch_elevated": 1,
+  "no_tradeable_signal": 6,
+  "most_repeated_tickers": ["NVDA", "CVX", "ZS"],
+  "best_catalyst_types": ["earnings_beat_post_reaction"],
+  "weakest_catalyst_types": ["data_pending_no_catalyst"],
+  "macro_gaps_identified": ["Fed_Chair_change", "geopolitical_energy_risk"],
+  "alpha_vantage_used_week": 0,
+  "alpha_vantage_limit": 25,
+  "portfolio_alert_changes": [
+    {"symbol": "NVDA", "from": "MATERIAL", "to": "INFO", "reason": "Post-earnings event passed"},
+    {"symbol": "CVX", "from": "NONE", "to": "WATCH", "reason": "Iran geopolitical risk elevated"}
+  ],
+  "notes": "Semana comeca com Memorial Day (sessao nula). Primeira sessao real: Terca 26 Mai. Highlights da semana: ZS AMC terca, AZO BMO terca, CRM/MRVL/SNOW quarta, COST/DELL quinta. Kevin Warsh novo Fed Chair como variavel macro nova."
+}

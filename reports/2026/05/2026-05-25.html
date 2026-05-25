@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Intel — R3 EOD Learning — 25 Mai 2026</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1c2128;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --green: #3fb950;
+    --red: #f85149;
+    --yellow: #d29922;
+    --blue: #58a6ff;
+    --orange: #f0883e;
+    --purple: #bc8cff;
+    --cyan: #39d353;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; line-height: 1.6; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 24px 16px; }
+
+  .header { border-bottom: 2px solid var(--blue); padding-bottom: 16px; margin-bottom: 24px; }
+  .header h1 { font-size: 22px; font-weight: 700; color: var(--blue); }
+  .header .meta { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .header .badges { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+
+  .section { margin-bottom: 32px; }
+  .section-title { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-left: 3px solid var(--blue); padding-left: 10px; margin-bottom: 14px; color: var(--blue); }
+
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.03em; }
+  .badge-green { background: rgba(63,185,80,0.15); color: var(--green); border: 1px solid var(--green); }
+  .badge-red { background: rgba(248,81,73,0.15); color: var(--red); border: 1px solid var(--red); }
+  .badge-yellow { background: rgba(210,153,34,0.15); color: var(--yellow); border: 1px solid var(--yellow); }
+  .badge-blue { background: rgba(88,166,255,0.15); color: var(--blue); border: 1px solid var(--blue); }
+  .badge-orange { background: rgba(240,136,62,0.15); color: var(--orange); border: 1px solid var(--orange); }
+  .badge-muted { background: rgba(139,148,158,0.15); color: var(--muted); border: 1px solid var(--muted); }
+
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-bottom: 16px; }
+  .macro-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+  .macro-card .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .macro-card .value { font-size: 18px; font-weight: 700; margin-top: 2px; }
+  .macro-card .change { font-size: 12px; margin-top: 2px; }
+  .macro-card .stale-badge { font-size: 10px; color: var(--yellow); margin-top: 4px; }
+  .val-green { color: var(--green); }
+  .val-red { color: var(--red); }
+  .val-blue { color: var(--blue); }
+  .val-muted { color: var(--muted); }
+  .val-yellow { color: var(--yellow); }
+
+  .alert-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 10px; }
+  .alert-box.warning { border-left: 3px solid var(--yellow); }
+  .alert-box.info { border-left: 3px solid var(--blue); }
+  .alert-box.positive { border-left: 3px solid var(--green); }
+  .alert-box.negative { border-left: 3px solid var(--red); }
+  .alert-box.neutral { border-left: 3px solid var(--muted); }
+
+  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+  .portfolio-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+  .portfolio-card .pticker { font-size: 18px; font-weight: 800; }
+  .portfolio-card .pname { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+  .portfolio-card .psummary { font-size: 12px; color: var(--text); margin-top: 8px; }
+  .portfolio-card .prow { display: flex; justify-content: space-between; font-size: 12px; margin-top: 4px; }
+  .portfolio-card .pk { color: var(--muted); }
+
+  .outcome-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .outcome-table th { background: var(--surface2); color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  .outcome-table td { padding: 8px 10px; border-bottom: 1px solid rgba(48,54,61,0.5); vertical-align: top; }
+  .outcome-table tr:hover td { background: var(--surface2); }
+  .outcome-table .ticker-cell { font-weight: 800; font-size: 14px; color: var(--blue); }
+
+  .lessons-list { display: flex; flex-direction: column; gap: 10px; }
+  .lesson-item { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--purple); border-radius: 8px; padding: 12px 16px; }
+  .lesson-item .l-cat { font-size: 10px; color: var(--purple); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .lesson-item .l-text { font-size: 13px; }
+
+  .tomorrow-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+  .tomorrow-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+  .tomorrow-card .tticker { font-size: 18px; font-weight: 800; color: var(--orange); }
+  .tomorrow-card .tevent { font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+  .tomorrow-card .twhy { font-size: 12px; margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--border); }
+
+  .source-list { display: flex; flex-direction: column; gap: 6px; }
+  .source-item { font-size: 12px; color: var(--muted); display: flex; gap: 8px; }
+  .source-item .s-name { color: var(--text); min-width: 200px; }
+
+  .critique-list { display: flex; flex-direction: column; gap: 8px; }
+  .critique-item { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--yellow); border-radius: 6px; padding: 10px 14px; font-size: 12px; }
+
+  .dq-bar { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
+  .dq-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+  .dq-item { font-size: 12px; }
+  .dq-item .dq-k { color: var(--muted); }
+
+  footer { text-align: center; color: var(--muted); font-size: 11px; margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--border); }
+
+  @media (max-width: 640px) {
+    .macro-grid { grid-template-columns: repeat(2, 1fr); }
+    .outcome-table { font-size: 11px; }
+    .outcome-table th, .outcome-table td { padding: 6px 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>&#127919; Market Intel — R3 EOD Learning</h1>
+    <div class="meta">
+      Data: <strong>Segunda-feira, 25 Maio 2026</strong> &nbsp;|&nbsp;
+      Hora Lisboa: <strong>22:06</strong> &nbsp;|&nbsp;
+      Hora ET: <strong>17:06</strong> &nbsp;|&nbsp;
+      Run: <strong>R3_EOD_LEARNING</strong>
+    </div>
+    <div class="badges" style="margin-top:10px;">
+      <span class="badge badge-red">&#127988; HOLIDAY NULL SESSION</span>
+      <span class="badge badge-yellow">&#127511; Memorial Day — NYSE/Nasdaq fechados</span>
+      <span class="badge badge-blue">Ultimo fecho: Sexta 22 Mai 2026</span>
+      <span class="badge badge-muted">R1 / R2: N/A (sem sessao)</span>
+      <span class="badge badge-orange">Proxima sessao: Terca 26 Mai 09h30 ET</span>
+    </div>
+  </div>
+
+  <!-- SECTION 1: MARKET CLOSE SNAPSHOT -->
+  <div class="section">
+    <div class="section-title">1. Market Close Snapshot</div>
+
+    <div class="alert-box warning" style="margin-bottom:16px;">
+      <strong>Memorial Day — Mercado fechado Segunda 25 Mai 2026.</strong>
+      Dados abaixo referem-se ao ultimo fecho (Sexta 22 Mai 2026). Proxima sessao regular: Terca 26 Mai 09h30 ET.
+    </div>
+
+    <div class="macro-grid">
+      <div class="macro-card">
+        <div class="label">S&amp;P 500</div>
+        <div class="value val-green">7.473+</div>
+        <div class="change val-green">All-Time High &gt;7.500</div>
+        <div class="stale-badge">&#9711; Fecho 22 Mai</div>
+      </div>
+      <div class="macro-card">
+        <div class="label">VIX</div>
+        <div class="value val-green">16.68</div>
+        <div class="change val-muted">Low Volatility</div>
+        <div class="stale-badge">&#9711; Fecho 22 Mai</div>
+      </div>
+      <div class="macro-card">
+        <div class="label">DXY</div>
+        <div class="value val-yellow">99.19</div>
+        <div class="change val-yellow">Weak Dollar &lt;100</div>
+        <div class="stale-badge">&#9711; Fecho 22 Mai</div>
+      </div>
+      <div class="macro-card">
+        <div class="label">10Y Yield</div>
+        <div class="value val-yellow">4.572%</div>
+        <div class="change val-muted">Ligeiramente acima 4.5%</div>
+        <div class="stale-badge">&#9711; Fecho 22 Mai</div>
+      </div>
+      <div class="macro-card">
+        <div class="label">NVDA (portf.)</div>
+        <div class="value val-blue">$218</div>
+        <div class="change val-green">+9% vs pre-earnings</div>
+        <div class="stale-badge">&#9711; Fecho 22 Mai</div>
+      </div>
+      <div class="macro-card">
+        <div class="label">MSFT (portf.)</div>
+        <div class="value val-blue">$417.80</div>
+        <div class="change val-muted">Sem catalisador novo</div>
+        <div class="stale-badge">&#9711; Fecho 22 Mai</div>
+      </div>
+      <div class="macro-card">
+        <div class="label">CVX (portf.)</div>
+        <div class="value val-yellow">$191.55</div>
+        <div class="change val-yellow">Iran risk elevado</div>
+        <div class="stale-badge">&#9711; Fecho 22 Mai</div>
+      </div>
+    </div>
+
+    <div class="alert-box positive">
+      <strong>Tape: BULLISH</strong> — S&amp;P 500 atingiu maximos historicos acima de 7.500 em Maio 2026. 8a semana consecutiva de ganhos. VIX em 16.68. Risk-on confirmado.
+    </div>
+
+    <div style="margin-top:12px;">
+      <div class="alert-box info">
+        <strong>&#128680; Kevin Warsh — Novo Presidente da Fed</strong><br>
+        Kevin Warsh tomou posse como novo Chairman da Federal Reserve. Menos dovish que Powell. Impacto em politica monetaria e valuations de growth stocks (NVDA, MSFT, MU) a monitorizar.
+      </div>
+      <div class="alert-box warning">
+        <strong>&#9981;&#65039; Iran War — Risco Geopolitico Energetico</strong><br>
+        CEO da Chevron e outros executivos de petroleo alertam para possiveis escassez de combustivel ligadas ao conflito com o Iran e disputa sobre peagem no Estreito de Ormuz. CVX alert level: NONE → WATCH.
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: RESULTADO DAS HIPOTESES -->
+  <div class="section">
+    <div class="section-title">2. Resultado das Hipoteses do Dia</div>
+
+    <div class="alert-box neutral" style="margin-bottom:12px;">
+      Sem sessao de trading hoje (Memorial Day). R1 e R2 nao executaram. Todas as hipoteses em R0 eram <strong>CALENDAR_WATCH</strong> para a semana 26-29 Mai. Unico ticker com dados de sexta para validacao parcial: <strong>NVDA</strong>.
+    </div>
+
+    <div style="overflow-x:auto;">
+    <table class="outcome-table">
+      <thead>
+        <tr>
+          <th>Ticker</th>
+          <th>Hipotese R0</th>
+          <th>Resultado EOD</th>
+          <th>Fecho/Ultimo</th>
+          <th>Licao</th>
+          <th>Data Quality</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ticker-cell">NVDA</td>
+          <td>Monitorizar reacao pos-earnings Q1 FY27 na abertura terca</td>
+          <td><span class="badge badge-yellow">PARTIALLY_WORKED</span></td>
+          <td>$218.13 (22 Mai)<br><span style="color:var(--muted);font-size:11px;">Range: $215-221</span></td>
+          <td>Sell-the-news moderado confirmado. +9% vs pre-earnings. Thesis intacta.</td>
+          <td><span class="badge badge-yellow">MEDIUM</span></td>
+        </tr>
+        <tr>
+          <td class="ticker-cell">ZS</td>
+          <td>Earnings AMC Terca 26 Mai — 1o grande AMC tech</td>
+          <td><span class="badge badge-muted">NO_TRADEABLE_SIGNAL</span></td>
+          <td>—</td>
+          <td>Evento amanhã. 40 revisoes EPS para cima. Expectativas elevadas.</td>
+          <td><span class="badge badge-muted">N/A</span></td>
+        </tr>
+        <tr>
+          <td class="ticker-cell">CRM</td>
+          <td>Earnings AMC Quarta 27 Mai — guidance AI Agentforce</td>
+          <td><span class="badge badge-muted">NO_TRADEABLE_SIGNAL</span></td>
+          <td>—</td>
+          <td>Evento quarta.</td>
+          <td><span class="badge badge-muted">N/A</span></td>
+        </tr>
+        <tr>
+          <td class="ticker-cell">MRVL</td>
+          <td>Earnings AMC Quarta 27 Mai — custom AI chips</td>
+          <td><span class="badge badge-muted">NO_TRADEABLE_SIGNAL</span></td>
+          <td>—</td>
+          <td>Evento quarta.</td>
+          <td><span class="badge badge-muted">N/A</span></td>
+        </tr>
+        <tr>
+          <td class="ticker-cell">AZO</td>
+          <td>Earnings BMO Terca 26 Mai — consumer bellwether</td>
+          <td><span class="badge badge-muted">NO_TRADEABLE_SIGNAL</span></td>
+          <td>—</td>
+          <td>Evento amanha BMO.</td>
+          <td><span class="badge badge-muted">N/A</span></td>
+        </tr>
+        <tr>
+          <td class="ticker-cell">CVX</td>
+          <td>DATA_PENDING em R0 — sem catalisador</td>
+          <td><span class="badge badge-orange">WATCH_ELEVATED</span></td>
+          <td>$191.55 (22 Mai)</td>
+          <td>Iran war geopolitico elevado. CEO warnings. Alert: NONE → WATCH.</td>
+          <td><span class="badge badge-yellow">MEDIUM</span></td>
+        </tr>
+        <tr>
+          <td class="ticker-cell">COST</td>
+          <td>Earnings AMC Quinta 28 Mai</td>
+          <td><span class="badge badge-muted">NO_TRADEABLE_SIGNAL</span></td>
+          <td>—</td>
+          <td>Evento quinta.</td>
+          <td><span class="badge badge-muted">N/A</span></td>
+        </tr>
+        <tr>
+          <td class="ticker-cell">DELL</td>
+          <td>Earnings AMC Quinta 28 Mai — AI servers</td>
+          <td><span class="badge badge-muted">NO_TRADEABLE_SIGNAL</span></td>
+          <td>—</td>
+          <td>Evento quinta.</td>
+          <td><span class="badge badge-muted">N/A</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <!-- SECTION 3: EARNINGS AMC -->
+  <div class="section">
+    <div class="section-title">3. Earnings AMC — Hoje e Amanha</div>
+
+    <div class="alert-box neutral" style="margin-bottom:12px;">
+      <strong>Sem earnings AMC hoje</strong> — Memorial Day. Mercado fechado. Proximo AMC relevante: <strong>ZS (Zscaler)</strong> amanha Terca 26 Mai.
+    </div>
+
+    <div class="tomorrow-grid">
+      <div class="tomorrow-card">
+        <div class="tticker">ZS</div>
+        <div class="tevent">AMC Terca 26 Mai 2026 | Cybersecurity</div>
+        <div class="prow" style="margin-top:6px;"><span class="pk">EPS est:</span> <strong>$1.01</strong></div>
+        <div class="prow"><span class="pk">Rev est:</span> <strong>$835.66M</strong></div>
+        <div class="prow"><span class="pk">EPS revisions up (90d):</span> <span class="val-green">40</span></div>
+        <div class="prow"><span class="pk">EPS revisions down (90d):</span> <span class="val-green">0</span></div>
+        <div class="twhy">Primeiro grande AMC tech da semana. Zero-trust cloud security. Impacto setorial em CRWD, PANW. Risco: expectativas muito elevadas → beat-but-sell se guidance decepcionar.</div>
+        <div style="margin-top:8px;"><span class="badge badge-orange">TOMORROW WATCH</span> <span class="badge badge-blue">SECTOR IMPACT</span></div>
+      </div>
+      <div class="tomorrow-card">
+        <div class="tticker">AZO</div>
+        <div class="tevent">BMO Terca 26 Mai 2026 | Consumer Discretionary</div>
+        <div class="prow" style="margin-top:6px;"><span class="pk">EPS est:</span> <strong>$36.60</strong></div>
+        <div class="prow"><span class="pk">Rev est:</span> <strong>$4.87B</strong></div>
+        <div class="twhy">Primeiro resultado S&amp;P 500 da semana curta. Barómetro de saude do consumidor em manutencao de veiculos. Same-store sales e DIY vs commercial como KPIs chave.</div>
+        <div style="margin-top:8px;"><span class="badge badge-orange">TOMORROW WATCH</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: PORTFOLIO SENTINEL EOD -->
+  <div class="section">
+    <div class="section-title">4. Portfolio Sentinel EOD</div>
+
+    <div class="alert-box info" style="margin-bottom:12px; font-size:12px;">
+      <strong>Nota:</strong> Etiquetas como "DCA watch" e "Take-profit watch" sao de vigilancia estrategica. Nao constituem recomendacao de acao automatica. Contexto de acompanhamento apenas.
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div class="pticker val-blue">NVDA</div>
+        <div class="pname">NVIDIA Corporation</div>
+        <div class="prow"><span class="pk">Alert:</span> <span class="badge badge-blue">INFO</span> <span style="font-size:11px;color:var(--muted);margin-left:6px;">anterior: MATERIAL ↓</span></div>
+        <div class="prow" style="margin-top:6px;"><span class="pk">Preco (22 Mai):</span> <strong>~$218</strong></div>
+        <div class="prow"><span class="pk">Implicacao:</span> <span class="val-green">Thesis reinforced</span></div>
+        <div class="psummary">
+          Post-earnings settling. Stock reteve ~+9% do movimento pos-earnings. Sell-the-news moderado na sexta. Thesis de long-term AI/Data Center intacta. Kevin Warsh (novo Fed Chair) como nova variavel macro a monitorizar para growth stocks.
+        </div>
+        <div style="margin-top:10px;font-size:11px;color:var(--muted);">Sem acao automatica. Monitorizar abertura terca e volume institucional.</div>
+      </div>
+      <div class="portfolio-card">
+        <div class="pticker val-blue">MU</div>
+        <div class="pname">Micron Technology</div>
+        <div class="prow"><span class="pk">Alert:</span> <span class="badge badge-blue">INFO</span></div>
+        <div class="prow" style="margin-top:6px;"><span class="pk">Preco:</span> <strong>n/d</strong></div>
+        <div class="prow"><span class="pk">Implicacao:</span> <span class="val-muted">No action / monitor only</span></div>
+        <div class="psummary">
+          Sem noticias especificas neste fim-de-semana. NVDA earnings historicos mantem sinal positivo indireto para HBM/DRAM. Proximo catalisador: earnings 24 Jun 2026.
+        </div>
+        <div style="margin-top:10px;font-size:11px;color:var(--muted);">Monitorizar noticias DRAM pricing e Samsung/SK Hynix.</div>
+      </div>
+      <div class="portfolio-card">
+        <div class="pticker val-blue">MSFT</div>
+        <div class="pname">Microsoft Corporation</div>
+        <div class="prow"><span class="pk">Alert:</span> <span class="badge badge-blue">INFO</span></div>
+        <div class="prow" style="margin-top:6px;"><span class="pk">Preco (22 Mai):</span> <strong>~$417.80</strong></div>
+        <div class="prow"><span class="pk">Implicacao:</span> <span class="val-muted">Monitor — Warsh Fed watch</span></div>
+        <div class="psummary">
+          Sem catalisadores novos diretamente. Kevin Warsh como novo Fed Chairman e a sua postura sobre taxas pode afetar valuations de growth. AI capex $725B hyperscalers thesis intacta. Proximos earnings: Julho 2026.
+        </div>
+        <div style="margin-top:10px;font-size:11px;color:var(--muted);">Monitorizar declaracoes Warsh. Sem acao automatica.</div>
+      </div>
+      <div class="portfolio-card" style="border-left: 3px solid var(--yellow);">
+        <div class="pticker val-yellow">CVX</div>
+        <div class="pname">Chevron Corporation</div>
+        <div class="prow"><span class="pk">Alert:</span> <span class="badge badge-yellow">WATCH</span> <span style="font-size:11px;color:var(--yellow);margin-left:6px;">anterior: NONE ↑</span></div>
+        <div class="prow" style="margin-top:6px;"><span class="pk">Preco (22 Mai):</span> <strong>~$191.55</strong></div>
+        <div class="prow"><span class="pk">Implicacao:</span> <span class="val-yellow">Volatility risk</span></div>
+        <div class="psummary">
+          CEO Chevron (e outros executivos de petroleo) alertaram para possiveis escassez de combustivel e desafios economicos por guerra Iran. Disputa sobre Estreito de Ormuz. Upside de preco do petroleo vs downside de demand destruction. Thesis de dividendo de longo prazo nao ameacada imediatamente.
+        </div>
+        <div style="margin-top:10px;font-size:11px;color:var(--muted);">Monitorizar WTI, evolucao negociacoes US-Iran. Sem acao automatica.</div>
+      </div>
+      <div class="portfolio-card">
+        <div class="pticker val-blue">VUUA</div>
+        <div class="pname">Vanguard S&amp;P 500 ETF (EUR)</div>
+        <div class="prow"><span class="pk">Alert:</span> <span class="badge badge-blue">INFO</span></div>
+        <div class="prow" style="margin-top:6px;"><span class="pk">Implicacao:</span> <span class="val-green">Thesis reinforced — DCA watch</span></div>
+        <div class="psummary">
+          S&amp;P 500 em maximos historicos acima de 7.500. Momentum bullish. Kevin Warsh como nova variavel de medio prazo. DCA watch = etiqueta de vigilancia estrategica para alocacao periodica planeada. Nao e recomendacao de acao.
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <div class="pticker val-blue">VWCE</div>
+        <div class="pname">Vanguard FTSE All-World ETF</div>
+        <div class="prow"><span class="pk">Alert:</span> <span class="badge badge-blue">INFO</span></div>
+        <div class="prow" style="margin-top:6px;"><span class="pk">Implicacao:</span> <span class="val-muted">No action / monitor only</span></div>
+        <div class="psummary">
+          Global risk-on alinhado com mercado americano. DXY &lt;100 tailwind. Risco geopolitico Iran como variavel global. Sem catalisadores adversos novos para emergentes.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: LICOES DO DIA -->
+  <div class="section">
+    <div class="section-title">5. Licoes do Dia</div>
+
+    <div class="lessons-list">
+      <div class="lesson-item">
+        <div class="l-cat">SYSTEM</div>
+        <div class="l-text"><strong>Memorial Day null session bem gerida.</strong> R0 de domingo posicionou corretamente para semana curta pós-feriado. R1/R2 nao correram (correto). R3 EOD cobre contexto de fim-de-semana com vigilancia de carteira e preparacao para amanha.</div>
+      </div>
+      <div class="lesson-item">
+        <div class="l-cat">TICKER BEHAVIOR</div>
+        <div class="l-text"><strong>NVDA: sell-the-news pos-earnings historicos materializou-se moderadamente.</strong> Stock fechou sexta ~$218 (+9% vs pre-earnings ~$200). Reacao "muted" era risco identificado em R0. Thesis intacta mas momentum de curto prazo moderado. Padrão documentado para proximos earnings.</div>
+      </div>
+      <div class="lesson-item">
+        <div class="l-cat">MACRO COVERAGE GAP</div>
+        <div class="l-text"><strong>Kevin Warsh como novo Fed Chairman nao capturado em R0.</strong> Mudanca de liderança da Fed e impacto nos valuations de growth stocks (NVDA, MSFT, MU) e/ou postura hawkish deve ser monitorizado. Resolver: incluir pesquisa de lideranca Fed e declaracoes FOMC em R0 semanal.</div>
+      </div>
+      <div class="lesson-item">
+        <div class="l-cat">PORTFOLIO COVERAGE</div>
+        <div class="l-text"><strong>CVX: R0 marcou como DATA_PENDING. Pesquisa de fim-de-semana revelou risco geopolitico material.</strong> Monitorização energetica deve incluir pesquisa geopolitica (OPEC+, conflitos, Estreito de Ormuz) mesmo sem earnings proximos para posicoes de energia.</div>
+      </div>
+      <div class="lesson-item">
+        <div class="l-cat">DATA QUALITY</div>
+        <div class="l-text"><strong>Dias de feriado produzem timestamps ambiguos em scrapers web.</strong> Precos MSFT $417.80 e CVX $191.55 capturados via web search mas nao confirmados por API. Marcar como MEDIUM. Alpha Vantage preservado (0/25 chamadas) — correto para sessao nula.</div>
+      </div>
+      <div class="lesson-item">
+        <div class="l-cat">ALPHA VANTAGE</div>
+        <div class="l-text"><strong>Budget completo preservado para terca.</strong> Nenhuma chamada Alpha Vantage hoje (correto — mercado fechado). 25/25 chamadas disponiveis para terca 26 Mai quando mercado abre e tickers precisam de validacao tecnica (NVDA abertura, AZO resultados, ZS pre-AMC).</div>
+      </div>
+      <div class="lesson-item">
+        <div class="l-cat">TOMORROW PREP</div>
+        <div class="l-text"><strong>ZS Zscaler AMC terca: primeiro grande teste ao sector cybersecurity.</strong> 40 revisoes EPS para cima com 0 para baixo sugere expectativas muito elevadas — risco de beat-but-sell se guidance decepcionar. Monitorizar CRWD e PANW como impacto setorial. AZO BMO como primeiro earnings S&amp;P 500 da semana.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: TOMORROW WATCH -->
+  <div class="section">
+    <div class="section-title">6. Tomorrow Watch — Terca 26 Mai</div>
+
+    <div class="tomorrow-grid">
+      <div class="tomorrow-card">
+        <div class="tticker">ZS</div>
+        <div class="tevent">AMC Terca 26 Mai | Cybersecurity | HIGH</div>
+        <div class="prow" style="margin-top:6px;"><span class="pk">EPS est:</span> <strong>$1.01</strong></div>
+        <div class="prow"><span class="pk">Rev est:</span> <strong>$835.66M</strong></div>
+        <div class="twhy">1o grande AMC tech. Zero-trust cloud. Impacto CRWD/PANW. Risco beat-but-sell.</div>
+      </div>
+      <div class="tomorrow-card">
+        <div class="tticker">AZO</div>
+        <div class="tevent">BMO Terca 26 Mai | Consumer | HIGH</div>
+        <div class="prow" style="margin-top:6px;"><span class="pk">EPS est:</span> <strong>$36.60</strong></div>
+        <div class="prow"><span class="pk">Rev est:</span> <strong>$4.87B</strong></div>
+        <div class="twhy">1o resultado S&amp;P 500 da semana. Same-store sales e margem em foco.</div>
+      </div>
+      <div class="tomorrow-card">
+        <div class="tticker">NVDA</div>
+        <div class="tevent">Abertura pos-Memorial Day | Portfolio | HIGH</div>
+        <div class="twhy">1a sessao pos-earnings historicos. Monitorizar volume e direccao institucional. Kevin Warsh Fed como variavel nova.</div>
+      </div>
+      <div class="tomorrow-card">
+        <div class="tticker">CVX</div>
+        <div class="tevent">Monitorizar WTI + Iran | Portfolio | MEDIUM</div>
+        <div class="twhy">CEO warnings gas shortage. Estreito de Ormuz. Monitorizar preco WTI e noticias geopoliticas.</div>
+      </div>
+      <div class="tomorrow-card">
+        <div class="tticker">M</div>
+        <div class="tevent">Earnings 26 Mai (timing a confirmar) | MEDIUM</div>
+        <div class="twhy">Macy's — barómetro consumidor médio americano. Timing nao confirmado.</div>
+      </div>
+    </div>
+
+    <div class="alert-box info" style="margin-top:16px;">
+      <strong>Macro Terca:</strong> Consumer Confidence 10h00 ET (MEDIUM), Dallas Fed Manufacturing Survey 10h30 ET (LOW), Philadelphia Fed Non-Manufacturing 08h30 ET (LOW). Kevin Warsh posse como novo Fed Chair.
+    </div>
+  </div>
+
+  <!-- SECTION 7: DATA QUALITY -->
+  <div class="section">
+    <div class="section-title">7. Data Quality / Limitacoes</div>
+
+    <div class="dq-bar">
+      <div class="dq-row">
+        <div class="dq-item"><span class="dq-k">Alpha Vantage calls:</span> <strong>0 / 25</strong></div>
+        <div class="dq-item"><span class="dq-k">R1 disponivel:</span> <strong style="color:var(--red)">NAO</strong></div>
+        <div class="dq-item"><span class="dq-k">R2 disponivel:</span> <strong style="color:var(--red)">NAO</strong></div>
+        <div class="dq-item"><span class="dq-k">R0 disponivel:</span> <strong style="color:var(--green)">SIM</strong></div>
+        <div class="dq-item"><span class="dq-k">Sessao:</span> <strong style="color:var(--yellow)">HOLIDAY_NULL</strong></div>
+      </div>
+    </div>
+
+    <div style="margin-top:12px;" class="critique-list">
+      <div class="critique-item">Memorial Day — sem sessao de trading. R1 e R2 nao executaram. Nenhuma hipotese intraday para validar.</div>
+      <div class="critique-item">Precos NVDA/MSFT/CVX sao do ultimo fecho (Sexta 22 Mai) — stale para efeitos de analise de terca.</div>
+      <div class="critique-item">Kevin Warsh novo Fed Chairman — desenvolvimento material nao capturado em R0. Gap de cobertura macro.</div>
+      <div class="critique-item">Alpha Vantage: 0/25 chamadas usadas hoje. Budget completo disponivel para terca.</div>
+    </div>
+  </div>
+
+  <!-- SECTION 8: MODEL SELF-CRITIQUE -->
+  <div class="section">
+    <div class="section-title">Auto-Critica do Modelo</div>
+    <div class="critique-list">
+      <div class="critique-item">R0 nao capturou Kevin Warsh como novo Fed Chairman. Resolver: pesquisa de lideranca Fed em R0 semanal.</div>
+      <div class="critique-item">CVX classificado DATA_PENDING em R0 sem pesquisa geopolitica energetica. Resolver: pesquisa dedicada OPEC+/geopolitico para posicoes energia.</div>
+      <div class="critique-item">Todos os R0 tickers eram CALENDAR_WATCH sem precos reais — correto para dia de feriado, mas a sessao de sexta (22 Mai) deveria ter sido capturada com precos reais.</div>
+      <div class="critique-item">AeroVironment (AVAV) +6.8% em sexta (proxy defense/geopolitico Iran) nao estava no radar — sector defense deveria ser incluido em contextos de guerra ativa.</div>
+    </div>
+  </div>
+
+  <!-- SOURCES -->
+  <div class="section">
+    <div class="section-title">Fontes</div>
+    <div class="source-list">
+      <div class="source-item"><span class="s-name">R0 Morning Radar 2026-05-24 (Internal JSON)</span> <span>Alta fiabilidade</span></div>
+      <div class="source-item"><span class="s-name">Web Search — NVDA post-earnings sexta 22 Mai</span> <span>Fiabilidade media</span></div>
+      <div class="source-item"><span class="s-name">Web Search — Memorial Day market news weekend</span> <span>Fiabilidade media</span></div>
+      <div class="source-item"><span class="s-name">Web Search — ZS AZO earnings preview terca</span> <span>Fiabilidade media</span></div>
+      <div class="source-item"><span class="s-name">Web Search — NVDA MSFT CVX portfolio weekend news</span> <span>Fiabilidade media</span></div>
+      <div class="source-item"><span class="s-name">config/portfolio-watchlist.json (Internal)</span> <span>Alta fiabilidade</span></div>
+    </div>
+  </div>
+
+  <footer>
+    Market Intel R3 EOD Learning — 25 Mai 2026 — 22:06 Lisboa — Apenas informação. Não é conselho de investimento.
+    <br>
+    <a href="https://jzmike.github.io/market-intel/latest.html" style="color:var(--blue);">latest.html</a> &nbsp;|&nbsp;
+    <a href="https://jzmike.github.io/market-intel/reports/2026/05/2026-05-25.html" style="color:var(--blue);">Relatorio do dia</a>
+  </footer>
+
+</div>
+</body>
+</html>

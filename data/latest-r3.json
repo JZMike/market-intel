@@ -1,0 +1,392 @@
+{
+  "date": "2026-05-25",
+  "run": "R3_EOD_LEARNING",
+  "run_time_lisbon": "22:06",
+  "run_time_et": "17:06",
+  "session_type": "HOLIDAY_NULL",
+  "session_note": "Memorial Day — NYSE e Nasdaq fechados. Sem sessão de trading. R1 e R2 não executaram.",
+  "urls": {
+    "latest": "https://jzmike.github.io/market-intel/latest.html",
+    "day": "https://jzmike.github.io/market-intel/reports/2026/05/2026-05-25.html"
+  },
+  "market_close_snapshot": {
+    "session": "CLOSED",
+    "reason": "Memorial Day — feriado federal EUA",
+    "last_trading_day": "2026-05-22",
+    "tape": "BULLISH",
+    "tape_note": "S&P atingiu máximos históricos acima de 7.500 em Maio. 8ª semana consecutiva de ganhos. Risk-on.",
+    "indices": {
+      "sp500": {
+        "value": "7473-7500+",
+        "note": "Atingiu all-time highs acima de 7.500 durante Maio 2026",
+        "session_type": "previous_close_May22",
+        "source": "web_search"
+      },
+      "vix": {
+        "value": 16.68,
+        "signal": "LOW_VOLATILITY",
+        "note": "Complacência — risk-on confirmado",
+        "source": "web_search"
+      },
+      "dxy": {
+        "value": 99.19,
+        "signal": "WEAK_DOLLAR",
+        "note": "DXY abaixo de 100 — tailwind para multinationals",
+        "source": "r0_data"
+      },
+      "us_10y_yield": {
+        "value": 4.572,
+        "note": "Ligeiramente acima de 4.5% — mantém alguma pressão nos valuations",
+        "source": "r0_data"
+      }
+    },
+    "macro_events": [
+      {
+        "event": "Kevin Warsh sworn in as Federal Reserve Chairman",
+        "impact": "MATERIAL",
+        "direction": "POTENTIAL_BULLISH",
+        "note": "Nova liderança da Fed. Warsh é considerado menos dovish que Powell mas mercado pode reagir de forma positiva à clareza de liderança. Monitorizar declarações sobre política monetária.",
+        "source": "web_search"
+      },
+      {
+        "event": "US-Iran talks progressing — Strait of Hormuz dispute ongoing",
+        "impact": "MEDIUM",
+        "direction": "MIXED",
+        "note": "Progresso nas negociações mas tensão sobre peagem no Estreito de Ormuz mantém-se. CVX e sector energético em vigilância.",
+        "source": "web_search"
+      }
+    ],
+    "notable_moves_may22": [
+      {
+        "ticker": "AVAV",
+        "company": "AeroVironment",
+        "move_pct": "+6.8",
+        "close": 174.23,
+        "note": "Drone de defesa — beneficiário do contexto geopolítico Iran"
+      },
+      {
+        "ticker": "NVDA",
+        "close_approx": 218.13,
+        "note": "Reação pós-earnings muted. Stock digere resultados históricos Q1 FY27. Pressão ligeira de sell-the-news após surge inicial."
+      }
+    ]
+  },
+  "ticker_outcomes": [
+    {
+      "ticker": "NVDA",
+      "company": "NVIDIA",
+      "r0_classification": "PORTFOLIO_ALERT",
+      "hypothesis": "Monitorizar reação na abertura terça 26 Mai pós-earnings históricos Q1 FY27",
+      "close_may22": 218.13,
+      "close_may22_range": "215.16-221.49",
+      "eod_result": "PARTIALLY_WORKED",
+      "result_note": "Stock settling ~$218 após surge pós-earnings. Reação 'muted' na sexta confirma pressão sell-the-news prevista em R0 como risco. Thesis de long-term intacta. Próxima observação: abertura terça.",
+      "catalyst_quality": "MATERIAL",
+      "data_quality": "MEDIUM — preço confirmado via web_search",
+      "session": "MARKET_CLOSED_TODAY",
+      "lesson": "Post-earnings sell-the-news materializou ligeiramente. $218 vs pre-earnings ~$200 = +9% retained. Thesis intacta mas momentum de curto prazo moderado."
+    },
+    {
+      "ticker": "CRM",
+      "company": "Salesforce",
+      "r0_classification": "CALENDAR_WATCH",
+      "hypothesis": "Earnings AMC Quarta 27 Mai — guidance AI Agentforce é catalisador chave",
+      "eod_result": "NO_TRADEABLE_SIGNAL",
+      "result_note": "Earnings ainda não ocorreram. Mantém watch para quarta-feira 27 Mai AMC.",
+      "data_quality": "N/A",
+      "lesson": "N/A — evento futuro"
+    },
+    {
+      "ticker": "COST",
+      "company": "Costco",
+      "r0_classification": "CALENDAR_WATCH",
+      "hypothesis": "Earnings AMC Quinta 28 Mai — membership growth e comp sales como KPIs",
+      "eod_result": "NO_TRADEABLE_SIGNAL",
+      "result_note": "Earnings ainda não ocorreram. Mantém watch para quinta-feira 28 Mai AMC.",
+      "data_quality": "N/A",
+      "lesson": "N/A — evento futuro"
+    },
+    {
+      "ticker": "MRVL",
+      "company": "Marvell Technology",
+      "r0_classification": "CALENDAR_WATCH",
+      "hypothesis": "Earnings AMC Quarta 27 Mai — custom AI chips e networking pós-NVDA",
+      "eod_result": "NO_TRADEABLE_SIGNAL",
+      "result_note": "Earnings ainda não ocorreram.",
+      "data_quality": "N/A",
+      "lesson": "N/A — evento futuro"
+    },
+    {
+      "ticker": "ZS",
+      "company": "Zscaler",
+      "r0_classification": "CALENDAR_WATCH",
+      "hypothesis": "Earnings AMC Terça 26 Mai — primeiro grande AMC tech da semana",
+      "eod_result": "NO_TRADEABLE_SIGNAL",
+      "result_note": "Earnings amanhã AMC. EPS est $1.01, Rev est $835.66M. 40 revisões de EPS para cima nas últimas 90 dias. Primeiro teste ao sector cybersecurity esta semana.",
+      "updated_estimates": {
+        "eps_estimate": 1.01,
+        "revenue_estimate_m": 835.66,
+        "eps_revisions_up_90d": 40,
+        "eps_revisions_down_90d": 0
+      },
+      "data_quality": "MEDIUM — confirmado via web_search",
+      "lesson": "N/A — evento amanhã. Watchlist confirmada."
+    },
+    {
+      "ticker": "AZO",
+      "company": "AutoZone",
+      "r0_classification": "CALENDAR_WATCH",
+      "hypothesis": "Earnings BMO Terça 26 Mai — primeiro resultado relevante da semana",
+      "eod_result": "NO_TRADEABLE_SIGNAL",
+      "result_note": "Earnings amanhã BMO. Focus em same-store sales, DIY vs commercial demand, margin stability.",
+      "data_quality": "MEDIUM",
+      "lesson": "N/A — evento amanhã"
+    },
+    {
+      "ticker": "MU",
+      "company": "Micron",
+      "r0_classification": "PORTFOLIO_ALERT",
+      "hypothesis": "NVDA beat como sinal indireto de procura HBM/DRAM — earnings 24 Jun",
+      "eod_result": "NO_TRADEABLE_SIGNAL",
+      "result_note": "Sem notícias específicas este fim-de-semana. NVDA thesis mantida. Earnings MU a 24 Jun.",
+      "data_quality": "LOW — sem preço ou notícia nova",
+      "lesson": "N/A — evento a 24 Jun"
+    },
+    {
+      "ticker": "CVX",
+      "company": "Chevron",
+      "r0_classification": "DATA_PENDING",
+      "hypothesis": "Sem notícias materiais identificadas em R0",
+      "eod_result": "WATCH_ELEVATED",
+      "result_note": "CVX CEO a avisar sobre escassez de combustível ligada ao conflito Iran. Alert level elevado de NONE para WATCH. Geopolítico energético como risco material.",
+      "data_quality": "MEDIUM — confirmado via web_search",
+      "lesson": "R0 classificou CVX como DATA_PENDING / NONE. Pesquisa de fim-de-semana revelou risco geopolítico significativo. Monitorização energética deve ser mais proativa."
+    }
+  ],
+  "earnings_amc_results": [
+    {
+      "note": "Sem earnings AMC hoje (Memorial Day — mercado fechado)",
+      "next_amc": {
+        "date": "2026-05-26",
+        "tickers": ["ZS", "ICLR", "QFIN", "BOX"],
+        "highlight": "ZS (Zscaler) é o mais relevante — primeiro grande AMC tech da semana"
+      }
+    }
+  ],
+  "portfolio_sentinel_eod": [
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "alert_level": "INFO",
+      "previous_level": "MATERIAL",
+      "level_change": "DOWNGRADE",
+      "level_change_reason": "Earnings event passou. Reação de mercado normal. Thesis intacta. Monitorização rotineira.",
+      "close_approx": 218.13,
+      "close_date": "2026-05-22",
+      "change_note": "Stock settling ~+9% acima do pré-earnings. Sell-the-news moderado. Sem novos catalisadores negativos.",
+      "implication": "Thesis reinforced",
+      "impact_direction": "Positive",
+      "data_quality": "MEDIUM",
+      "action_note": "Monitorizar abertura terça. Nova Fed Chair Warsh pode afetar sentiment de tech/growth. Nenhuma ação automática — vigilância apenas."
+    },
+    {
+      "symbol": "MU",
+      "name": "Micron",
+      "alert_level": "INFO",
+      "previous_level": "INFO",
+      "level_change": "UNCHANGED",
+      "close_approx": "n/d",
+      "close_date": "2026-05-22",
+      "change_note": "Sem notícias materiais este fim-de-semana. NVDA thesis como sinal indireto mantém-se válida.",
+      "implication": "No action / monitor only",
+      "impact_direction": "Neutral",
+      "data_quality": "LOW",
+      "action_note": "Próximo catalisador: earnings 24 Jun 2026. Monitorizar qualquer notícia DRAM/HBM pricing."
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "alert_level": "INFO",
+      "previous_level": "INFO",
+      "level_change": "UNCHANGED",
+      "close_approx": 417.80,
+      "close_date": "2026-05-22",
+      "change_note": "Kevin Warsh como novo Chairman da Fed pode ter implicações para taxa de desconto aplicada a growth stocks. Curto prazo incerto. Longo prazo: AI capex $725B hyperscalers thesis intacta.",
+      "implication": "Monitor only — Warsh Fed Chair watch",
+      "impact_direction": "Neutral to slight uncertainty",
+      "data_quality": "MEDIUM",
+      "action_note": "Monitorizar declarações de Warsh sobre política monetária. Sem ação automática."
+    },
+    {
+      "symbol": "CVX",
+      "name": "Chevron",
+      "alert_level": "WATCH",
+      "previous_level": "NONE",
+      "level_change": "UPGRADE",
+      "level_change_reason": "CEO Chevron a alertar para escassez de combustível por conflito Iran. Risco geopolítico elevado.",
+      "close_approx": 191.55,
+      "close_date": "2026-05-22",
+      "change_note": "CEO de empresas de petróleo, incluindo CVX, alertam para possíveis escassez de combustível e desafios económicos amplos derivados da guerra Iran. Strait of Hormuz como risco.",
+      "implication": "Volatility risk",
+      "impact_direction": "Mixed — price spike risk vs demand destruction",
+      "data_quality": "MEDIUM",
+      "action_note": "Acompanhar preço WTI e notícias negociações US-Iran. Thesis de dividendo de longo prazo não ameaçada no curto prazo. Nenhuma ação automática — vigilância apenas."
+    },
+    {
+      "symbol": "VUUA",
+      "name": "Vanguard S&P 500 ETF (EUR)",
+      "alert_level": "INFO",
+      "previous_level": "INFO",
+      "level_change": "UNCHANGED",
+      "change_note": "S&P 500 em máximos históricos acima de 7.500. VIX 16.68. Novo Fed Chair Warsh como variável de médio prazo.",
+      "implication": "Thesis reinforced — DCA watch de longo prazo",
+      "impact_direction": "Positive",
+      "data_quality": "MEDIUM",
+      "action_note": "DCA watch — não é recomendação de ação. É etiqueta de vigilância estratégica para contextualizar alocação periódica planeada."
+    },
+    {
+      "symbol": "VWCE",
+      "name": "Vanguard FTSE All-World ETF",
+      "alert_level": "INFO",
+      "previous_level": "INFO",
+      "level_change": "UNCHANGED",
+      "change_note": "Global risk-on alinhado. DXY fraco (<100) tailwind para ativos globais. Geopolítico Iran é risco de curto prazo monitorizado.",
+      "implication": "No action / monitor only",
+      "impact_direction": "Neutral to positive",
+      "data_quality": "LOW",
+      "action_note": "Monitorar DXY e geopolítico. Sem ação automática."
+    }
+  ],
+  "lessons": [
+    {
+      "id": 1,
+      "category": "SYSTEM",
+      "lesson": "Memorial Day null session bem gerida: R0 de domingo posicionou corretamente para a semana curta. R1/R2 não correram (correto). R3 EOD cobre o contexto de feriado com vigilância de fim-de-semana."
+    },
+    {
+      "id": 2,
+      "category": "TICKER_BEHAVIOR",
+      "lesson": "NVDA: sell-the-news pós-earnings históricos materializou-se moderadamente. Stock fechou sexta ~$218 (+9% vs pré-earnings ~$200). Thesis intacta mas momentum de curto prazo moderado. Padrão previsível documentado."
+    },
+    {
+      "id": 3,
+      "category": "MACRO_COVERAGE",
+      "lesson": "Kevin Warsh como novo Fed Chairman foi um desenvolvimento material não capturado no R0. Mudança de liderança da Fed deve ser monitorizada proativamente — impacto em valuations de growth stocks (NVDA, MSFT, MU) não negligenciável."
+    },
+    {
+      "id": 4,
+      "category": "PORTFOLIO_COVERAGE",
+      "lesson": "CVX: R0 classificou como DATA_PENDING/NONE. Pesquisa de fim-de-semana revelou risco geopolítico (CEO warnings, Iran war, Strait of Hormuz). Monitorização energética deve incluir pesquisa geopolítica mesmo sem catalisador de earnings."
+    },
+    {
+      "id": 5,
+      "category": "DATA_QUALITY",
+      "lesson": "Dias de feriado produzem dados ambíguos (scraper timestamps de domingo/segunda podem ser confundidos com sexta). MSFT $417.80 e CVX $191.55 foram capturados via web search mas não confirmados por API — marcar como MEDIUM."
+    },
+    {
+      "id": 6,
+      "category": "ALPHA_VANTAGE",
+      "lesson": "Budget Alpha Vantage preservado (0 chamadas hoje). Correto para dia de mercado fechado. Budget completo disponível para terça 26 Mai quando mercado abre e tickers precisam de validação técnica."
+    },
+    {
+      "id": 7,
+      "category": "TOMORROW_PREP",
+      "lesson": "ZS Zscaler AMC terça é o primeiro grande teste da semana ao sector cybersecurity. 40 revisões de EPS para cima sugere expectativas elevadas — risco de 'beat but sell' se guidance decepcionar. AZO BMO como barómetro de consumidor auto parts."
+    }
+  ],
+  "model_self_critique": [
+    "R0 não capturou Kevin Warsh como novo Fed Chairman — gap de cobertura macro. Resolver: incluir pesquisa de liderança Fed em R0 semanal.",
+    "CVX classificado como DATA_PENDING em R0 sem follow-up de geopolítico energético. Resolver: pesquisa dedicada ao contexto OPEC+/geopolítico para posições energéticas mesmo sem earnings próximos.",
+    "Todos os R0 tickers eram CALENDAR_WATCH sem preços reais — correto para feriado, mas reduz capacidade de validação EOD. Sessão de sexta (22 Mai) foi a última com dados reais.",
+    "AeroVironment (AVAV) +6.8% em sexta não estava no radar — defense sector como proxy de geopolítico Iran deveria ter sido incluído em sector snapshot."
+  ],
+  "data_quality_summary": {
+    "alpha_vantage_calls_used": 0,
+    "alpha_vantage_budget_remaining": 25,
+    "r1_available": false,
+    "r2_available": false,
+    "r0_available": true,
+    "session_type": "HOLIDAY_NULL",
+    "warnings": [
+      "Memorial Day — mercado fechado. Sem dados intraday.",
+      "R1 e R2 não executaram — nenhuma hipótese intraday para validar.",
+      "Preços NVDA/MSFT/CVX são do último fecho (sexta 22 Mai) — stale para efeitos de análise de terça.",
+      "Kevin Warsh novo Fed Chairman — desenvolvimento material não em R0.",
+      "Alpha Vantage: 0/25 chamadas usadas hoje. Budget completo para terça."
+    ]
+  },
+  "tomorrow_watch": [
+    {
+      "ticker": "ZS",
+      "company": "Zscaler",
+      "event": "Earnings AMC Terça 26 Mai",
+      "eps_estimate": 1.01,
+      "revenue_estimate_m": 835.66,
+      "why": "Primeiro grande AMC tech da semana. Cybersecurity zero-trust. 40 revisões EPS para cima. Impacto em CRWD, PANW.",
+      "risk": "Beat-but-sell se guidance decepcionar",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "AZO",
+      "company": "AutoZone",
+      "event": "Earnings BMO Terça 26 Mai",
+      "eps_estimate": 36.60,
+      "revenue_estimate_bn": 4.87,
+      "why": "Primeiro earnings S&P 500 da semana. Barómetro consumidor auto parts. Same-store sales como KPI.",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "NVDA",
+      "company": "NVIDIA",
+      "event": "Abertura após Memorial Day",
+      "why": "Reação institucional ao post-earnings settling. Primeira sessão após resultados históricos. Monitorizar volume e direção.",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "M",
+      "company": "Macys",
+      "event": "Earnings 26 Mai (timing não confirmado)",
+      "why": "Barómetro consumidor médio americano",
+      "priority": "MEDIUM"
+    },
+    {
+      "ticker": "CVX",
+      "company": "Chevron",
+      "event": "Monitorizar WTI e notícias Iran",
+      "why": "CEO warnings sobre escassez combustível. Geopolítico elevado.",
+      "priority": "MEDIUM"
+    }
+  ],
+  "sources": [
+    {
+      "name": "R0 Morning Radar 2026-05-24",
+      "type": "Internal JSON",
+      "reliability": "HIGH",
+      "note": "Base data para semana"
+    },
+    {
+      "name": "Web Search — NVDA post-earnings May 22",
+      "query": "NVDA stock price May 22 2026 post earnings reaction Friday close",
+      "type": "Web Search",
+      "reliability": "MEDIUM"
+    },
+    {
+      "name": "Web Search — Memorial Day market news",
+      "query": "stock market news Memorial Day weekend May 2026 major developments",
+      "type": "Web Search",
+      "reliability": "MEDIUM"
+    },
+    {
+      "name": "Web Search — ZS AZO earnings preview",
+      "query": "ZS Zscaler AZO AutoZone earnings Tuesday May 26 2026 preview estimates",
+      "type": "Web Search",
+      "reliability": "MEDIUM"
+    },
+    {
+      "name": "Web Search — Portfolio news weekend",
+      "query": "NVDA MU MSFT CVX news May 24 25 2026 portfolio update weekend",
+      "type": "Web Search",
+      "reliability": "MEDIUM"
+    }
+  ]
+}
