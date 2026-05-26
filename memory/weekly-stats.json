@@ -1,0 +1,23 @@
+{
+  "last_updated": "2026-05-26",
+  "week": "2026-W22",
+  "sessions_with_data": ["2026-05-26"],
+  "total_tickers_validated": 6,
+  "worked": 3,
+  "partially_worked": 2,
+  "failed": 1,
+  "data_insufficient": 0,
+  "most_material_move": {"ticker": "MU", "change_pct": 19.29, "catalyst": "UBS PT +204% / $1T market cap"},
+  "incomplete_cycles": ["2026-05-26 (R1/R2 missing)"],
+  "best_catalyst_types": ["ANALYST_UPGRADE_MAJOR", "MACRO_CONTINUATION"],
+  "weakest_catalyst_types": ["CALENDAR_WATCH (no near-term catalyst scored)", "NONE (energy risk missed)"],
+  "most_repeated_tickers": ["NVDA", "MSFT", "MU"],
+  "portfolio_alerts_eod": [
+    {"ticker": "MU", "level": "CRITICAL", "change_pct": 19.29},
+    {"ticker": "CVX", "level": "WATCH", "change_pct": -3.51},
+    {"ticker": "NVDA", "level": "INFO", "change_pct": -0.22},
+    {"ticker": "MSFT", "level": "INFO", "change_pct": -0.61}
+  ],
+  "lessons_count": 7,
+  "top_lesson": "Analyst upgrades have earnings-equivalent magnitude — add analyst_revision_risk dimension to scoring"
+}

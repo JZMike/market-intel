@@ -1,0 +1,337 @@
+{
+  "date": "2026-05-26",
+  "run": "R3_EOD_LEARNING",
+  "run_time_lisbon": "22:09",
+  "run_time_et": "17:09",
+  "urls": {
+    "latest": "https://jzmike.github.io/market-intel/latest.html",
+    "day": "https://jzmike.github.io/market-intel/reports/2026/05/2026-05-26.html"
+  },
+  "runs_available": {
+    "r0": true,
+    "r1": false,
+    "r2": false,
+    "note": "R1 and R2 did not run today. EOD reconstruction from R0 only."
+  },
+  "market_close_snapshot": {
+    "date": "2026-05-26",
+    "tape": "BULLISH",
+    "tape_detail": "Semiconductors/tech led record closes on S&P 500 and Nasdaq. Dow negative. VIX slightly elevated. Iran/Ukraine geopolitical tension absorbed bullishly.",
+    "indices": [
+      {
+        "symbol": "S&P 500",
+        "close": 7519.12,
+        "change_pct": 0.61,
+        "note": "Record close"
+      },
+      {
+        "symbol": "Nasdaq",
+        "close": 26656.18,
+        "change_pct": 1.19,
+        "note": "Record close"
+      },
+      {
+        "symbol": "Dow Jones",
+        "close": 50461.68,
+        "change_pct": -0.23,
+        "note": "Value lagged"
+      },
+      {
+        "symbol": "Russell 2000",
+        "close": null,
+        "change_pct": 1.77,
+        "note": "Small caps strong"
+      },
+      {
+        "symbol": "VIX",
+        "close": 17.01,
+        "change_pct": 2.53,
+        "note": "Slightly elevated, geopolitical risk"
+      }
+    ],
+    "sectors": [
+      { "sector": "Technology (XLK)", "performance_pct": 2.8, "direction": "STRONG_UP" },
+      { "sector": "Industrials (XLI)", "performance_pct": 1.62, "direction": "UP" },
+      { "sector": "Materials", "performance_pct": 1.5, "direction": "UP" },
+      { "sector": "Health Care (XLV)", "performance_pct": 1.17, "direction": "UP" },
+      { "sector": "Financials (XLF)", "performance_pct": 0.41, "direction": "SLIGHT_UP" },
+      { "sector": "Energy (XLE)", "performance_pct": null, "direction": "NEGATIVE_INFERRED", "note": "CVX -3.51%" }
+    ],
+    "top_mover": "MU (Micron Technology) +19.3% — $1 trillion market cap milestone",
+    "breadth_note": "16 of top 20 S&P 500 performers were semiconductors or computer hardware"
+  },
+  "ticker_outcomes": [
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "r0_classification": "CALENDAR_WATCH",
+      "r0_intraday_readiness": "LOW",
+      "r0_thesis": "Earnings 2026-06-24 as future catalyst; HBM/DRAM demand bullish",
+      "close_price": 895.88,
+      "change_pct": 19.29,
+      "volume": 75232829,
+      "data_source": "Alpha Vantage (confirmed)",
+      "eod_result": "WORKED",
+      "catalyst_confirmed": true,
+      "catalyst_detail": "UBS raised PT 204% to $1,625 — most aggressive semi upgrade in recent history. HBM4 capacity sold out through year-end. Q2 FY26 revenue $23.9B (+196% YoY). Multiple upgrades: CFRA, HSBC, Citigroup. $1 trillion market cap crossed for first time.",
+      "catalyst_type": "ANALYST_UPGRADE_MAJOR",
+      "gap_maintained": true,
+      "lesson": "Analyst upgrades can trigger earnings-magnitude moves. R0 had MU at LOW intraday readiness — should include analyst revision risk in scoring."
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "r0_classification": "PORTFOLIO_ALERT",
+      "r0_intraday_readiness": "NONE",
+      "r0_thesis": "Post-earnings bullish (Q1 FY27 beat, data center +69%, $87B Q2 guidance)",
+      "close_price": 214.86,
+      "change_pct": -0.22,
+      "volume": 185173649,
+      "data_source": "Alpha Vantage (confirmed)",
+      "eod_result": "PARTIALLY_WORKED",
+      "catalyst_confirmed": true,
+      "catalyst_detail": "Long-term thesis intact (post-earnings beat). Intraday flat despite semi sector +2.8%. High volume (185M) suggests distribution/rotation. Post-earnings consolidation pattern confirmed.",
+      "catalyst_type": "POST_EARNINGS_CONSOLIDATION",
+      "lesson": "Post-earnings consolidation persists even during sector up days. Mega-cap gravity differs from sector ETF moves. NVDA flat while MU +19% = stock-specific vs sector distinction."
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "r0_classification": "PORTFOLIO_ALERT",
+      "r0_intraday_readiness": "NONE",
+      "r0_thesis": "AI capex $190B/2026 bullish for ecosystem",
+      "close_price": 416.03,
+      "change_pct": -0.61,
+      "volume": 30315713,
+      "data_source": "Alpha Vantage (confirmed)",
+      "eod_result": "PARTIALLY_WORKED",
+      "catalyst_confirmed": true,
+      "catalyst_detail": "Long-term AI capex thesis intact. Intraday slightly negative. Tech rally was semi/hardware driven, not software/cloud. MSFT diverged from sector.",
+      "catalyst_type": "SECTOR_DIVERGENCE",
+      "lesson": "Tech sector +2.8% but MSFT -0.61% — semiconductor rally does not lift all tech. Software/cloud follows different drivers than hardware."
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "r0_classification": "NONE",
+      "r0_intraday_readiness": "NONE",
+      "r0_thesis": "No material news; energy sector quiet",
+      "close_price": 184.71,
+      "change_pct": -3.51,
+      "volume": 14194670,
+      "data_source": "Alpha Vantage (confirmed)",
+      "eod_result": "FAILED",
+      "catalyst_confirmed": false,
+      "catalyst_detail": "CVX dropped -3.51% — notable portfolio loss. Energy sector weakness likely driven by oil price pressure. R0 classified as NONE with no monitoring. Geopolitical context (Iran deal prospects) may have weighed on oil/energy.",
+      "catalyst_type": "ENERGY_SECTOR_WEAKNESS",
+      "lesson": "Portfolio positions classified NONE in R0 still need monitoring. Energy sector has independent drivers (oil, OPEC, geopolitical) that can diverge sharply from broad market on any given day."
+    },
+    {
+      "ticker": "SPY",
+      "name": "S&P 500 (VUUA proxy)",
+      "r0_classification": "SECTOR_REFERENCE",
+      "r0_intraday_readiness": "NONE",
+      "r0_thesis": "Previous-close bias bullish (+0.37%)",
+      "close_price": 7519.12,
+      "change_pct": 0.61,
+      "volume": null,
+      "data_source": "Web search (CNBC/TheStreet)",
+      "eod_result": "WORKED",
+      "catalyst_confirmed": true,
+      "catalyst_detail": "S&P 500 closed at record +0.61%. VUUA ETF tracks this. Macro bullish thesis confirmed.",
+      "catalyst_type": "MACRO_CONTINUATION",
+      "lesson": "Broad market bullish bias from R0 confirmed. Record close."
+    },
+    {
+      "ticker": "QQQ",
+      "name": "Nasdaq 100",
+      "r0_classification": "SECTOR_REFERENCE",
+      "r0_intraday_readiness": "NONE",
+      "r0_thesis": "Previous-close +0.19%, AI mega-cap driven",
+      "close_price": 26656.18,
+      "change_pct": 1.19,
+      "volume": null,
+      "data_source": "Web search",
+      "eod_result": "WORKED",
+      "catalyst_confirmed": true,
+      "catalyst_detail": "Nasdaq +1.19% record close. VWCE and QQQ exposure positive. Semi rally lifted Nasdaq above S&P.",
+      "catalyst_type": "SECTOR_CONTINUATION",
+      "lesson": "Nasdaq outperformed S&P today (1.19% vs 0.61%) — semi rally more Nasdaq-weighted."
+    }
+  ],
+  "earnings_amc_results": [
+    {
+      "ticker": "AZO",
+      "name": "AutoZone",
+      "timing": "BMO",
+      "eps_actual": 38.07,
+      "eps_estimate": 36.65,
+      "eps_delta": "+1.42 (beat)",
+      "revenue_actual_b": 4.84,
+      "revenue_estimate_b": 4.88,
+      "revenue_result": "slight miss",
+      "highlights": "Total sales +8.4% YoY (largest increase 3+ years). Domestic SSS +4.1%. Commercial +10.4%.",
+      "guidance": null,
+      "ah_reaction": null,
+      "relevance": "LOW_RELEVANCE",
+      "portfolio_impact": "None — not a portfolio holding. Consumer auto parts sector. Positive read on consumer spending."
+    },
+    {
+      "ticker": "ZS",
+      "name": "Zscaler",
+      "timing": "AMC",
+      "eps_actual": null,
+      "eps_estimate": 0.80,
+      "revenue_estimate_m": 835.48,
+      "status": "RESULTS_PENDING",
+      "note": "AMC results not available at time of R3 (17:09 ET). Expected after close.",
+      "relevance": "TOMORROW_WATCH",
+      "portfolio_impact": "None — not a portfolio holding. Cybersecurity sector read for tomorrow."
+    }
+  ],
+  "portfolio_sentinel_eod": [
+    {
+      "symbol": "MU",
+      "name": "Micron Technology",
+      "alert_level": "CRITICAL",
+      "close_price": 895.88,
+      "change_pct": 19.29,
+      "implication": "Thesis reinforced",
+      "detail": "MU crossed $1 trillion market cap for the first time. UBS PT raised 204% to $1,625. HBM4 capacity sold out through year-end. Q2 FY26 revenue $23.9B (+196% YoY). Memory market 30-50% undersupplied through 2026-2027. Multiple analyst upgrades. Thesis dramatically reinforced.",
+      "watch_tag": "DCA watch",
+      "watch_tag_note": "DCA watch é etiqueta de vigilância estratégica. Não é recomendação automática de compra."
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "alert_level": "INFO",
+      "close_price": 214.86,
+      "change_pct": -0.22,
+      "implication": "Thesis reinforced (long-term)",
+      "detail": "NVDA flat (-0.22%) despite semiconductor sector +2.8%. High volume (185M) indicates active trading/distribution. Post-earnings consolidation pattern. Long-term AI data center thesis intact. Short-term: consolidation expected.",
+      "watch_tag": "Monitor only"
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "alert_level": "INFO",
+      "close_price": 416.03,
+      "change_pct": -0.61,
+      "implication": "Thesis reinforced (long-term)",
+      "detail": "MSFT slightly negative while tech sector broadly positive. AI capex thesis ($190B/2026) remains intact. Today's tech rally was hardware/semi-driven, not cloud/software. Long-term MSFT thesis unchanged.",
+      "watch_tag": "Monitor only"
+    },
+    {
+      "symbol": "CVX",
+      "name": "Chevron",
+      "alert_level": "WATCH",
+      "close_price": 184.71,
+      "change_pct": -3.51,
+      "implication": "Volatility risk",
+      "detail": "CVX dropped -3.51% while broad market was positive. Energy sector weakness, likely driven by oil price pressure and potential Iran deal news (reduced geopolitical premium). Monitor oil price and OPEC developments. Dividend thesis unchanged for long-term.",
+      "watch_tag": "Monitor only",
+      "watch_tag_note": "Movimento de 1 dia não invalida tese de longo prazo. Monitorizar próxima sessão."
+    },
+    {
+      "symbol": "VUUA",
+      "name": "Vanguard S&P 500 ETF",
+      "alert_level": "INFO",
+      "close_price": null,
+      "change_pct": 0.61,
+      "implication": "Thesis reinforced",
+      "detail": "S&P 500 record close +0.61%. VUUA tracks this. Long-term broad market diversification thesis reinforced.",
+      "watch_tag": "Monitor only"
+    },
+    {
+      "symbol": "VWCE",
+      "name": "Vanguard FTSE All-World ETF",
+      "alert_level": "INFO",
+      "close_price": null,
+      "change_pct": null,
+      "implication": "Thesis reinforced",
+      "detail": "Global equities context positive. US record closes bullish for global exposure. Geopolitical risks (Iran/Ukraine) elevated but absorbed by markets.",
+      "watch_tag": "Monitor only"
+    }
+  ],
+  "lessons": [
+    {
+      "category": "MISSED_CATALYST",
+      "lesson": "Analyst upgrades can trigger earnings-magnitude moves. MU +19.3% from UBS PT revision was not forecast in R0. R0 intraday_readiness for MU was LOW — should incorporate analyst consensus revision risk as a scoring dimension."
+    },
+    {
+      "category": "POST_EARNINGS_PATTERN",
+      "lesson": "NVDA flat (-0.22%) despite sector +2.8% confirms post-earnings consolidation is a real pattern. Mega-cap post-earnings gravity persists even on sector up days."
+    },
+    {
+      "category": "INTRA_SECTOR_DIFFERENTIATION",
+      "lesson": "Semiconductor sector rally (MU +19%, NVDA flat) shows that sector ETF performance does not equal individual stock performance. Stock-specific vs sector distinction is critical for portfolio monitoring."
+    },
+    {
+      "category": "ENERGY_MONITORING_GAP",
+      "lesson": "CVX -3.51% while broad market positive. R0 classified CVX as NONE with no monitoring flag. Portfolio positions need energy/oil sector monitoring regardless of news-driven classification."
+    },
+    {
+      "category": "INCOMPLETE_CYCLE",
+      "lesson": "R1 and R2 did not run today. EOD R3 reconstructed from R0 only, losing intraday price context. Incomplete cycle reduces hypothesis validation quality."
+    },
+    {
+      "category": "GEOPOLITICAL_ABSORPTION",
+      "lesson": "Iran/Ukraine geopolitical risk elevated VIX (+2.53% to 17.01) but markets rallied to record closes. Market absorbed geopolitical tension bullishly — semi/tech demand story dominated narrative."
+    },
+    {
+      "category": "VALUE_TECH_BIFURCATION",
+      "lesson": "Dow -0.23% while S&P +0.61% and Nasdaq +1.19%. Record closes on tech-heavy indices while value-weighted Dow lagged. Today was a semi/tech day, not a broad market day."
+    }
+  ],
+  "model_self_critique": [
+    "R0 classified MU as CALENDAR_WATCH / LOW intraday readiness. Analyst upgrade events are as material as earnings. Need analyst revision risk dimension.",
+    "CVX energy risk was not flagged in R0. All portfolio positions need a baseline monitoring flag regardless of daily news.",
+    "R1/R2 cycle missing today — need to improve reliability of mid-day runs.",
+    "MU $1T market cap milestone was forecast direction (bullish) but not magnitude or timing. Calendar watch should not preclude near-term catalyst monitoring."
+  ],
+  "data_quality_summary": {
+    "alpha_vantage_calls_used": 4,
+    "av_tickers": ["MU", "NVDA", "MSFT", "CVX"],
+    "warnings": [
+      "R1 and R2 did not run — intraday context missing",
+      "ZS earnings AMC results pending at time of R3",
+      "CVX price confirmed but energy sector broader data not retrieved",
+      "VUUA and VWCE prices not confirmed (ETFs, European-listed)"
+    ]
+  },
+  "tomorrow_watch": [
+    {
+      "ticker": "ZS",
+      "name": "Zscaler",
+      "reason": "AMC results tonight — cybersecurity sector read. Est. EPS $0.80, Revenue $835.48M. Watch for beat/miss impact on tech sector.",
+      "priority": "MEDIUM"
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "reason": "Follow-through after +19.3% and $1T market cap milestone. Watch for pre-market continuation or profit-taking. HBM4 sold out story.",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "reason": "Energy recovery or continuation of -3.51% weakness. Monitor oil prices and Iran deal news.",
+      "priority": "MEDIUM"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "reason": "Post-MU rally: will semi momentum carry to NVDA? High volume today (185M) suggests positioning. Watch for catch-up or continued consolidation.",
+      "priority": "MEDIUM"
+    }
+  ],
+  "sources": [
+    "Alpha Vantage API (MU, NVDA, MSFT, CVX — confirmed closes)",
+    "CNBC: Micron $1T market cap article",
+    "TheStreet: Stock Market Today May 26 2026",
+    "Benzinga: Earnings May 26 2026",
+    "Quiver Quantitative: AutoZone Q3 2026 earnings",
+    "TechMarketer: Micron UBS $1,625 PT analysis",
+    "Motley Fool: Micron May 26 2026"
+  ]
+}

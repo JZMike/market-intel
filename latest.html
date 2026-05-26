@@ -329,3 +329,308 @@ footer a {color: #3498db; text-decoration: none;}
 </div>
 </body>
 </html>
+
+<!-- ===== R3 EOD LEARNING — 22h09 ===== -->
+<style>
+.eod-section {background: #fff; margin-bottom: 16px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-top: 4px solid #2ecc71;}
+.eod-section h2 {font-size: 18px; color: #2c3e50; margin-bottom: 12px; border-bottom: 2px solid #e9ecef; padding-bottom: 8px;}
+.eod-close-grid {display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; margin-bottom: 16px;}
+.eod-close-card {background: #f8f9fa; padding: 12px; border-radius: 4px; text-align: center; border-left: 4px solid #3498db;}
+.eod-close-card.record {border-left-color: #2ecc71;}
+.eod-close-card.negative {border-left-color: #e74c3c;}
+.eod-close-card .sym {font-weight: 700; font-size: 14px; color: #2c3e50;}
+.eod-close-card .val {font-size: 18px; font-weight: 700; margin: 4px 0;}
+.eod-close-card .chg {font-size: 12px;}
+.eod-close-card .chg.up {color: #27ae60;}
+.eod-close-card .chg.down {color: #e74c3c;}
+.eod-close-card .lbl {font-size: 11px; color: #7f8c8d;}
+.outcome-table {width: 100%; border-collapse: collapse; font-size: 12px; overflow-x: auto; display: block;}
+.outcome-table th {background: #2c3e50; color: #fff; padding: 8px 10px; text-align: left; font-size: 11px; white-space: nowrap;}
+.outcome-table td {padding: 8px 10px; border-bottom: 1px solid #e9ecef; vertical-align: top;}
+.outcome-table tr:nth-child(even) {background: #f8f9fa;}
+.badge-worked {background: #d4edda; color: #155724; padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: 600; white-space: nowrap;}
+.badge-partial {background: #fff3cd; color: #856404; padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: 600; white-space: nowrap;}
+.badge-failed {background: #f8d7da; color: #721c24; padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: 600; white-space: nowrap;}
+.sentinel-card {background: #f8f9fa; padding: 12px; border-radius: 4px; margin-bottom: 10px; border-left: 4px solid #3498db;}
+.sentinel-card.critical {border-left-color: #e74c3c;}
+.sentinel-card.watch {border-left-color: #f39c12;}
+.sentinel-card.info {border-left-color: #3498db;}
+.sentinel-card .s-header {display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;}
+.sentinel-card .s-ticker {font-weight: 700; font-size: 14px;}
+.sentinel-card .s-badge {font-size: 10px; font-weight: 600; padding: 2px 6px; border-radius: 3px; background: #e74c3c; color: #fff;}
+.sentinel-card .s-badge.critical {background: #e74c3c;}
+.sentinel-card .s-badge.watch {background: #f39c12; color: #fff;}
+.sentinel-card .s-badge.info {background: #3498db; color: #fff;}
+.sentinel-card .s-price {font-size: 13px; color: #555; margin-bottom: 6px;}
+.sentinel-card .s-detail {font-size: 12px; color: #7f8c8d;}
+.lesson-list {list-style: none; padding: 0;}
+.lesson-list li {padding: 10px 12px; background: #f8f9fa; border-radius: 4px; border-left: 3px solid #9b59b6; margin-bottom: 8px; font-size: 12px;}
+.lesson-list li strong {display: block; color: #2c3e50; font-size: 11px; text-transform: uppercase; margin-bottom: 4px;}
+.tomorrow-list {list-style: none; padding: 0;}
+.tomorrow-list li {padding: 8px 12px; background: #f8f9fa; border-radius: 4px; border-left: 3px solid #3498db; margin-bottom: 8px; font-size: 12px;}
+.tomorrow-list li strong {color: #2c3e50;}
+.tomorrow-list li.high {border-left-color: #e74c3c;}
+.tomorrow-list li.medium {border-left-color: #f39c12;}
+.sector-grid {display: grid; grid-template-columns: repeat(2,1fr); gap: 8px; margin-top: 12px;}
+.sector-item {background: #f8f9fa; padding: 8px; border-radius: 4px; font-size: 12px; display: flex; justify-content: space-between; align-items: center;}
+.sector-item .s-name {color: #555;}
+.sector-item .s-pct {font-weight: 600;}
+.sector-item .s-pct.up {color: #27ae60;}
+.sector-item .s-pct.down {color: #e74c3c;}
+@media (min-width: 720px) {
+  .eod-close-grid {grid-template-columns: repeat(5,1fr);}
+  .sector-grid {grid-template-columns: repeat(3,1fr);}
+}
+</style>
+
+<div class="container">
+
+<div class="eod-section">
+<h2>🎯 EOD Learning — 22h09 LIS / 17h09 ET</h2>
+
+<div style="background: #d4edda; border: 1px solid #c3e6cb; border-radius: 6px; padding: 12px; margin-bottom: 16px; font-size: 12px; color: #155724;">
+  <strong>Tape: BULLISH</strong> — Semiconductors lideraram. S&P 500 + Nasdaq fecharam em máximos históricos. MU +19.3% cruzou $1 trilhão de capitalização. R1/R2 não correram hoje — ciclo reconstruído a partir de R0.
+</div>
+
+<h3 style="font-size: 15px; margin-bottom: 10px; color: #2c3e50;">📈 Market Close Snapshot</h3>
+<div class="eod-close-grid">
+  <div class="eod-close-card record">
+    <div class="sym">S&P 500</div>
+    <div class="val" style="color: #27ae60;">7,519.12</div>
+    <div class="chg up">↑ +0.61%</div>
+    <div class="lbl">🏆 Máximo Histórico</div>
+  </div>
+  <div class="eod-close-card record">
+    <div class="sym">Nasdaq</div>
+    <div class="val" style="color: #27ae60;">26,656.18</div>
+    <div class="chg up">↑ +1.19%</div>
+    <div class="lbl">🏆 Máximo Histórico</div>
+  </div>
+  <div class="eod-close-card negative">
+    <div class="sym">Dow Jones</div>
+    <div class="val" style="color: #e74c3c;">50,461.68</div>
+    <div class="chg down">↓ -0.23%</div>
+    <div class="lbl">Value lagged</div>
+  </div>
+  <div class="eod-close-card record">
+    <div class="sym">Russell 2000</div>
+    <div class="val" style="color: #27ae60;">—</div>
+    <div class="chg up">↑ +1.77%</div>
+    <div class="lbl">Small caps fortes</div>
+  </div>
+  <div class="eod-close-card">
+    <div class="sym">VIX</div>
+    <div class="val" style="color: #f39c12;">17.01</div>
+    <div class="chg down" style="color: #e74c3c;">↑ +2.53%</div>
+    <div class="lbl">Iran/Ucrânia</div>
+  </div>
+</div>
+
+<div class="sector-grid">
+  <div class="sector-item"><span class="s-name">Tecnologia (XLK)</span><span class="s-pct up">+2.80%</span></div>
+  <div class="sector-item"><span class="s-name">Industriais (XLI)</span><span class="s-pct up">+1.62%</span></div>
+  <div class="sector-item"><span class="s-name">Materiais</span><span class="s-pct up">+1.50%</span></div>
+  <div class="sector-item"><span class="s-name">Saúde (XLV)</span><span class="s-pct up">+1.17%</span></div>
+  <div class="sector-item"><span class="s-name">Financeiros (XLF)</span><span class="s-pct up">+0.41%</span></div>
+  <div class="sector-item"><span class="s-name">Energia (XLE)</span><span class="s-pct down">Negativo (CVX -3.5%)</span></div>
+</div>
+<p style="font-size: 11px; color: #7f8c8d; margin-top: 8px;">16 dos 20 melhores S&P 500 do dia foram semicondutores ou hardware. Top mover: MU +19.3% ($1T market cap).</p>
+</div>
+
+<div class="eod-section">
+<h2>📊 Resultado das Hipóteses R0</h2>
+<p style="font-size: 12px; color: #7f8c8d; margin-bottom: 12px;">⚠️ R1 e R2 não correram hoje. Validação feita exclusivamente sobre hipóteses R0 (09:35 LIS / 04:35 ET).</p>
+<div style="overflow-x: auto;">
+<table class="outcome-table">
+<thead>
+<tr>
+  <th>Ticker</th>
+  <th>Hipótese R0</th>
+  <th>Classificação R0</th>
+  <th>Fecho</th>
+  <th>Var%</th>
+  <th>Resultado EOD</th>
+  <th>Lição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>MU</strong></td>
+  <td>Earnings 24-Jun; HBM bullish (long-term)</td>
+  <td>CALENDAR_WATCH / LOW</td>
+  <td>$895.88</td>
+  <td><strong style="color:#27ae60;">+19.29%</strong></td>
+  <td><span class="badge-worked">WORKED (surpresa)</span></td>
+  <td>Upgrades de analistas = catalistas de magnitude de earnings. R0 subestimou.</td>
+</tr>
+<tr>
+  <td><strong>NVDA</strong></td>
+  <td>Post-earnings bullish; data center +69%</td>
+  <td>PORTFOLIO_ALERT</td>
+  <td>$214.86</td>
+  <td><span style="color:#e74c3c;">-0.22%</span></td>
+  <td><span class="badge-partial">PARTIALLY_WORKED</span></td>
+  <td>Consolidação pós-earnings persiste mesmo em dias de setor forte.</td>
+</tr>
+<tr>
+  <td><strong>MSFT</strong></td>
+  <td>AI capex $190B; ecosystem bullish</td>
+  <td>PORTFOLIO_ALERT</td>
+  <td>$416.03</td>
+  <td><span style="color:#e74c3c;">-0.61%</span></td>
+  <td><span class="badge-partial">PARTIALLY_WORKED</span></td>
+  <td>Rally tech foi hardware/semi-driven, não software/cloud. Divergência intra-setor.</td>
+</tr>
+<tr>
+  <td><strong>CVX</strong></td>
+  <td>Sem notícia; energia quieta</td>
+  <td>NONE</td>
+  <td>$184.71</td>
+  <td><span style="color:#e74c3c;">-3.51%</span></td>
+  <td><span class="badge-failed">FAILED</span></td>
+  <td>Energia tem drivers independentes. Posições NONE na carteira precisam monitorização mínima.</td>
+</tr>
+<tr>
+  <td><strong>SPY/VUUA</strong></td>
+  <td>Bias bullish (May 23 close +0.37%)</td>
+  <td>SECTOR_REFERENCE</td>
+  <td>7,519.12</td>
+  <td><span style="color:#27ae60;">+0.61%</span></td>
+  <td><span class="badge-worked">WORKED</span></td>
+  <td>Macro bullish bias confirmado. Máximo histórico.</td>
+</tr>
+<tr>
+  <td><strong>QQQ/VWCE</strong></td>
+  <td>Bias bullish; AI mega-cap driven</td>
+  <td>SECTOR_REFERENCE</td>
+  <td>26,656.18</td>
+  <td><span style="color:#27ae60;">+1.19%</span></td>
+  <td><span class="badge-worked">WORKED</span></td>
+  <td>Nasdaq superou S&P — semi-rally mais pesado em Nasdaq.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="eod-section">
+<h2>📋 Earnings AMC — Resultados Disponíveis</h2>
+<ul class="portfolio-list" style="margin-top: 0;">
+  <li style="border-left-color: #27ae60;">
+    <strong>✅ AZO — AutoZone (BMO)</strong>
+    <span class="detail">EPS $38.07 vs $36.65E (beat +$1.42) | Revenue $4.84B vs $4.88B (miss ligeiro) | SSS +4.1% | Comercial +10.4% | Vendas totais +8.4% (maior crescimento em 3 anos). <strong>Relevância: LOW</strong> — não é posição da carteira. Leitura positiva de consumidor.</span>
+  </li>
+  <li style="border-left-color: #f39c12;">
+    <strong>⏳ ZS — Zscaler (AMC)</strong>
+    <span class="detail">Resultados pendentes às 17:09 ET. Est. EPS $0.80 | Revenue $835.48M. <strong>Relevância: TOMORROW WATCH</strong> — leitura do setor de cibersegurança para amanhã.</span>
+  </li>
+</ul>
+<p style="font-size: 11px; color: #7f8c8d; margin-top: 8px;">73 empresas reportaram hoje. AMC relevante para carteira: nenhuma. ZS aguarda resultado.</p>
+</div>
+
+<div class="eod-section">
+<h2>🛡️ Portfolio Sentinel EOD</h2>
+
+<div class="sentinel-card critical">
+  <div class="s-header">
+    <span class="s-ticker">🔴 MU — Micron Technology</span>
+    <span class="s-badge critical">CRITICAL</span>
+  </div>
+  <div class="s-price">$895.88 (+19.29%) | Volume: 75.2M | AV Confirmado</div>
+  <div class="s-detail">Micron cruzou $1 trilhão de capitalização de mercado pela primeira vez. UBS elevou PT 204% para $1,625. HBM4 esgotado até ao final de 2026. Revenue Q2 FY26: $23.9B (+196% YoY). Upgrades: CFRA, HSBC, Citigroup. Memória DRAM +58-63%, NAND +70-75%. Mercado subabastecido 30-50% em 2026-2027.<br><em>Tese: Dramaticamente reforçada. "DCA watch" = etiqueta de vigilância estratégica, não recomendação automática.</em></div>
+</div>
+
+<div class="sentinel-card info">
+  <div class="s-header">
+    <span class="s-ticker">🔵 NVDA — NVIDIA</span>
+    <span class="s-badge info">INFO</span>
+  </div>
+  <div class="s-price">$214.86 (-0.22%) | Volume: 185.2M | AV Confirmado</div>
+  <div class="s-detail">NVDA flat apesar de setor semis +2.8%. Volume elevado (185M) — posicionamento ativo. Padrão de consolidação pós-earnings confirmado. Tese AI data center long-term intacta. Curto prazo: consolidação esperada.<br><em>Tese: Reforçada (longo prazo). Monitor only.</em></div>
+</div>
+
+<div class="sentinel-card info">
+  <div class="s-header">
+    <span class="s-ticker">🔵 MSFT — Microsoft</span>
+    <span class="s-badge info">INFO</span>
+  </div>
+  <div class="s-price">$416.03 (-0.61%) | Volume: 30.3M | AV Confirmado</div>
+  <div class="s-detail">MSFT ligeiramente negativo enquanto tech positivo. Rally foi hardware/semi-driven, não software/cloud. Tese AI capex $190B/2026 intacta. Divergência intra-setor esperável.<br><em>Tese: Reforçada (longo prazo). Monitor only.</em></div>
+</div>
+
+<div class="sentinel-card watch">
+  <div class="s-header">
+    <span class="s-ticker">🟡 CVX — Chevron</span>
+    <span class="s-badge watch">WATCH</span>
+  </div>
+  <div class="s-price">$184.71 (-3.51%) | Volume: 14.2M | AV Confirmado</div>
+  <div class="s-detail">CVX caiu -3.51% com mercado positivo — energia fraca. Possível driver: notícias de acordo EUA-Irão reduzem prémio geopolítico no petróleo. Tese dividendo long-term não invalidada por 1 dia. Monitorizar preço petróleo e OPEC.<br><em>Risco: Volatilidade. Monitor only.</em></div>
+</div>
+
+<div class="sentinel-card info">
+  <div class="s-header">
+    <span class="s-ticker">🔵 VUUA — Vanguard S&P 500</span>
+    <span class="s-badge info">INFO</span>
+  </div>
+  <div class="s-price">S&P 500 +0.61% | Máximo histórico</div>
+  <div class="s-detail">Tese de diversificação broad market reforçada. Máximo histórico. Monitor only.</div>
+</div>
+
+<div class="sentinel-card info">
+  <div class="s-header">
+    <span class="s-ticker">🔵 VWCE — Vanguard All-World</span>
+    <span class="s-badge info">INFO</span>
+  </div>
+  <div class="s-price">Global equities positivo</div>
+  <div class="s-detail">Contexto global positivo com recordes EUA. Risco geopolítico (Irão/Ucrânia) absorvido. Tese de diversificação global intacta. Monitor only.</div>
+</div>
+</div>
+
+<div class="eod-section">
+<h2>🧠 Lições do Dia</h2>
+<ul class="lesson-list">
+  <li><strong>MISSED_CATALYST — Upgrades de analistas</strong>MU +19.3% de revisão de PT da UBS (204%). R0 tinha MU a LOW intraday readiness. Upgrades de analistas têm magnitude comparável a earnings. Necessário incorporar "analyst revision risk" como dimensão de scoring.</li>
+  <li><strong>POST_EARNINGS_PATTERN — Consolidação persiste</strong>NVDA flat (-0.22%) com setor +2.8%. Mega-cap consolidação pós-earnings é padrão real que resiste a dias de setor forte. Não confundir sector ETF performance com stock performance.</li>
+  <li><strong>INTRA_SECTOR_DIFFERENTIATION — MU vs NVDA</strong>Setor semi +2.8% mas MU +19.3% e NVDA -0.22%. Stock-specific vs sector é distinção crítica para carteira concentrada em tecnologia.</li>
+  <li><strong>ENERGY_MONITORING_GAP — CVX ignorado</strong>CVX -3.51% com mercado positivo. R0 classificou como NONE sem flag de monitorização. Todas as posições da carteira precisam de nível mínimo de monitorização independente de notícias.</li>
+  <li><strong>INCOMPLETE_CYCLE — R1/R2 em falta</strong>EOD reconstruído exclusivamente de R0. Contexto intraday perdido. Qualidade de validação de hipóteses reduzida. Melhorar fiabilidade do ciclo mid-day.</li>
+  <li><strong>GEOPOLITICAL_ABSORPTION — Irão/Ucrânia absorvidos</strong>VIX +2.53% mas mercado fechou em máximos. Tensão geopolítica foi absorvida pela narrativa de procura semi/AI. Saber distinguir entre risco de sentimento e risco fundamental.</li>
+  <li><strong>VALUE_TECH_BIFURCATION — Dow negativo</strong>Dow -0.23% enquanto S&P +0.61% e Nasdaq +1.19%. Dia semi/tech — não broad market. Relevante para leitura de tape e portfolios com value exposure.</li>
+</ul>
+</div>
+
+<div class="eod-section">
+<h2>👁️ Tomorrow Watch</h2>
+<ul class="tomorrow-list">
+  <li class="high"><strong>🔴 MU (Micron)</strong> — Follow-through após +19.3% e $1T market cap. Pré-mercado/abertura: continuação ou realização de lucros? HBM4 sold out story continua.</li>
+  <li class="medium"><strong>🟡 ZS (Zscaler)</strong> — Resultados AMC ainda pendentes (17:09 ET). Leitura do setor de cibersegurança. Est. EPS $0.80 / Revenue $835M.</li>
+  <li class="medium"><strong>🟡 CVX (Chevron)</strong> — Recuperação energética ou continuação de fraqueza? Monitor preço petróleo e notícias acordo Irão.</li>
+  <li class="medium"><strong>🟡 NVDA</strong> — Após dia flat com semis +2.8%, NVDA seguirá momentum de MU amanhã? Volume 185M sugere posicionamento ativo.</li>
+</ul>
+</div>
+
+<div class="eod-section">
+<h2>⚙️ Data Quality / Limitações</h2>
+<div class="data-quality">
+  <div class="data-quality-row">
+    <strong>Alpha Vantage</strong>
+    <span>4/5 calls usados (MU, NVDA, MSFT, CVX — confirmados)</span>
+  </div>
+  <div class="data-quality-row">
+    <strong>R1 / R2</strong>
+    <span style="color: #e74c3c;">⚠️ Não correram hoje — ciclo incompleto</span>
+  </div>
+  <div class="data-quality-row">
+    <strong>ZS Earnings</strong>
+    <span style="color: #f39c12;">Resultados AMC pendentes (17:09 ET)</span>
+  </div>
+  <div class="data-quality-row">
+    <strong>VUUA / VWCE</strong>
+    <span>ETFs europeus — preços não confirmados via AV</span>
+  </div>
+</div>
+<p style="font-size: 11px; color: #7f8c8d; margin-top: 10px;">Fontes EOD: Alpha Vantage API (preços), CNBC, TheStreet, Benzinga, Motley Fool, TechMarketer, Quiver Quant.</p>
+<p style="font-size: 11px; color: #e74c3c; margin-top: 6px;"><strong>Aviso:</strong> Este relatório é exclusivamente para fins de aprendizagem de mercado. Não constitui recomendação de compra/venda. "DCA watch" e "Take-profit watch" são etiquetas de vigilância estratégica, não recomendações automáticas.</p>
+</div>
+
+</div>
