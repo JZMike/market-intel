@@ -1,0 +1,33 @@
+{
+  "week_of": "2026-05-25",
+  "last_updated": "2026-05-27",
+  "total_days_with_r3": 1,
+  "total_tickers_validated": 0,
+  "worked": 0,
+  "partially_worked": 0,
+  "failed": 0,
+  "data_insufficient": 1,
+  "no_hypotheses": 1,
+  "most_repeated_tickers": ["MU", "NVDA", "MSFT"],
+  "best_catalyst_types": ["earnings_beat", "analyst_upgrade_major", "market_cap_milestone"],
+  "weakest_catalyst_types": ["geopolitical_rumour_iran", "sector_general_pullback"],
+  "system_reliability": {
+    "r0_executed_this_week": 1,
+    "r1_executed_this_week": 0,
+    "r2_executed_this_week": 0,
+    "r3_executed_this_week": 1,
+    "gap_alert": "CRITICAL — R1/R2 não executaram esta semana. Hipóteses não validadas."
+  },
+  "portfolio_alerts_week": {
+    "MU": {"max_level": "WATCH", "note": "Rally histórico $1T market cap"},
+    "NVDA": {"max_level": "INFO", "note": "Post-earnings consolidação"},
+    "MSFT": {"max_level": "INFO", "note": "AI capex bullish"},
+    "CVX": {"max_level": "INFO", "note": "Oil pressure"},
+    "VUUA": {"max_level": "NONE"},
+    "VWCE": {"max_level": "NONE"}
+  },
+  "amc_earnings_covered": ["CRM", "SNOW", "MRVL"],
+  "alpha_vantage_calls_week": 1,
+  "alpha_vantage_limit_hit": true,
+  "lessons_count": 7
+}

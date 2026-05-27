@@ -1,0 +1,322 @@
+{
+  "date": "2026-05-27",
+  "run": "R3_EOD_LEARNING",
+  "run_time_lisbon": "22:06",
+  "run_time_et": "17:06",
+  "urls": {
+    "latest": "https://jzmike.github.io/market-intel/latest.html",
+    "day": "https://jzmike.github.io/market-intel/reports/2026/05/2026-05-27.html"
+  },
+  "prior_runs_available": {
+    "r0": false,
+    "r1": false,
+    "r2": false,
+    "note": "Nenhum R0/R1/R2 encontrado para 2026-05-27. Última referência é R0 de 2026-05-26 (pré-mercado, mercado fechado). R3 baseia-se em dados de mercado recolhidos directamente."
+  },
+  "market_close_snapshot": {
+    "date": "2026-05-27",
+    "session": "REGULAR",
+    "tape": "MIXED_BULLISH_DOW_RECORD",
+    "narrative": "Dow atingiu novo recorde (+0.36%) impulsionado pela queda do petróleo. S&P 500 e Nasdaq praticamente inalterados. Chips tech puxados por NVDA e MRVL em retracção; MU manteve rally histórico (+3.6% após +19% ontem). Rumores sobre Irão criaram volatilidade intraday em semicondutores.",
+    "indices": [
+      {
+        "symbol": "DJI",
+        "name": "Dow Jones Industrial Average",
+        "close": 50644.28,
+        "change_pct": 0.36,
+        "session_note": "NEW RECORD"
+      },
+      {
+        "symbol": "SPY",
+        "name": "S&P 500 ETF",
+        "close": 750.46,
+        "change": -0.13,
+        "change_pct": -0.017,
+        "session_note": "Flat, record territory"
+      },
+      {
+        "symbol": "QQQ",
+        "name": "Nasdaq 100 ETF",
+        "close": 729.45,
+        "change": -0.83,
+        "change_pct": -0.11,
+        "session_note": "Slight chip drag"
+      },
+      {
+        "symbol": "VIX",
+        "name": "CBOE Volatility Index",
+        "close": 16.90,
+        "change_pct": -0.65,
+        "session_note": "Estável, sem stress"
+      }
+    ],
+    "sectors": [
+      {"etf": "XLK", "name": "Technology", "change_pct": null, "note": "Misto — chip pullback tarde"},
+      {"etf": "XLV", "name": "Healthcare", "change_pct": 0.16, "note": "Ligeira alta"},
+      {"etf": "XLI", "name": "Industrials", "change_pct": 0.14, "note": "Ligeira alta"},
+      {"etf": "XLF", "name": "Financials", "change_pct": -0.84, "note": "Queda moderada"},
+      {"etf": "XLE", "name": "Energy", "change_pct": null, "note": "Pressão por queda do petróleo"}
+    ],
+    "key_movers_day": [
+      {"ticker": "MU", "move_pct": 3.63, "direction": "UP", "catalyst": "Continuação rally $1T market cap + UBS target $1,625 + Goldman AI earnings forecast"},
+      {"ticker": "NVDA", "move_pct": -1.05, "direction": "DOWN", "catalyst": "Chip pullback, rumores Irão"},
+      {"ticker": "MRVL", "move_pct": -4.59, "direction": "DOWN", "catalyst": "Sell-the-news pré-earnings (stock +100% em 2026)"},
+      {"ticker": "CRM", "move_pct": -0.88, "direction": "DOWN", "catalyst": "Cautela pré-earnings AMC"},
+      {"ticker": "CVX", "move_pct": -1.25, "direction": "DOWN", "catalyst": "Queda do petróleo"},
+      {"ticker": "MSFT", "move_pct": -0.81, "direction": "DOWN", "catalyst": "Chip/tech pullback geral"}
+    ],
+    "sources": [
+      "Finnhub API (quotes confirmados 16:00 ET)",
+      "CNBC via web search",
+      "TheStreet via web search"
+    ]
+  },
+  "ticker_outcomes": [
+    {
+      "ticker": "N/A",
+      "outcome": "NO_HYPOTHESES_TO_VALIDATE",
+      "note": "Nenhum R1/R2 disponível para 2026-05-27. Não existem hipóteses do dia para avaliar. Ciclo de validação incompleto.",
+      "lesson": "Falha sistémica: sem R0/R1, o R3 não pode fechar o ciclo de aprendizagem. Prioridade: garantir execução do R0 diário."
+    }
+  ],
+  "earnings_amc_results": [
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "report_date": "2026-05-27",
+      "timing": "AMC",
+      "eps_actual": 3.88,
+      "eps_estimate": 3.13,
+      "eps_beat_pct": 24.1,
+      "revenue_actual_b": 11.13,
+      "revenue_yoy_pct": 13.0,
+      "guidance": "Q2 em linha com estimativas; full-year revenue midpoint $46.05B (ligeira revisão alta)",
+      "ah_reaction_pct": -2.8,
+      "ah_note": "Stock -2.8% AH apesar do beat EPS. Mercado focado em guidance Q2 apenas em linha (billings miss).",
+      "relevance": "TOMORROW_WATCH",
+      "portfolio_impact": "NONE — CRM não na carteira. Pode afectar sentiment SaaS/enterprise software sector.",
+      "data_quality": "CONFIRMED",
+      "sources": ["SEC 8-K via web search", "24/7 Wall St."]
+    },
+    {
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "report_date": "2026-05-27",
+      "timing": "AMC",
+      "eps_estimate": 0.32,
+      "revenue_estimate_b": 1.32,
+      "eps_actual": null,
+      "revenue_actual_b": null,
+      "guidance": "Full-year product revenue guide $5.66B > consensus $5.50B (pre-earnings)",
+      "ah_reaction_pct": null,
+      "ah_note": "Resultados AMC — dados AH não confirmados. Uma fonte mencionou +25% mas informação possivelmente misturada com outra notícia. Verificar amanhã.",
+      "relevance": "TOMORROW_WATCH",
+      "portfolio_impact": "NONE — SNOW não na carteira",
+      "data_quality": "UNVERIFIED — conflito de fontes. Prioridade de verificação amanhã (R0/R1).",
+      "sources": ["Snowflake IR", "Eciks.org (pre-earnings)", "Dado +25% AH de fonte duvidosa — UNVERIFIED"]
+    },
+    {
+      "ticker": "MRVL",
+      "name": "Marvell Technology",
+      "report_date": "2026-05-27",
+      "timing": "AMC",
+      "eps_actual": 0.80,
+      "eps_estimate": 0.75,
+      "eps_beat_pct": 6.67,
+      "revenue_actual_b": 2.418,
+      "revenue_note": "Record trimestral, +28% YoY",
+      "guidance": "Q2 FY27 revenue ~$2.4B ±5% (+27% YoY)",
+      "regular_session_pct": -4.59,
+      "ah_reaction_pct": null,
+      "ah_note": "Sessão regular -4.59% (sell-the-news, stock dobrou em 2026). AH após earnings — dados não confirmados.",
+      "relevance": "SECTOR_IMPACT",
+      "portfolio_impact": "INDIRECT — MRVL é peer de semicondutores AI. Beat confirma demand environment para NVDA e MU.",
+      "data_quality": "PARTIAL — resultados regulares confirmados via SEC 8-K. AH pendente.",
+      "sources": ["SEC Form 8-K via web search", "Finnhub quote", "MoneyMorning"]
+    }
+  ],
+  "portfolio_sentinel_eod": [
+    {
+      "symbol": "MU",
+      "name": "Micron Technology",
+      "close": 928.41,
+      "change": 32.53,
+      "change_pct": 3.63,
+      "prev_close": 895.88,
+      "alert_level": "WATCH",
+      "implication": "Take-profit watch",
+      "headline": "MU +3.6% continuação rally histórico. Market cap $1T+ pela primeira vez.",
+      "detail": "Micron atingiu $1T market cap a 26 de Maio (+19% num único dia) e continuou +3.6% hoje. Catalisadores: UBS raised target para $1,625, Goldman prevê MU como um dos dois maiores contribuidores para crescimento EPS do S&P 500 em 2026 (com NVDA). HBM supply 2026 totalmente vendido. MRVL beat hoje confirma environment AI chip demand muito forte. Tese de longo prazo fortemente confirmada.",
+      "risk_factors": ["Stock em máximos históricos extremos", "Potencial profit-taking violento", "Memória cíclica — riscos macro podem reverter rápido", "Posição pode estar muito acima de peso na carteira"],
+      "thesis_status": "Thesis strongly reinforced",
+      "disclaimer": "'Take-profit watch' é etiqueta de vigilância estratégica, não recomendação de acção.",
+      "sources": ["Finnhub", "CNBC", "Goldman Sachs via web", "FX Leaders"]
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "close": 212.60,
+      "change": -2.26,
+      "change_pct": -1.05,
+      "prev_close": 214.86,
+      "alert_level": "INFO",
+      "implication": "No action / monitor only",
+      "headline": "NVDA -1.05% — pullback chips por rumores Irão e pressão sectorial",
+      "detail": "Pullback normal pós-earnings (beat de 20 de Maio: EPS $1.87 vs $1.76E, revenue $81.6B). Sem notícia material específica hoje. Iran rumors criaram volatilidade intraday em tech/semis. Q2 guidance de ~$87B continua em linha. AI capex de MSFT ($190B para 2026) suporta demand thesis.",
+      "risk_factors": ["Geopolítica Irão pode afetar supply chain", "Export restrictions regulatórias em curso"],
+      "thesis_status": "Thesis reinforced",
+      "sources": ["Finnhub", "Finnhub news"]
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "close": 412.67,
+      "change": -3.36,
+      "change_pct": -0.81,
+      "prev_close": 416.03,
+      "alert_level": "INFO",
+      "implication": "No action / monitor only",
+      "headline": "MSFT -0.81% — pullback tech geral",
+      "detail": "Queda ligeira sem notícia material específica. Contexto bullish mantém-se: AI capex $190B para 2026, Azure/OpenAI investment. CRM beat hoje é positivo para enterprise software demand em geral.",
+      "risk_factors": ["Regulatory risk OpenAI", "AI capex ROI questões no mercado"],
+      "thesis_status": "Thesis reinforced",
+      "sources": ["Finnhub", "Finnhub news"]
+    },
+    {
+      "symbol": "CVX",
+      "name": "Chevron",
+      "close": 182.40,
+      "change": -2.31,
+      "change_pct": -1.25,
+      "prev_close": 184.71,
+      "alert_level": "INFO",
+      "implication": "No action / monitor only",
+      "headline": "CVX -1.25% — queda petróleo puxa energia",
+      "detail": "Irónicamente, a queda do petróleo hoje foi o catalisador para o Dow bater recorde (componentes industriais/consumo beneficiaram). Para CVX, pressão de curto prazo. Tese de longo prazo (dividendo, free cash flow) não afectada por um dia de queda do crude.",
+      "risk_factors": ["Oil price continued weakness", "OPEC+ production decisions"],
+      "thesis_status": "No action / monitor only",
+      "sources": ["Finnhub", "CNBC via web search"]
+    },
+    {
+      "symbol": "VUUA",
+      "name": "Vanguard S&P 500 ETF",
+      "close_proxy": "SPY $750.46 (-0.02%)",
+      "alert_level": "NONE",
+      "implication": "No action / monitor only",
+      "headline": "S&P 500 essencialmente flat — mercado em máximos",
+      "detail": "SPY proxy mostra S&P em record territory. VUUA deve reflectir performance similar. Sem alertas.",
+      "thesis_status": "No action / monitor only",
+      "sources": ["Finnhub"]
+    },
+    {
+      "symbol": "VWCE",
+      "name": "Vanguard FTSE All-World ETF",
+      "alert_level": "NONE",
+      "implication": "No action / monitor only",
+      "headline": "Global equities sem alertas materiais hoje",
+      "detail": "Sem dados específicos VWCE hoje. DXY não confirmado. Contexto global sem stress sistémico aparente.",
+      "thesis_status": "No action / monitor only",
+      "sources": ["Análise contextual"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": 1,
+      "category": "SYSTEM_RELIABILITY",
+      "lesson": "Nenhum R0/R1/R2 executou hoje (nem nos últimos dias de forma consistente). Sem estas runs, o R3 não consegue avaliar hipóteses — o ciclo de aprendizagem fica incompleto. Prioridade máxima: garantir execução automática fiável do R0 diário às 09:00 Lisboa.",
+      "severity": "HIGH"
+    },
+    {
+      "id": 2,
+      "category": "CATALYST_QUALITY",
+      "lesson": "MU +19% ontem (atingiu $1T market cap) não foi capturado pelo R0 de 26 de Maio. O sistema executou em pré-mercado e não tinha dados do movimento do dia. UBS upgrades de target +$1,000 devem ser flagged como HIGH PRIORITY no R0.",
+      "severity": "HIGH"
+    },
+    {
+      "id": 3,
+      "category": "SECTOR_BIFURCATION",
+      "lesson": "AI Memory (MU +3.6%) vs AI Compute (NVDA -1.05%) mostraram divergência hoje. Semicondutores não são monolíticos. Futuras análises devem distinguir entre HBM/memory e GPU/compute como sub-sectores separados.",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": 4,
+      "category": "SELL_THE_NEWS",
+      "lesson": "MRVL: stock +100% em 2026, EPS beat de 6.7%, mas -4.6% no dia regular. Stocks com múltiplos muito expandidos precisam de beat massivo + raise para não decepcionar. Este padrão (priced for perfection) deve ser flag nos tickers com YTD +50%.",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": 5,
+      "category": "DATA_QUALITY",
+      "lesson": "SNOW AMC: fonte mencionou +25% AH com dados incoerentes (referência a Graviton chips da AWS, o que é errado para SNOW). Dados AMC de fontes de baixa qualidade devem ser marcados UNVERIFIED e verificados no R0 seguinte.",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": 6,
+      "category": "API_BUDGET",
+      "lesson": "Alpha Vantage atingiu limite diário de 25 requests (free tier) sem que nenhuma chamada tenha sido feita neste R3. Quota provavelmente esgotada por runs anteriores do sistema. Considerar upgrade ou usar Finnhub como fonte primária de quotes (sem limite aparente).",
+      "severity": "LOW"
+    },
+    {
+      "id": 7,
+      "category": "GEOPOLITICAL_NOISE",
+      "lesson": "Rumores Irão voltaram a criar intraday volatility em chips/tech hoje. Este factor aparece repetidamente. Criar tag 'geopolitical_noise_iran' no sistema para evitar over-reading de movimentos de curto prazo em NVDA/MSFT por esta causa.",
+      "severity": "LOW"
+    }
+  ],
+  "model_self_critique": [
+    "R3 corre sem R1/R2 — é possível executar learning mas sem validação de hipóteses o valor é reduzido.",
+    "Dados de SNOW AMC são inconsistentes — não incluo como fact no relatório.",
+    "MU move extraordinário (+$1T) deveria ter sido capturado. Melhoria: pesquisar market cap milestones no R0.",
+    "MRVL incluído como SECTOR_IMPACT porque é peer de semicondutores AI — relevante para avaliar environment da carteira (NVDA, MU).",
+    "Sem Alpha Vantage funcional, a validação técnica depende exclusivamente do Finnhub."
+  ],
+  "data_quality_summary": {
+    "alpha_vantage_calls_used": 1,
+    "alpha_vantage_status": "LIMIT_REACHED — free tier 25 req/day esgotado",
+    "finnhub_calls_used": 8,
+    "web_searches_used": 7,
+    "warnings": [
+      "Alpha Vantage limit reached — sem dados técnicos AV disponíveis",
+      "SNOW AMC: dados AH unverified — conflito de fontes",
+      "MRVL AH: resultados AMC sem confirmação AH clara",
+      "Nenhum R0/R1/R2 para 2026-05-27 — hipóteses do dia: zero",
+      "DXY e 10Y yield não confirmados para hoje"
+    ]
+  },
+  "tomorrow_watch": [
+    {
+      "ticker": "SNOW",
+      "reason": "Earnings AMC — reacção AH não confirmada. Verificar abertura e dados reais.",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "MRVL",
+      "reason": "Earnings AMC — beat confirmado mas reacção AH pendente. Chip sector signal.",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "CRM",
+      "reason": "Earnings AMC — -2.8% AH por Q2 guide em linha. Verificar abertura e sector drag.",
+      "priority": "MEDIUM"
+    },
+    {
+      "ticker": "MU",
+      "reason": "Após rally histórico ($1T+), monitorizar profit-taking ou continuação. UBS $1,625 target.",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "NVDA",
+      "reason": "Pullback hoje (-1.05%). Sem catalyst negativo material. Monitorizar recovery ou continuação de fraqueza.",
+      "priority": "MEDIUM"
+    }
+  ],
+  "sources": [
+    {"name": "Finnhub API", "type": "API", "reliability": "HIGH"},
+    {"name": "CNBC via web search", "type": "WEB", "reliability": "HIGH"},
+    {"name": "TheStreet via web search", "type": "WEB", "reliability": "MEDIUM"},
+    {"name": "SEC Form 8-K (MRVL)", "type": "PRIMARY", "reliability": "HIGH"},
+    {"name": "Goldman Sachs AI earnings forecast via web", "type": "WEB", "reliability": "HIGH"},
+    {"name": "FX Leaders / Benzinga (MU $1T)", "type": "WEB", "reliability": "MEDIUM"},
+    {"name": "Eciks.org (SNOW pré-earnings)", "type": "WEB", "reliability": "LOW"}
+  ]
+}
