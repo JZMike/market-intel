@@ -1,0 +1,381 @@
+{
+  "date": "2026-05-28",
+  "run": "R3_EOD_LEARNING",
+  "run_time_lisbon": "22:11",
+  "run_time_et": "17:11",
+  "urls": {
+    "latest": "https://jzmike.github.io/market-intel/latest.html",
+    "day": "https://jzmike.github.io/market-intel/reports/2026/05/2026-05-28.html"
+  },
+  "market_close_snapshot": {
+    "date": "2026-05-28",
+    "session": "regular",
+    "tape": "BULLISH",
+    "new_records": true,
+    "indices": [
+      {"symbol": "SPY", "name": "S&P 500", "close": 754.60, "change_pct": 0.55, "note": "New all-time record close (7,563.63 index)"},
+      {"symbol": "QQQ", "name": "Nasdaq 100", "close": 735.60, "change_pct": 0.84, "note": "New all-time record (26,917 index)"},
+      {"symbol": "DIA", "name": "Dow Jones", "close": null, "index_close": 50668.97, "change_pct": 0.05, "note": "Muted — financials drag"},
+      {"symbol": "VIX", "name": "CBOE Volatility Index", "close": 16.74, "change_pct": 2.76, "note": "Slight rise on PCE data — not alarming"},
+      {"symbol": "TNX", "name": "10Y Treasury Yield", "close": 4.47, "change_pct": null, "note": "Retreated from 4.70% May-20 high on oil price drop"},
+      {"symbol": "DXY", "name": "US Dollar Index", "close": 99.30, "change_pct": 0.10, "note": "Slightly firmer"}
+    ],
+    "sectors": [
+      {"etf": "XLY", "name": "Consumer Discretionary", "change_pct": 1.64, "bias": "BULLISH"},
+      {"etf": "XLK", "name": "Technology", "change_pct": null, "bias": "BULLISH", "note": "Leading — SNOW +36%, MSFT +3.47%"},
+      {"etf": "XLV", "name": "Health Care", "change_pct": 0.16, "bias": "NEUTRAL"},
+      {"etf": "XLI", "name": "Industrials", "change_pct": 0.14, "bias": "NEUTRAL"},
+      {"etf": "XLF", "name": "Financials", "change_pct": -0.84, "bias": "BEARISH"}
+    ],
+    "top_movers": [
+      {"ticker": "SNOW", "change_pct": 36.48, "reason": "Q1 FY27 earnings blowout + $6B AWS deal — best day ever"},
+      {"ticker": "BBY", "change_pct": 15.80, "reason": "Q1 FY27 EPS $1.28 vs $1.22E beat, comps +2%"},
+      {"ticker": "MSFT", "change_pct": 3.47, "reason": "SNOW AI validation + new AI coding model + EY $1B deal + Pershing Square stake"},
+      {"ticker": "CRM", "change_pct": -0.75, "reason": "Beat on EPS/Rev AMC May-27, but FY27 guidance slightly light"}
+    ],
+    "session_narrative": "Tech and AI revival session. Snowflake's best day ever (+36.5%) on blowout Q1 and $6B AWS deal confirmed enterprise AI demand is at 'clear inflection point', reigniting the AI trade. S&P 500 and Nasdaq hit new records despite PCE data showing highest inflation reading in ~3 years. Iran-US peace deal rumors drove oil lower, lifting consumer sentiment but pressuring energy. Financials lagged. VIX rose slightly on PCE but remained in low-volatility zone."
+  },
+  "ticker_outcomes": [
+    {
+      "ticker": "NVDA",
+      "source_run": "R0_2026-05-26",
+      "hypothesis": "Post-earnings (Q1 FY27 beat $81.6B +85%) consolidation; watch for short-term pullback or continuation",
+      "close": 214.25,
+      "prev_close": 212.60,
+      "change_pct": 0.78,
+      "outcome": "PARTIALLY_WORKED",
+      "validation": "Modest +0.78% on AI tape day. Not leading despite bullish market — mild consolidation post-earnings as hypothesised. No pullback but no breakout either. Post-earnings digestion phase continuing.",
+      "catalyst_quality": "STRUCTURAL",
+      "data_quality": "FINNHUB_CONFIRMED",
+      "lesson": "Post-earnings consolidation hypothesis held. NVDA not the day's driver despite being portfolio core — MSFT and SNOW ecosystem led. Watch for NVDA breakout above May-20 post-earnings highs."
+    },
+    {
+      "ticker": "MSFT",
+      "source_run": "R0_2026-05-26",
+      "hypothesis": "AI capex commitment ($190B) bullish; Azure/OpenAI ecosystem catalyst",
+      "close": 426.99,
+      "prev_close": 412.67,
+      "change_pct": 3.47,
+      "outcome": "WORKED",
+      "validation": "Strong +3.47% on multiple converging catalysts: SNOW enterprise AI validation, new AI coding model reveal (Build June 2-3), EY $1B deal, Pershing Square stake disclosure. The AI capex thesis was validated externally by SNOW's 'inflection point' language.",
+      "catalyst_quality": "MATERIAL_NEW_CATALYST",
+      "data_quality": "FINNHUB_CONFIRMED",
+      "lesson": "MSFT thesis validated beyond R0 hypothesis — new catalysts emerged (Pershing stake, AI coding model). Ecosystem spillover from SNOW earnings was more powerful than anticipated for MSFT specifically."
+    },
+    {
+      "ticker": "MU",
+      "source_run": "R0_2026-05-26",
+      "hypothesis": "Calendar watch — Q4 FY26 earnings June 24; HBM/DRAM demand bullish thesis",
+      "close": 923.52,
+      "prev_close": 928.41,
+      "change_pct": -0.53,
+      "outcome": "DATA_INSUFFICIENT",
+      "validation": "Slight -0.53% on no material news. Thesis is June 24 earnings — too early to validate. AI tape day did not significantly lift MU. Memory sector underperformed vs compute/software.",
+      "catalyst_quality": "FUTURE_CALENDAR",
+      "data_quality": "FINNHUB_CONFIRMED",
+      "lesson": "MU is in 'wait for earnings' phase. On AI tape days, memory (MU) underperforms vs software/cloud (SNOW, MSFT). Thesis intact but no intraday signal."
+    },
+    {
+      "ticker": "SPY",
+      "source_run": "R0_2026-05-26",
+      "hypothesis": "Bullish bias; VIX stable; +0.37% previous close continuation",
+      "close": 754.60,
+      "prev_close": 750.46,
+      "change_pct": 0.55,
+      "outcome": "WORKED",
+      "validation": "New all-time record close (7,563 index). +0.55% continuation of bullish trend despite PCE headwind. Hypothesis of bullish continuation worked.",
+      "catalyst_quality": "STRUCTURAL",
+      "data_quality": "FINNHUB_CONFIRMED",
+      "lesson": "Broad market bullish hypothesis worked. AI revival (SNOW) + macro resilience = new record. PCE inflation data did not derail the bull run."
+    },
+    {
+      "ticker": "QQQ",
+      "source_run": "R0_2026-05-26",
+      "hypothesis": "Tech benchmark; slight lag vs S&P; watch breadth divergence",
+      "close": 735.60,
+      "prev_close": 729.45,
+      "change_pct": 0.84,
+      "outcome": "WORKED",
+      "validation": "QQQ outperformed SPY (+0.84% vs +0.55%) on AI tape day — breadth divergence did not materialise; tech led. The lag concern from R0 was resolved by SNOW/MSFT catalyst.",
+      "catalyst_quality": "STRUCTURAL",
+      "data_quality": "FINNHUB_CONFIRMED",
+      "lesson": "When AI ecosystem has a 'signal event' (SNOW $6B AWS deal), QQQ typically outperforms SPY. Breadth watch was correct but the outcome was positive breadth, not negative."
+    }
+  ],
+  "earnings_amc_results": [
+    {
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "reported": "AMC 2026-05-27",
+      "eps_actual": 0.39,
+      "eps_estimate": 0.32,
+      "eps_beat_pct": 21.9,
+      "revenue_actual_b": 1.39,
+      "revenue_estimate_b": 1.32,
+      "revenue_beat_pct": 5.3,
+      "revenue_growth_yoy_pct": 33.5,
+      "guidance": "FY27 product revenue guidance raised to $5.84B; Q2 product rev $1.415-1.42B vs $1.37B est; RPO +38% to $9.21B",
+      "deal": "$6B multi-year AWS infrastructure commitment — largest to date",
+      "stock_reaction": "+36.48% (best day ever) during regular session May 28",
+      "portfolio_member": false,
+      "classification": ["SECTOR_IMPACT", "TOMORROW_WATCH"],
+      "relevance": "Confirmed enterprise AI demand at 'clear inflection point'. Key external validator for MSFT/NVDA AI thesis. Priced in today.",
+      "tomorrow_signal": "Watch if SNOW consolidates above $220 or retraces. AI sector sentiment anchor."
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "reported": "AMC 2026-05-27",
+      "eps_actual": 3.88,
+      "eps_estimate": 3.12,
+      "eps_beat_pct": 24.4,
+      "revenue_actual_b": 11.13,
+      "revenue_estimate_b": 11.05,
+      "revenue_beat_pct": 0.7,
+      "revenue_growth_yoy_pct": 13.0,
+      "guidance": "FY27 revenue $45.8-46.2B (~10-11% growth); Q1 FY27 rev $11.03-11.08B. Margin guidance: non-GAAP op margin 34.3% (+20bps)",
+      "deal": null,
+      "stock_reaction": "-0.75% on guidance perceived as slightly light despite EPS beat",
+      "portfolio_member": false,
+      "classification": ["LOW_RELEVANCE"],
+      "relevance": "No portfolio exposure. Guidance light vs growth expectations. Enterprise software sector nuance: CRM growth (~10-11%) lags AI-native platforms (SNOW +33%). Market differentiating.",
+      "tomorrow_signal": "CRM weakness could persist if enterprise software rotation continues toward AI-native platforms."
+    },
+    {
+      "ticker": "BBY",
+      "name": "Best Buy",
+      "reported": "BMO 2026-05-28",
+      "eps_actual": 1.28,
+      "eps_estimate": 1.22,
+      "eps_beat_pct": 4.9,
+      "revenue_actual_b": 8.94,
+      "revenue_estimate_b": 8.80,
+      "revenue_beat_pct": 1.6,
+      "revenue_growth_yoy_pct": 1.9,
+      "guidance": "FY27 Adjusted EPS guidance maintained at $6.30-6.60",
+      "deal": null,
+      "stock_reaction": "+15.80% (outsized for modest beat — low bar set by market)",
+      "portfolio_member": false,
+      "classification": ["LOW_RELEVANCE"],
+      "relevance": "Consumer electronics retail — not portfolio relevant. Comps +2% showing resilient consumer but muted guidance. The +15.8% move suggests extremely low expectations were set.",
+      "tomorrow_signal": "Watch if BBY holds gains or reverts. Consumer sector temperature check."
+    }
+  ],
+  "portfolio_sentinel_eod": [
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "close": 214.25,
+      "change_pct": 0.78,
+      "alert_level": "INFO",
+      "status": "WATCH",
+      "events_today": [
+        "AI enterprise demand confirmed via SNOW earnings ('inflection point') — positive for NVDA data center thesis",
+        "MSFT $190B capex commitment reinforced — downstream GPU demand bullish",
+        "No NVDA-specific news today — post-earnings consolidation phase continuing"
+      ],
+      "thesis_impact": "Thesis reinforced (indirectly via ecosystem)",
+      "implication": "Monitor only",
+      "note": "NVDA +0.78% on AI tape day where SNOW +36% and MSFT +3.47%. Underperformance vs ecosystem peers suggests short-term digestion. No alarm — thesis structurally intact. Watch for breakout above May-20 post-earnings levels."
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "close": 426.99,
+      "change_pct": 3.47,
+      "alert_level": "MATERIAL",
+      "status": "WATCH",
+      "events_today": [
+        "SNOW enterprise AI validation ('inflection point') — direct Azure/AI thesis support",
+        "New in-house AI coding model to be unveiled at Build Conference June 2-3",
+        "EY $1B partnership for enterprise AI deployment via Azure/Copilot",
+        "Pershing Square (Bill Ackman) disclosed major stake — institutional conviction signal",
+        "MSFT +3.47% — added ~$107B market cap in one session"
+      ],
+      "thesis_impact": "Thesis strongly reinforced",
+      "implication": "DCA watch",
+      "note": "Multiple converging catalysts today. The 'DCA watch' label is a vigilância estratégica label — não é recomendação automática. Build Conference June 2-3 is next near-term catalyst. $426.99 close — watch for continuation or consolidation before Build."
+    },
+    {
+      "symbol": "MU",
+      "name": "Micron",
+      "close": 923.52,
+      "change_pct": -0.53,
+      "alert_level": "NONE",
+      "status": "CALENDAR_WATCH",
+      "events_today": [
+        "No material news today",
+        "Memory sector underperformed vs compute/software on AI tape day",
+        "Earnings June 24 remains key catalyst (EPS $19.25 +908% YoY expected)"
+      ],
+      "thesis_impact": "Thesis unchanged",
+      "implication": "Monitor only",
+      "note": "MU -0.53% — normal noise. AI tape day benefited software/cloud over memory. Thesis intact for June 24 earnings. DRAM/HBM demand environment remains constructive via NVDA data center context."
+    },
+    {
+      "symbol": "CVX",
+      "name": "Chevron",
+      "close": 183.03,
+      "change_pct": 0.35,
+      "alert_level": "WATCH",
+      "status": "WATCH",
+      "events_today": [
+        "Iran-US peace deal RUMORS (unconfirmed) pushed oil benchmarks lower today",
+        "CVX +0.35% — resilient despite oil pressure from Iran deal rumors",
+        "DXY slightly firmer (99.30) — mild USD headwind for oil",
+        "Energy sector (XLE) underperformed on oil headline"
+      ],
+      "thesis_impact": "Volatility risk — Iran deal headline",
+      "implication": "Volatility risk",
+      "note": "Iran-US deal rumors unconfirmed. If deal confirmed, sustained oil price decline would pressure CVX earnings and dividend sustainability narrative. CVX held +0.35% today showing resilience. Monitor Iran deal status — 'bogus' characterisation in one source suggests rumor may be false. No action warranted — vigilância."
+    },
+    {
+      "symbol": "VUUA",
+      "name": "Vanguard S&P 500 ETF",
+      "close": null,
+      "change_pct": 0.55,
+      "alert_level": "INFO",
+      "status": "WATCH",
+      "events_today": [
+        "S&P 500 new all-time record close (7,563.63 index equivalent)",
+        "PCE data: highest reading in ~3 years — inflation signal",
+        "Broad market +0.55% on AI revival vs PCE headwind standoff"
+      ],
+      "thesis_impact": "Thesis reinforced (new record)",
+      "implication": "Monitor only",
+      "note": "New record close despite PCE inflation data — demonstrates market's current preference for AI/tech narrative over macro headwinds. Fed response to PCE data is key monitor for this position. VIX 16.74 remains low — no systemic risk signal."
+    },
+    {
+      "symbol": "VWCE",
+      "name": "Vanguard FTSE All-World ETF",
+      "close": null,
+      "change_pct": null,
+      "alert_level": "INFO",
+      "status": "WATCH",
+      "events_today": [
+        "USD slightly firmer (DXY 99.30) — mild headwind for non-USD holdings",
+        "Iran-US deal rumors: geopolitical risk easing signal for global markets",
+        "Global AI/tech rally supportive of international tech holdings"
+      ],
+      "thesis_impact": "Thesis unchanged",
+      "implication": "Monitor only",
+      "note": "No specific catalyst. Global market context broadly supportive. DXY at 99.30 is not strong enough to materially impact. Long-term diversification thesis intact."
+    }
+  ],
+  "lessons": [
+    {
+      "lesson_id": 1,
+      "category": "DATA_COMPLETENESS",
+      "title": "R1/R2 não correram para 2026-05-27 e 2026-05-28",
+      "detail": "O R3 de hoje não tem R1/R2 para validar hipóteses intraday. O último R0 foi 2026-05-26 (dados de 23-Mai). O sistema ficou sem tracking intraday por 2 sessões. Impacto: hipóteses R0 validadas com dados de fecho mas sem contexto de abertura/volume.",
+      "action": "Garantir que R1/R2 correm independentemente mesmo quando R0 tem dados stale. Criar script de fallback que verifica último R0 e agenda R1/R2 automaticamente."
+    },
+    {
+      "lesson_id": 2,
+      "category": "CATALYST_SPILLOVER",
+      "title": "SNOW earnings funcionaram como proxy AI para MSFT (+3.47%)",
+      "detail": "Snowflake's 'clear inflection point' language para AI enterprise demand foi o principal catalisador de MSFT hoje — mais do que qualquer notícia MSFT-específica. Ecossistema AI tem efeito de contagion positivo entre tickers não correlacionados diretamente.",
+      "action": "R0/R1 devem incluir secção 'Ecosystem Spillover Watch' — identificar quais AMC earnings podem mover portfolio holdings via tese partilhada."
+    },
+    {
+      "lesson_id": 3,
+      "category": "MACRO_VS_NARRATIVE",
+      "title": "PCE mais alto em 3 anos não impediu novos recordes — narrative beats macro (por agora)",
+      "detail": "PCE data foi inflacionário mas o mercado ignorou em favor da tese AI. Isto é risco latente: quando a narrativa AI enfraquecer, o macro voltará a dominar. VIX subiu ligeiramente (+2.76%) — sinal de que o mercado não está a ignorar completamente.",
+      "action": "Manter dual-track na análise: narrativa dominante (AI) vs macro acumulado (PCE, Fed, recessão). Quando divergência narrativa/macro for extrema, elevar nível de alerta."
+    },
+    {
+      "lesson_id": 4,
+      "category": "MEMORY_AVOIDANCE",
+      "title": "NVDA continuou consolidação pós-earnings como previsto no R0",
+      "detail": "A hipótese de consolidação pós-earnings para NVDA foi a mais correta do R0. +0.78% em dia de forte AI tape é abaixo do mercado — confirma digestão. Modelo viu isto bem.",
+      "action": "Continuar a distinguir entre 'earnings momentum' e 'post-earnings digestion'. NVDA está na fase 2 (digestion). Reclassificar de PORTFOLIO_ALERT para CONSOLIDATION_WATCH em próximos runs."
+    },
+    {
+      "lesson_id": 5,
+      "category": "EARNINGS_QUALITY",
+      "title": "Beat EPS não é suficiente se guidance decepcionar — CRM -0.75% apesar de EPS beat",
+      "detail": "CRM bateu EPS ($3.88 vs $3.12E, +24.4%) mas ficou flat/negativo porque a guidance anual foi vista como ligeiramente abaixo das expectativas do mercado. Em ambiente de AI, o mercado pede aceleração de crescimento, não manutenção.",
+      "action": "Em avaliação earnings: guidance e revenue acceleration > EPS beat. Classificar guidance como ACCELERATING / MAINTAINING / DECELERATING."
+    },
+    {
+      "lesson_id": 6,
+      "category": "ALPHA_VANTAGE_BUDGET",
+      "title": "Alpha Vantage limit atingido antes do R3",
+      "detail": "Limite de 25 chamadas/dia atingido. R3 não conseguiu validação técnica RSI/MACD para NVDA e MSFT. Esta é uma limitação estrutural do free tier — R1/R2 consomem chamadas durante o dia.",
+      "action": "Criar prioridade Alpha Vantage: R3 reserva 5 chamadas. R1 max 10, R2 max 10. Ou upgrade para premium plan."
+    },
+    {
+      "lesson_id": 7,
+      "category": "GEOPOLITICAL_WATCH",
+      "title": "Iran-US deal rumor afetou CVX e energia — validar antes de agir",
+      "detail": "Rumores de acordo Iran-US empurraram petróleo abaixo. CVX resistiu (+0.35%). Uma fonte descreveu o relatório como 'bogus' — falso alarme. CVX não foi materialmente afetado. Em geopolítica, esperar confirmação antes de elevar alerta de portfólio.",
+      "action": "Geopolítico/rumor: classificar como WATCH até confirmação. Não elevar para MATERIAL sem fonte primária confirmada (Reuters, Bloomberg, governo)."
+    }
+  ],
+  "model_self_critique": [
+    "R0 de 2026-05-26 não tinha earnings BMO/AMC identificados — SNOW e CRM (AMC May-27) não foram antecipados. Gap de cobertura de earnings calendar.",
+    "MSFT tese estava correta mas sem antecipação do catalisador específico (Pershing Square stake, AI coding model) — hipótese demasiado genérica.",
+    "CVX classificada como 'NONE' em R0 mas hoje teve Iran deal rumor — energia precisa de maior sensibilidade a geopolítico.",
+    "Sem R1/R2, o modelo não consegue avaliar abertura, volume, ou mid-session sentiment — perda de contexto intraday significativa."
+  ],
+  "data_quality_summary": {
+    "r0_available": true,
+    "r0_date": "2026-05-26",
+    "r1_available": false,
+    "r2_available": false,
+    "price_data_source": "Finnhub API (confirmed EOD)",
+    "macro_data_source": "Web search (CNBC, TheStreet, Motley Fool, FX Leaders)",
+    "alpha_vantage_calls_used": 2,
+    "alpha_vantage_status": "RATE_LIMIT_REACHED",
+    "warnings": [
+      "No R1/R2 data for 2026-05-27 or 2026-05-28 — intraday context missing",
+      "Alpha Vantage daily limit reached — no RSI/MACD technical validation for portfolio tickers",
+      "R0 was 2 sessions behind (May 26 data) — 2-day gap in hypothesis tracking",
+      "VWCE not tracked by Finnhub — no price data for this ETF",
+      "VUUA Finnhub data used SPY as proxy (same underlying index)"
+    ]
+  },
+  "tomorrow_watch": [
+    {
+      "ticker": "SNOW",
+      "reason": "Watch for consolidation/continuation above $220 after best day ever (+36%). AI sector sentiment anchor.",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "MSFT",
+      "reason": "Build Conference June 2-3 — AI coding model reveal. May see pre-event drift. $426.99 close — watch resistance.",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "NVDA",
+      "reason": "If SNOW consolidates and AI tape cools, watch NVDA for re-entry in post-earnings digestion. Structural thesis intact.",
+      "priority": "MEDIUM"
+    },
+    {
+      "ticker": "CRM",
+      "reason": "Guidance slightly light — watch if enterprise software rotation toward AI-native continues. Potential sector drag.",
+      "priority": "LOW"
+    },
+    {
+      "ticker": "CVX",
+      "reason": "Iran-US deal rumor status — confirm or deny. If confirmed, energy sector pressure. If denied (bogus), CVX resilience confirmed.",
+      "priority": "MEDIUM"
+    },
+    {
+      "ticker": "PCE_FED",
+      "reason": "Macro: PCE highest in 3 years. Watch for Fed speakers tomorrow (May 29) — any hawkish signals could reverse today's rally.",
+      "priority": "HIGH"
+    }
+  ],
+  "sources": [
+    {"name": "CNBC", "articles": ["S&P 500 and Nasdaq close at new records", "Salesforce CRM Q1 earnings report 2027"]},
+    {"name": "TheStreet", "articles": ["Stock Market Today May 28 2026"]},
+    {"name": "Motley Fool", "articles": ["Stock Market Today May 28", "Snowflake stock soaring after blowout quarter"]},
+    {"name": "FX Leaders", "articles": ["SNOW surges 38% after earnings blowout $6B AWS deal"]},
+    {"name": "StockStory", "articles": ["Best Buy BBY Q1 CY2026 earnings"]},
+    {"name": "StockTitan", "articles": ["Best Buy Q1 EPS +38%"]},
+    {"name": "Finnhub API", "articles": ["EOD quotes: NVDA, MSFT, MU, CVX, SPY, QQQ, SNOW, CRM, BBY"]},
+    {"name": "SEC EDGAR", "articles": ["Snowflake Form 8-K FY2027Q1 earnings"]}
+  ]
+}

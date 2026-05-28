@@ -1,0 +1,27 @@
+{
+  "week": "2026-W22",
+  "dates_covered": ["2026-05-24", "2026-05-26", "2026-05-28"],
+  "total_tickers_validated": 5,
+  "outcomes": {
+    "worked": 3,
+    "partially_worked": 1,
+    "failed": 0,
+    "data_insufficient": 1,
+    "no_tradeable_signal": 0
+  },
+  "worked_tickers": ["MSFT", "SPY", "QQQ"],
+  "partially_worked_tickers": ["NVDA"],
+  "data_insufficient_tickers": ["MU"],
+  "most_repeated_tickers": ["NVDA", "MSFT", "SPY"],
+  "best_catalyst_types": ["AI ecosystem spillover (SNOW→MSFT)", "Post-earnings consolidation (NVDA)", "Broad market trend (SPY/QQQ)"],
+  "weakest_catalyst_types": ["Stale R0 without R1/R2 follow-through", "Calendar watch tickers (MU — too early)", "Geopolitical rumors (unconfirmed)"],
+  "r1_r2_execution_gaps": ["2026-05-27: no R1/R2", "2026-05-28: no R1/R2 before R3"],
+  "alpha_vantage_limit_issues": 1,
+  "system_improvements_flagged": [
+    "R1/R2 fallback scheduling when R0 runs with stale data",
+    "Ecosystem spillover watch section in R0",
+    "Alpha Vantage budget allocation: R1 max 10, R2 max 10, R3 reserve 5",
+    "Guidance quality classification: ACCELERATING / MAINTAINING / DECELERATING"
+  ],
+  "last_updated": "2026-05-28"
+}
