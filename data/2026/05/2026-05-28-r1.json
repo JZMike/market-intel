@@ -1,0 +1,533 @@
+{
+  "date": "2026-05-28",
+  "run": "R1_PRE_OPEN_FINAL",
+  "run_time_lisbon": "14:15",
+  "run_time_et": "09:15",
+  "r0_source": "latest-r0.json (2026-05-26 — 2 dias atrás, sessão mais recente)",
+  "r0_warning": "R0 de 2026-05-28 não encontrado. R1 construído a partir de latest-r0.json (May 26) + pesquisas atualizadas.",
+  "urls": {
+    "latest": "https://jzmike.github.io/market-intel/latest.html",
+    "day": "https://jzmike.github.io/market-intel/reports/2026/05/2026-05-28.html"
+  },
+  "data_quality_summary": {
+    "price_data_status": "LIVE_PREMARKET",
+    "volume_data_status": "PREMARKET_PARTIAL",
+    "earnings_data_status": "NO_MAJOR_US_BMO",
+    "alpha_vantage_calls_used": 1,
+    "alpha_vantage_tickers": [
+      "MU"
+    ],
+    "r0_staleness": "2_DAYS",
+    "warnings": [
+      "R0 de hoje (2026-05-28) não encontrado — usando latest-r0.json (2026-05-26)",
+      "Preços Finnhub às 09:15 ET (premarket)",
+      "DXY não confirmado para hoje — valor R0 usado como referência",
+      "Iran military strike: novo risco geopolítico desde R0"
+    ]
+  },
+  "macro_update": {
+    "setup": "CAUTIOUSLY_BULLISH",
+    "comment": "Futuros S&P planos (-0.03%), VIX declining -4% (16.29) — contexto positivo. US 10Y em 4.504%. Mega-cap AI (NVDA, MSFT, AMD, MRVL) com pressão moderada. Destaque: MU +3.6% em 52-week high após catalisadores duplos. Risco novo: ataque militar EUA-Irão (geopolítico, impacto TBD).",
+    "vs_r0": "S&P avançou de contexto ~7,500+ vs R0 (maio 26). VIX desceu de 16.68 → 16.29. MU e MRVL tiveram upgrades materiais desde R0.",
+    "indicators": [
+      {
+        "symbol": "ES_F",
+        "name": "S&P 500 Futures",
+        "price": 7538.5,
+        "change_pct": -0.03,
+        "session": "premarket_09h15_ET"
+      },
+      {
+        "symbol": "SPY",
+        "name": "S&P 500 ETF",
+        "price": 750.46,
+        "prev_close": 750.59,
+        "change_pct": -0.02,
+        "session": "premarket_finnhub"
+      },
+      {
+        "symbol": "QQQ",
+        "name": "Nasdaq 100 ETF",
+        "price": 729.45,
+        "prev_close": 730.28,
+        "change_pct": -0.11,
+        "session": "premarket_finnhub"
+      },
+      {
+        "symbol": "VIX",
+        "name": "CBOE Volatility Index",
+        "price": 16.29,
+        "change_pct": -4.0,
+        "note": "Declining — positivo para equities",
+        "session": "premarket"
+      },
+      {
+        "symbol": "US10Y",
+        "name": "US 10Y Treasury Yield",
+        "price": 4.504,
+        "session": "premarket"
+      },
+      {
+        "symbol": "DXY",
+        "name": "US Dollar Index",
+        "price": 99.2,
+        "note": "R0 referência, não confirmado hoje",
+        "session": "stale_reference"
+      }
+    ],
+    "geopolitical_new": {
+      "event": "US military strike in Iran",
+      "impact": "Novo risco geopolítico. Potencial spike em oil prices (bullish CVX/energy), mas risk-off em equities se escalar.",
+      "status": "MONITORING",
+      "discovered": "2026-05-28 premarket"
+    }
+  },
+  "earnings_bmo_confirmed": [
+    {
+      "symbol": "FUTU",
+      "name": "Futu Holdings",
+      "timing": "bmo",
+      "eps_actual": 6.03,
+      "eps_estimate": 22.53,
+      "beat_miss": "MISS",
+      "revenue_actual": 5850631632,
+      "revenue_estimate": 6204943896,
+      "guidance": "N/A",
+      "premarket_reaction": "N/A — não monitorizado",
+      "relevance": "LOW — HK brokerage, fora do radar principal",
+      "data_quality": "CONFIRMED",
+      "source": "Finnhub Earnings Calendar"
+    }
+  ],
+  "earnings_amc_watch": [
+    {
+      "symbol": "CHA",
+      "name": "China Telecom ADR",
+      "timing": "amc",
+      "eps_estimate": 2.05,
+      "revenue_estimate": 3262566135,
+      "relevance": "LOW — fora do radar principal",
+      "status": "CALENDAR_WATCH",
+      "data_quality": "ESTIMATE_ONLY"
+    }
+  ],
+  "portfolio_sentinel_update": [
+    {
+      "symbol": "MU",
+      "name": "Micron Technology",
+      "status": "MATERIAL",
+      "level": "MATERIAL",
+      "price_today": 928.41,
+      "price_high_today": 956.16,
+      "change_pct": 3.63,
+      "headline": "Bernstein supply-chain report (hoje) + UBS PT $1,625 (May 26). 52-week high tocado: $956.16",
+      "detail": "UBS Timothy Arcuri tripled PT para $1,625 em 26-Mai. Reframing: 'AI-native infrastructure giant'. Supply agreements cobrem 60-70% server DDR5 through 2029. Bernstein supply-chain bullish hoje. AV: Mkt cap $1.047T, Forward P/E 9.43, 30 Buy / 0 Sell, 52W high $956.16.",
+      "impact": "BULLISH — portfolio thesis fortemente confirmada. Risco: sell-the-news após 52W high.",
+      "data_quality": "CONFIRMED_LIVE",
+      "av_data": {
+        "market_cap": 1046999532000,
+        "pe_ratio": 43.85,
+        "forward_pe": 9.43,
+        "eps": 21.17,
+        "52w_high": 956.16,
+        "52w_low": 92.0,
+        "ma_50d": 538.14,
+        "ma_200d": 330.52,
+        "analyst_target": 652.98,
+        "ratings": {
+          "buy": 30,
+          "hold": 5,
+          "sell": 0
+        }
+      },
+      "source": "UBS Research May 26, Bernstein May 28, Alpha Vantage, Finnhub"
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA",
+      "status": "WATCH",
+      "level": "INFO",
+      "price_today": 212.6,
+      "change_pct": -1.05,
+      "headline": "Pullback moderado -1.05%. Consolidação pós-earnings Q1 FY27 (beat $81.6B).",
+      "detail": "Sem catalisador novo hoje. Mega-cap AI em ligeira pressão. Tese intacta.",
+      "impact": "NEUTRAL — monitorar suporte $210",
+      "data_quality": "LIVE_PREMARKET",
+      "source": "Finnhub"
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "status": "INFO",
+      "level": "INFO",
+      "price_today": 412.67,
+      "change_pct": -0.81,
+      "headline": "Pullback moderado -0.81%. Sem notícia nova material.",
+      "detail": "AI capex $190B para 2026 continua como tema. Sem novos catalisadores hoje.",
+      "impact": "NEUTRAL",
+      "data_quality": "LIVE_PREMARKET",
+      "source": "Finnhub"
+    },
+    {
+      "symbol": "CVX",
+      "name": "Chevron",
+      "status": "WATCH",
+      "level": "WATCH",
+      "price_today": 182.4,
+      "change_pct": -1.25,
+      "headline": "Iran military strike — potencial spike em oil prices. CVX -1.25% mas pode reverter.",
+      "detail": "Ataque militar EUA-Irão descoberto premarket. CVX energy play se oil subir. Monitorar XLE e WTI intraday.",
+      "impact": "AMBIGUOUS — risco-off vs oil supply shock",
+      "data_quality": "LIVE_PREMARKET",
+      "source": "Finnhub, Web search"
+    },
+    {
+      "symbol": "VUUA",
+      "name": "Vanguard S&P 500 ETF",
+      "status": "NONE",
+      "level": "INFO",
+      "headline": "Macro flat. SPY -0.02%. Contexto cautelosamente bullish.",
+      "impact": "Macro reference",
+      "data_quality": "LIVE_PREMARKET"
+    },
+    {
+      "symbol": "VWCE",
+      "name": "Vanguard FTSE All-World ETF",
+      "status": "NONE",
+      "level": "INFO",
+      "headline": "Iran geopolítico pode pressionar global risk-off. Monitorar.",
+      "impact": "Macro global reference",
+      "data_quality": "CONTEXT_ONLY"
+    }
+  ],
+  "master_table": [
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "bucket": "portfolio_material_mover",
+      "classification": "BULLISH_OBSERVATION",
+      "score": 84,
+      "confidence": "HIGH",
+      "price": 928.41,
+      "prev_close": 895.88,
+      "gap_pct": 3.63,
+      "high_today": 956.16,
+      "catalyst": "Bernstein supply-chain bullish report (hoje) + UBS PT $1,625 (May 26). 52W high $956.16 tocado.",
+      "cap_bucket": "mega",
+      "score_breakdown": {
+        "catalyst": 22,
+        "price_action": 18,
+        "volume_rvol": 16,
+        "liquidity": 15,
+        "technical": 8,
+        "portfolio_relevance": 10,
+        "risk_penalty": -5
+      },
+      "risk_note": "Near 52W high — sell-the-news risco. Stock 10x desde 52W low ($92).",
+      "data_quality": "HIGH — Finnhub live + Alpha Vantage confirmed"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "bucket": "portfolio_sentinel",
+      "classification": "NEUTRAL_WAIT",
+      "score": 55,
+      "confidence": "MEDIUM",
+      "price": 212.6,
+      "prev_close": 214.86,
+      "gap_pct": -1.05,
+      "catalyst": "Sem novo catalisador. Post-Q1 FY27 beat consolidação. AI capex tema intacto.",
+      "cap_bucket": "mega",
+      "score_breakdown": {
+        "catalyst": 8,
+        "price_action": 10,
+        "volume_rvol": 10,
+        "liquidity": 15,
+        "technical": 5,
+        "portfolio_relevance": 10,
+        "risk_penalty": -3
+      },
+      "risk_note": "Suporte $210 a monitorar. Pullback benigno ou início de correção?",
+      "data_quality": "MEDIUM — Finnhub live, sem dados técnicos completos"
+    },
+    {
+      "ticker": "MRVL",
+      "name": "Marvell Technology",
+      "bucket": "premarket_mover",
+      "classification": "BEARISH_OBSERVATION",
+      "score": 50,
+      "confidence": "MEDIUM",
+      "price": 198.7,
+      "prev_close": 208.26,
+      "gap_pct": -4.59,
+      "catalyst": "HSBC upgrade $300 PT (May 26) mas stock -4.59% hoje — give-back pós-upgrade. Múltiplos upgrades: Stifel $210, Melius $220, BofA $200.",
+      "cap_bucket": "large",
+      "score_breakdown": {
+        "catalyst": 14,
+        "price_action": 8,
+        "volume_rvol": 10,
+        "liquidity": 12,
+        "technical": 5,
+        "portfolio_relevance": 0,
+        "risk_penalty": -9
+      },
+      "risk_note": "Forte suporte de analyst upgrades mas give-back imediato. Buy the dip vs confirmar topping.",
+      "data_quality": "MEDIUM — Finnhub live"
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "bucket": "sector_reference",
+      "classification": "NEUTRAL_WAIT",
+      "score": 40,
+      "confidence": "LOW",
+      "price": 495.54,
+      "prev_close": 503.89,
+      "gap_pct": -1.66,
+      "catalyst": "AI semiconductor sector proxy. Sem catalisador específico.",
+      "cap_bucket": "large",
+      "risk_note": "Segue QQQ/NVDA. Ausência de catalisador específico.",
+      "data_quality": "MEDIUM — Finnhub live"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "bucket": "portfolio_sentinel",
+      "classification": "NEUTRAL_WAIT",
+      "score": 45,
+      "confidence": "MEDIUM",
+      "price": 412.67,
+      "prev_close": 416.03,
+      "gap_pct": -0.81,
+      "catalyst": "AI capex $190B 2026 ongoing. Sem novo catalisador.",
+      "cap_bucket": "mega",
+      "risk_note": "Mega-cap em ligeira pressão.",
+      "data_quality": "MEDIUM — Finnhub live"
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "bucket": "portfolio_sentinel",
+      "classification": "GEOPOLITICAL_WATCH",
+      "score": 42,
+      "confidence": "LOW",
+      "price": 182.4,
+      "prev_close": 184.71,
+      "gap_pct": -1.25,
+      "catalyst": "Iran military strike (novo hoje). Se oil spike → CVX pode reverter.",
+      "cap_bucket": "large",
+      "risk_note": "Ambiguous: risk-off vs oil supply disruption bullish.",
+      "data_quality": "MEDIUM — Finnhub live"
+    },
+    {
+      "ticker": "SPY",
+      "name": "S&P 500 ETF",
+      "bucket": "sector_reference",
+      "classification": "SECTOR_REFERENCE",
+      "score": null,
+      "price": 750.46,
+      "prev_close": 750.59,
+      "gap_pct": -0.02,
+      "catalyst": "Market reference. Futures 7,538. Essencialmente flat.",
+      "cap_bucket": "benchmark",
+      "data_quality": "LIVE_PREMARKET"
+    },
+    {
+      "ticker": "QQQ",
+      "name": "Nasdaq 100 ETF",
+      "bucket": "sector_reference",
+      "classification": "SECTOR_REFERENCE",
+      "score": null,
+      "price": 729.45,
+      "prev_close": 730.28,
+      "gap_pct": -0.11,
+      "catalyst": "Tech benchmark. AI mega-cap em ligeira pressão.",
+      "cap_bucket": "benchmark",
+      "data_quality": "LIVE_PREMARKET"
+    }
+  ],
+  "top_observation": [
+    {
+      "rank": 1,
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "classification": "BULLISH_OBSERVATION",
+      "score": 84,
+      "confidence": "HIGH",
+      "hypothesis": "52W high touch + dual analyst catalyst (Bernstein hoje + UBS $1,625). AI memory supercycle momentum play.",
+      "price_premarket": 928.41,
+      "gap_pct": 3.63,
+      "catalyst": "Bernstein supply-chain bullish (hoje) + UBS PT tripled para $1,625. 30 Buy / 0 Sell. Forward P/E 9.43.",
+      "validate_at_open": {
+        "gap_holds": "Price acima $920 após primeiros 2 min?",
+        "volume": "Volume >1.5M primeiros 5 min? ($3.1B volume premarket foi reportado)",
+        "vwap": "VWAP mantido? Preço acima VWAP = bullish",
+        "52w_high": "Novo 52W high tentado? ($956.16 foi o high hoje)",
+        "invalidation": "Fecha abaixo $900 = fade/trap. Abaixo $895 = reversal"
+      },
+      "portfolio_relevance": "Core holding — MATERIAL"
+    },
+    {
+      "rank": 2,
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "classification": "NEUTRAL_WAIT",
+      "score": 55,
+      "confidence": "MEDIUM",
+      "hypothesis": "Post-earnings consolidation -1.05%. Suporte $210 a validar. Sem novo catalisador.",
+      "price_premarket": 212.6,
+      "gap_pct": -1.05,
+      "catalyst": "Sem catalisador novo. Context: Q1 FY27 beat intacto. AI capex demand.",
+      "validate_at_open": {
+        "gap_holds": "Abre acima $210?",
+        "volume": "Volume abaixo do habitual = consolidação saudável",
+        "vwap": "Mantém VWAP = bullish bias",
+        "invalidation": "Quebra $208 com volume = risco pullback mais profundo"
+      },
+      "portfolio_relevance": "Core holding — INFO"
+    },
+    {
+      "rank": 3,
+      "ticker": "MRVL",
+      "name": "Marvell Technology",
+      "classification": "BEARISH_OBSERVATION",
+      "score": 50,
+      "confidence": "MEDIUM",
+      "hypothesis": "Give-back pós-HSBC upgrade $300 PT (May 26). -4.59% hoje. Fade ou buy-the-dip?",
+      "price_premarket": 198.7,
+      "gap_pct": -4.59,
+      "catalyst": "HSBC Buy $300 (May 26) + Stifel $210, BofA $200. Q1 beat +28% YoY. Mas dando back hoje.",
+      "validate_at_open": {
+        "gap_holds": "Estabiliza $195-200?",
+        "volume": "Volume seco = dip comprável; volume expansion = continuação do fade",
+        "vwap": "Recupera VWAP = possível dip opportunity",
+        "invalidation": "Quebra $193 com volume = confirmação fade"
+      },
+      "portfolio_relevance": "Não portfolio — SECTOR_WATCH"
+    },
+    {
+      "rank": 4,
+      "ticker": "CVX",
+      "name": "Chevron",
+      "classification": "GEOPOLITICAL_WATCH",
+      "score": 42,
+      "confidence": "LOW",
+      "hypothesis": "Iran strike pode provocar oil spike intraday. CVX como proxy energético.",
+      "price_premarket": 182.4,
+      "gap_pct": -1.25,
+      "catalyst": "US military strike in Iran (descoberto hoje premarket). Supply disruption = oil bullish.",
+      "validate_at_open": {
+        "oil_reaction": "WTI/Brent spike? >2% = CVX reactive",
+        "volume": "Volume elevado em CVX/XLE = Iran impact confirmado",
+        "invalidation": "Oil flat ou cai = geopolítico não priced in, CVX continua lower"
+      },
+      "portfolio_relevance": "Core holding — WATCH"
+    },
+    {
+      "rank": 5,
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "classification": "NEUTRAL_WAIT",
+      "score": 40,
+      "confidence": "LOW",
+      "hypothesis": "Sector proxy AI semiconductors. Segue QQQ. Sem catalisador específico.",
+      "price_premarket": 495.54,
+      "gap_pct": -1.66,
+      "catalyst": "AI sector pullback geral. Sem notícia específica.",
+      "validate_at_open": {
+        "sector_recovery": "QQQ/MU recoveram? AMD pode seguir",
+        "invalidation": "Quebra $490 = fraqueza sector confirmada"
+      },
+      "portfolio_relevance": "Não portfolio — SECTOR_PROXY"
+    }
+  ],
+  "r2_tracking_list": [
+    {
+      "ticker": "MU",
+      "price_r1": 928.41,
+      "hypothesis": "Bullish momentum para novo 52W high. AI memory supercycle play.",
+      "catalyst": "Bernstein supply-chain + UBS $1,625 PT",
+      "validate_r2": [
+        "gap >$920 mantido?",
+        "volume >1.5M primeiros 5min?",
+        "VWAP hold?",
+        "52W high attempt ($956)?",
+        "Invalidação se <$900"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "price_r1": 212.6,
+      "hypothesis": "Consolidação saudável. Suporte $210.",
+      "catalyst": "Contexto Q1 FY27 beat, sem novo",
+      "validate_r2": [
+        "$210 hold?",
+        "Volume baixo = consolidação OK",
+        "VWAP acima = neutral-bullish",
+        "Quebra $208 = atenção"
+      ]
+    },
+    {
+      "ticker": "MRVL",
+      "price_r1": 198.7,
+      "hypothesis": "Fade pós-upgrade ou bounce de dip?",
+      "catalyst": "HSBC $300 PT mas give-back -4.59%",
+      "validate_r2": [
+        "Estabiliza $195-200?",
+        "Volume seco = comprável",
+        "Recupera VWAP = oportunidade",
+        "Quebra $193 = continuação fade"
+      ]
+    },
+    {
+      "ticker": "CVX",
+      "price_r1": 182.4,
+      "hypothesis": "Iran oil supply shock play",
+      "catalyst": "Iran military strike",
+      "validate_r2": [
+        "WTI spike >2%?",
+        "CVX recovery para $183+?",
+        "XLE volume?",
+        "Oil flat = invalidação"
+      ]
+    }
+  ],
+  "risk_factors": [
+    {
+      "factor": "US military strike in Iran",
+      "impact": "Geopolitical risk-off; oil spike possível",
+      "probability": "medium",
+      "new": true
+    },
+    {
+      "factor": "AI mega-caps em pullback geral (NVDA, MSFT, AMD, MRVL todos down)",
+      "impact": "Sector rotation ou correção pontual?",
+      "probability": "medium"
+    },
+    {
+      "factor": "MU near 52-week high ($956.16) — sell-the-news risco",
+      "impact": "Potencial reversal após atingir 52W high",
+      "probability": "medium"
+    },
+    {
+      "factor": "US 10Y em 4.504% — elevated yields",
+      "impact": "Pressão em growth stocks se yield sobe mais",
+      "probability": "low-medium"
+    },
+    {
+      "factor": "VIX a declinar (16.29) mas geopolítico pode reverter",
+      "impact": "Spike de VIX se Iran escalation",
+      "probability": "low"
+    }
+  ],
+  "sources": [
+    "Finnhub API (live premarket quotes: SPY, QQQ, NVDA, MSFT, MU, CVX, MRVL, AMD)",
+    "Alpha Vantage API (MU OVERVIEW — 1 call)",
+    "Web Search: Bernstein MU supply-chain report May 28 2026",
+    "Web Search: UBS MU $1,625 PT May 26 2026 (Timothy Arcuri)",
+    "Web Search: S&P 500 futures / VIX / 10Y premarket May 28 2026",
+    "Web Search: MRVL HSBC upgrade $300 May 26 2026",
+    "Web Search: Premarket movers May 28 2026",
+    "latest-r0.json (2026-05-26 context)"
+  ]
+}
