@@ -1,0 +1,365 @@
+{
+  "date": "2026-05-29",
+  "run": "R3_EOD_LEARNING",
+  "run_time_lisbon": "22:15",
+  "run_time_et": "17:15",
+  "urls": {
+    "latest": "https://jzmike.github.io/market-intel/latest.html",
+    "day": "https://jzmike.github.io/market-intel/reports/2026/05/2026-05-29.html"
+  },
+  "market_close_snapshot": {
+    "date": "2026-05-29",
+    "bias": "BULLISH",
+    "tape_summary": "S&P 9th consecutive weekly gain, Dow first close ever above 51,000. Tech led by MSFT+MU+DELL. Energy underperformed on Iran ceasefire. NVDA diverged negatively from tech rally.",
+    "indices": [
+      { "name": "S&P 500", "close": 7580.06, "change_pct": "+0.22%", "note": "ATH zone, 9th consecutive weekly gain, 7th straight up day", "source": "TheStreet/web" },
+      { "name": "Nasdaq Composite", "close": 26972.62, "change_pct": "+0.20%", "source": "TheStreet/web" },
+      { "name": "Dow Jones", "close": 51032.46, "change_pct": "+0.72%", "note": "First close ever above 51,000", "source": "TheStreet/web" },
+      { "name": "SPY ETF", "close": 756.48, "change_pct": "+0.25%", "source": "Finnhub" },
+      { "name": "QQQ ETF", "close": 738.31, "change_pct": "+0.37%", "source": "Finnhub" },
+      { "name": "VIX", "close_est": 15.9, "change_pct_est": "-2.48%", "note": "Finnhub returned 0 — web estimate. Sub-16 = very low fear.", "source": "web estimate" },
+      { "name": "XLK (Tech)", "close": 191.02, "change_pct": "+2.23%", "source": "Finnhub" },
+      { "name": "XLE (Energy)", "close": 56.29, "change_pct": "-1.16%", "note": "Iran ceasefire impact confirmed", "source": "Finnhub" },
+      { "name": "MSFT", "close": 450.24, "change_pct": "+5.45%", "note": "Portfolio MATERIAL — Morgan Stanley cloud upgrade + coding model", "source": "Alpha Vantage/Finnhub" },
+      { "name": "MU", "close": 971.00, "change_pct": "+5.14%", "note": "Portfolio MATERIAL — UBS $1,625 target, HBM sold out", "source": "Alpha Vantage" },
+      { "name": "DELL", "close": 420.91, "change_pct": "+32.76%", "note": "AMC earnings May 28 — AI server revenue +757%, backlog $51.3B", "source": "Finnhub" }
+    ],
+    "macro_notes": [
+      "Iran ceasefire (60-day) holding — oil geopolitical premium deflated as flagged in R1",
+      "10Y yield ~4.44% — benign, supportive of growth multiples",
+      "AI infrastructure spending narrative dominant: DELL +32.76%, MU +5.14%, XLK +2.23%",
+      "NVDA -1.45% despite XLK +2.23% — post-earnings distribution pattern persistent",
+      "Sectors: Tech strong, Energy weak, Financials muted"
+    ],
+    "dxy": "not fetched"
+  },
+  "ticker_outcomes": [
+    {
+      "ticker": "QQQ",
+      "hypothesis_r1": "Gap up continuation — tech leadership holds above 730, Iran ceasefire + 10Y easing = growth multiple expansion",
+      "classification_r1": "BULLISH OBSERVATION",
+      "score_r1": 75,
+      "confidence_r1": "HIGH",
+      "price_r1": 735.60,
+      "price_r2": 740.39,
+      "price_close": 738.31,
+      "change_from_r1_pct": "+0.37%",
+      "gap_status": "HELD",
+      "result_eod": "WORKED",
+      "thesis_validated": true,
+      "catalyst_was": "MATERIAL",
+      "lesson": "Alta confiança no contexto ATH + catalisador macro (ceasefire, 10Y) funcionou. Modelo acertou na leitura.",
+      "data_quality": "VALID"
+    },
+    {
+      "ticker": "SPY",
+      "hypothesis_r1": "Broad market gap up — risk-on sustained, S&P record close",
+      "classification_r1": "BULLISH OBSERVATION",
+      "score_r1": 73,
+      "confidence_r1": "HIGH",
+      "price_r1": 754.60,
+      "price_r2": 757.67,
+      "price_close": 756.48,
+      "change_from_r1_pct": "+0.25%",
+      "gap_status": "HELD",
+      "result_eod": "WORKED",
+      "thesis_validated": true,
+      "catalyst_was": "MATERIAL",
+      "lesson": "S&P ATH confirmado, 9ª semana consecutiva de ganhos. Tese broad market bullish simples e correta.",
+      "data_quality": "VALID"
+    },
+    {
+      "ticker": "PLAB",
+      "hypothesis_r1": "Gap down continuation — double earnings miss, no reversal catalyst",
+      "classification_r1": "BEARISH OBSERVATION",
+      "score_r1": 66,
+      "confidence_r1": "MEDIUM",
+      "price_r1": 34.02,
+      "price_r2": 32.93,
+      "price_close": 32.35,
+      "change_from_r1_pct": "-4.91%",
+      "gap_status": "EXTENDED",
+      "result_eod": "WORKED",
+      "thesis_validated": true,
+      "catalyst_was": "MATERIAL",
+      "lesson": "Double fundamental miss (-23.6% EPS, -5% Rev) = bearish tese robusta. Venda continuou todo o dia. Sem reversal catalyst = continuação esperada.",
+      "data_quality": "VALID"
+    },
+    {
+      "ticker": "NVDA",
+      "hypothesis_r1": "Post-earnings recovery continues inline with QQQ/tech rally",
+      "classification_r1": "BULLISH OBSERVATION",
+      "score_r1": 66,
+      "confidence_r1": "MEDIUM",
+      "price_r1": 214.25,
+      "price_r2": 216.38,
+      "price_close": 211.14,
+      "price_intraday_high": 217.86,
+      "change_from_r1_pct": "-1.45%",
+      "gap_status": "REVERSED",
+      "result_eod": "FAILED",
+      "thesis_validated": false,
+      "catalyst_was": "NARRATIVE",
+      "lesson": "NVDA fechou -1.45% num dia em que XLK subiu +2.23%. Distribuição pós-earnings persistente. O modelo assumiu incorretamente que o tailwind tech bastaria. $215 era resistência real — o nível foi testado ($217.86 intraday) e rejeitado com força. 'Tech rally tailwind' não é catalisador suficiente para NVDA em distribuição pós-earnings.",
+      "data_quality": "VALID",
+      "cnbc_context": "$215 key level: if materially broken becomes resistance. Rotation into MSFT/MU/DELL occurred."
+    },
+    {
+      "ticker": "CVX",
+      "hypothesis_r1": "Thesis change watch — Iran ceasefire removes oil geopolitical premium",
+      "classification_r1": "NEUTRAL / WAIT",
+      "score_r1": 55,
+      "confidence_r1": "MEDIUM",
+      "price_r1": 183.03,
+      "price_r2": 181.31,
+      "price_close": 182.46,
+      "change_from_r1_pct": "-0.31%",
+      "gap_status": "WEAKENED",
+      "result_eod": "PARTIALLY_WORKED",
+      "thesis_validated": true,
+      "catalyst_was": "MATERIAL",
+      "lesson": "Identificação da mudança de tese (R1) foi correta. CVX -0.31%, XLE -1.16%. O modelo fez bem a chamada da reversão do catalisador petróleo. CVX mostrou relativa resiliência vs XLE — suporte estrutural (dividendo, produção) absorveu parte da pressão.",
+      "data_quality": "VALID"
+    }
+  ],
+  "portfolio_sentinel_eod": [
+    {
+      "ticker": "NVDA",
+      "company": "NVIDIA",
+      "alert_level": "WATCH",
+      "close": 211.14,
+      "change_pct": "-1.45%",
+      "intraday_high": 217.86,
+      "intraday_low": 211.13,
+      "volume_note": "Not quantified — NVDA selloff on up-tech day implies distribution",
+      "impact": "Thesis weakened short-term",
+      "headline": "NVDA -1.45% enquanto XLK +2.23%. Distribuição pós-earnings persistente. Rotação para MSFT/MU/DELL.",
+      "detail": "Testou $215 resistência ($217.86 intraday) e rejeitou com força. Fechou $211.14. Zona $210-211 = suporte crítico. Se quebrar, torna-se resistência. AI demand LT intacto mas mercado a rotar para outros nomes do ecossistema.",
+      "sentiment": "NEUTRAL",
+      "implication": "Thesis weakened short-term",
+      "classification": "PORTFOLIO ALERT - WATCH",
+      "tomorrow_action": "Watch $210-211 support zone Monday. Earnings LT thesis intact."
+    },
+    {
+      "ticker": "MSFT",
+      "company": "Microsoft",
+      "alert_level": "MATERIAL",
+      "close": 450.24,
+      "change_pct": "+5.45%",
+      "volume": 79076424,
+      "impact": "Thesis strongly reinforced",
+      "headline": "MSFT +5.45% — Morgan Stanley bullish cloud infrastructure + novo coding model anunciado.",
+      "detail": "Open $432.55, high $450.33, close $450.24. Volume 79M (muito acima da média). Catalisadores: (1) Morgan Stanley raised cloud infrastructure thesis com defense services potential; (2) New coding model previewed. Stock estava -12% YTD antes desta sessão — esta sessão é recovery material.",
+      "sentiment": "BULLISH",
+      "implication": "Thesis reinforced",
+      "classification": "PORTFOLIO ALERT - MATERIAL",
+      "tomorrow_action": "Monitor continuation vs profit-taking. Volume diz-nos que foi institucional."
+    },
+    {
+      "ticker": "MU",
+      "company": "Micron",
+      "alert_level": "MATERIAL",
+      "close": 971.00,
+      "change_pct": "+5.14%",
+      "volume": 60158160,
+      "volume_note": "60M shares — elevated vs average",
+      "impact": "Thesis strongly reinforced",
+      "headline": "MU +5.14% — UBS target $1,625 (+204%), HBM toda a capacidade 2026 vendida sob contratos de longo prazo.",
+      "detail": "Preço: $923.52 → $971.00. Open $957.99, high $981.00, low $940.51. Micron acima de $1T market cap (por pouco). UBS Timothy Arcuri raised target de $535 para $1,625. HBM sold out through year-end sob contratos de preço fixo. AI memory demand continua a superar supply. Stock +68% YTD.",
+      "sentiment": "BULLISH",
+      "implication": "Thesis reinforced",
+      "classification": "PORTFOLIO ALERT - MATERIAL",
+      "tomorrow_action": "Momentum forte. Próximo nível: $981 (intraday high hoje)."
+    },
+    {
+      "ticker": "CVX",
+      "company": "Chevron",
+      "alert_level": "INFO",
+      "close": 182.46,
+      "change_pct": "-0.31%",
+      "impact": "Volatility risk managed — thesis intact LT",
+      "headline": "CVX -0.31% mas XLE -1.16%. Resiliente vs sector. Iran ceasefire impact confirmado mas absorvido.",
+      "detail": "Iran ceasefire 60-day holding. Oil geopolitical premium foi corretamente identificado como removido em R1. CVX mostrou relativa resistência vs XLE broad sector. Dividendo e tese de produção estrutural intactos.",
+      "sentiment": "NEUTRAL",
+      "implication": "No action / monitor only",
+      "classification": "INFO",
+      "tomorrow_action": "Monitor oil + ceasefire developments Monday."
+    },
+    {
+      "ticker": "VUUA",
+      "company": "Vanguard S&P 500 ETF",
+      "alert_level": "INFO",
+      "impact": "Thesis reinforced",
+      "headline": "S&P 500 ATH zone, 9th consecutive weekly gain. VUUA tracking positively.",
+      "sentiment": "BULLISH",
+      "implication": "Thesis reinforced",
+      "classification": "INFO",
+      "tomorrow_action": "No action needed. Monitor only."
+    },
+    {
+      "ticker": "VWCE",
+      "company": "Vanguard FTSE All-World ETF",
+      "alert_level": "NONE",
+      "impact": "Positive — US markets at ATH, global markets following",
+      "headline": "Broad market ATH supportive. Iran ceasefire reduces geopolitical risk premium globally.",
+      "sentiment": "BULLISH",
+      "implication": "Thesis reinforced",
+      "classification": "NONE",
+      "tomorrow_action": "No action needed. Monitor only."
+    }
+  ],
+  "earnings_amc_results": [
+    {
+      "ticker": "DELL",
+      "company": "Dell Technologies",
+      "report_date": "2026-05-28 AMC",
+      "trading_day": "2026-05-29",
+      "eps_actual": 4.86,
+      "eps_estimate": 2.94,
+      "eps_beat_pct": "+65.3%",
+      "revenue_actual": "43.8B",
+      "revenue_estimate": "35.5B",
+      "revenue_beat_pct": "+23.4%",
+      "guidance": "FY rev $167B (from $140B prior), AI server sales $60B",
+      "ai_server_revenue_growth_yoy": "+757%",
+      "ai_server_backlog": "51.3B",
+      "day_reaction": "+32.76% (close $420.91 vs pc $317.05)",
+      "afterhours_reaction": "+39% reported pre-session",
+      "classification": "SECTOR IMPACT",
+      "relevance_tomorrow": "TOMORROW WATCH",
+      "portfolio_impact": "Validação do ecossistema AI demand — bullish para NVDA LT, MU HBM demand, MSFT cloud capex. DELL não está na carteira mas confirma a narrativa.",
+      "source": "CNBC, Bloomberg, Yahoo Finance"
+    },
+    {
+      "ticker": "BN",
+      "company": "Ballantyne Strong",
+      "report_date": "2026-05-29 AMC",
+      "eps_actual": null,
+      "revenue_actual": null,
+      "classification": "LOW RELEVANCE",
+      "relevance_tomorrow": "NONE",
+      "data_quality": "Sem resultados confirmados disponíveis. Micro-cap/small-cap. Não é material.",
+      "source": "R0 calendar"
+    }
+  ],
+  "lessons": [
+    {
+      "id": 1,
+      "category": "portfolio_coverage",
+      "lesson": "BLIND SPOT DE CARTEIRA: MSFT (+5.45%) e MU (+5.14%) foram os maiores movers da carteira hoje mas não estavam no R2 tracking list. Rule: todas as posições da carteira devem ter live price check no R2, nunca apenas 'sem notícias materiais'.",
+      "impact": "HIGH",
+      "action": "Adicionar todas as posições de carteira ao r2_tracking_list independentemente de catalisador identificado"
+    },
+    {
+      "id": 2,
+      "category": "post_earnings_dynamics",
+      "lesson": "NVDA POST-EARNINGS DISTRIBUTION: NVDA fechou -1.45% num dia em que XLK subiu +2.23%. A assunção de que o tailwind tech continuaria a recovery pós-earnings foi incorreta. Em mega-caps com PE elevado (30x) após earnings beats, a distribuição pode persistir semanas mesmo em tape bullish. $215 resistência era mais forte do que o modelo pesou.",
+      "impact": "HIGH",
+      "action": "Após earnings de mega-cap: reduzir confiança para MEDIUM no máximo nos 5 dias seguintes ao report. Identificar níveis de resistência pós-gap com mais precisão."
+    },
+    {
+      "id": 3,
+      "category": "amc_tracking",
+      "lesson": "DELL AMC MAY 28 foi o maior evento do dia (+32.76%) e não estava explicitamente na tracking list do R1. O R0 tinha HPE/PANW/ULTA no radar mas não o DELL do dia anterior. AMC earnings acting no dia seguinte — especialmente mega-beats confirmados — devem ser automáticos na tracking list.",
+      "impact": "HIGH",
+      "action": "R1 deve sempre incluir AMC do dia anterior na master table se resultados disponíveis em premarket"
+    },
+    {
+      "id": 4,
+      "category": "sector_rotation",
+      "lesson": "ROTAÇÃO INTRA-TECH: XLK +2.23% mas NVDA -1.45%. O dinheiro moveu-se de NVDA para MSFT (+5.45%), MU (+5.14%), DELL (+32.76%). Olhar para o sector ETF não é suficiente — há rotação dentro do sector que o modelo não capturou.",
+      "impact": "MEDIUM",
+      "action": "Identificar divergências NVDA vs XLK como sinal de rotação. Track top 5 constituintes XLK separadamente."
+    },
+    {
+      "id": 5,
+      "category": "correct_call",
+      "lesson": "CVX THESIS CHANGE (R1) FOI CORRETO: A identificação da reversão do catalisador petróleo (ceasefire cancela premium) foi uma boa chamada real-time. XLE fechou -1.16%, CVX -0.31%. O modelo funcionou bem em atualizar a tese de R0 para R1.",
+      "impact": "POSITIVE",
+      "action": "Manter abordagem de rever teses quando catalisador macro muda entre runs"
+    },
+    {
+      "id": 6,
+      "category": "bearish_thesis",
+      "lesson": "PLAB BEARISH THESIS ROBUSTA: Double miss fundamental (EPS -23.6%, Rev -5%) sem guidance = continuação confirmada. Tese bearish pós-earnings em small/mid cap com miss genuíno tem elevada taxa de sucesso no dia seguinte.",
+      "impact": "POSITIVE",
+      "action": "Manter scoring elevado para bearish earnings gaps em small/mid cap com double miss"
+    },
+    {
+      "id": 7,
+      "category": "data_quality",
+      "lesson": "VIX via Finnhub retorna 0 consistentemente. Alpha Vantage rate limit atingido em chamadas em sequência rápida (MU e DELL foram bloqueadas). R3 dependente de web search para VIX e sectores.",
+      "impact": "LOW",
+      "action": "Usar sleep 2 entre chamadas Alpha Vantage. Para VIX usar CBOE feed ou web search como fallback documentado."
+    }
+  ],
+  "model_self_critique": [
+    "R1 e R2 acertaram na direção de QQQ, SPY, PLAB (3/5 tickers principais).",
+    "NVDA foi o maior erro — assunção de tailwind suficiente sem considerar a força da zona de resistência $215 e o padrão de distribuição pós-earnings.",
+    "MSFT e MU movimentos materiais de carteira não foram capturados porque ficaram como 'sem notícias' no R2. Este é o principal blind spot a corrigir.",
+    "A chamada do ceasefire no R1 (CVX thesis change) foi excelente — boa capacidade de update intraday.",
+    "DELL AMC May 28 devia estar na tracking list do R1 — era o único event-driven de magnitude esperada.",
+    "Tese high-confidence (QQQ, SPY) funcionaram perfeitamente — o modelo calibra bem broad market em condições ATH+macro bullish."
+  ],
+  "data_quality_summary": {
+    "alpha_vantage_calls_used": 2,
+    "alpha_vantage_calls_successful": ["MSFT"],
+    "alpha_vantage_rate_limited": ["MU (got on retry)", "DELL (blocked)"],
+    "warnings": [
+      "VIX: Finnhub retorna 0. Estimativa web (~15.9, -2.48%) usada.",
+      "DXY: não obtido.",
+      "BN (Ballantyne Strong AMC): sem resultados confirmados disponíveis — micro-cap.",
+      "DELL Alpha Vantage: rate limited — usando Finnhub quote.",
+      "Sector ETFs: apenas XLK e XLE via Finnhub. XLF/XLV/XLI/XLC de May 27 (stale)."
+    ]
+  },
+  "tomorrow_watch": [
+    {
+      "ticker": "HPE",
+      "event": "Earnings AMC June 1",
+      "catalyst": "IT infrastructure / AI data center proxy. EPS est $0.54, Rev est $9.9B.",
+      "relevance": "HIGH — AI capex spending confirmation after DELL mega-beat",
+      "note": "DELL +32.76% sets high expectations for IT infrastructure"
+    },
+    {
+      "ticker": "NVDA",
+      "event": "Support watch $210-211",
+      "catalyst": "Post-earnings distribution. $215 rejected today.",
+      "relevance": "PORTFOLIO — critical level",
+      "note": "If $210 breaks, next support unclear. DELL/MU AI narrative should help LT."
+    },
+    {
+      "ticker": "MSFT",
+      "event": "Continuation/fade watch",
+      "catalyst": "+5.45% institutional move. Morgan Stanley cloud upgrade.",
+      "relevance": "PORTFOLIO HIGH",
+      "note": "Volume 79M suggests institutional. Watch for continuation Monday."
+    },
+    {
+      "ticker": "MU",
+      "event": "Momentum continuation",
+      "catalyst": "UBS $1,625 target. HBM sold out. Market cap above $1T.",
+      "relevance": "PORTFOLIO HIGH",
+      "note": "Intraday high $981 — next target if momentum continues."
+    },
+    {
+      "ticker": "DELL",
+      "event": "Post-gap digestion",
+      "catalyst": "+32.76% on AI server mega-beat. $51.3B backlog.",
+      "relevance": "SECTOR REFERENCE",
+      "note": "Not in portfolio but AI demand validator. Watch gap fill vs consolidation."
+    }
+  ],
+  "sources": [
+    { "name": "TheStreet", "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-may-29-2026", "data": "Market close indices" },
+    { "name": "CNBC", "url": "https://www.cnbc.com/2026/05/29/dell-stock-earnings-ai-servers.html", "data": "DELL earnings" },
+    { "name": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-05-28/dell-boosts-outlook-to-60-billion-in-ai-server-sales-this-year", "data": "DELL AI guidance" },
+    { "name": "CNBC Nvidia", "url": "https://www.cnbc.com/2026/05/26/nvidia-stock-faces-a-key-level-that-could-make-or-break-where-it-goes-next.html", "data": "NVDA $215 resistance level" },
+    { "name": "Nasdaq", "url": "https://www.nasdaq.com/articles/why-nvidia-stock-underperforming-2026", "data": "NVDA underperformance context" },
+    { "name": "Motley Fool MSFT", "url": "https://www.fool.com/investing/2026/05/28/why-microsoft-stock-is-surging-today/", "data": "MSFT catalyst" },
+    { "name": "TradingKey MU", "url": "https://www.tradingkey.com/news/market-movers/261936451-market-movers-mu-20260529", "data": "MU May 29 catalyst" },
+    { "name": "247wallst MU", "url": "https://247wallst.com/investing/2026/04/23/micron-is-up-68-ytd-as-hbm-demand-explodes-is-the-memory-rally-sustainable/", "data": "MU HBM context" },
+    { "name": "Finnhub", "data": "Live quotes: SPY, QQQ, NVDA, CVX, PLAB, MSFT, MU, DELL, XLK, XLE" },
+    { "name": "Alpha Vantage", "data": "MSFT, MU (rate limited on DELL)" }
+  ]
+}

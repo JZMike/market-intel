@@ -1,0 +1,23 @@
+{
+  "week_of": "2026-05-25",
+  "last_updated": "2026-05-29",
+  "total_tickers_validated": 5,
+  "worked": 3,
+  "partially_worked": 1,
+  "failed": 1,
+  "data_insufficient": 0,
+  "worked_tickers": ["QQQ","SPY","PLAB"],
+  "partially_worked_tickers": ["CVX"],
+  "failed_tickers": ["NVDA"],
+  "portfolio_material_events": ["MSFT+5.45%","MU+5.14%","NVDA-1.45%_underperform"],
+  "surprise_events": ["DELL+32.76%_not_in_tracking_list","MSFT_not_in_R2_tracking","MU_not_in_R2_tracking"],
+  "best_catalyst_types": ["broad_market_ATH_gap_up","fundamental_double_miss_bearish","macro_ceasefire_thesis_change"],
+  "weakest_catalyst_types": ["narrative_tech_tailwind_post_earnings_mega_cap"],
+  "most_repeated_tickers": ["NVDA","CVX","SPY","QQQ"],
+  "alpha_vantage_calls_total": 4,
+  "alpha_vantage_r0": 0,
+  "alpha_vantage_r1": 2,
+  "alpha_vantage_r2": 0,
+  "alpha_vantage_r3": 2,
+  "notes": "Semana encerrada. S&P 9ª semana consecutiva de ganhos. MSFT e MU movimentos materiais de carteira não capturados em R2."
+}
