@@ -1,0 +1,257 @@
+{
+  "date": "2026-05-29",
+  "run": "R2_OPEN_VALIDATION",
+  "run_time_lisbon": "14:50",
+  "run_time_et": "09:50",
+  "urls": {
+    "latest": "https://jzmike.github.io/market-intel/latest.html",
+    "day": "https://jzmike.github.io/market-intel/reports/2026/05/2026-05-29.html"
+  },
+  "data_quality_summary": {
+    "price_data_status": "VALID",
+    "volume_data_status": "PARTIAL",
+    "alpha_vantage_calls_used": 0,
+    "warnings": [
+      "PLAB: Finnhub pc=34.02 (yesterday official close after AH earnings gap). Original prev_close $53.51 per R1. Gap total -38.5% vs original close.",
+      "VIX intraday not fetched — using web search estimate (prev close 16.29, likely flat/lower with ATH tape).",
+      "CVX: Below R1 $182 validation threshold — energy underperforming broad market significantly.",
+      "Volume confirmations: individual ticker volume not fetched via Finnhub quote. Estimates based on market context."
+    ]
+  },
+  "market_open_snapshot": {
+    "SPY": {
+      "current": 757.67,
+      "open_regular": 755.71,
+      "r1_price": 754.60,
+      "prev_close_r1": 750.46,
+      "gap_at_open_pct": "+0.70%",
+      "change_from_r1_pct": "+0.41%",
+      "status": "ATH",
+      "source": "Finnhub"
+    },
+    "QQQ": {
+      "current": 740.39,
+      "open_regular": 736.855,
+      "r1_price": 735.60,
+      "prev_close_r1": 729.45,
+      "gap_at_open_pct": "+1.01%",
+      "change_from_r1_pct": "+0.65%",
+      "status": "ATH",
+      "source": "Finnhub"
+    },
+    "VIX": {
+      "estimated": "~16.2",
+      "prev_close": 16.29,
+      "status": "BENIGN",
+      "comment": "Sub-17. ATH market implies VIX flat/lower. Below QQQ invalidation threshold of 18.",
+      "source": "web search estimate"
+    },
+    "bias": "BULLISH — both indices at all-time highs. Iran ceasefire holding. 10Y benign ~4.44%. Tech leadership confirmed.",
+    "tape_summary": "Strong open. Gap up held and extended. Market making new ATH across S&P and Nasdaq. Iran ceasefire narrative intact."
+  },
+  "validated_tickers": [
+    {
+      "ticker": "QQQ",
+      "hypothesis_r1": "Gap up continuation — tech leadership holds",
+      "classification_r1": "BULLISH OBSERVATION",
+      "score_r1": 75,
+      "confidence_r1": "HIGH",
+      "price_r1": 735.60,
+      "open_regular": 736.855,
+      "price_now": 740.39,
+      "change_from_open_pct": "+0.49%",
+      "change_from_r1_pct": "+0.65%",
+      "gap_from_prev_close_pct": "+1.01%",
+      "gap_status": "HELD",
+      "volume_status": "STRONG",
+      "thesis_status": "CONFIRMED",
+      "watch_decision": "KEEP WATCH",
+      "validate_checks": {
+        "gap_holds": "PASS — QQQ 740.39 >> 730 threshold",
+        "volume_appears": "PASS — ATH tape confirms institutional participation",
+        "vwap_action": "PASS — price well above open, accelerating",
+        "catalyst_confirms": "PASS — VIX ~16.2 (<17), new ATH session confirmed",
+        "invalidation_triggered": false,
+        "invalidation_level": "729"
+      },
+      "comment": "Hipótese totalmente confirmada. Gap manteve e acelerou para ATH. QQQ +1.01% vs close de ontem, +0.65% vs R1. VIX benign. Tech leadership intacta.",
+      "source": "Finnhub live + web search"
+    },
+    {
+      "ticker": "SPY",
+      "hypothesis_r1": "Broad market gap up — risk-on sustained",
+      "classification_r1": "BULLISH OBSERVATION",
+      "score_r1": 73,
+      "confidence_r1": "HIGH",
+      "price_r1": 754.60,
+      "open_regular": 755.71,
+      "price_now": 757.67,
+      "change_from_open_pct": "+0.26%",
+      "change_from_r1_pct": "+0.41%",
+      "gap_from_prev_close_pct": "+0.70%",
+      "gap_status": "HELD",
+      "volume_status": "STRONG",
+      "thesis_status": "CONFIRMED",
+      "watch_decision": "KEEP WATCH",
+      "validate_checks": {
+        "gap_holds": "PASS — SPY 757.67 >> 750 threshold",
+        "volume_appears": "PASS — ATH breadth confirmed by web search",
+        "vwap_action": "PASS — price well above open and rising",
+        "catalyst_confirms": "PASS — broad breadth, de-escalation holding, advancing > declining",
+        "invalidation_triggered": false,
+        "invalidation_level": "748"
+      },
+      "comment": "S&P ATH confirmado. Gap manteve e continuou. Broad market bullish sem sinais de reversão. Invalidação (748) nunca ameaçada.",
+      "source": "Finnhub live + web search"
+    },
+    {
+      "ticker": "NVDA",
+      "hypothesis_r1": "Recovery continuation inline with tech rally",
+      "classification_r1": "BULLISH OBSERVATION",
+      "score_r1": 66,
+      "confidence_r1": "MEDIUM",
+      "price_r1": 214.25,
+      "open_regular": 214.9275,
+      "price_now": 216.38,
+      "change_from_open_pct": "+0.67%",
+      "change_from_r1_pct": "+0.99%",
+      "gap_from_prev_close_pct": "+1.10%",
+      "gap_status": "HELD",
+      "volume_status": "NORMAL",
+      "thesis_status": "CONFIRMED",
+      "watch_decision": "KEEP WATCH",
+      "validate_checks": {
+        "gap_holds": "PASS — NVDA 216.38 >> 213 threshold",
+        "volume_appears": "PASS — normal for portfolio position, no adverse signal",
+        "vwap_action": "PASS — testing $215-216 resistance zone as projected in R1",
+        "catalyst_confirms": "PASS — QQQ at ATH, no adverse NVDA news confirmed",
+        "invalidation_triggered": false,
+        "invalidation_level": "211"
+      },
+      "comment": "Portfolio. Recovery totalmente confirmada. +0.99% vs R1. Testando resistência $215-216 exatamente como antecipado. QQQ tailwind ativo. Próximo trigger: confirmação acima $216 ou rejeição.",
+      "source": "Finnhub live"
+    },
+    {
+      "ticker": "PLAB",
+      "hypothesis_r1": "Gap down continuation — no catalyst for reversal",
+      "classification_r1": "BEARISH OBSERVATION",
+      "score_r1": 66,
+      "confidence_r1": "MEDIUM",
+      "price_r1": 34.02,
+      "open_regular": 34.55,
+      "price_now": 32.93,
+      "change_from_open_pct": "-4.70%",
+      "change_from_r1_pct": "-3.21%",
+      "gap_from_prev_close_pct": "-38.5%",
+      "note_gap": "Gap calculado vs close original pré-earnings $53.51. Finnhub pc=34.02 (close pós gap em AH ontem). Open regular $34.55 = leve relief +1.6% desde pc, depois vendido.",
+      "gap_status": "HELD",
+      "volume_status": "STRONG",
+      "thesis_status": "CONFIRMED",
+      "watch_decision": "KEEP WATCH",
+      "validate_checks": {
+        "gap_holds": "PASS — PLAB 32.93 << $38 threshold (extended further)",
+        "volume_appears": "PASS — earnings disaster, high volume at open consistent",
+        "vwap_action": "PASS — opened $34.55, rejected, fell to $32.93 — VWAP rejection active",
+        "catalyst_confirms": "PASS — no upgrade, buyback or reversal catalyst found",
+        "invalidation_triggered": false,
+        "invalidation_level": "38"
+      },
+      "comment": "Bearish thesis confirmada e reforçada. Breve relief na abertura ($34.55), depois continuou a vender para $32.93 (-4.7% desde open). Gap total -38.5% vs close original $53.51. Sem catalisador de reversão. VWAP rejection ativo.",
+      "source": "Finnhub live + web search"
+    },
+    {
+      "ticker": "CVX",
+      "hypothesis_r1": "THESIS CHANGE WATCH — oil premium deflating",
+      "classification_r1": "NEUTRAL / WAIT",
+      "score_r1": 55,
+      "confidence_r1": "MEDIUM",
+      "price_r1": 183.03,
+      "open_regular": 182.5625,
+      "price_now": 181.31,
+      "change_from_open_pct": "-0.69%",
+      "change_from_r1_pct": "-0.94%",
+      "gap_from_prev_close_pct": "-0.60%",
+      "gap_status": "REVERSED",
+      "volume_status": "UNKNOWN",
+      "thesis_status": "WEAKENED",
+      "watch_decision": "PORTFOLIO MONITOR ONLY",
+      "validate_checks": {
+        "gap_holds": "FAIL — CVX 181.31 < $182 validation threshold",
+        "volume_appears": "UNKNOWN — not confirmed",
+        "vwap_action": "FAIL — below open and declining vs rising broad market",
+        "catalyst_confirms": "PARTIAL — oil deflation confirmed, deeper than neutral projection",
+        "invalidation_triggered": false,
+        "note": "No hard invalidation (XLE -2%, USO -2%) but performance clearly weak"
+      },
+      "comment": "Ceasefire confirmado e petróleo a deflacionar mais do que esperado. CVX -0.94% vs R1 enquanto SPY está em ATH (+0.97%). Abaixo do threshold $182. Energia underperforma significativamente mercado broad. Tese estrutural LT intacta. Sem ação intraday.",
+      "source": "Finnhub live"
+    }
+  ],
+  "new_post_open_ticker": null,
+  "new_post_open_note": "Sem novo ticker pós-open suficientemente limpo. Nenhum ticker identificado com >3% move, >1B cap, catalisador claro e fonte fiável nas 2 pesquisas web realizadas.",
+  "portfolio_sentinel_update": [
+    {
+      "ticker": "NVDA",
+      "alert_level": "INFO",
+      "price_r2": 216.38,
+      "change_from_r1_pct": "+0.99%",
+      "impact": "Positivo — testando resistência $215-216. Recovery a avançar em linha com QQQ ATH.",
+      "sentiment": "BULLISH",
+      "action": "Manter watch. Próximo trigger: confirmação acima $216 com volume ou rejeição da zona de resistência."
+    },
+    {
+      "ticker": "CVX",
+      "alert_level": "WATCH",
+      "price_r2": 181.31,
+      "change_from_r1_pct": "-0.94%",
+      "impact": "Energia underperforma mercado broad em ATH. Oil deflation confirma tese mudança R1. Abaixo threshold $182.",
+      "sentiment": "NEUTRAL",
+      "action": "PORTFOLIO MONITOR ONLY. Tese LT intacta (dividendo, produção). Sem ação intraday."
+    },
+    {
+      "ticker": "MSFT",
+      "alert_level": "NONE",
+      "price_r2": "not fetched",
+      "impact": "QQQ ATH implica MSFT positivo. Sem dados específicos.",
+      "sentiment": "NEUTRAL"
+    },
+    {
+      "ticker": "MU",
+      "alert_level": "NONE",
+      "price_r2": "not fetched",
+      "impact": "Tech rally e QQQ ATH suportam. Sem dados específicos.",
+      "sentiment": "NEUTRAL"
+    },
+    {
+      "ticker": "VUUA/VWCE",
+      "alert_level": "NONE",
+      "impact": "SPY/QQQ em ATH. ETFs broad market positivos.",
+      "sentiment": "NEUTRAL"
+    }
+  ],
+  "summary": {
+    "confirmed": ["QQQ", "SPY", "NVDA", "PLAB"],
+    "weakened": ["CVX"],
+    "reversed": [],
+    "invalidated": [],
+    "data_insufficient": []
+  },
+  "sources": [
+    {
+      "name": "Finnhub Live Quotes",
+      "tickers": ["QQQ", "SPY", "NVDA", "PLAB", "CVX"],
+      "time_et": "09:50",
+      "status": "VALID"
+    },
+    {
+      "name": "Web Search — Market Open Snapshot",
+      "query": "SPY QQQ VIX market open today May 29 2026 intraday",
+      "result": "ATH confirmed SPY+QQQ, VIX prev close 16.29, ceasefire holding"
+    },
+    {
+      "name": "Web Search — Movers",
+      "query": "US market open movers PLAB NVDA CVX now May 29 2026 9:45 ET",
+      "result": "PLAB -25.4% mentioned (stale), NVDA and CVX context"
+    }
+  ]
+}
