@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market Intel | R0 Morning Radar | May 29, 2026</title>
+    <title>Market Intel | R0 + R1 Pre-Open | May 29, 2026</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e27; color: #e0e0e0; line-height: 1.5; padding: 12px; }
@@ -52,6 +52,40 @@
         .risk-detail { color: #888; font-size: 0.9em; }
         .next-sessions { background: #111827; padding: 12px; border-radius: 6px; border-left: 3px solid #60a5fa; }
         .next-sessions li { padding: 8px 0; font-size: 0.95em; }
+        .r1-header { background: linear-gradient(135deg, #1a2744, #0e1a35); border: 1px solid #3b82f6; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+        .r1-header h2 { color: #60a5fa; font-size: 1.15em; margin-bottom: 8px; }
+        .r1-tape { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+        .r1-tape-card { background: #0f172a; padding: 10px; border-radius: 5px; border-left: 3px solid #3b82f6; }
+        .r1-tape-label { font-size: 0.8em; color: #888; margin-bottom: 2px; }
+        .r1-tape-val { font-size: 1.05em; font-weight: 600; color: #4ade80; }
+        .r1-tape-chg { font-size: 0.8em; color: #fbbf24; }
+        .r1-tape-card.neg .r1-tape-val { color: #f87171; }
+        .r1-tape-card.neg .r1-tape-chg { color: #f87171; }
+        .r1-tape-card.neutral .r1-tape-val { color: #94a3b8; }
+        .r1-alert-box { border-radius: 6px; padding: 10px 14px; margin-bottom: 10px; font-size: 0.9em; }
+        .r1-alert-box.material { background: #2a1218; border-left: 4px solid #ef4444; }
+        .r1-alert-box.watch { background: #1a2518; border-left: 4px solid #fbbf24; }
+        .r1-alert-box.info { background: #111827; border-left: 4px solid #60a5fa; }
+        .r1-alert-title { font-weight: 700; color: #e2e8f0; margin-bottom: 4px; }
+        .r1-alert-detail { color: #94a3b8; }
+        .r1-obs-table { width: 100%; border-collapse: collapse; font-size: 0.88em; }
+        .r1-obs-table th { background: #1e293b; color: #60a5fa; padding: 9px 8px; text-align: left; border-bottom: 2px solid #3b82f6; }
+        .r1-obs-table td { padding: 9px 8px; border-bottom: 1px solid #1e293b; vertical-align: top; }
+        .r1-obs-table tr:hover td { background: #0f172a; }
+        .badge-bull { display: inline-block; background: #14532d; color: #4ade80; padding: 2px 7px; border-radius: 3px; font-size: 0.78em; font-weight: 600; }
+        .badge-bear { display: inline-block; background: #450a0a; color: #f87171; padding: 2px 7px; border-radius: 3px; font-size: 0.78em; font-weight: 600; }
+        .badge-neutral { display: inline-block; background: #1e293b; color: #94a3b8; padding: 2px 7px; border-radius: 3px; font-size: 0.78em; font-weight: 600; }
+        .badge-cal { display: inline-block; background: #1c2a47; color: #93c5fd; padding: 2px 7px; border-radius: 3px; font-size: 0.78em; font-weight: 600; }
+        .badge-port { display: inline-block; background: #312e81; color: #a5b4fc; padding: 2px 7px; border-radius: 3px; font-size: 0.78em; font-weight: 600; }
+        .score-high { color: #4ade80; font-weight: 700; }
+        .score-med { color: #fbbf24; font-weight: 600; }
+        .score-low { color: #94a3b8; }
+        .r2-track { background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 12px; margin-bottom: 10px; }
+        .r2-track-ticker { color: #4ade80; font-weight: 700; font-size: 1.05em; margin-bottom: 4px; }
+        .r2-track-hyp { color: #e2e8f0; font-size: 0.9em; margin-bottom: 4px; }
+        .r2-track-checks { font-size: 0.85em; color: #64748b; }
+        .r2-track-checks span { color: #60a5fa; }
+        .r2-invalid { color: #f87171; font-size: 0.82em; margin-top: 4px; }
         footer { border-top: 1px solid #1a4d2e; padding-top: 16px; margin-top: 32px; font-size: 0.85em; color: #888; }
         a { color: #60a5fa; text-decoration: none; }
         a:hover { text-decoration: underline; }
@@ -353,10 +387,295 @@
             </ul>
         </section>
 
+        <!-- ====== R1 PRE-OPEN FINAL ====== -->
+        <div style="border-top: 2px solid #3b82f6; margin: 32px 0 24px 0; padding-top: 20px;">
+
+        <div class="r1-header">
+            <h2>🔄 Pre-Open Final — 14h15 Lisboa | 09h15 ET</h2>
+            <div class="meta">
+                <div><strong>Run:</strong> R1_PRE_OPEN_FINAL · May 29, 2026</div>
+                <div><strong>Qualidade:</strong> <span style="color:#4ade80;">VALID</span> (price+vol) | <span style="color:#fbbf24;">PARTIAL</span> (earnings NTAP)</div>
+                <div><strong>Alpha Vantage:</strong> 2 chamadas usadas (NTAP, CVX)</div>
+                <div><strong>Macro bias:</strong> <span style="color:#4ade80;">BULLISH GAP UP</span></div>
+            </div>
+        </div>
+
+        <!-- 1. TAPE ATUALIZADO -->
+        <section>
+            <div class="section-title">1. Tape Atualizado · 09:15 ET</div>
+            <div style="background:#132240; border-left:4px solid #f59e0b; border-radius:6px; padding:10px 14px; margin-bottom:14px; font-size:0.9em;">
+                ⚡ <strong>MUDANÇA MACRO vs R0:</strong> Ceasefire EUA-Irão anunciado (extensão 60 dias + negociações nucleares + Estreito de Ormuz). Catalisador petróleo do R0 <strong style="color:#f87171;">CANCELADO</strong>. 10Y Treasury cedeu para ~4.44% (mínimo 2 semanas). SPY/QQQ gap up de recordes.
+            </div>
+            <div class="r1-tape">
+                <div class="r1-tape-card">
+                    <div class="r1-tape-label">SPY</div>
+                    <div class="r1-tape-val">$754.60</div>
+                    <div class="r1-tape-chg">+0.55% | Gap de record</div>
+                </div>
+                <div class="r1-tape-card">
+                    <div class="r1-tape-label">QQQ</div>
+                    <div class="r1-tape-val">$735.60</div>
+                    <div class="r1-tape-chg">+0.84% | Tech lidera</div>
+                </div>
+                <div class="r1-tape-card neutral">
+                    <div class="r1-tape-label">VIX</div>
+                    <div class="r1-tape-val" style="color:#fbbf24;">16.51</div>
+                    <div class="r1-tape-chg" style="color:#94a3b8;">+1.35% | Benign, sub-17</div>
+                </div>
+                <div class="r1-tape-card">
+                    <div class="r1-tape-label">US 10Y Treasury</div>
+                    <div class="r1-tape-val">~4.44%</div>
+                    <div class="r1-tape-chg">Cedeu, mín. 2 semanas</div>
+                </div>
+                <div class="r1-tape-card neutral">
+                    <div class="r1-tape-label">USO (Oil ETF)</div>
+                    <div class="r1-tape-val" style="color:#94a3b8;">$130.78</div>
+                    <div class="r1-tape-chg" style="color:#94a3b8;">-0.19% | Prémio geo deflate</div>
+                </div>
+                <div class="r1-tape-card neutral">
+                    <div class="r1-tape-label">XLE (Energy Sector)</div>
+                    <div class="r1-tape-val" style="color:#94a3b8;">$56.95</div>
+                    <div class="r1-tape-chg" style="color:#94a3b8;">-0.07% | Flat/ligeiro abaixo</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. EARNINGS BMO CONFIRMADOS -->
+        <section>
+            <div class="section-title">2. Earnings BMO Confirmados</div>
+            <div class="r1-alert-box info">
+                <div class="r1-alert-title">KNOP — Knoll Inc | Status: PENDING</div>
+                <div class="r1-alert-detail">Preço atual: $11.19 (+1.18%). Sem resultados confirmados. Micro-cap, relevância mínima.</div>
+            </div>
+            <div class="r1-alert-box info">
+                <div class="r1-alert-title">FUFU — FUTU Holdings | Status: PENDING</div>
+                <div class="r1-alert-detail">Sem resultados confirmados. Small-cap China FinTech. Baixa prioridade.</div>
+            </div>
+        </section>
+
+        <!-- 3. EARNINGS AMC MAY 28 → PREMARKET ACT -->
+        <section>
+            <div class="section-title">3. Earnings AMC (May 28 → actuando hoje)</div>
+            <div class="r1-alert-box material">
+                <div class="r1-alert-title">🔴 PLAB (Photronics) — DOUBLE MISS | -36.4% premarket</div>
+                <div class="r1-alert-detail">
+                    EPS: $0.42 vs $0.55 est <strong style="color:#f87171;">(-23.6% miss)</strong> | Rev: $209.9M vs $221M est <strong style="color:#f87171;">(-5.0% miss)</strong><br>
+                    Sem guidance. Prev close: $53.51 → agora $34.02. Data Quality: VALID.
+                </div>
+            </div>
+            <div class="r1-alert-box watch">
+                <div class="r1-alert-title">🟡 NTAP (NetApp) — Revenue Beat / EPS Miss | Flat (-0.24%)</div>
+                <div class="r1-alert-detail">
+                    EPS: $2.03 vs $2.27 est (miss) | Rev: $1.95B vs $1.91B est (beat) | FY27 guidance: $7.45B midpoint (+8%)<br>
+                    Mercado indiferente. $142.40 (-0.24%). "Stock falls" per Quiver. Data Quality: PARTIAL.
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. EARNINGS AMC WATCH -->
+        <section>
+            <div class="section-title">4. Earnings AMC Calendar Watch</div>
+            <ul class="earnings-list">
+                <li class="earnings-item"><span class="earnings-ticker">HPE</span> — Jun 1 AMC &nbsp;<span class="badge-cal">CALENDAR WATCH</span>
+                    <div class="earnings-meta">EPS est: $0.54 | Rev est: $9.9B | IT infra / AI data center proxy</div>
+                </li>
+                <li class="earnings-item"><span class="earnings-ticker">PANW</span> — Jun 2 AMC &nbsp;<span class="badge-cal">CALENDAR WATCH</span>
+                    <div class="earnings-meta">EPS est: $0.81 | Rev est: $3.0B | Cybersecurity / enterprise AI spend</div>
+                </li>
+                <li class="earnings-item"><span class="earnings-ticker">ULTA</span> — Jun 2 AMC &nbsp;<span class="badge-cal">CALENDAR WATCH</span>
+                    <div class="earnings-meta">EPS est: $7.01 | Rev est: $3.2B | Retail bellwether / consumer discretionary</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 5. PORTFOLIO SENTINEL UPDATE -->
+        <section>
+            <div class="section-title">5. Portfolio Sentinel Update</div>
+            <div class="r1-alert-box info">
+                <div class="r1-alert-title">✅ NVDA | INFO — Recovering (+0.78%)</div>
+                <div class="r1-alert-detail">$214.25 | Post-earnings recovery inline com QQQ rally. Blackwell narrative intact. Sem notícias novas. Tese inalterada. <em>Downgrade de MATERIAL → INFO (sem novidades).</em></div>
+            </div>
+            <div class="r1-alert-box watch">
+                <div class="r1-alert-title">⚠️ CVX | WATCH — MUDANÇA DE TESE</div>
+                <div class="r1-alert-detail">$183.03 (+0.35%) | <strong>Catalisador petróleo do R0 CANCELADO</strong> — ceasefire EUA-Irão (60 dias). Estreito de Ormuz possivelmente reaberto. Oil quase flat (USO -0.19%). XLE -0.07%. Tese estrutural LT intacta, mas upside de curto prazo removido. <em>Upgrade de INFO → WATCH (mudança de tese).</em></div>
+            </div>
+            <div class="r1-alert-box info">
+                <div class="r1-alert-title">⚪ MSFT / MU / ETFs | SEM ALERTAS</div>
+                <div class="r1-alert-detail">Sem notícias materiais. QQQ +0.84% suporta posições. MSFT e MU a beneficiar do rally tech.</div>
+            </div>
+        </section>
+
+        <!-- 6. MASTER PRE-OPEN TABLE -->
+        <section>
+            <div class="section-title">6. Master Pre-Open Table</div>
+            <!-- Mobile cards -->
+            <div class="radar-cards" style="display:block;">
+                <div class="radar-card">
+                    <div class="radar-card-header"><span class="radar-card-ticker">QQQ</span><span class="badge-bull">BULLISH OBS</span></div>
+                    <div class="radar-card-meta">$735.60 · +0.84% · Score <span class="score-high">75</span> · HIGH</div>
+                    <div class="radar-card-catalyst">Record gap up. Iran ceasefire + 10Y easing. Tech liderança.</div>
+                </div>
+                <div class="radar-card">
+                    <div class="radar-card-header"><span class="radar-card-ticker">SPY</span><span class="badge-bull">BULLISH OBS</span></div>
+                    <div class="radar-card-meta">$754.60 · +0.55% · Score <span class="score-high">73</span> · HIGH</div>
+                    <div class="radar-card-catalyst">S&P record close gap. Broad market bullish. De-escalação macro.</div>
+                </div>
+                <div class="radar-card">
+                    <div class="radar-card-header"><span class="radar-card-ticker">NVDA</span><span class="badge-bull">BULLISH OBS</span></div>
+                    <div class="radar-card-meta">$214.25 · +0.78% · Score <span class="score-med">66</span> · MEDIUM</div>
+                    <div class="radar-card-catalyst">Portfolio. Post-earnings recovery. AI tailwind. QQQ lidera.</div>
+                </div>
+                <div class="radar-card">
+                    <div class="radar-card-header"><span class="radar-card-ticker">PLAB</span><span class="badge-bear">BEARISH OBS</span></div>
+                    <div class="radar-card-meta">$34.02 · -36.4% · Score <span class="score-med">66</span> · MEDIUM</div>
+                    <div class="radar-card-catalyst">Double miss. EPS -23.6%, Rev -5%. Sem guidance. Gap down.</div>
+                </div>
+                <div class="radar-card">
+                    <div class="radar-card-header"><span class="radar-card-ticker">CVX</span><span class="badge-neutral">NEUTRAL/WAIT</span></div>
+                    <div class="radar-card-meta">$183.03 · +0.35% · Score <span class="score-med">55</span> · MEDIUM</div>
+                    <div class="radar-card-catalyst">Portfolio. Ceasefire cancela catalisador petróleo do R0. Watch.</div>
+                </div>
+                <div class="radar-card">
+                    <div class="radar-card-header"><span class="radar-card-ticker">SOFI</span><span class="badge-neutral">NEUTRAL/WAIT</span></div>
+                    <div class="radar-card-meta">$16.97 · +4.95% · Score <span class="score-low">47</span> · LOW</div>
+                    <div class="radar-card-catalyst">Movimento grande sem catalisador confirmado. Monitor only.</div>
+                </div>
+                <div class="radar-card">
+                    <div class="radar-card-header"><span class="radar-card-ticker">HPE · PANW · ULTA</span><span class="badge-cal">CALENDAR WATCH</span></div>
+                    <div class="radar-card-meta">Earnings Jun 1–2 · Sem preço hoje</div>
+                    <div class="radar-card-catalyst">HPE (Jun 1 AMC), PANW + ULTA (Jun 2 AMC). Próxima semana.</div>
+                </div>
+            </div>
+            <!-- Desktop table -->
+            <table class="r1-obs-table desktop-only" style="display:table;">
+                <thead>
+                    <tr>
+                        <th>Ticker</th><th>Classificação</th><th>Preço</th><th>Gap%</th><th>Score</th><th>Confiança</th><th>Catalisador</th><th>Data Q</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>QQQ</strong></td><td><span class="badge-bull">BULLISH OBS</span></td><td>$735.60</td><td style="color:#4ade80;">+0.84%</td><td class="score-high">75</td><td>HIGH</td><td>Record gap + ceasefire + 10Y</td><td>VALID</td></tr>
+                    <tr><td><strong>SPY</strong></td><td><span class="badge-bull">BULLISH OBS</span></td><td>$754.60</td><td style="color:#4ade80;">+0.55%</td><td class="score-high">73</td><td>HIGH</td><td>Record gap + broad market</td><td>VALID</td></tr>
+                    <tr><td><strong>NVDA</strong></td><td><span class="badge-port">PORTFOLIO ALERT</span></td><td>$214.25</td><td style="color:#4ade80;">+0.78%</td><td class="score-med">66</td><td>MEDIUM</td><td>Post-earnings recovery + AI</td><td>VALID</td></tr>
+                    <tr><td><strong>PLAB</strong></td><td><span class="badge-bear">BEARISH OBS</span></td><td>$34.02</td><td style="color:#f87171;">-36.4%</td><td class="score-med">66</td><td>MEDIUM</td><td>EPS -23.6% + Rev -5% miss</td><td>VALID</td></tr>
+                    <tr><td><strong>CVX</strong></td><td><span class="badge-neutral">NEUTRAL/WAIT</span></td><td>$183.03</td><td style="color:#fbbf24;">+0.35%</td><td class="score-med">55</td><td>MEDIUM</td><td>Ceasefire cancela catalisador oil</td><td>VALID</td></tr>
+                    <tr><td><strong>SOFI</strong></td><td><span class="badge-neutral">NEUTRAL/WAIT</span></td><td>$16.97</td><td style="color:#4ade80;">+4.95%</td><td class="score-low">47</td><td>LOW</td><td>Movimento sem catalisador</td><td>PARTIAL</td></tr>
+                    <tr><td><strong>NTAP</strong></td><td><span class="badge-neutral">NEUTRAL/WAIT</span></td><td>$142.40</td><td style="color:#f87171;">-0.24%</td><td class="score-low">40</td><td>MEDIUM</td><td>Rev beat / EPS miss / flat</td><td>PARTIAL</td></tr>
+                    <tr><td><strong>HPE</strong></td><td><span class="badge-cal">CALENDAR WATCH</span></td><td>—</td><td>—</td><td class="score-low">43</td><td>MEDIUM</td><td>Jun 1 AMC earnings</td><td>VALID</td></tr>
+                    <tr><td><strong>PANW</strong></td><td><span class="badge-cal">CALENDAR WATCH</span></td><td>—</td><td>—</td><td class="score-low">43</td><td>MEDIUM</td><td>Jun 2 AMC earnings</td><td>VALID</td></tr>
+                    <tr><td><strong>ULTA</strong></td><td><span class="badge-cal">CALENDAR WATCH</span></td><td>—</td><td>—</td><td class="score-low">38</td><td>MEDIUM</td><td>Jun 2 AMC earnings</td><td>VALID</td></tr>
+                    <tr><td><strong>KNOP</strong></td><td><span class="badge-neutral">AVOID</span></td><td>$11.19</td><td style="color:#4ade80;">+1.18%</td><td class="score-low">9</td><td>LOW</td><td>BMO pending, micro-cap</td><td>PARTIAL</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 7. TOP OBSERVATION -->
+        <section>
+            <div class="section-title">7. Top Observation para o Open</div>
+            <table class="r1-obs-table" style="display:table; font-size:0.85em;">
+                <thead>
+                    <tr><th>Rank</th><th>Ticker</th><th>Hipótese</th><th>Score</th><th>Conf</th><th>Preço</th><th>Gap</th><th>Catalisador</th><th>Validar no Open</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><strong style="color:#60a5fa;">QQQ</strong></td>
+                        <td>Gap up sustenta. Tech lidera. VIX &lt;17.</td>
+                        <td class="score-high">75</td><td>HIGH</td><td>$735.60</td><td style="color:#4ade80;">+0.84%</td>
+                        <td>Ceasefire + 10Y + record close</td>
+                        <td>QQQ &gt;730? Vol normal+? VWAP hold? VIX &lt;17?</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong style="color:#60a5fa;">SPY</strong></td>
+                        <td>S&P gap de record. Breadth confirma.</td>
+                        <td class="score-high">73</td><td>HIGH</td><td>$754.60</td><td style="color:#4ade80;">+0.55%</td>
+                        <td>Broad market de-escalação</td>
+                        <td>SPY &gt;750? Advancing &gt; declining? VWAP hold?</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong style="color:#f87171;">PLAB</strong></td>
+                        <td>Gap down continuação. Sem catalisador reversal.</td>
+                        <td class="score-med">66</td><td>MEDIUM</td><td>$34.02</td><td style="color:#f87171;">-36.4%</td>
+                        <td>Double miss EPS+Rev</td>
+                        <td>Fica &lt;$38? Volume alto? VWAP rejeição? Sem upgrade?</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong style="color:#4ade80;">NVDA</strong></td>
+                        <td>Recovery pós-earnings com QQQ. Testa $215-216.</td>
+                        <td class="score-med">66</td><td>MEDIUM</td><td>$214.25</td><td style="color:#4ade80;">+0.78%</td>
+                        <td>Post-earnings drift + AI narrative</td>
+                        <td>NVDA &gt;213? Testa $215-216? QQQ aguenta?</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><strong style="color:#fbbf24;">CVX</strong></td>
+                        <td>WATCH tese. Ceasefire cancela catalisador. Monitor XLE.</td>
+                        <td class="score-med">55</td><td>MEDIUM</td><td>$183.03</td><td style="color:#fbbf24;">+0.35%</td>
+                        <td>Portfolio — mudança tese Iran</td>
+                        <td>XLE direcção? USO hold? Sector rotation out of energy?</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 8. R2 TRACKING PLACEHOLDER -->
+        <section>
+            <div class="section-title">8. R2 Tracking Placeholder · Validação às 14h50</div>
+            <div class="r2-track">
+                <div class="r2-track-ticker">QQQ — $735.60 (14:15)</div>
+                <div class="r2-track-hyp">Hipótese: Gap up sustenta. Tech lidera. Iran ceasefire + 10Y &lt; 4.50%.</div>
+                <div class="r2-track-checks">✓ Gap mantém? <span>QQQ &gt;730</span> · ✓ Volume aparece? · ✓ Rompe VWAP? <span>VWAP ~731-732</span> · ✓ VIX fica &lt;17?</div>
+                <div class="r2-invalid">Invalidação: QQQ abaixo 729, VIX acima 18, breadth inverte</div>
+            </div>
+            <div class="r2-track">
+                <div class="r2-track-ticker">SPY — $754.60 (14:15)</div>
+                <div class="r2-track-hyp">Hipótese: Broad market sustenta gap. Advancing &gt; Declining confirma.</div>
+                <div class="r2-track-checks">✓ SPY &gt;750? · ✓ Breadth positivo? · ✓ VWAP hold? <span>~752-753</span></div>
+                <div class="r2-invalid">Invalidação: SPY &lt;748, breadth inverte, VIX spike</div>
+            </div>
+            <div class="r2-track">
+                <div class="r2-track-ticker">PLAB — $34.02 (-36.4%) (14:15)</div>
+                <div class="r2-track-hyp">Hipótese: Gap down continua. Sem catalisador para reversal. Volume alto confirma pressão.</div>
+                <div class="r2-track-checks">✓ Fica &lt;$38? · ✓ Volume &gt;3x média? · ✓ VWAP rejeição? · ✓ Sem upgrade/buyback?</div>
+                <div class="r2-invalid">Invalidação: V-reversal acima $38, upgrade ou buyback anunciado</div>
+            </div>
+            <div class="r2-track">
+                <div class="r2-track-ticker">NVDA — $214.25 (+0.78%) (14:15)</div>
+                <div class="r2-track-hyp">Hipótese: Recovery continua com QQQ. Testa resistência $215-216.</div>
+                <div class="r2-track-checks">✓ NVDA &gt;213? · ✓ Volume inline? · ✓ Testa $215-216? · ✓ QQQ aguenta?</div>
+                <div class="r2-invalid">Invalidação: NVDA &lt;$211, QQQ gap fill, notícia adversa</div>
+            </div>
+            <div class="r2-track">
+                <div class="r2-track-ticker">CVX — $183.03 (WATCH tese) (14:15)</div>
+                <div class="r2-track-hyp">Hipótese: NEUTRAL. Monitor se mercado reprecia energia após ceasefire.</div>
+                <div class="r2-track-checks">✓ XLE direcção? · ✓ USO mantém? · ✓ CVX vs XLE spread?</div>
+                <div class="r2-invalid">Invalidação: XLE cai &gt;1%, USO -2%+, rotation sell em energia</div>
+            </div>
+        </section>
+
+        <!-- DATA QUALITY & FONTES -->
+        <section>
+            <div class="section-title">Data Quality · Fontes R1</div>
+            <div style="background:#111827; border-radius:6px; padding:12px; font-size:0.88em; color:#94a3b8;">
+                <p>📊 <strong>Preços (Finnhub live):</strong> SPY, QQQ, NTAP, PLAB, CVX, NVDA, SOFI, USO, XLE, KNOP — VALID (09:15 ET)</p>
+                <p>📈 <strong>Alpha Vantage:</strong> 2/5 chamadas usadas — NTAP (revenue/volume), CVX (volume/confirmação)</p>
+                <p>⚠️ <strong>NTAP:</strong> Conflito de dados — "+18.3%" reportado em premarket early vs Finnhub live -0.24%. Finnhub = fonte de verdade.</p>
+                <p>⚠️ <strong>KNOP/FUFU:</strong> Resultados BMO não confirmados — PENDING.</p>
+                <p>🔍 <strong>Web Search:</strong> 4 pesquisas usadas — macro/ceasefire, premarket movers, earnings NTAP/PLAB, upgrades/downgrades</p>
+                <p>📡 <strong>Fontes:</strong> Finnhub · Alpha Vantage · ChartMill · public.com · Alphastreet · Investing.com · Quiver Quant · web search</p>
+            </div>
+        </section>
+
+        </div><!-- end R1 section -->
+
         <footer>
-            <p><strong>Data Quality:</strong> Prices from previous close (stale as of 09:38 Lisbon); premarket pending. Earnings from Finnhub & web search. Macro from CNBC/Bloomberg.</p>
-            <p><strong>Alpha Vantage calls used:</strong> 0 (reserved for CRITICAL portfolio alerts)</p>
-            <p><strong>Report prepared by:</strong> R0 Morning Radar | Market Intelligence Agent</p>
+            <p><strong>R0 Data Quality:</strong> Previous close prices (09:38 Lisbon). Earnings from Finnhub & web search. Macro from CNBC/Bloomberg.</p>
+            <p><strong>R1 Data Quality:</strong> Live prices Finnhub (09:15 ET). Alpha Vantage: 2/5 chamadas. Earnings: PLAB VALID, NTAP PARTIAL. Macro: VALID.</p>
+            <p><strong>Sessões:</strong> R0 09:38 · R1 14:15 · R2 14:50 · R3 22:15 (Lisboa)</p>
+            <p><strong>Report prepared by:</strong> Market Intelligence Agent · R0 + R1 Pre-Open Final</p>
             <p><strong>View latest:</strong> <a href="https://jzmike.github.io/market-intel/latest.html">latest.html</a> | <a href="https://github.com/jzmike/market-intel">GitHub</a></p>
         </footer>
     </div>

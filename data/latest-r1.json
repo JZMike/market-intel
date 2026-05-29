@@ -1,0 +1,637 @@
+{
+  "date": "2026-05-29",
+  "run": "R1_PRE_OPEN_FINAL",
+  "run_time_lisbon": "14:15",
+  "run_time_et": "09:15",
+  "urls": {
+    "latest": "https://jzmike.github.io/market-intel/latest.html",
+    "day": "https://jzmike.github.io/market-intel/reports/2026/05/2026-05-29.html"
+  },
+  "data_quality_summary": {
+    "price_data_status": "VALID",
+    "volume_data_status": "VALID",
+    "earnings_data_status": "PARTIAL",
+    "alpha_vantage_calls_used": 2,
+    "warnings": [
+      "NTAP premarket: conflicting signals (+18.3% reported vs Finnhub -0.24% at open). Using Finnhub live data as source of truth.",
+      "KNOP/FUFU (BMO): no material results found — micro/small-cap, marking PENDING.",
+      "KEY MACRO CHANGE vs R0: US-Iran ceasefire (60-day extension) reverses oil geopolitical premium. CVX oil catalyst from R0 cancelled.",
+      "10Y Treasury eased to ~4.44% on ceasefire news — lowest in 2 weeks."
+    ]
+  },
+  "macro_update": {
+    "bias": "BULLISH",
+    "setup": "Gap up open on record closes + Iran ceasefire de-escalation. Tech leadership continues. Oil premium partially deflated.",
+    "key_change_vs_r0": "US-Iran tentative ceasefire (60-day extension + nuclear talks + Strait of Hormuz). Oil geopolitical catalyst from R0 REVERSED. 10Y yields easing. Positive for broad market, less positive for energy.",
+    "tape": {
+      "SPY": { "price": 754.60, "prev_close": 750.46, "change_pct": "+0.55%", "source": "Finnhub", "status": "VALID" },
+      "QQQ": { "price": 735.60, "prev_close": 729.45, "change_pct": "+0.84%", "source": "Finnhub", "status": "VALID" },
+      "VIX": { "value": 16.51, "change_pct": "+1.35%", "comment": "Slight uptick but benign. Sub-17 = contained volatility.", "source": "web search" },
+      "US10Y": { "value": "~4.44%", "comment": "Eased, lowest in 2 weeks. Iran ceasefire reduces inflation risk premium.", "source": "web search" },
+      "USO": { "price": 130.78, "prev_close": 131.03, "change_pct": "-0.19%", "source": "Finnhub", "status": "VALID" },
+      "XLE": { "price": 56.95, "prev_close": 56.99, "change_pct": "-0.07%", "source": "Finnhub", "status": "VALID" },
+      "DXY": { "value": "not fetched", "status": "STALE" }
+    },
+    "macro_notes": [
+      "SPY/QQQ: gap up from record highs. Broad market bias firmly bullish.",
+      "VIX 16.51: contained — no fear premium. Market complacent but consistent with tech rally.",
+      "10Y 4.44%: rate easing positive for growth/tech multiples.",
+      "Oil (USO -0.19%): ceasefire news deflates geopolitical premium. Oil resilient but upside catalyst from R0 reduced.",
+      "Iran ceasefire deal: 60-day extension + nuclear negotiations + Strait of Hormuz. Risk-off removed for energy names."
+    ]
+  },
+  "earnings_bmo_confirmed": [
+    {
+      "ticker": "KNOP",
+      "company": "Knoll Inc",
+      "time": "BMO",
+      "eps_actual": null,
+      "eps_estimate": 0.31,
+      "revenue_actual": null,
+      "revenue_estimate": "92.1M",
+      "guidance": null,
+      "premarket_reaction": "+1.18% ($11.19 vs pc $11.06)",
+      "status": "PENDING",
+      "data_quality": "No confirmed results. Micro-cap, muted price reaction. No material signal.",
+      "source": "Finnhub quote"
+    },
+    {
+      "ticker": "FUFU",
+      "company": "FUTU Holdings",
+      "time": "BMO",
+      "eps_actual": null,
+      "eps_estimate": 0.03,
+      "revenue_actual": null,
+      "revenue_estimate": "92.8M",
+      "guidance": null,
+      "premarket_reaction": "not fetched",
+      "status": "PENDING",
+      "data_quality": "No results confirmed. Small-cap China FinTech. Low priority.",
+      "source": "Finnhub"
+    }
+  ],
+  "earnings_amc_watch": [
+    {
+      "ticker": "NTAP",
+      "company": "NetApp",
+      "time": "AMC May 28 — acting today",
+      "eps_actual": 2.03,
+      "eps_estimate": 2.27,
+      "revenue_actual": "1.95B",
+      "revenue_estimate": "1.91B",
+      "guidance": "FY27 $7.325B-$7.575B (midpoint $7.45B, +8% YoY — acceleration from FY26 +5%)",
+      "beat_miss": "REVENUE BEAT / EPS MISS",
+      "premarket_reaction": "$142.40 (-0.24% from $142.74 prev close)",
+      "premarket_volume": "6,036,760",
+      "market_reaction_note": "Market flat reaction — EPS miss overshadows revenue beat. 'Stock falls' per Quiver Quant. +18.3% claim from earlier premarket appears incorrect per Finnhub live.",
+      "classification": "NEUTRAL/WAIT",
+      "data_quality": "PARTIAL — conflicting signals. Finnhub live is source of truth.",
+      "source": "Alphastreet, Investing.com, Quiver Quant, Alpha Vantage"
+    },
+    {
+      "ticker": "PLAB",
+      "company": "Photronics Inc",
+      "time": "AMC May 28 — acting today",
+      "eps_actual": 0.42,
+      "eps_estimate": 0.55,
+      "revenue_actual": "209.9M",
+      "revenue_estimate": "221.0M",
+      "guidance": "Not provided",
+      "beat_miss": "DOUBLE MISS",
+      "revenue_miss_pct": "-5.0%",
+      "eps_miss_pct": "-23.6%",
+      "premarket_reaction": "$34.02 (-36.4% from $53.51 prev close)",
+      "classification": "BEARISH OBSERVATION",
+      "data_quality": "VALID",
+      "source": "ChartMill, Finnhub, public.com"
+    },
+    {
+      "ticker": "HPE",
+      "company": "Hewlett Packard Enterprise",
+      "time": "AMC June 1",
+      "eps_estimate": 0.54,
+      "revenue_estimate": "9.9B",
+      "classification": "CALENDAR WATCH",
+      "data_quality": "VALID — estimates confirmed",
+      "note": "Next week key for IT/AI capex sentiment"
+    },
+    {
+      "ticker": "PANW",
+      "company": "Palo Alto Networks",
+      "time": "AMC June 2",
+      "eps_estimate": 0.81,
+      "revenue_estimate": "3.0B",
+      "classification": "CALENDAR WATCH",
+      "data_quality": "VALID — estimates confirmed"
+    },
+    {
+      "ticker": "ULTA",
+      "company": "Ulta Beauty",
+      "time": "AMC June 2",
+      "eps_estimate": 7.01,
+      "revenue_estimate": "3.2B",
+      "classification": "CALENDAR WATCH",
+      "data_quality": "VALID — estimates confirmed"
+    }
+  ],
+  "portfolio_sentinel_update": [
+    {
+      "ticker": "NVDA",
+      "company": "NVIDIA",
+      "alert_level": "INFO",
+      "change_vs_r0": "DOWNGRADED from MATERIAL (thesis unchanged, no new news today)",
+      "price_now": 214.25,
+      "price_change_pct": "+0.78%",
+      "impact": "Positive drift — recovering from post-earnings dip",
+      "headline": "NVDA recovering +0.78% in line with QQQ rally. No new material news. Post-earnings consolidation continues.",
+      "detail": "Broad tech rally (QQQ +0.84%) carrying NVDA. No new analyst actions or news catalysts today. 30x PE, Blackwell demand narrative intact.",
+      "sentiment": "BULLISH",
+      "classification": "PORTFOLIO ALERT - MONITORING",
+      "source": "Finnhub"
+    },
+    {
+      "ticker": "CVX",
+      "company": "Chevron",
+      "alert_level": "WATCH",
+      "change_vs_r0": "UPGRADED from INFO — thesis change: oil catalyst REVERSED by ceasefire",
+      "price_now": 183.03,
+      "price_change_pct": "+0.35%",
+      "impact": "MATERIAL THESIS CHANGE — Iran ceasefire removes near-term oil geopolitical premium",
+      "headline": "US-Iran ceasefire (60-day) announced. Strait of Hormuz potentially reopened. Oil geopolitical premium from R0 CANCELLED.",
+      "detail": "CVX slightly up (+0.35%) despite ceasefire — oil resilient but upside catalyst gone. XLE -0.07%. USO -0.19%. Structural LT thesis (dividend, production) intact. Near-term oil upside reduced. Watch if market re-prices energy lower at open.",
+      "sentiment": "NEUTRAL",
+      "classification": "PORTFOLIO ALERT - THESIS CHANGE",
+      "source": "Web search, Finnhub, Alpha Vantage"
+    },
+    {
+      "ticker": "MSFT",
+      "company": "Microsoft",
+      "alert_level": "NONE",
+      "change_vs_r0": "unchanged",
+      "price_now": "not fetched",
+      "impact": "Positive — QQQ +0.84% implies MSFT likely up",
+      "headline": "No material news. Tech sector positive.",
+      "sentiment": "NEUTRAL",
+      "classification": "SECTOR REFERENCE"
+    },
+    {
+      "ticker": "MU",
+      "company": "Micron",
+      "alert_level": "NONE",
+      "change_vs_r0": "unchanged",
+      "price_now": "not fetched",
+      "impact": "Positive — HBM/AI narrative intact with tech rally",
+      "headline": "No material news. Tech rally supportive.",
+      "sentiment": "NEUTRAL",
+      "classification": "SECTOR REFERENCE"
+    },
+    {
+      "ticker": "VUUA/VWCE",
+      "company": "Vanguard ETFs",
+      "alert_level": "NONE",
+      "change_vs_r0": "unchanged",
+      "impact": "Positive — SPY/QQQ gap up",
+      "headline": "Broad market gap up. ETFs tracking records.",
+      "sentiment": "NEUTRAL",
+      "classification": "SECTOR REFERENCE"
+    }
+  ],
+  "master_table": [
+    {
+      "ticker": "QQQ",
+      "company": "Invesco QQQ ETF",
+      "bucket": "sector_reference",
+      "classification": "BULLISH OBSERVATION",
+      "price": 735.60,
+      "prev_close": 729.45,
+      "gap_pct": "+0.84%",
+      "volume_premarket": "high",
+      "catalyst": "Tech leadership gap up from record. Iran ceasefire → 10Y easing → growth multiple expansion. NVDA/SNOW momentum.",
+      "score": {
+        "catalyst": 18,
+        "price_action": 14,
+        "volume_rvol": 14,
+        "liquidity": 15,
+        "technical_context": 9,
+        "portfolio_relevance": 5,
+        "risk_penalty": 0,
+        "total": 75
+      },
+      "confidence": "HIGH",
+      "data_quality": "VALID"
+    },
+    {
+      "ticker": "SPY",
+      "company": "SPDR S&P 500 ETF",
+      "bucket": "sector_reference",
+      "classification": "BULLISH OBSERVATION",
+      "price": 754.60,
+      "prev_close": 750.46,
+      "gap_pct": "+0.55%",
+      "volume_premarket": "high",
+      "catalyst": "S&P gap up from record close. Broad market bullish. Iran ceasefire reduces risk premium.",
+      "score": {
+        "catalyst": 18,
+        "price_action": 12,
+        "volume_rvol": 14,
+        "liquidity": 15,
+        "technical_context": 9,
+        "portfolio_relevance": 5,
+        "risk_penalty": 0,
+        "total": 73
+      },
+      "confidence": "HIGH",
+      "data_quality": "VALID"
+    },
+    {
+      "ticker": "NVDA",
+      "company": "NVIDIA",
+      "bucket": "portfolio_alert",
+      "classification": "BULLISH OBSERVATION",
+      "price": 214.25,
+      "prev_close": 212.60,
+      "gap_pct": "+0.78%",
+      "volume_premarket": "normal",
+      "catalyst": "Post-earnings recovery. Tech rally tailwind. Blackwell demand narrative intact. No new adverse news.",
+      "score": {
+        "catalyst": 15,
+        "price_action": 10,
+        "volume_rvol": 10,
+        "liquidity": 15,
+        "technical_context": 8,
+        "portfolio_relevance": 10,
+        "risk_penalty": -2,
+        "total": 66
+      },
+      "confidence": "MEDIUM",
+      "data_quality": "VALID"
+    },
+    {
+      "ticker": "PLAB",
+      "company": "Photronics Inc",
+      "bucket": "bmo_confirmed_mover",
+      "classification": "BEARISH OBSERVATION",
+      "price": 34.02,
+      "prev_close": 53.51,
+      "gap_pct": "-36.4%",
+      "volume_premarket": "very high",
+      "catalyst": "DOUBLE MISS: EPS $0.42 vs $0.55 est (-23.6%), Rev $209.9M vs $221M est (-5%). No guidance.",
+      "score": {
+        "catalyst": 22,
+        "price_action": 18,
+        "volume_rvol": 14,
+        "liquidity": 8,
+        "technical_context": 7,
+        "portfolio_relevance": 0,
+        "risk_penalty": -3,
+        "total": 66
+      },
+      "confidence": "MEDIUM",
+      "data_quality": "VALID",
+      "note": "Small-mid cap. Gap of this size often sees initial continuation then partial fill. Liquidity risk at open."
+    },
+    {
+      "ticker": "CVX",
+      "company": "Chevron",
+      "bucket": "portfolio_alert",
+      "classification": "NEUTRAL / WAIT",
+      "price": 183.03,
+      "prev_close": 182.40,
+      "gap_pct": "+0.35%",
+      "volume_premarket": "normal",
+      "catalyst": "Iran ceasefire REVERSES oil geopolitical premium. XLE -0.07%. Oil resilient but upside catalyst gone. Structural thesis intact.",
+      "score": {
+        "catalyst": 12,
+        "price_action": 8,
+        "volume_rvol": 10,
+        "liquidity": 13,
+        "technical_context": 6,
+        "portfolio_relevance": 8,
+        "risk_penalty": -2,
+        "total": 55
+      },
+      "confidence": "MEDIUM",
+      "data_quality": "VALID",
+      "note": "R0 had CVX as CATALYST WATCH bullish. Thesis now NEUTRAL — oil catalyst cancelled by ceasefire."
+    },
+    {
+      "ticker": "SOFI",
+      "company": "SoFi Technologies",
+      "bucket": "premarket_mover",
+      "classification": "NEUTRAL / WAIT",
+      "price": 16.97,
+      "prev_close": 16.17,
+      "gap_pct": "+4.95%",
+      "volume_premarket": "elevated",
+      "catalyst": "Large premarket move. No confirmed catalyst found. Speculative, no portfolio relevance.",
+      "score": {
+        "catalyst": 8,
+        "price_action": 16,
+        "volume_rvol": 12,
+        "liquidity": 10,
+        "technical_context": 6,
+        "portfolio_relevance": 0,
+        "risk_penalty": -5,
+        "total": 47
+      },
+      "confidence": "LOW",
+      "data_quality": "PARTIAL — no catalyst confirmed",
+      "note": "Monitor only. Needs open confirmation."
+    },
+    {
+      "ticker": "NTAP",
+      "company": "NetApp",
+      "bucket": "earnings_amc_acting",
+      "classification": "NEUTRAL / WAIT",
+      "price": 142.40,
+      "prev_close": 142.74,
+      "gap_pct": "-0.24%",
+      "volume_premarket": "6,036,760",
+      "catalyst": "Revenue beat ($1.95B vs $1.91B), EPS miss ($2.03 vs $2.27). FY27 guidance inline. Market flat reaction.",
+      "score": {
+        "catalyst": 10,
+        "price_action": 5,
+        "volume_rvol": 10,
+        "liquidity": 12,
+        "technical_context": 5,
+        "portfolio_relevance": 0,
+        "risk_penalty": -2,
+        "total": 40
+      },
+      "confidence": "MEDIUM",
+      "data_quality": "PARTIAL",
+      "note": "Market indifferent. Not a priority for today's session."
+    },
+    {
+      "ticker": "HPE",
+      "company": "Hewlett Packard Enterprise",
+      "bucket": "amc_calendar_watch",
+      "classification": "CALENDAR WATCH",
+      "price": "not fetched",
+      "catalyst": "Earnings June 1 AMC — IT infrastructure / AI data center proxy. EPS est $0.54, Rev est $9.9B.",
+      "score": {
+        "catalyst": 20,
+        "price_action": 0,
+        "volume_rvol": 0,
+        "liquidity": 13,
+        "technical_context": 5,
+        "portfolio_relevance": 5,
+        "risk_penalty": 0,
+        "total": 43
+      },
+      "confidence": "MEDIUM",
+      "data_quality": "VALID — calendar only"
+    },
+    {
+      "ticker": "PANW",
+      "company": "Palo Alto Networks",
+      "bucket": "amc_calendar_watch",
+      "classification": "CALENDAR WATCH",
+      "price": "not fetched",
+      "catalyst": "Earnings June 2 AMC — Cybersecurity / enterprise AI spending. EPS est $0.81, Rev est $3.0B.",
+      "score": {
+        "catalyst": 20,
+        "price_action": 0,
+        "volume_rvol": 0,
+        "liquidity": 13,
+        "technical_context": 5,
+        "portfolio_relevance": 5,
+        "risk_penalty": 0,
+        "total": 43
+      },
+      "confidence": "MEDIUM",
+      "data_quality": "VALID — calendar only"
+    },
+    {
+      "ticker": "ULTA",
+      "company": "Ulta Beauty",
+      "bucket": "amc_calendar_watch",
+      "classification": "CALENDAR WATCH",
+      "price": "not fetched",
+      "catalyst": "Earnings June 2 AMC — Retail bellwether / consumer discretionary. EPS est $7.01, Rev est $3.2B.",
+      "score": {
+        "catalyst": 18,
+        "price_action": 0,
+        "volume_rvol": 0,
+        "liquidity": 12,
+        "technical_context": 5,
+        "portfolio_relevance": 3,
+        "risk_penalty": 0,
+        "total": 38
+      },
+      "confidence": "MEDIUM",
+      "data_quality": "VALID — calendar only"
+    },
+    {
+      "ticker": "KNOP",
+      "company": "Knoll Inc",
+      "bucket": "bmo_confirmed_mover",
+      "classification": "AVOID / STUDY ONLY",
+      "price": 11.19,
+      "prev_close": 11.06,
+      "gap_pct": "+1.18%",
+      "catalyst": "BMO today, no results confirmed. Micro-cap furniture. No material signal.",
+      "score": {
+        "catalyst": 3,
+        "price_action": 3,
+        "volume_rvol": 3,
+        "liquidity": 3,
+        "technical_context": 2,
+        "portfolio_relevance": 0,
+        "risk_penalty": -5,
+        "total": 9
+      },
+      "confidence": "LOW",
+      "data_quality": "PARTIAL — results pending"
+    }
+  ],
+  "top_observation": [
+    {
+      "rank": 1,
+      "ticker": "QQQ",
+      "hypothesis": "Tech leadership sustains. Gap up holds above 730. First 15 min sets bullish tone. Iran ceasefire + 10Y easing = growth multiple expansion.",
+      "classification": "BULLISH OBSERVATION",
+      "score": 75,
+      "confidence": "HIGH",
+      "price_1415": 735.60,
+      "gap_pct": "+0.84%",
+      "catalyst": "Record close gap + Iran ceasefire + 10Y easing",
+      "validate_at_open": {
+        "gap_holds": "QQQ > 730 in first 5 min",
+        "volume_appears": "Volume in line with 20D avg or above",
+        "vwap_action": "Stays above VWAP (opens around 731-732)",
+        "catalyst_confirms": "VIX stays below 17, 10Y stays below 4.50",
+        "invalidation": "QQQ fills gap below 729, VIX spikes above 18"
+      }
+    },
+    {
+      "rank": 2,
+      "ticker": "SPY",
+      "hypothesis": "S&P record close gap up. Broad breadth supports sustained open. Iran ceasefire reduces risk premium across sectors.",
+      "classification": "BULLISH OBSERVATION",
+      "score": 73,
+      "confidence": "HIGH",
+      "price_1415": 754.60,
+      "gap_pct": "+0.55%",
+      "catalyst": "Record close + de-escalation macro",
+      "validate_at_open": {
+        "gap_holds": "SPY > 750 in first 5 min",
+        "volume_appears": "Volume normal to above average",
+        "vwap_action": "Holds above VWAP (opens ~752-753)",
+        "catalyst_confirms": "Breadth: advancing > declining at open",
+        "invalidation": "SPY fills to 748, breadth inverts"
+      }
+    },
+    {
+      "rank": 3,
+      "ticker": "PLAB",
+      "hypothesis": "Double earnings miss -36.4% gap down. Continuation expected if no relief catalyst. Gap fill scenario requires buyer demand, no obvious catalyst present.",
+      "classification": "BEARISH OBSERVATION",
+      "score": 66,
+      "confidence": "MEDIUM",
+      "price_1415": 34.02,
+      "gap_pct": "-36.4%",
+      "catalyst": "EPS miss -23.6%, Rev miss -5%. No guidance.",
+      "validate_at_open": {
+        "gap_holds": "Stays below $38 (prior support zone)",
+        "volume_appears": "High volume at open (>3x avg daily volume)",
+        "vwap_action": "Opens below VWAP, tests and rejects",
+        "catalyst_confirms": "No reversal news, no upgrade, no buyback",
+        "invalidation": "V-reversal above $38, buyback/upgrade announced"
+      },
+      "risk_note": "Small-mid cap — wide spread at open. Liquidity risk first 5 min."
+    },
+    {
+      "rank": 4,
+      "ticker": "NVDA",
+      "hypothesis": "Post-earnings recovery continues inline with QQQ rally. No new adverse catalyst. 30x PE narrative intact with AI tailwind.",
+      "classification": "BULLISH OBSERVATION",
+      "score": 66,
+      "confidence": "MEDIUM",
+      "price_1415": 214.25,
+      "gap_pct": "+0.78%",
+      "catalyst": "Broad tech rally + AI demand narrative + Blackwell sold out",
+      "validate_at_open": {
+        "gap_holds": "NVDA > 213 in first 5 min",
+        "volume_appears": "Normal to elevated",
+        "vwap_action": "Holds above VWAP, tests $215-216 resistance",
+        "catalyst_confirms": "QQQ maintains gap, no NVDA-specific adverse news",
+        "invalidation": "Falls below $211 (previous support), QQQ gap fill"
+      }
+    },
+    {
+      "rank": 5,
+      "ticker": "CVX",
+      "hypothesis": "Oil geopolitical catalyst from R0 CANCELLED by Iran ceasefire. CVX neutral-to-watch. Monitor if energy sector reprices lower at open or market shrugs off ceasefire on structural oil demand.",
+      "classification": "NEUTRAL / WAIT",
+      "score": 55,
+      "confidence": "MEDIUM",
+      "price_1415": 183.03,
+      "gap_pct": "+0.35%",
+      "catalyst": "Portfolio position — thesis change watch. Iran ceasefire vs structural oil demand.",
+      "validate_at_open": {
+        "gap_holds": "CVX > 182",
+        "volume_appears": "Watch for sector rotation out of energy",
+        "vwap_action": "XLE VWAP direction key",
+        "catalyst_confirms": "USO holds flat or rises despite ceasefire",
+        "invalidation": "XLE drops >1%, USO -2%+, energy sector rotation sell"
+      }
+    }
+  ],
+  "r2_tracking_list": [
+    {
+      "ticker": "QQQ",
+      "price_at_1415": 735.60,
+      "hypothesis": "Gap up continuation — tech leadership holds",
+      "catalyst": "Iran ceasefire + 10Y easing + record close",
+      "validate_open": ["Gap holds >730", "VIX <17", "Breadth positive", "VWAP holds"],
+      "invalidation": "QQQ <729, VIX >18"
+    },
+    {
+      "ticker": "SPY",
+      "price_at_1415": 754.60,
+      "hypothesis": "Broad market gap up — risk-on sustained",
+      "catalyst": "Record close + de-escalation",
+      "validate_open": ["SPY >750", "Advance/decline positive", "No reversal"],
+      "invalidation": "SPY <748, breadth inverts"
+    },
+    {
+      "ticker": "PLAB",
+      "price_at_1415": 34.02,
+      "hypothesis": "Gap down continuation — no catalyst for reversal",
+      "catalyst": "Double miss — EPS -23.6%, Rev -5%",
+      "validate_open": ["Stays below $38", "High volume confirms sell pressure", "VWAP rejection"],
+      "invalidation": "V-reversal above $38, upgrade/buyback"
+    },
+    {
+      "ticker": "NVDA",
+      "price_at_1415": 214.25,
+      "hypothesis": "Recovery continuation inline with tech rally",
+      "catalyst": "AI narrative + QQQ tailwind",
+      "validate_open": ["NVDA >213", "Tests $215-216 resistance", "Sector confirms"],
+      "invalidation": "NVDA <211, QQQ gap fill"
+    },
+    {
+      "ticker": "CVX",
+      "price_at_1415": 183.03,
+      "hypothesis": "THESIS CHANGE WATCH — oil premium deflating",
+      "catalyst": "Iran ceasefire removes geopolitical premium",
+      "validate_open": ["XLE direction", "USO holds or falls", "CVX vs XLE spread"],
+      "invalidation": "XLE rallies despite ceasefire, oil demand narrative dominates"
+    }
+  ],
+  "risk_factors": [
+    {
+      "factor": "Iran Ceasefire Reversal",
+      "impact": "Oil geopolitical premium gone for now. CVX bullish catalyst from R0 CANCELLED. If deal collapses, premium returns.",
+      "probability": "LOW-MEDIUM",
+      "change_vs_r0": "NEW — R0 had this as risk-on for oil. Now reversed.",
+      "source": "web search"
+    },
+    {
+      "factor": "PLAB Gap Down Liquidity Risk",
+      "impact": "-36.4% gap on small-mid cap. Wide spreads at open. Monitor if selloff exhausts or accelerates.",
+      "probability": "MEDIUM",
+      "change_vs_r0": "NEW",
+      "source": "Finnhub, ChartMill"
+    },
+    {
+      "factor": "VIX Uptick (16.51 +1.35%)",
+      "impact": "Small increase — not alarming but monitor. Above 17 = caution. Above 20 = risk-off.",
+      "probability": "LOW",
+      "change_vs_r0": "NEW",
+      "source": "web search"
+    },
+    {
+      "factor": "NVDA Post-Earnings Volatility",
+      "impact": "Portfolio position. Elevated PE. Now recovering but fragile if QQQ reverses.",
+      "probability": "MEDIUM",
+      "change_vs_r0": "UNCHANGED",
+      "source": "technical"
+    },
+    {
+      "factor": "Tech Valuation / Rate Risk",
+      "impact": "30x PE mega-caps. 10Y easing helps but any reversal = multiple compression.",
+      "probability": "MEDIUM",
+      "change_vs_r0": "UNCHANGED",
+      "source": "macro"
+    },
+    {
+      "factor": "Light Volume Friday",
+      "impact": "Lower liquidity = wider swings. Gap moves can exaggerate. Risk of reversals.",
+      "probability": "MEDIUM",
+      "change_vs_r0": "UNCHANGED",
+      "source": "calendar"
+    }
+  ],
+  "sources": [
+    { "name": "Finnhub Live Quotes", "tickers": ["SPY","QQQ","NTAP","PLAB","CVX","NVDA","SOFI","USO","XLE","KNOP"] },
+    { "name": "Alpha Vantage Global Quote", "tickers": ["NTAP","CVX"], "calls_used": 2 },
+    { "name": "Web Search — Macro/Premarket", "query": "S&P Nasdaq futures VIX DXY 10Y May 29 2026" },
+    { "name": "Web Search — Premarket Movers", "query": "US premarket movers stocks May 29 2026" },
+    { "name": "Web Search — Earnings", "query": "earnings results BMO May 29 2026 NTAP PLAB" },
+    { "name": "Web Search — Analyst Actions", "query": "analyst upgrades downgrades premarket May 29 2026" },
+    { "name": "ChartMill / public.com", "note": "PLAB earnings data" },
+    { "name": "Alphastreet / Investing.com", "note": "NTAP earnings data" }
+  ]
+}
