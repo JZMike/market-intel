@@ -1,0 +1,48 @@
+{
+  "last_updated": "2026-06-01",
+  "week_of": "2026-W23",
+  "sessions_analyzed": [
+    {
+      "date": "2026-05-29",
+      "r1_r2_ran": true,
+      "tickers_validated": 5,
+      "worked": ["QQQ", "SPY", "PLAB"],
+      "partially_worked": ["NVDA", "CVX"],
+      "failed": [],
+      "data_insufficient": []
+    },
+    {
+      "date": "2026-06-01",
+      "r1_r2_ran": false,
+      "tickers_validated": 0,
+      "note": "Apenas R0 correu. R3 com contexto de continuidade."
+    }
+  ],
+  "week_totals": {
+    "tickers_validated": 5,
+    "worked": 3,
+    "partially_worked": 2,
+    "failed": 0,
+    "data_insufficient": 0,
+    "worked_rate_pct": 60.0,
+    "partially_or_worked_rate_pct": 100.0
+  },
+  "most_repeated_tickers": ["QQQ", "SPY", "NVDA", "CVX"],
+  "best_catalyst_types": [
+    "Earnings gap (PLAB — bearish, NTAP)",
+    "ATH momentum (QQQ, SPY)",
+    "Computex/event catalyst (NVDA, MU)"
+  ],
+  "weakest_catalyst_types": [
+    "Geopolítica ceasefire oil (CVX — reverteu em <48h)",
+    "Calendar watch sem R1 hipótese (HPE)"
+  ],
+  "missed_opportunities": [
+    "MU +6.64% (Computex AI memory — não estava em hipótese)",
+    "HPE +26% AH (CALENDAR WATCH não convertido)"
+  ],
+  "system_issues": [
+    "R0 às 04:38 ET em Seg 01-Jun — sem R1/R2",
+    "Berkshire CVX reduction não capturada em tempo real"
+  ]
+}

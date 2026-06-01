@@ -1,0 +1,397 @@
+{
+  "date": "2026-06-01",
+  "run": "R3_EOD_LEARNING",
+  "run_time_lisbon": "22:08",
+  "run_time_et": "17:08",
+  "urls": {
+    "latest": "https://jzmike.github.io/market-intel/latest.html",
+    "day": "https://jzmike.github.io/market-intel/reports/2026/06/2026-06-01.html"
+  },
+  "context_note": "Hoje (01-Jun, Segunda) só correu R0 às 09:38 Lisboa / 04:38 ET. R1/R2 são de Sexta 29-Mai. Validação EOD combina: fecho de Sexta + fecho de hoje para contexto de continuidade.",
+  "market_close_snapshot": {
+    "date": "2026-06-01",
+    "tape": "BULLISH — ATH em SPY/QQQ pela 2ª sessão consecutiva. Tech lidera com Computex. Oil spike parcialmente absorvido pelo mercado.",
+    "indices": [
+      {
+        "symbol": "SPY",
+        "name": "S&P 500 ETF",
+        "close": 758.54,
+        "prev_close": 756.48,
+        "change_pct": 0.27,
+        "high": 760.28,
+        "low": 754.69,
+        "status": "ATH",
+        "source": "Finnhub"
+      },
+      {
+        "symbol": "QQQ",
+        "name": "Nasdaq-100 ETF",
+        "close": 742.74,
+        "prev_close": 738.31,
+        "change_pct": 0.60,
+        "high": 745.65,
+        "low": 735.99,
+        "status": "ATH",
+        "source": "Finnhub"
+      },
+      {
+        "symbol": "VIX",
+        "name": "Volatility Index",
+        "close": 16.05,
+        "change_pct": 4.77,
+        "comment": "Ligeiro uptick (oil geopolítica) mas sub-17. Contenção mantida.",
+        "source": "web_search"
+      },
+      {
+        "symbol": "DXY",
+        "name": "Dollar Index",
+        "value": "~98.85",
+        "note": "Stale — valor de Sexta. Sem atualização hoje.",
+        "source": "R0_stale"
+      },
+      {
+        "symbol": "DGS10",
+        "name": "10Y Treasury Yield",
+        "value_pct": "~4.44",
+        "note": "Sem dados novos. Iran reavivado não moveu yield materialmente.",
+        "source": "R0_stale"
+      }
+    ],
+    "sectors": [
+      {
+        "symbol": "XLK",
+        "name": "Technology",
+        "close": 195.76,
+        "change_pct": 2.48,
+        "status": "LEADING",
+        "catalyst": "Computex 2026 — NVDA RTX Spark superchip, MSFT partnership",
+        "source": "Finnhub"
+      },
+      {
+        "symbol": "XLE",
+        "name": "Energy",
+        "close": 57.30,
+        "change_pct": 1.79,
+        "status": "RECOVERY",
+        "catalyst": "Oil +3% on Iran ceasefire disruption (new strikes)",
+        "source": "Finnhub"
+      }
+    ],
+    "key_movers": [
+      {
+        "ticker": "NVDA",
+        "close": 224.36,
+        "change_pct": 6.26,
+        "catalyst": "Computex 2026: RTX Spark Arm superchip para PC, parceria Microsoft. Novo mercado consumer AI."
+      },
+      {
+        "ticker": "MU",
+        "close": 1035.50,
+        "change_pct": 6.64,
+        "catalyst": "Computex tailwind — AI memory demand para RTX Spark e data centers. HBM narrative reforçada."
+      },
+      {
+        "ticker": "MSFT",
+        "close": 460.52,
+        "change_pct": 2.28,
+        "catalyst": "Parceria NVDA RTX Spark. Azure + AI capex narrative."
+      },
+      {
+        "ticker": "HPE",
+        "close": 47.00,
+        "change_pct": 9.20,
+        "catalyst": "Antecipação earnings Q2 + record high intraday $44.67 pré-resultados. +26% AH pós-earnings."
+      },
+      {
+        "ticker": "CVX",
+        "close": 185.83,
+        "change_pct": 1.85,
+        "catalyst": "Oil +3% em ceasefire disruption (novos strikes EUA/Irão). Berkshire reduziu $8B em CVX (negativo)."
+      }
+    ]
+  },
+  "ticker_outcomes": [
+    {
+      "ticker": "QQQ",
+      "hypothesis_r1": "Gap up continuation — tech leadership holds",
+      "classification_r1": "BULLISH OBSERVATION",
+      "price_r2": 740.39,
+      "price_may29_close": 738.31,
+      "price_today_close": 742.74,
+      "change_r2_to_close_pct": -0.28,
+      "change_since_r1_pct": 0.99,
+      "gap_status_r2": "HELD",
+      "eod_result": "WORKED",
+      "eod_detail": "Hipótese confirmada por completo. Gap manteve, ATH confirmado. Leve fade no final de sexta (-0.28% desde R2) totalmente normal. Hoje continua ATH +0.60%. Contexto: VIX sub-17 em ambos os dias.",
+      "lesson": "QQQ em ATH com VIX<17 e sem notícia adversa → hipótese bullish quase sempre funciona. Modelo deve manter confiança alta neste setup.",
+      "data_quality": "VALID"
+    },
+    {
+      "ticker": "SPY",
+      "hypothesis_r1": "Broad market gap up — risk-on sustained",
+      "classification_r1": "BULLISH OBSERVATION",
+      "price_r2": 757.67,
+      "price_may29_close": 756.48,
+      "price_today_close": 758.54,
+      "change_r2_to_close_pct": -0.16,
+      "change_since_r1_pct": 0.25,
+      "gap_status_r2": "HELD",
+      "eod_result": "WORKED",
+      "eod_detail": "Hipótese confirmada. S&P ATH em Sexta, novo ATH em Segunda. Leve pullback no final do dia de Sexta após alta de manhã é comportamento típico. Tese intacta.",
+      "lesson": "SPY em ATH com broad breadth = hipótese bullish funciona. Não confundir intraday fade com falha de hipótese.",
+      "data_quality": "VALID"
+    },
+    {
+      "ticker": "NVDA",
+      "hypothesis_r1": "Recovery continuation inline with tech rally",
+      "classification_r1": "BULLISH OBSERVATION",
+      "price_r2": 216.38,
+      "price_may29_close": 211.14,
+      "price_today_close": 224.36,
+      "change_r2_to_close_pct": -2.42,
+      "change_since_r1_pct": -1.45,
+      "gap_status_r2": "HELD at open but rejected",
+      "eod_result": "PARTIALLY_WORKED",
+      "eod_detail": "Hipótese de recovery confirmou até R2 ($216.38) mas NVDA rejeitou exatamente na zona de resistência $215-216 (como R2 antecipou) e fechou em $211.14 em Sexta. Hoje +6.26% para $224.36 em Computex (RTX Spark superchip). O catalisador novo (Computex) não estava disponível para a hipótese de Sexta.",
+      "lesson": "Resistência $215-216 foi identificada corretamente. A rejeição em Sexta foi tecnicamente precisa. O breakout para $224 foi por catalisador novo (evento Computex). Modelo deve notar: NVDA em zona de resistência + evento externo pendente = classificar como WAIT/CONDITIONAL, não manter BULLISH sem catalisador claro.",
+      "data_quality": "VALID"
+    },
+    {
+      "ticker": "PLAB",
+      "hypothesis_r1": "Gap down continuation — no catalyst for reversal",
+      "classification_r1": "BEARISH OBSERVATION",
+      "price_r2": 32.93,
+      "price_may29_close": 32.35,
+      "price_today_close": 31.87,
+      "change_r2_to_close_pct": -1.76,
+      "change_since_r1_pct": -6.32,
+      "gap_from_original_close_pct": -40.4,
+      "gap_status_r2": "EXTENDED LOWER",
+      "eod_result": "WORKED",
+      "eod_detail": "Bearish thesis plenamente confirmada. PLAB continuou a cair em Sexta (-1.76% desde R2) e hoje mais -1.48%. Queda total desde close pré-earnings ($53.51): -40.4%. Sem catalisador de reversão identificado.",
+      "lesson": "Double miss com guidance fraco = venda estruturada por dias/semanas. Modelo identificou corretamente. Próxima verificação em 5-7 sessões.",
+      "data_quality": "VALID"
+    },
+    {
+      "ticker": "CVX",
+      "hypothesis_r1": "THESIS CHANGE — oil premium deflating (Iran ceasefire)",
+      "classification_r1": "NEUTRAL / WAIT",
+      "price_r2": 181.31,
+      "price_may29_close": 182.46,
+      "price_today_close": 185.83,
+      "change_r2_to_close_pct": 0.63,
+      "change_since_r1_pct": 1.53,
+      "gap_status_r2": "REVERSED by EOD",
+      "eod_result": "PARTIALLY_WORKED",
+      "eod_detail": "Hipótese de deflação de oil premium funcionou durante a manhã de Sexta (CVX -0.94% vs SPY ATH) mas CVX recuperou para $182.46 no fecho. Hoje +1.85% para $185.83 com oil +3% (ceasefire disrupted — novos strikes EUA/Irão). Tese de deflação reverteu completamente. Berkshire reduziu CVX $8B — sinal material negativo LT.",
+      "lesson": "Geopolítica Médio Oriente = imprevisível no curto prazo. Hipótese de ceasefire deflation era válida no contexto de Sexta mas o evento reverteu em <48h. Para energia com risco geopolítico, classificar NEUTRAL/WAIT é correto — não construir hipótese direcional forte.",
+      "berkshire_note": "Berkshire Hathaway reduziu CVX em ~$8B. Dado material para tese LT. Ver Portfolio Sentinel.",
+      "data_quality": "VALID"
+    }
+  ],
+  "earnings_amc_results": [
+    {
+      "ticker": "HPE",
+      "company": "Hewlett Packard Enterprise",
+      "time": "AMC June 1 2026",
+      "eps_actual": 0.79,
+      "eps_estimate": 0.54,
+      "eps_beat_miss": "BEAT",
+      "eps_beat_pct": 46.3,
+      "revenue_actual_b": 10.68,
+      "revenue_estimate_b": 9.89,
+      "revenue_beat_miss": "BEAT",
+      "revenue_beat_pct": 8.0,
+      "revenue_growth_yoy_pct": 40,
+      "guidance_q3_revenue_b": "11.5-12.1",
+      "guidance_fy26_revenue_growth_pct": "29-33% (raised)",
+      "guidance_q3_eps": "0.88-0.93",
+      "ceo_quote": "Record-breaking revenue, higher-than-anticipated profitability, and increased free cash flow — biggest backlog ever seen.",
+      "ah_reaction": "+26% at $59.40",
+      "regular_session_close": 47.00,
+      "regular_session_change_pct": 9.20,
+      "classification": "TOMORROW WATCH",
+      "portfolio_impact": "Não está em carteira diretamente. Positivo para AI server demand narrative (NVDA, MU beneficiam).",
+      "relevance_tomorrow": "HPE vai abrir gap up significativo. Watch: follow-through vs profit-taking. AI server demand reforçado.",
+      "sector_impact": "POSITIVO para tech/AI infra. Confirma enterprise AI demand é real e acelerou.",
+      "data_quality": "VALID",
+      "sources": ["CNBC", "SEC 8-K", "Quiver Quantitative", "GuruFocus"]
+    }
+  ],
+  "portfolio_sentinel_eod": [
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "priority": "HIGH",
+      "alert_level": "WATCH",
+      "close_today": 224.36,
+      "change_today_pct": 6.26,
+      "change_may29_close_pct": 6.26,
+      "impact": "Computex 2026: RTX Spark Arm superchip launch. NVDA a expandir para consumer PC market com parceria MSFT. Catalisador novo e material.",
+      "thesis_status": "Thesis reinforced",
+      "next_resistance": "~$225-230",
+      "implications": "WATCH — Posição valoriza +6.26% hoje. Catalisador de evento (Computex) confirmado. Watch para keynote Jensen Huang continuação.",
+      "note": "Não é recomendação. Vigilância de posição LT em contexto de evento material."
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron",
+      "priority": "HIGH",
+      "alert_level": "WATCH",
+      "close_today": 1035.50,
+      "change_today_pct": 6.64,
+      "impact": "Computex AI demand narrative — RTX Spark e data centers intensificam demand por HBM/DRAM. MU principal beneficiário de memoria AI.",
+      "thesis_status": "Thesis reinforced",
+      "implications": "WATCH — +6.64% single-day move. HBM narrative reforçada por Computex. Watch para sustainability.",
+      "note": "Não é recomendação. Vigilância de posição LT em contexto de catalisador setorial forte."
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "priority": "MEDIUM",
+      "alert_level": "MATERIAL",
+      "close_today": 185.83,
+      "change_today_pct": 1.85,
+      "impact": "DUPLO SINAL CONFLITUANTE: (1) Oil +3% por ceasefire disruption = positivo curto prazo; (2) Berkshire Hathaway reduziu CVX em ~$8B = sinal negativo material LT.",
+      "thesis_status": "Thesis weakened",
+      "implications": "DCA watch — Berkshire a reduzir CVX é dado de convicção a monitorar. Oil volátil por geopolítica. Dividendo ainda intacto.",
+      "berkshire_signal": "Berkshire reduziu ~$8B em CVX. Buffett/Munger playbook: quando reduzem uma posição significativa, merece atenção. Não implica ação automática.",
+      "note": "Não é recomendação. Vigilância de posição LT — redução Berkshire é dado material para reavaliação de tese."
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "priority": "HIGH",
+      "alert_level": "INFO",
+      "close_today": 460.52,
+      "change_today_pct": 2.28,
+      "impact": "Parceria NVDA no RTX Spark (Arm+AI para consumer). Azure AI adoption narrative reforçada por Computex.",
+      "thesis_status": "Thesis reinforced",
+      "implications": "No action / monitor only — posição LT reforçada por catalisador de ecosistema AI.",
+      "note": "Não é recomendação."
+    },
+    {
+      "ticker": "VUUA",
+      "name": "Vanguard S&P 500 ETF",
+      "priority": "MEDIUM",
+      "alert_level": "NONE",
+      "close_today_proxy": "SPY 758.54 (+0.27%)",
+      "impact": "S&P 500 em ATH pela 2ª sessão consecutiva. Broad market sólido.",
+      "thesis_status": "Thesis reinforced",
+      "implications": "No action / monitor only"
+    },
+    {
+      "ticker": "VWCE",
+      "name": "Vanguard FTSE All-World ETF",
+      "priority": "MEDIUM",
+      "alert_level": "NONE",
+      "impact": "Mercado global beneficia de tech rally USA. Iran disruption é risco regional mas sem spillover global de momento.",
+      "thesis_status": "Thesis reinforced",
+      "implications": "No action / monitor only"
+    }
+  ],
+  "lessons": [
+    {
+      "id": 1,
+      "category": "sistema",
+      "lesson": "Hoje só correu R0 (04:38 ET). Sem R1/R2, o sistema não teve hipóteses intraday para validar. A rotina R3 fica com valor reduzido sem as hipóteses do dia para avaliar.",
+      "action": "Garantir que R1 corra sempre às 09:15 ET independentemente da hora do R0."
+    },
+    {
+      "id": 2,
+      "category": "resistencia_tecnica",
+      "lesson": "NVDA: zona de resistência $215-216 foi identificada corretamente em R2. NVDA rejeitou exatamente aí e fechou em $211.14. O breakout de hoje ($224.36) foi por catalisador externo (Computex). Modelo viu bem a resistência.",
+      "action": "Quando ticker está em zona de resistência + evento externo pendente: classificar como WAIT/CONDITIONAL, não BULLISH sem confirmação."
+    },
+    {
+      "id": 3,
+      "category": "geopolitica",
+      "lesson": "CVX e oil: ceasefire agreement reverteu em <48h com novos strikes. Hipóteses baseadas em resolução geopolítica têm validade muito curta.",
+      "action": "Para teses de energia baseadas em geopolítica Médio Oriente: prazo máximo de hipótese é intraday. Não extrapolar para multiday."
+    },
+    {
+      "id": 4,
+      "category": "missed_ticker",
+      "lesson": "MU +6.64% hoje não estava em nenhuma hipótese ativa. Com Computex como catalisador de setor AI/memória, MU era óbvia extensão de qualquer hipótese NVDA.",
+      "action": "Quando NVDA tem catalisador de evento (Computex, GTC, etc.), incluir MU e AMD como hipóteses secundárias automáticas."
+    },
+    {
+      "id": 5,
+      "category": "earnings_surpresa",
+      "lesson": "HPE estava em R0 como CALENDAR WATCH mas sem R1/R2, não havia hipótese construída. O resultado foi o maior beat desde 2018 (+46% EPS, +40% revenue YoY). Perda de observação por sistema incompleto.",
+      "action": "Quando R0 identifica earnings materiais como CALENDAR WATCH, o R1 deve obrigatoriamente construir hipótese preliminar mesmo que classificada como WATCH."
+    },
+    {
+      "id": 6,
+      "category": "berkshire_signal",
+      "lesson": "Berkshire reduziu CVX em ~$8B. Este é um sinal de convicção institucional que merece atenção para holder de CVX LT. Não foi capturado nas pesquisas do dia.",
+      "action": "Adicionar pesquisa de 'large institutional holder changes' à rotina semanal do Portfolio Sentinel."
+    },
+    {
+      "id": 7,
+      "category": "continuidade_bearish",
+      "lesson": "PLAB: bearish thesis após double miss manteve-se por 3 sessões consecutivas (total -40.4% desde close pré-earnings). Modelo identificou corretamente e não contraditou a tese.",
+      "action": "Post-earnings crash estrutural sem catalisador de reversão = hipótese bearish válida por múltiplas sessões. Reclassificar depois de 5-7 sessões."
+    }
+  ],
+  "model_self_critique": [
+    "R0 às 04:38 ET é demasiado cedo. Sistema perde hipóteses do dia e o R3 fica sem dados para avaliar.",
+    "CVX: tese de deflation oil foi demasiado assertiva. Com geopolítica ativa, classificação NEUTRAL/WAIT era mais adequada.",
+    "MU não foi incluído como hipótese secundária de NVDA apesar de ser o mais óbvio beneficiário do AI memory demand.",
+    "HPE identificado em R0 como CALENDAR WATCH mas nunca construída hipótese direcional. Missing de opportunity observation.",
+    "Berkshire CVX reduction não foi capturada. Pesquisa de movers institucionais deveria ser parte do R3 standard."
+  ],
+  "tomorrow_watch": [
+    {
+      "ticker": "HPE",
+      "reason": "AH +26% ($59.40). Maior beat desde 2018. Gap up massivo esperado na abertura. Watch: follow-through vs profit-taking. AI server demand confirmado.",
+      "classification": "TOMORROW WATCH — ALTA PRIORIDADE",
+      "direction": "BULLISH OBSERVATION",
+      "key_level": "Gap up esperado ~$57-60. Volume confirmação crítica."
+    },
+    {
+      "ticker": "NVDA",
+      "reason": "Computex 2026 continua. Jensen Huang keynote amanhã. RTX Spark + HPE earnings beat reforçam AI narrative. Hoje +6.26%, tendência de continuação.",
+      "classification": "TOMORROW WATCH",
+      "direction": "BULLISH OBSERVATION",
+      "key_level": "Suporte $216-220, próxima resistência $225-230."
+    },
+    {
+      "ticker": "MU",
+      "reason": "+6.64% hoje em AI memory demand. Computex tailwind. HBM demand reforçado por HPE results (AI server backlog record).",
+      "classification": "TOMORROW WATCH",
+      "direction": "BULLISH OBSERVATION",
+      "key_level": "Watch sustentabilidade acima $1000."
+    },
+    {
+      "ticker": "CVX",
+      "reason": "Oil +3%, ceasefire disrupted, Berkshire -$8B. Conflito geopolítico reaceso. Volátil.",
+      "classification": "PORTFOLIO WATCH",
+      "direction": "MIXED — oil bullish curto prazo, Berkshire sinal bearish LT"
+    }
+  ],
+  "data_quality_summary": {
+    "r0_available": true,
+    "r1_available": "May 29 (não today)",
+    "r2_available": "May 29 (não today)",
+    "r3_status": "GENERATED",
+    "alpha_vantage_calls_used": 0,
+    "finnhub_calls_used": 7,
+    "warnings": [
+      "R1/R2 são de Sexta 29-Mai. Hoje (01-Jun) só correu R0 às 04:38 ET. Validação EOD usa fecho de Sexta + contexto de Segunda.",
+      "VIX: Finnhub retornou 0 para VIX. Valor de web search (16.05) usado.",
+      "DXY e 10Y yield: valores de Sexta (stale). Sem atualização disponível.",
+      "PLAB: without specific news today, continuing structural decline noted.",
+      "Sector performance: XLK e XLE via Finnhub. Outros sectores não verificados."
+    ]
+  },
+  "sources": [
+    {"name": "Finnhub Live Quotes", "tickers": ["NVDA", "CVX", "MSFT", "MU", "PLAB", "SPY", "QQQ", "HPE", "XLK", "XLE"], "status": "VALID"},
+    {"name": "CNBC — HPE earnings", "url": "https://www.cnbc.com/2026/06/01/hpe-stock-earnings-q2.html", "status": "VALID"},
+    {"name": "Yahoo Finance — Market close June 1 2026", "url": "https://finance.yahoo.com/markets/stocks/live/stock-market-today-monday-june-1-flat-225422503.html", "status": "VALID"},
+    {"name": "SEC 8-K — HPE Q2 2026", "url": "https://www.sec.gov/Archives/edgar/data/0001645590/000164559026000052/hpe-20260601.htm", "status": "VALID"},
+    {"name": "Quiver Quantitative — HPE earnings", "url": "https://www.quiverquant.com/news/HEWLETT+PACKARD+ENTERPRISE+%28%24HPE%29+Releases+Q2+2026+Earnings%2C+Stock+Rises", "status": "VALID"},
+    {"name": "Seeking Alpha — Movers June 1", "url": "https://seekingalpha.com/news/4598762-biggest-stock-movers-monday-xpev-nio-and-more", "status": "VALID"},
+    {"name": "Trading Key — NVDA June 1", "url": "https://www.tradingkey.com/news/market-movers/261939362-market-movers-nvda-20260601", "status": "VALID"}
+  ]
+}
