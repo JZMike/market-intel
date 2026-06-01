@@ -545,13 +545,13 @@
     <div class="section">
       <h2>📅 Next Radar Cycles</h2>
       <div class="next-steps">
-        <div class="step-box">
-          <div class="time">R1 @ 14:15</div>
-          <div class="label">Post-open (5 min data)</div>
+        <div class="step-box" style="background:#d4edda;">
+          <div class="time" style="color:#155724;">R1 @ 14:15 ✅</div>
+          <div class="label">Pre-open final — COMPLETO</div>
         </div>
         <div class="step-box">
           <div class="time">R2 @ 14:50</div>
-          <div class="label">Mid-session (45 min data)</div>
+          <div class="label">Open validation (15-20 min)</div>
         </div>
         <div class="step-box">
           <div class="time">R3 @ 22:15</div>
@@ -561,13 +561,619 @@
     </div>
 
     <div class="section">
-      <h2>📚 Sources</h2>
+      <h2>📚 Sources — R0</h2>
       <div class="sources">
         <p>📌 <a href="https://www.fool.com/investing/2026/05/31/nvda-stock-jensen-huang-keynote-computex/">The Motley Fool — NVDA COMPUTEX keynote</a></p>
         <p>📌 <a href="https://www.schwab.com/learn/story/semiconductor-earnings-preview">Schwab — Semiconductor earnings preview</a></p>
         <p>📌 <a href="https://finance.yahoo.com/calendar/earnings/">Yahoo Finance — Earnings calendar</a></p>
         <p>📌 <a href="https://fred.stlouisfed.org/series/DGS10">FRED — 10Y Treasury yield</a></p>
-        <p>ℹ️ <strong>Data quality note:</strong> Macro pricing from Friday 30-May close. Earnings from Finnhub API + web search. No Alpha Vantage calls (reserved for R1/R2/R3 material alerts).</p>
+        <p>ℹ️ <strong>Data quality note:</strong> Macro pricing from Friday 30-May close. Earnings from Finnhub API + web search. Alpha Vantage: 0 calls.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- R1 PRE-OPEN FINAL — 14:15 Lisboa / 09:15 ET                 -->
+  <!-- ============================================================ -->
+  <div class="container" id="r1">
+
+    <style>
+      .r1-header {
+        background: linear-gradient(135deg, #00695c, #00897b);
+        color: white;
+        padding: 24px;
+        border-radius: 8px;
+        margin-bottom: 24px;
+        margin-top: 8px;
+      }
+      .r1-header h1 { font-size: 20px; margin-bottom: 8px; }
+      .r1-header .meta { font-size: 13px; opacity: 0.9; }
+      .r1-header .badges { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+      .r1-badge { display: inline-block; padding: 4px 8px; background: rgba(255,255,255,0.2); border-radius: 4px; font-size: 11px; font-weight: 600; }
+      .r1-badge.live { background: #0bc76d; }
+      .r1-badge.partial { background: #ffa400; }
+      .r1-badge.warn { background: #d32f2f; }
+
+      .r1-section {
+        background: white;
+        padding: 20px;
+        margin-bottom: 16px;
+        border-radius: 8px;
+        border-left: 4px solid #00897b;
+      }
+      .r1-section h2 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: #00695c;
+      }
+
+      .tape-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      @media (min-width: 721px) { .tape-grid { grid-template-columns: repeat(5, 1fr); } }
+
+      .tape-item {
+        padding: 12px;
+        background: #f9f9f9;
+        border-radius: 6px;
+        border: 1px solid #e0e0e0;
+      }
+      .tape-item .symbol { font-weight: 700; font-size: 14px; color: #00695c; }
+      .tape-item .name { font-size: 11px; color: #666; }
+      .tape-item .price { font-size: 16px; margin-top: 4px; font-weight: 600; }
+      .tape-item .change.up { font-size: 12px; color: #0bc76d; font-weight: 600; }
+      .tape-item .change.down { font-size: 12px; color: #d32f2f; font-weight: 600; }
+      .tape-item .stale-note { font-size: 10px; color: #999; margin-top: 2px; }
+
+      .obs-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+      .obs-table th {
+        background: #00695c;
+        color: white;
+        padding: 8px 6px;
+        text-align: left;
+        font-size: 11px;
+      }
+      .obs-table td { padding: 8px 6px; border-bottom: 1px solid #eee; vertical-align: top; }
+      .obs-table tr:last-child td { border-bottom: none; }
+      .obs-table tr:hover td { background: #f0faf8; }
+
+      .cls-bull { background: #e8f5e9; color: #1b5e20; padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: 700; white-space: nowrap; }
+      .cls-bear { background: #ffebee; color: #b71c1c; padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: 700; white-space: nowrap; }
+      .cls-neutral { background: #fff8e1; color: #e65100; padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: 700; white-space: nowrap; }
+      .cls-avoid { background: #f3e5f5; color: #4a148c; padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: 700; white-space: nowrap; }
+      .cls-watch { background: #e3f2fd; color: #0d47a1; padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: 700; white-space: nowrap; }
+
+      .conf-high { color: #1b5e20; font-weight: 700; }
+      .conf-med { color: #e65100; font-weight: 700; }
+      .conf-low { color: #d32f2f; font-weight: 700; }
+
+      .score-circle {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        line-height: 36px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 13px;
+        color: white;
+      }
+      .score-high { background: #1b5e20; }
+      .score-med { background: #e65100; }
+      .score-low { background: #d32f2f; }
+
+      .sentinel-card {
+        padding: 12px;
+        background: #f9f9f9;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        border-left: 3px solid #00897b;
+      }
+      .sentinel-card.mixed { border-left-color: #ffa400; }
+      .sentinel-card.bull { border-left-color: #0bc76d; }
+      .sentinel-card .sticker { font-weight: 700; font-size: 14px; color: #00695c; }
+      .sentinel-card .level { font-size: 11px; color: #666; font-weight: 600; margin-top: 2px; }
+      .sentinel-card .detail { font-size: 12px; color: #333; margin-top: 6px; line-height: 1.5; }
+
+      .r2-card {
+        padding: 12px;
+        background: #e8f5e9;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        border-left: 3px solid #43a047;
+      }
+      .r2-card .ticker { font-weight: 700; color: #1b5e20; font-size: 14px; }
+      .r2-card .hyp { font-size: 12px; color: #333; margin-top: 4px; line-height: 1.4; }
+      .r2-card ul { margin: 6px 0 0 16px; font-size: 11px; color: #555; line-height: 1.6; }
+
+      .r1-warn-box {
+        padding: 10px 14px;
+        background: #fff3e0;
+        border-left: 3px solid #ffa400;
+        border-radius: 4px;
+        font-size: 12px;
+        color: #333;
+        margin-bottom: 8px;
+      }
+      .r1-warn-box strong { color: #e65100; }
+
+      .risk-r1-item {
+        padding: 12px;
+        background: #fff3e0;
+        border-left: 3px solid #ffa400;
+        border-radius: 4px;
+        margin-bottom: 8px;
+      }
+      .risk-r1-item .title { font-weight: 600; font-size: 12px; color: #bf360c; }
+      .risk-r1-item .detail { font-size: 12px; color: #333; margin-top: 4px; }
+      .risk-r1-item.critical { border-left-color: #d32f2f; background: #ffebee; }
+      .risk-r1-item.critical .title { color: #b71c1c; }
+
+      .dq-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+      .dq-item { padding: 8px; background: #f0faf8; border-radius: 6px; font-size: 12px; }
+      .dq-item .label { font-weight: 600; color: #00695c; }
+      .dq-item .val-live { color: #1b5e20; font-weight: 700; margin-top: 2px; }
+      .dq-item .val-partial { color: #e65100; font-weight: 700; margin-top: 2px; }
+      .dq-item .val-stale { color: #d32f2f; font-weight: 700; margin-top: 2px; }
+    </style>
+
+    <div class="r1-header">
+      <h1>🔄 R1 Pre-Open Final</h1>
+      <div class="meta">2026-06-01 | 14:15 Lisboa / 09:15 ET | Premarket (15 min to open)</div>
+      <div class="badges">
+        <span class="r1-badge live">🟢 PREMARKET LIVE</span>
+        <span class="r1-badge">🌍 TAPE ATUALIZADO</span>
+        <span class="r1-badge partial">⚠️ HPE: CONFIRMAÇÃO PENDENTE</span>
+        <span class="r1-badge warn">🔴 NVDA SELL-THE-NEWS</span>
+      </div>
+    </div>
+
+    <!-- TAPE ATUALIZADO -->
+    <div class="r1-section">
+      <h2>📊 Tape Atualizado — 09:15 ET</h2>
+      <div class="tape-grid">
+        <div class="tape-item">
+          <div class="symbol">SPY</div>
+          <div class="name">S&P 500 ETF</div>
+          <div class="price">$756.48</div>
+          <div class="change up">+0.25% | +$1.88</div>
+        </div>
+        <div class="tape-item">
+          <div class="symbol">QQQ</div>
+          <div class="name">Nasdaq-100 ETF</div>
+          <div class="price">$738.31</div>
+          <div class="change up">+0.37% | +$2.71</div>
+        </div>
+        <div class="tape-item">
+          <div class="symbol">VIX</div>
+          <div class="name">Volatility</div>
+          <div class="price">15.32</div>
+          <div class="change up">carry-fwd</div>
+          <div class="stale-note">⚠️ R0 carryforward</div>
+        </div>
+        <div class="tape-item">
+          <div class="symbol">DXY</div>
+          <div class="name">Dollar Index</div>
+          <div class="price">98.85</div>
+          <div class="change up">carry-fwd</div>
+          <div class="stale-note">⚠️ R0 carryforward</div>
+        </div>
+        <div class="tape-item">
+          <div class="symbol">10Y</div>
+          <div class="name">Treasury Yield</div>
+          <div class="price">4.44%</div>
+          <div class="change up">carry-fwd</div>
+          <div class="stale-note">⚠️ R0 carryforward</div>
+        </div>
+      </div>
+      <p style="margin-top:12px;font-size:12px;color:#333;line-height:1.6;">
+        <strong>Tape bias: RISK-ON MISTO.</strong> SPY +0.25%, QQQ +0.37%. Semiconductores fortes
+        (MU +5.14%, HPE +12.64%). NVDA em <strong>sell-the-news</strong> (-1.45%): gap até $217.86 revertido
+        para $211.14. Taiwan TAIEX +1.000 pts para ATH 45.600 (COMPUTEX). FDX -17% = <strong>corporate
+        action</strong> (spin-off FreightCo — não é sinal fundamental). US tightened AI chip curbs
+        (headwind NVDA China revenue).
+      </p>
+    </div>
+
+    <!-- EARNINGS BMO -->
+    <div class="r1-section">
+      <h2>📋 Earnings BMO Confirmados</h2>
+      <div class="r1-warn-box">
+        <strong>⚠️ HPE:</strong> Resultados oficiais não confirmados em search. Preço +12.64%
+        ($43.04 vs prev close $38.21) implica forte beat. Investor call confirmado às <strong>4:05 PM ET</strong>.
+        Tratar como provável beat — confirmar ao open.
+      </div>
+      <table class="obs-table">
+        <thead>
+          <tr>
+            <th>Ticker</th><th>Status</th><th>EPS Est.</th><th>Rev Est.</th>
+            <th>Premarket</th><th>Gap %</th><th>Range</th><th>Data Q.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:#00695c;">HPE</strong><br><span style="font-size:10px;color:#666;">Hewlett Packard Ent.</span></td>
+            <td><span class="cls-bull">PROVÁVEL BEAT</span></td>
+            <td>$0.53<br><span style="font-size:10px;color:#666;">+39.5% YoY</span></td>
+            <td>$9.77B<br><span style="font-size:10px;color:#666;">+28% YoY</span></td>
+            <td><strong>$43.04</strong></td>
+            <td><strong style="color:#1b5e20;">+12.64%</strong></td>
+            <td style="font-size:10px;">H: $44.58<br>L: $41.52</td>
+            <td><span style="color:#e65100;font-weight:700;">PARTIAL</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- EARNINGS AMC -->
+    <div class="r1-section">
+      <h2>🔔 Earnings AMC Watch</h2>
+      <table class="obs-table">
+        <thead>
+          <tr><th>Ticker</th><th>Hora ET</th><th>EPS Est.</th><th>Rev Est.</th><th>Relevância</th><th>Nota</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:#00695c;">HPE</strong></td>
+            <td>4:05 PM ET</td>
+            <td>$0.53</td>
+            <td>$9.77B</td>
+            <td><span class="cls-watch">CALENDAR WATCH</span></td>
+            <td style="font-size:10px;">Se resultados BMO não confirmados: call às 16h05. Confirmar EPS/Rev vs est. e guidance FY2026.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- PORTFOLIO SENTINEL UPDATE -->
+    <div class="r1-section">
+      <h2>🎯 Portfolio Sentinel — Update R1</h2>
+      <div class="sentinel-card mixed">
+        <div class="sticker">NVDA (NVIDIA)</div>
+        <div class="level">🟡 MATERIAL — MISTO (sell-the-news + chip curbs)</div>
+        <div class="detail">
+          <strong>✅ COMPUTEX ENTREGUE:</strong> Vera Rubin em mass production (envios outono 2026), Vera CPU (+1.8x vs x86), RTX Spark AI PC superchip (30+ laptops, 10+ desktops). "Infrastructure company" positioning.<br>
+          <strong>🔴 SELL-THE-NEWS:</strong> Gap até $217.86 (+1.7%) reverteu para $211.14 (-1.45%). Volume 289M (extremo). Clássico anticipated-catalyst reversal.<br>
+          <strong>⚠️ US CHIP CURBS:</strong> Novas restrições de exportação AI tightened ao mesmo tempo que COMPUTEX — headwind China revenue.<br>
+          <strong>🌍 TAIWAN ATH:</strong> TAIEX +1.000pts, TSMC + Foxconn + MediaTek + Quanta em ATH. Supply chain fortissimo.
+        </div>
+      </div>
+      <div class="sentinel-card bull">
+        <div class="sticker">MU (Micron)</div>
+        <div class="level">🔵 WATCH (upgd de INFO) — Bullish para tese</div>
+        <div class="detail">
+          <strong>MU +5.14%</strong> ($971). TSMC all-time high valida HBM/DRAM demand thesis. COMPUTEX confirma AI data center acceleration → HBM demand reforçado. Jun 24 earnings cada vez mais relevantes.
+        </div>
+      </div>
+      <div class="sentinel-card bull">
+        <div class="sticker">MSFT (Microsoft)</div>
+        <div class="level">🔵 WATCH (upgd de INFO) — Bullish para tese</div>
+        <div class="detail">
+          <strong>RTX Spark:</strong> Parceria NVDA + Microsoft + MediaTek para AI PC market. Software stocks a subir à medida que Huang descarta receios de disrupção de AI. Azure AI thesis reforçada.
+        </div>
+      </div>
+      <div class="sentinel-card">
+        <div class="sticker">CVX (Chevron)</div>
+        <div class="level">⚪ NONE — Neutral</div>
+        <div class="detail">Sem notícias materiais. Iran peace ainda holding. Monitorar petróleo.</div>
+      </div>
+    </div>
+
+    <!-- MASTER TABLE -->
+    <div class="r1-section">
+      <h2>📋 Master Pre-Open Table</h2>
+      <div style="overflow-x:auto;">
+        <table class="obs-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Ticker</th>
+              <th>Classificação</th>
+              <th>Score</th>
+              <th>Conf.</th>
+              <th>Preço PM</th>
+              <th>Gap %</th>
+              <th>H/L sessão</th>
+              <th>Volume</th>
+              <th>RVOL</th>
+              <th>Catalisador</th>
+              <th>Data Q.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><strong style="color:#00695c;">NVDA</strong><br><span style="font-size:10px;color:#666;">mega | 🎒 ptf</span></td>
+              <td><span class="cls-bear">BEARISH OBS</span></td>
+              <td><span class="score-circle score-med">73</span></td>
+              <td><span class="conf-high">HIGH</span></td>
+              <td><strong style="color:#d32f2f;">$211.14</strong><br><span style="font-size:10px;">pc $214.25</span></td>
+              <td><strong style="color:#d32f2f;">−1.45%</strong></td>
+              <td style="font-size:10px;">H $217.86<br>L $211.13</td>
+              <td style="font-size:10px;">289M</td>
+              <td><span style="color:#d32f2f;font-weight:700;">EXTREME</span></td>
+              <td style="font-size:10px;">COMPUTEX (Vera Rubin+RTX Spark). Sell-the-news. Chip curbs.</td>
+              <td><span style="color:#1b5e20;font-weight:700;">AV+FH</span></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><strong style="color:#00695c;">MU</strong><br><span style="font-size:10px;color:#666;">large | 🎒 ptf</span></td>
+              <td><span class="cls-bull">BULLISH OBS</span></td>
+              <td><span class="score-circle score-med">72</span></td>
+              <td><span class="conf-med">MED</span></td>
+              <td><strong style="color:#1b5e20;">$971.00</strong><br><span style="font-size:10px;">pc $923.52</span></td>
+              <td><strong style="color:#1b5e20;">+5.14%</strong></td>
+              <td style="font-size:10px;">H $981<br>L $940.51</td>
+              <td style="font-size:10px;">—</td>
+              <td><span style="color:#0bc76d;font-weight:700;">HIGH est</span></td>
+              <td style="font-size:10px;">Sector COMPUTEX. TSMC ATH. HBM demand. +34% YTD.</td>
+              <td><span style="color:#e65100;font-weight:700;">FH live</span></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><strong style="color:#00695c;">HPE</strong><br><span style="font-size:10px;color:#666;">large | não ptf</span></td>
+              <td><span class="cls-bull">BULLISH OBS</span></td>
+              <td><span class="score-circle score-med">66</span></td>
+              <td><span class="conf-med">MED</span></td>
+              <td><strong style="color:#1b5e20;">$43.04</strong><br><span style="font-size:10px;">pc $38.21</span></td>
+              <td><strong style="color:#1b5e20;">+12.64%</strong></td>
+              <td style="font-size:10px;">H $44.58<br>L $41.52</td>
+              <td style="font-size:10px;">—</td>
+              <td><span style="color:#d32f2f;font-weight:700;">EXTREME est</span></td>
+              <td style="font-size:10px;">Q2 earnings provável beat. EPS $0.53 est (+39.5%). Rev $9.77B est.</td>
+              <td><span style="color:#e65100;font-weight:700;">PARTIAL</span></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><strong style="color:#00695c;">SPY</strong><br><span style="font-size:10px;color:#666;">mega | 🎒 VUUA ref</span></td>
+              <td><span class="cls-neutral">NEUTRAL/WAIT</span></td>
+              <td><span class="score-circle score-low">54</span></td>
+              <td><span class="conf-high">HIGH</span></td>
+              <td><strong>$756.48</strong><br><span style="font-size:10px;">pc $754.60</span></td>
+              <td><strong style="color:#1b5e20;">+0.25%</strong></td>
+              <td style="font-size:10px;">H $758.08<br>L $754.69</td>
+              <td style="font-size:10px;">—</td>
+              <td><span style="color:#666;font-weight:700;">NORMAL</span></td>
+              <td style="font-size:10px;">Broad market ref. Risk-on. Semis fortes. FDX spin-off não impacta.</td>
+              <td><span style="color:#1b5e20;font-weight:700;">FH live</span></td>
+            </tr>
+            <tr style="opacity:0.6;">
+              <td>5</td>
+              <td><strong>FDX</strong><br><span style="font-size:10px;color:#666;">large | não ptf</span></td>
+              <td><span class="cls-avoid">AVOID</span></td>
+              <td><span class="score-circle" style="background:#9e9e9e;">—</span></td>
+              <td><span class="conf-high">HIGH</span></td>
+              <td>—</td>
+              <td><strong style="color:#d32f2f;">−17.0%</strong></td>
+              <td style="font-size:10px;">—</td>
+              <td style="font-size:10px;">—</td>
+              <td>—</td>
+              <td style="font-size:10px;">Corporate action: FedEx Freight spin-off completado. Ajuste mecânico de preço. Não é sinal fundamental.</td>
+              <td>CONFIRMED</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:11px;color:#666;margin-top:8px;">AV = Alpha Vantage | FH = Finnhub | ptf = posição na carteira | score max 100 (penalizações incluídas)</p>
+    </div>
+
+    <!-- TOP OBSERVATION -->
+    <div class="r1-section">
+      <h2>🔭 Top Observation para o Open</h2>
+      <p style="font-size:12px;color:#666;margin-bottom:12px;">Abertura NYSE: 09:30 ET (14:30 Lisboa). Validar no R2 às 14:50.</p>
+      <div style="overflow-x:auto;">
+        <table class="obs-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Ticker</th>
+              <th>Hipótese</th>
+              <th>Score</th>
+              <th>Conf.</th>
+              <th>Preço PM</th>
+              <th>Gap</th>
+              <th>Volume</th>
+              <th>RVOL</th>
+              <th>Catalisador</th>
+              <th>Validar no open</th>
+              <th>Data Q.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><strong style="color:#d32f2f;">NVDA</strong></td>
+              <td><span class="cls-bear">BEARISH OBS</span><br><span style="font-size:10px;">Sell-the-news. Watch VWAP ~$213-214 como resistência.</span></td>
+              <td><span class="score-circle score-med">73</span></td>
+              <td><span class="conf-high">HIGH</span></td>
+              <td style="color:#d32f2f;font-weight:700;">$211.14<br><small>−1.45%</small></td>
+              <td style="font-size:10px;">Gap UP revertido<br>abaixo prev close</td>
+              <td style="font-size:10px;">289M</td>
+              <td style="color:#d32f2f;font-weight:700;">EXTREME</td>
+              <td style="font-size:10px;">COMPUTEX entregue (Vera Rubin + RTX Spark). Sell-the-news. US chip curbs.</td>
+              <td style="font-size:10px;">
+                • Gap mantém abaixo $214.25?<br>
+                • Volume confirma direção?<br>
+                • Rejeição VWAP ~$213 = bearish<br>
+                • Suporte $211 ou quebra?<br>
+                <strong>Invalidação: recovery acima $217.86</strong>
+              </td>
+              <td><span style="color:#1b5e20;font-weight:700;">HIGH</span></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><strong style="color:#1b5e20;">MU</strong></td>
+              <td><span class="cls-bull">BULLISH OBS</span><br><span style="font-size:10px;">Sector momentum COMPUTEX. TSMC ATH valida HBM thesis.</span></td>
+              <td><span class="score-circle score-med">72</span></td>
+              <td><span class="conf-med">MED</span></td>
+              <td style="color:#1b5e20;font-weight:700;">$971.00<br><small>+5.14%</small></td>
+              <td style="font-size:10px;">Gap UP<br>+$47.48 vs pc</td>
+              <td style="font-size:10px;">—</td>
+              <td style="color:#0bc76d;font-weight:700;">HIGH est</td>
+              <td style="font-size:10px;">Sector COMPUTEX. TSMC ATH. Vera Rubin HBM demand. Jun 24 earnings preview.</td>
+              <td style="font-size:10px;">
+                • $971 mantém no open?<br>
+                • Volume acima média?<br>
+                • Acima VWAP = continuação<br>
+                • AMD/AVGO também verdes?<br>
+                <strong>Invalidação: queda abaixo $960</strong>
+              </td>
+              <td><span style="color:#e65100;font-weight:700;">MED</span></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><strong style="color:#1b5e20;">HPE</strong></td>
+              <td><span class="cls-bull">BULLISH OBS</span><br><span style="font-size:10px;">Earnings probable beat +12.64%. Confirmar resultados ao open.</span></td>
+              <td><span class="score-circle score-med">66</span></td>
+              <td><span class="conf-med">MED</span></td>
+              <td style="color:#1b5e20;font-weight:700;">$43.04<br><small>+12.64%</small></td>
+              <td style="font-size:10px;">Gap UP earnings<br>+$4.83 vs pc</td>
+              <td style="font-size:10px;">—</td>
+              <td style="color:#d32f2f;font-weight:700;">EXTREME est</td>
+              <td style="font-size:10px;">Q2 beat provável (preço). EPS $0.53 est (+39.5%). Rev $9.77B est (+28%). Guidance FY2026 key.</td>
+              <td style="font-size:10px;">
+                • $43 mantém no open?<br>
+                • 1ª vela 5min: compra confirma?<br>
+                • VWAP hold = convicção institucional<br>
+                • Resultados oficiais confirmam?<br>
+                <strong>Invalidação: abaixo $41.52 (session low)</strong>
+              </td>
+              <td><span style="color:#e65100;font-weight:700;">PARTIAL</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- R2 TRACKING PLACEHOLDER -->
+    <div class="r1-section">
+      <h2>⏱ R2 Tracking Placeholder — Validação Open (14:50)</h2>
+      <p style="font-size:12px;color:#666;margin-bottom:12px;">Preencher no R2 com dados dos primeiros 15-20 min de sessão (09:30-09:50 ET).</p>
+      <div class="r2-card">
+        <div class="ticker">NVDA — BEARISH OBS — $211.14 (−1.45%)</div>
+        <div class="hyp">Hipótese: Sell-the-news continua. VWAP ~$213-214 como primeira resistência.</div>
+        <ul>
+          <li>Gap mantém abaixo $214.25? → [R2]</li>
+          <li>Volume abertura vs 289M premarket? → [R2]</li>
+          <li>VWAP break ou rejeição? → [R2]</li>
+          <li>Suporte $211 hold ou quebra para $207? → [R2]</li>
+          <li>Invalidação: recovery acima $217.86 → [R2]</li>
+        </ul>
+      </div>
+      <div class="r2-card">
+        <div class="ticker">MU — BULLISH OBS — $971.00 (+5.14%)</div>
+        <div class="hyp">Hipótese: Sector momentum sustenta. TSMC ATH = HBM thesis confirmed.</div>
+        <ul>
+          <li>$971 hold no open? → [R2]</li>
+          <li>Volume acima da média? → [R2]</li>
+          <li>Acima/abaixo VWAP? → [R2]</li>
+          <li>AMD, AVGO também verdes? (breadth check) → [R2]</li>
+          <li>Invalidação: queda abaixo $960 → [R2]</li>
+        </ul>
+      </div>
+      <div class="r2-card">
+        <div class="ticker">HPE — BULLISH OBS — $43.04 (+12.64%)</div>
+        <div class="hyp">Hipótese: Earnings beat consolidado. $43+ mantém. Resultados oficiais confirmam.</div>
+        <ul>
+          <li>$43 hold no open? → [R2]</li>
+          <li>1ª vela 5 min: buying ou selling? → [R2]</li>
+          <li>Resultados oficiais EPS vs $0.53? → [R2]</li>
+          <li>VWAP hold = institutional conviction → [R2]</li>
+          <li>Invalidação: abaixo $41.52 (session low) → [R2]</li>
+        </ul>
+      </div>
+      <div class="r2-card" style="background:#fff8e1;border-left-color:#ffa400;">
+        <div class="ticker" style="color:#e65100;">SPY — NEUTRAL/WAIT — $756.48 (+0.25%)</div>
+        <div class="hyp">Referência broad market. Risk-on tape.</div>
+        <ul>
+          <li>Acima $756 = risk-on holds → [R2]</li>
+          <li>Abaixo $754.60 (prev close) = cautela → [R2]</li>
+          <li>VIX direção no open? → [R2]</li>
+          <li>Peso semis (NVDA drag vs MU/HPE lift)? → [R2]</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RISK FACTORS R1 -->
+    <div class="r1-section">
+      <h2>⚡ Risk Factors Atualizados</h2>
+      <div class="risk-r1-item critical">
+        <div class="title">🔴 NVDA Sell-the-News Dynamic</div>
+        <div class="detail">COMPUTEX era catalisador muito antecipado. Gap até $217.86 completamente revertido para $211.14. Volume 289M confirma participação extrema. Padrão clássico de reversão pós-catalisador confirmado.</div>
+      </div>
+      <div class="risk-r1-item">
+        <div class="title">⚠️ US AI Chip Export Curbs Tightened</div>
+        <div class="detail">Novas restrições tightened simultaneamente com COMPUTEX. Impacto na receita China de NVDA. Headwind setor chips AI. Reação de mercado TBD ao open.</div>
+      </div>
+      <div class="risk-r1-item">
+        <div class="title">⚠️ HPE — Confirmação de Resultados Pendente</div>
+        <div class="detail">HPE +12.64% mas EPS/Rev reais não confirmados. Se resultados dececionam vs estimativas ($0.53 EPS, $9.77B Rev), gap fill para $38-39 possível. Investor call 4:05 PM ET.</div>
+      </div>
+      <div class="risk-r1-item">
+        <div class="title">🌍 Geopolítico / Iran</div>
+        <div class="detail">Peace agreement ainda frágil. Escalada reverte ganhos de petróleo/inflação. Monitorar oil price e flows de risk-off.</div>
+      </div>
+    </div>
+
+    <!-- DATA QUALITY R1 -->
+    <div class="r1-section">
+      <h2>📌 Data Quality — R1 Summary</h2>
+      <div class="dq-grid">
+        <div class="dq-item">
+          <div class="label">Preços</div>
+          <div class="val-live">LIVE PREMARKET</div>
+        </div>
+        <div class="dq-item">
+          <div class="label">Volume</div>
+          <div class="val-partial">PARTIAL</div>
+        </div>
+        <div class="dq-item">
+          <div class="label">Earnings</div>
+          <div class="val-partial">PARTIAL</div>
+        </div>
+        <div class="dq-item">
+          <div class="label">Alpha V. calls</div>
+          <div class="val-live">1 / 5</div>
+        </div>
+        <div class="dq-item">
+          <div class="label">Web searches</div>
+          <div class="val-live">4 / 4</div>
+        </div>
+        <div class="dq-item">
+          <div class="label">VIX/DXY/10Y</div>
+          <div class="val-stale">STALE (R0)</div>
+        </div>
+      </div>
+      <ul class="summary-list">
+        <li>⚠️ <strong>Finnhub t-field</strong> = 2026-05-29 UTC (ref close); c-field = preços premarket atuais confirmados por AV NVDA.</li>
+        <li>⚠️ <strong>HPE</strong>: EPS/Rev reais não encontrados. Price action +12.64% é sinal primário. Aguardar confirmação.</li>
+        <li>⚠️ <strong>FDX −17%</strong>: Corporate action (spin-off FreightCo). Não é sinal de mercado.</li>
+        <li>ℹ️ <strong>Alpha Vantage</strong>: 1 call usada (NVDA — carteira HIGH priority + catalisador MATERIAL).</li>
+      </ul>
+    </div>
+
+    <!-- SOURCES R1 -->
+    <div class="r1-section">
+      <h2>📚 Sources — R1</h2>
+      <div class="sources">
+        <p>📊 <strong>Finnhub API</strong> — Quotes: NVDA, HPE, SPY, QQQ, MU, FDX + Company News</p>
+        <p>📊 <strong>Alpha Vantage API</strong> — NVDA Global Quote (1 call)</p>
+        <p>📌 <a href="https://www.benzinga.com/markets/tech/26/06/52895858/nvidia-infrastructure-company-jensen-huang-computex-2026-ai-factory">Benzinga — NVDA Infrastructure Company (COMPUTEX)</a></p>
+        <p>📌 <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/261938407-nvda-verarubin-ai-jensenhuang-nvidia-tradingkey">TradingKey — Vera Rubin + COMPUTEX keynote</a></p>
+        <p>📌 <a href="https://www.servethehome.com/nvidia-computex-2026-keynote-live-coverage/">ServeTheHome — NVDA COMPUTEX live coverage</a></p>
+        <p>📌 <a href="https://www.heygotrade.com/en/news/us-ai-chip-curbs-nvidia-computex-2026-huang-keynote/">HeyGoTrade — US AI Chip Curbs + COMPUTEX</a></p>
+        <p>📌 <a href="https://www.gurufocus.com/news/8891339/hewlett-packard-enterprise-hpe-set-for-strong-q2-earnings-with-revenue-growth">GuruFocus — HPE Q2 Preview</a></p>
+        <p>📌 <a href="https://stockanalysis.com/markets/premarket/">StockAnalysis — Premarket Movers</a></p>
+        <p>ℹ️ <strong>Data quality:</strong> Preços premarket via Finnhub + AV. VIX/DXY/10Y de R0 carryforward. Earnings HPE parciais — aguardar confirmação.</p>
       </div>
     </div>
 
