@@ -1,0 +1,49 @@
+{
+  "last_updated": "2026-06-03",
+  "week": "2026-W23",
+  "period": "2026-05-29 to 2026-06-03",
+  "r1_runs": ["2026-05-29"],
+  "r1_missing": ["2026-06-02", "2026-06-03"],
+  "r3_runs": ["2026-06-03"],
+  "total_tickers_validated": 5,
+  "outcomes": {
+    "worked": 3,
+    "partially_worked": 1,
+    "no_tradeable_signal": 1,
+    "failed": 0,
+    "not_tracked": 2,
+    "data_insufficient": 0
+  },
+  "worked_tickers": ["QQQ", "SPY", "PLAB"],
+  "partial_tickers": ["NVDA"],
+  "failed_tickers": [],
+  "most_repeated_tickers": ["QQQ", "SPY", "NVDA", "CVX"],
+  "best_catalyst_types": ["earnings_double_miss_no_guidance", "broad_macro_record_close", "ceasefire_macro"],
+  "weakest_catalyst_types": ["post_earnings_recovery_inline_with_index"],
+  "amc_calendar_watches": {
+    "total": 5,
+    "beats": 5,
+    "misses": 0,
+    "beat_tickers": ["HPE", "PANW", "ULTA", "CRWD", "AVGO"],
+    "earnings_sweep_flag": "SECTOR_EARNINGS_TAILWIND — 5/5 beat"
+  },
+  "portfolio_sentinel_summary": {
+    "material_alerts": ["CVX"],
+    "watch_alerts": ["NVDA", "MSFT", "VUUA", "VWCE"],
+    "info_alerts": ["MU"],
+    "reinforced_theses": ["CVX", "MU"],
+    "volatility_risk": ["NVDA", "MSFT"]
+  },
+  "key_macro_events": [
+    "2026-05-29: Iran ceasefire (60-day) — oil premium removed",
+    "2026-06-01: HPE record earnings — AI capex confirmed",
+    "2026-06-02: PANW + ULTA beats — enterprise spend + consumer solid",
+    "2026-06-03: Iran ceasefire collapsed — missiles Kuwait+Bahrain — Brent +4.24% to $97.79"
+  ],
+  "system_health": {
+    "r1_reliability": "POOR — 2 consecutive missing days (Jun 2-3)",
+    "av_calls_efficiency": "3/5 used (NVDA, CVX, AVGO) — within budget",
+    "finnhub_reliability": "GOOD — 10 tickers, VIX failed",
+    "data_quality_overall": "PARTIAL — R1 gaps reduce cycle value significantly"
+  }
+}

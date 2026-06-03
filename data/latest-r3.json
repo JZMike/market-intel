@@ -1,0 +1,460 @@
+{
+  "date": "2026-06-03",
+  "run": "R3_EOD_LEARNING",
+  "run_time_lisbon": "22:07",
+  "run_time_et": "17:07",
+  "urls": {
+    "latest": "https://jzmike.github.io/market-intel/latest.html",
+    "day": "https://jzmike.github.io/market-intel/reports/2026/06/2026-06-03.html"
+  },
+  "context_note": "Último R1 válido: 2026-05-29. R1/R2 ausentes em 2026-06-02 e 2026-06-03. R3 valida hipóteses de 29-Mai e fecha ciclo com snapshot EOD de hoje (03-Jun).",
+
+  "market_close_snapshot": {
+    "date": "2026-06-03",
+    "tape": "RISK-OFF / MIXED",
+    "indices": {
+      "SPY": { "close": 754.24, "prev_close": 759.57, "change_pct": "-0.70%", "source": "Finnhub" },
+      "QQQ": { "close": 744.21, "prev_close": 746.16, "change_pct": "-0.26%", "source": "Finnhub" },
+      "VIX": { "value": 16.08, "change_pct": "+1.97%", "source": "web search" },
+      "XLE": { "close": 58.71, "prev_close": 57.96, "change_pct": "+1.29%", "source": "Finnhub" },
+      "DXY": { "status": "not fetched" }
+    },
+    "macro_context": "Iran lançou mísseis sobre o Kuwait e Bahrein — ceasefire colapsou. Negociações com EUA interrompidas. Brent crude +4.24% para $97.79/barril. Sectores tech/financials/comms em queda; energia forte. Dow -1.21%, Russell 2000 -1.25%.",
+    "key_event": "Iran war escalation — ceasefire collapsed. New missile strikes. Oil premium RETURNS.",
+    "sector_leaders": ["XLE energy +1.29%"],
+    "sector_laggards": ["Tech (XLK)", "Financials (XLF)", "Communications", "Consumer discretionary"],
+    "brent_crude": { "price": 97.79, "change_pct": "+4.24%", "note": "Iran halts US talks + missiles at Gulf → oil spike" }
+  },
+
+  "ticker_outcomes": [
+    {
+      "ticker": "QQQ",
+      "r1_date": "2026-05-29",
+      "hypothesis": "Gap up continuation — tech leadership holds above $730. Iran ceasefire + 10Y easing = growth multiple expansion.",
+      "r1_price": 735.60,
+      "r1_classification": "BULLISH OBSERVATION",
+      "r1_confidence": "HIGH",
+      "eod_price_may29": 738.31,
+      "eod_change_from_r1": "+0.37%",
+      "outcome": "WORKED",
+      "outcome_detail": "Gap held. Closed at $738.31, comfortably above $730 invalidation. Tech leadership sustained on May 29.",
+      "gap_held": true,
+      "catalyst_material": true,
+      "lesson": "Iran ceasefire + 10Y easing provided sustained bullish tape. High confidence setups with macro tailwind worked as expected.",
+      "data_quality": "VALID"
+    },
+    {
+      "ticker": "SPY",
+      "r1_date": "2026-05-29",
+      "hypothesis": "S&P record close gap up. Broad breadth supports sustained open.",
+      "r1_price": 754.60,
+      "r1_classification": "BULLISH OBSERVATION",
+      "r1_confidence": "HIGH",
+      "eod_price_may29": 755.0,
+      "eod_change_from_r1": "+0.05%",
+      "outcome": "WORKED",
+      "outcome_detail": "Closed approximately flat/slightly above R1 level. Gap held. Broad market sustained record close.",
+      "gap_held": true,
+      "catalyst_material": true,
+      "lesson": "Record close gap + macro de-escalation = sustained tape. SPY thesis consistently reliable when both technicals and macro align.",
+      "data_quality": "ESTIMATED (web search, Finnhub historical)"
+    },
+    {
+      "ticker": "PLAB",
+      "r1_date": "2026-05-29",
+      "hypothesis": "Gap down continuation — double miss. No catalyst for reversal. Gap fill scenario requires buyer demand.",
+      "r1_price": 34.02,
+      "r1_prev_close": 53.51,
+      "gap_pct": "-36.4%",
+      "r1_classification": "BEARISH OBSERVATION",
+      "r1_confidence": "MEDIUM",
+      "eod_price_may29": 33.50,
+      "eod_price_today": 32.11,
+      "eod_change_from_r1": "~-1.5% from R1 level",
+      "outcome": "WORKED",
+      "outcome_detail": "Gap persisted. Continued to erode: $34 on 29-Mai → $32.11 on 03-Jun (-5.6% from R1 level). Double miss + no guidance = prolonged price discovery. Bearish thesis fully confirmed.",
+      "gap_held": true,
+      "catalyst_material": true,
+      "lesson": "Double earnings miss with no guidance creates extended downward drift, not just a one-day event. No catalysts for reversal = multi-day continuation hypothesis valid.",
+      "data_quality": "VALID (Finnhub confirmed current price)"
+    },
+    {
+      "ticker": "NVDA",
+      "r1_date": "2026-05-29",
+      "hypothesis": "Post-earnings recovery continues inline with QQQ rally. Tests $215-216 resistance.",
+      "r1_price": 214.25,
+      "r1_classification": "BULLISH OBSERVATION",
+      "r1_confidence": "MEDIUM",
+      "invalidation_level": 211.0,
+      "eod_price_may29": 211.14,
+      "eod_price_today": 214.75,
+      "eod_change_from_r1_may29": "-1.45%",
+      "outcome": "PARTIALLY_WORKED",
+      "outcome_detail": "Fell from R1 price $214.25 to close $211.14 on May 29 — barely above invalidation level ($211). Recovery thesis was too optimistic for the day. QQQ was up +0.37% but NVDA underperformed. Today (June 3) NVDA at $214.75 but -3.62% on the day due to Iran escalation.",
+      "gap_held": false,
+      "catalyst_material": false,
+      "lesson": "NVDA underperformed QQQ on May 29 despite tech rally — post-earnings stocks often digest before resuming. Hypothesis survived by $0.14 margin above $211 invalidation. Validate vs index more carefully. Today's -3.62% on 158M vol shows geopolitical chip-sector exposure.",
+      "data_quality": "VALID (Finnhub + Alpha Vantage confirmed)"
+    },
+    {
+      "ticker": "CVX",
+      "r1_date": "2026-05-29",
+      "hypothesis": "NEUTRAL/WAIT — Iran ceasefire removes geopolitical oil premium. Monitor thesis change.",
+      "r1_price": 183.03,
+      "r1_classification": "NEUTRAL / WAIT",
+      "r1_confidence": "MEDIUM",
+      "eod_price_may29": 182.46,
+      "eod_price_today": 189.81,
+      "eod_change_from_r1_may29": "-0.31%",
+      "outcome": "NO_TRADEABLE_SIGNAL",
+      "outcome_detail": "May 29: CVX -0.31% from R1 — neutral confirmed. Ceasefire correctly neutralised the oil catalyst. However, by June 3, ceasefire COLLAPSED and Iran launched missiles. CVX now at $189.81 (+1.21% today, +$7.35 from May 29 close of ~$182.46). THESIS REVERSED AGAIN.",
+      "gap_held": false,
+      "catalyst_material": true,
+      "note": "IMPORTANT: Oil geopolitical thesis was correctly NEUTRAL on May 29. But ceasefire was fragile — within 5 days, Iran escalated again. Long-term CVX thesis now REINFORCED by new oil spike.",
+      "lesson": "Geopolitical ceasefires in active conflicts are temporary. CVX oil catalyst analysis should always include both 'ceasefire holds' and 'ceasefire breaks' scenarios. The thesis changed twice in 5 days.",
+      "data_quality": "VALID (Finnhub + Alpha Vantage confirmed)"
+    },
+    {
+      "ticker": "SOFI",
+      "r1_date": "2026-05-29",
+      "hypothesis": "NEUTRAL/WAIT — no confirmed catalyst. Monitor only.",
+      "r1_classification": "NEUTRAL / WAIT",
+      "r1_confidence": "LOW",
+      "outcome": "NO_TRADEABLE_SIGNAL",
+      "outcome_detail": "Correctly classified as no-trade. Not tracked further.",
+      "data_quality": "NOT TRACKED"
+    },
+    {
+      "ticker": "NTAP",
+      "r1_date": "2026-05-29",
+      "hypothesis": "NEUTRAL/WAIT — EPS miss overshadows revenue beat. Market indifferent.",
+      "r1_classification": "NEUTRAL / WAIT",
+      "r1_confidence": "MEDIUM",
+      "outcome": "NO_TRADEABLE_SIGNAL",
+      "outcome_detail": "Correctly deprioritised. Not tracked further.",
+      "data_quality": "NOT TRACKED"
+    }
+  ],
+
+  "amc_calendar_watch_outcomes": [
+    {
+      "ticker": "HPE",
+      "date_reported": "2026-06-01",
+      "time": "AMC",
+      "eps_actual": null,
+      "eps_estimate": 0.54,
+      "revenue_estimate": "9.9B",
+      "result": "BIG BEAT",
+      "detail": "Record revenue quarter. CEO: 'exceptional quarter with record-breaking revenue, higher-than-anticipated profitability'. Raising FY26 revenue growth to +29-33% YoY.",
+      "classification": "SECTOR_IMPACT",
+      "relevance_for_portfolio": "Positive signal for IT/AI infrastructure capex. Supports MU and NVDA long-term narratives.",
+      "data_quality": "VALID (SEC 8-K + web search)"
+    },
+    {
+      "ticker": "PANW",
+      "date_reported": "2026-06-02",
+      "time": "AMC",
+      "eps_actual": 0.85,
+      "eps_estimate": 0.72,
+      "beat_pct": "+18.06%",
+      "result": "BEAT",
+      "detail": "Q3 2026: EPS $0.85 vs $0.72 est (+18%). Cybersecurity enterprise spending resilient.",
+      "classification": "SECTOR_IMPACT",
+      "relevance_for_portfolio": "Confirms enterprise AI/security spend strong. Sector sentiment positive.",
+      "data_quality": "VALID (MarketBeat)"
+    },
+    {
+      "ticker": "ULTA",
+      "date_reported": "2026-06-02",
+      "time": "AMC",
+      "eps_actual": 7.74,
+      "eps_estimate": 7.01,
+      "beat_pct": "+10.4%",
+      "revenue_growth": "+11.1%",
+      "comparable_sales": "+5.3%",
+      "result": "BEAT",
+      "detail": "Net sales +11.1%, comp sales +5.3%, operating income +11.6%, diluted EPS +15.5% to $7.74.",
+      "classification": "LOW_RELEVANCE",
+      "relevance_for_portfolio": "Consumer discretionary bellwether. No direct portfolio relevance.",
+      "data_quality": "VALID (SEC 8-K)"
+    }
+  ],
+
+  "earnings_amc_results": [
+    {
+      "ticker": "AVGO",
+      "company": "Broadcom",
+      "date_reported": "2026-06-03",
+      "time": "AMC",
+      "eps_actual": 2.44,
+      "eps_estimate": 2.40,
+      "revenue_actual": "22.19B",
+      "revenue_estimate": "22.12B",
+      "ai_revenue": "10.8B",
+      "beat_miss": "BEAT (EPS +1.7%, Rev slight beat)",
+      "guidance": "Not specified in available data",
+      "regular_session_move": "+5.2% pre-earnings positioning, -0.49% final close",
+      "after_hours_reaction": "Not yet available",
+      "classification": "TOMORROW_WATCH",
+      "relevance_for_portfolio": "AI revenue $10.8B confirms AI infrastructure capex strength. Positive for NVDA (AI chips) and MU (HBM memory) long-term thesis.",
+      "data_quality": "PARTIAL — after-hours reaction pending",
+      "sources": ["Benzinga", "FX Leaders", "TheStreet liveblog"]
+    },
+    {
+      "ticker": "CRWD",
+      "company": "CrowdStrike Holdings",
+      "date_reported": "2026-06-03",
+      "time": "AMC",
+      "eps_actual": 1.10,
+      "eps_estimate": 0.88,
+      "beat_pct": "+25%",
+      "revenue_growth_yoy": "+26%",
+      "special_event": "4-for-1 stock split announced; new Chief AI Officer appointed",
+      "beat_miss": "BEAT",
+      "classification": "TOMORROW_WATCH",
+      "relevance_for_portfolio": "High conviction beat + structural event (stock split). Cybersecurity AI demand accelerating. Not a direct portfolio position but sector read.",
+      "after_hours_reaction": "Not yet confirmed — CRWD regular session -2.78% (likely risk-off from Iran, not earnings)",
+      "data_quality": "VALID (public.com, CNBC)",
+      "sources": ["public.com/stocks/crwd/earnings", "CNBC"]
+    },
+    {
+      "ticker": "VEEV",
+      "company": "Veeva Systems",
+      "date_reported": "2026-06-03",
+      "time": "AMC",
+      "eps_actual": null,
+      "result": "PENDING",
+      "classification": "LOW_RELEVANCE",
+      "data_quality": "NOT AVAILABLE",
+      "note": "Scheduled June 3 AMC but data not yet available."
+    }
+  ],
+
+  "portfolio_sentinel_eod": [
+    {
+      "ticker": "NVDA",
+      "company": "NVIDIA",
+      "alert_level": "WATCH",
+      "price_today": 214.75,
+      "prev_close": 222.82,
+      "change_pct": "-3.62%",
+      "change_abs": "-8.07",
+      "volume": 158218711,
+      "volume_note": "Very high — 2-3x normal. Institutional selling.",
+      "impact": "Geopolitical chip risk + broad tech sell-off. -3.62% on extremely high volume (158M). Iran war escalation creates export/supply chain uncertainty narrative.",
+      "headline": "Iran missiles at Kuwait/Bahrain → tech sector risk-off. NVDA sold heavily with high volume.",
+      "detail": "NVDA down -3.62% on 158M volume. Iran escalation raises geopolitical chip exposure fears. However, AVGO AI revenue $10.8B tonight confirms AI capex is intact. LT thesis (Blackwell demand, AI infrastructure, 30x PE) unchanged. Near-term geopolitical overhang is real risk.",
+      "thesis_status": "Thesis intact LT. Near-term volatility risk from Iran war escalation.",
+      "classification": "PORTFOLIO ALERT - WATCH",
+      "implication": "Volatility risk",
+      "data_source": "Finnhub + Alpha Vantage (confirmed)",
+      "action_note": "VIGILÂNCIA — não é ação. Monitorizar se Iran escalation reduz chip demand or export restrictions."
+    },
+    {
+      "ticker": "CVX",
+      "company": "Chevron",
+      "alert_level": "MATERIAL",
+      "price_today": 189.81,
+      "prev_close": 187.55,
+      "change_pct": "+1.21%",
+      "change_abs": "+2.26",
+      "volume": 7966886,
+      "volume_note": "Elevated — above average on oil news.",
+      "impact": "THESIS REVERSED BACK TO BULLISH. Iran missiles → oil spike → Brent +4.24% to $97.79. Ceasefire from May 29 has collapsed. CVX now $189.81 (+$7.35 from May 29 close ~$182.46).",
+      "headline": "Iran ceasefire collapsed — missiles at Kuwait/Bahrain. Brent crude +4.24% to $97.79. CVX geopolitical oil premium RETURNS.",
+      "detail": "CVX +1.21% as oil surges. The May 29 ceasefire that neutralised the CVX oil catalyst was temporary (5 days). CVX structural thesis (dividend, long-term production) + geopolitical premium now both active. XLE +1.29% confirms sector rotation into energy.",
+      "thesis_status": "REINFORCED — geopolitical oil premium returns. Both structural and tactical thesis now active.",
+      "classification": "PORTFOLIO ALERT - MATERIAL THESIS CHANGE",
+      "implication": "Thesis reinforced",
+      "data_source": "Finnhub + Alpha Vantage (confirmed)",
+      "action_note": "DCA watch — não é recomendação de compra. Etiqueta de vigilância: tese oil reforçada, posição existente beneficia."
+    },
+    {
+      "ticker": "MSFT",
+      "company": "Microsoft",
+      "alert_level": "WATCH",
+      "price_today": 427.34,
+      "prev_close": 441.31,
+      "change_pct": "-3.17%",
+      "change_abs": "-13.97",
+      "volume": null,
+      "impact": "Significant sell-off -3.17%. Iran-driven tech risk-off. No MSFT-specific adverse news found.",
+      "headline": "Broad tech sell-off on Iran escalation. MSFT -3.17%.",
+      "detail": "MSFT down -3.17% — in line with tech sector risk-off from Iran war escalation. No Azure/OpenAI/earnings-specific adverse news. LT thesis (Azure growth, AI copilot, enterprise) unchanged. QQQ -0.26% but MSFT -3.17% suggests some individual rotation.",
+      "thesis_status": "Thesis intact. Near-term volatility.",
+      "classification": "PORTFOLIO ALERT - WATCH",
+      "implication": "Volatility risk",
+      "data_source": "Finnhub",
+      "action_note": "Monitor only — não é ação."
+    },
+    {
+      "ticker": "MU",
+      "company": "Micron Technology",
+      "alert_level": "INFO",
+      "price_today": 1079.57,
+      "prev_close": 1064.10,
+      "change_pct": "+1.45%",
+      "change_abs": "+15.47",
+      "volume": null,
+      "impact": "Positive divergence: MU +1.45% while broad market sold off. AVGO AI revenue $10.8B tonight confirms HBM/AI memory demand. Upcoming catalyst: MU earnings ~June 24.",
+      "headline": "MU resilient +1.45% despite risk-off session. AI memory demand narrative intact.",
+      "detail": "MU outperforming broad market today. AVGO's $10.8B AI revenue tonight is indirect validation of AI chip demand chain (NVDA GPUs → HBM/LPDDR5X demand → MU). Note: price $1,079 reflects significant appreciation since last tracked. Upcoming earnings ~June 24 is key catalyst.",
+      "thesis_status": "REINFORCED — AI capex + HBM demand narrative confirmed by AVGO numbers.",
+      "classification": "PORTFOLIO INFO",
+      "implication": "Thesis reinforced",
+      "upcoming_catalyst": "MU earnings ~June 24, 2026",
+      "data_source": "Finnhub",
+      "action_note": "Monitorizar antes de earnings Jun 24 — não é ação."
+    },
+    {
+      "ticker": "VUUA",
+      "company": "Vanguard S&P 500 UCITS ETF",
+      "alert_level": "WATCH",
+      "market_proxy": "SPY",
+      "spy_close": 754.24,
+      "spy_change_pct": "-0.70%",
+      "impact": "S&P -0.70% on Iran escalation. Third consecutive day of major index records being tested. Geopolitical risk now elevated.",
+      "headline": "S&P -0.70% — Iran war re-escalation weighs on broad market.",
+      "thesis_status": "Long-term thesis intact. Short-term geopolitical volatility risk.",
+      "classification": "PORTFOLIO WATCH",
+      "implication": "Volatility risk",
+      "data_source": "Finnhub",
+      "action_note": "Monitor only."
+    },
+    {
+      "ticker": "VWCE",
+      "company": "Vanguard FTSE All-World UCITS ETF",
+      "alert_level": "WATCH",
+      "impact": "Global risk-off from Iran missiles hitting Gulf states (Kuwait, Bahrain). USD likely firmed. Global equities under pressure.",
+      "headline": "Iran missiles at Gulf states — global risk-off event. VWCE impacted via USD/EM exposure.",
+      "thesis_status": "LT diversification thesis unchanged. Near-term geopolitical risk.",
+      "classification": "PORTFOLIO WATCH",
+      "implication": "Volatility risk",
+      "data_source": "Derived from macro context",
+      "action_note": "Monitor only."
+    }
+  ],
+
+  "lessons": [
+    {
+      "id": 1,
+      "category": "geopolitical_analysis",
+      "lesson": "Ceasefires em conflitos activos são transitórios. O ceasefire Iran-EUA de 29-Mai colapsou em 5 dias. A análise de CVX deve sempre incluir cenários dual: 'ceasefire holds' (neutral oil) e 'ceasefire breaks' (oil premium returns). Não assumir permanência.",
+      "action": "Adicionar ao template R1/R0: campo 'ceasefire_fragility_score' para catalysts geopolíticos."
+    },
+    {
+      "id": 2,
+      "category": "system_reliability",
+      "lesson": "R1 ausente nos dias 2026-06-02 e 2026-06-03 — 2 dias consecutivos sem inteligência matinal. R2 abortado por falta de R1. Isto é uma falha de sistema, não de mercado. Investigar por que o trigger R1 falhou.",
+      "action": "Verificar cron job / trigger R1. Adicionar health check no R3 que alerta quando R1 está ausente há >1 dia."
+    },
+    {
+      "id": 3,
+      "category": "earnings_analysis",
+      "lesson": "PLAB: double earnings miss sem guidance = price discovery prolongada. $34.02 em 29-Mai → $32.11 em 03-Jun (-5.6%). Hipótese bearish válida por múltiplos dias. Quando não existe guidance e há miss duplo, a hipótese bearish deve ter horizonte >1 dia.",
+      "action": "No scoring de earnings, adicionar factor 'guidance_present': se ausente + double miss → bearish score mais elevado com nota de durabilidade."
+    },
+    {
+      "id": 4,
+      "category": "hypothesis_calibration",
+      "lesson": "NVDA fechou $211.14 em 29-Mai — a apenas $0.14 acima do nível de invalidação ($211). Hypothesis survived by margin of cents. Confidence 'MEDIUM' deveria ter gerado invalidation level mais largo (ex: $209). Score 66/100 com MEDIUM confidence não deve usar price targets tão apertados.",
+      "action": "Para MEDIUM confidence: widening invalidation range +/- 1.5%. Para HIGH confidence: range normal."
+    },
+    {
+      "id": 5,
+      "category": "sector_sweep",
+      "lesson": "HPE, PANW, ULTA — 3/3 calendar watches bateram estimativas (junho 1-2). Sweep positivo de earnings confirma sector sentiment. O modelo deveria ter flagged esta convergência como 'EARNINGS_SWEEP_POSITIVE' para informar o R0/R1 de 03-Jun.",
+      "action": "Adicionar lógica de sector sweep no R3: se ≥3 tickers do mesmo sector/semana batem → adicionar nota 'SECTOR_EARNINGS_TAILWIND' ao portfolio relevante."
+    },
+    {
+      "id": 6,
+      "category": "catalyst_quality",
+      "lesson": "CRWD: EPS +25% + 4-for-1 stock split = duplo catalisador (fundamental + técnico). Splits criam momentum de curto prazo (pool de acções maior, preço mais acessível psicologicamente). Este tipo de evento combinado deve ter score de catalisador mais elevado.",
+      "action": "No scoring: 'stock_split_announced' = +5 pontos catalyst score quando combined with earnings beat."
+    },
+    {
+      "id": 7,
+      "category": "ai_infrastructure_chain",
+      "lesson": "AVGO AI revenue $10.8B confirma AI infrastructure capex forte. Este número é proxy directo para NVDA chip demand e MU HBM memory demand. O R3 deve monitorizar AVGO/HPE earnings como leading indicators para o portfolio.",
+      "action": "Adicionar AVGO e HPE como 'portfolio_proxy_indicators' — os seus resultados de earnings são catalysts indirectos para NVDA e MU."
+    }
+  ],
+
+  "model_self_critique": [
+    "R3 está a correr 5 dias após o último R1 válido (29-Mai). Isto reduz significativamente o valor do EOD learning — idealmente o R3 corre no mesmo dia do R1.",
+    "Sem R1/R2 para 02-Jun e 03-Jun, perdemos contexto matinal de dois dias de mercado importantes (HPE/PANW/ULTA earnings, recordes do S&P, nova escalada Iran).",
+    "PLAB tracking deixou de existir após 29-Mai — a continuação bearish não foi capturada até hoje. O sistema precisa de monitorizar posições abertas mesmo sem novo R1.",
+    "MU a $1,079 não foi monitorizado entre R1 (mai-29) e R3 hoje — significant price movement (de cerca de $120-130 em maio para $1,079 agora). É possível que MU tenha feito um reverse split ou que o preço reflicta crescimento real. Necessita validação adicional.",
+    "VIX não retornou via Finnhub API — dependência de web search para metric crítica."
+  ],
+
+  "data_quality_summary": {
+    "alpha_vantage_calls_used": 3,
+    "alpha_vantage_tickers": ["NVDA", "CVX", "AVGO"],
+    "finnhub_tickers_checked": ["NVDA", "CVX", "SPY", "QQQ", "MSFT", "MU", "AVGO", "CRWD", "PLAB", "XLE"],
+    "warnings": [
+      "R1 ausente para 2026-06-02 — R2 abortado",
+      "R1 ausente para 2026-06-03 — R3 sem validação intra-day",
+      "VIX: Finnhub retornou FAIL — usando valor de web search (16.08)",
+      "PLAB close de 29-Mai: estimado ~$33.50 via web search (Gurufocus: -31% a -36.3%); preço actual $32.11 confirmado via Finnhub",
+      "SPY close 29-Mai: estimado ~$755 via web search; sem Finnhub histórico confirmado",
+      "MU preço $1,079: valor significativamente alto vs histórico — possível stock split ou apreciação real. Necessita validação.",
+      "AVGO/CRWD after-hours: dados de reacção pós-earnings não disponíveis até ao fecho desta run"
+    ]
+  },
+
+  "tomorrow_watch": [
+    {
+      "ticker": "CRWD",
+      "reason": "EPS +25% beat + 4-for-1 stock split anunciado. Esperar gap up. High conviction catalyst.",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "AVGO",
+      "reason": "AI revenue $10.8B. After-hours reaction ao beat. Proxy de AI capex para NVDA/MU.",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "CVX",
+      "reason": "Iran ceasefire colapsou. Brent $97.79 (+4.24%). Oil momentum — $100/barril nível psicológico.",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "NVDA",
+      "reason": "Geopolitical chip risk overhang. -3.62% em 158M vol hoje. Monitorizar abertura e se Iran news pesam adicionalmente.",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "XLE",
+      "reason": "Energy sector continuação ou reversão de Iran premium. XLE +1.29% hoje.",
+      "priority": "MEDIUM"
+    },
+    {
+      "ticker": "MU",
+      "reason": "AVGO AI revenue confirma HBM demand. Divergência positiva hoje (+1.45%). Próximo catalisador: earnings ~Jun 24.",
+      "priority": "MEDIUM"
+    },
+    {
+      "ticker": "OIL/BRENT",
+      "reason": "$97.79 — próximo de $100 psicológico. Iran war escalation trajectory.",
+      "priority": "HIGH"
+    }
+  ],
+
+  "sources": [
+    { "name": "Finnhub Live Quotes", "tickers": ["NVDA", "CVX", "SPY", "QQQ", "MSFT", "MU", "AVGO", "CRWD", "PLAB", "XLE"] },
+    { "name": "Alpha Vantage Global Quote", "tickers": ["NVDA", "CVX", "AVGO"], "calls_used": 3 },
+    { "name": "Web Search — Market Close", "query": "US stock market close June 3 2026 S&P Nasdaq VIX" },
+    { "name": "Web Search — Movers", "query": "biggest stock movers June 3 2026 after market close" },
+    { "name": "Web Search — Sector", "query": "sector performance June 3 2026 XLK XLF XLE" },
+    { "name": "Web Search — Earnings AMC", "query": "earnings after market close June 3 2026 Broadcom CrowdStrike" },
+    { "name": "Web Search — PLAB", "query": "PLAB Photronics stock price May 29 2026" },
+    { "name": "Web Search — HPE/PANW/ULTA", "query": "HPE PANW ULTA earnings results June 2026" },
+    { "name": "Web Search — Portfolio/Iran", "query": "NVDA MU MSFT CVX geopolitical Iran oil June 3 2026" },
+    { "name": "SEC EDGAR 8-K", "note": "HPE and ULTA earnings filings confirmed" },
+    { "name": "TheStreet Liveblog", "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-03-2026" },
+    { "name": "Motley Fool", "url": "https://www.fool.com/coverage/stock-market-today/2026/06/03/" },
+    { "name": "Benzinga Earnings Calendar", "url": "https://www.benzinga.com/insights/earnings/26/06/52964815/earnings-scheduled-for-june-3-2026" },
+    { "name": "MarketBeat PANW", "url": "https://www.marketbeat.com/earnings/reports/2026-6-2-palo-alto-networks-inc-stock/" }
+  ]
+}
