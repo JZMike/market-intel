@@ -1,49 +1,68 @@
 {
-  "last_updated": "2026-06-03",
+  "last_updated": "2026-06-04",
   "week": "2026-W23",
-  "period": "2026-05-29 to 2026-06-03",
+  "period": "2026-05-29 to 2026-06-05",
   "r1_runs": ["2026-05-29"],
-  "r1_missing": ["2026-06-02", "2026-06-03"],
-  "r3_runs": ["2026-06-03"],
-  "total_tickers_validated": 5,
+  "r1_missing": ["2026-06-02", "2026-06-03", "2026-06-04"],
+  "r3_runs": ["2026-06-03", "2026-06-04"],
+  "total_tickers_validated": 11,
   "outcomes": {
     "worked": 3,
-    "partially_worked": 1,
+    "partially_worked": 2,
     "no_tradeable_signal": 1,
-    "failed": 0,
+    "failed": 5,
     "not_tracked": 2,
     "data_insufficient": 0
   },
-  "worked_tickers": ["QQQ", "SPY", "PLAB"],
-  "partial_tickers": ["NVDA"],
-  "failed_tickers": [],
-  "most_repeated_tickers": ["QQQ", "SPY", "NVDA", "CVX"],
-  "best_catalyst_types": ["earnings_double_miss_no_guidance", "broad_macro_record_close", "ceasefire_macro"],
-  "weakest_catalyst_types": ["post_earnings_recovery_inline_with_index"],
-  "amc_calendar_watches": {
-    "total": 5,
-    "beats": 5,
+  "worked_tickers": ["QQQ (29-Mai)", "SPY (29-Mai)", "PLAB (29-Mai)"],
+  "partial_tickers": ["NVDA (29-Mai)", "NVDA (04-Jun)"],
+  "failed_tickers": ["CRWD (04-Jun)", "AVGO (04-Jun)", "MU (04-Jun)", "CVX (04-Jun)", "USO/OIL (04-Jun)"],
+  "most_repeated_tickers": ["NVDA", "CVX", "MU", "QQQ"],
+  "best_catalyst_types": [
+    "earnings_double_miss_no_guidance (PLAB)",
+    "broad_macro_record_close (QQQ/SPY 29-Mai)",
+    "positive_relative_strength_divergence (NVDA 04-Jun)"
+  ],
+  "weakest_catalyst_types": [
+    "earnings_beat_high_multiple_sell_the_news (AVGO, CRWD)",
+    "oil_geopolitical_premium (CVX, USO — durou <24h)",
+    "ai_chain_sympathy_play (MU via AVGO)"
+  ],
+  "amc_calendar_watches_cumulative": {
+    "total": 8,
+    "beats": 7,
+    "beat_guide_cut": 1,
     "misses": 0,
-    "beat_tickers": ["HPE", "PANW", "ULTA", "CRWD", "AVGO"],
-    "earnings_sweep_flag": "SECTOR_EARNINGS_TAILWIND — 5/5 beat"
+    "pending": 1,
+    "beat_tickers": ["HPE", "PANW", "ULTA", "CRWD", "AVGO", "IOT"],
+    "beat_but_guide_cut": ["LULU"],
+    "pending_tickers": ["RBRK"],
+    "pattern_note": "7/8 AMC watches bateram — mas 2/8 (CRWD, AVGO) resultaram em queda pós-earnings por valuation premium. Beat ≠ price up em high-multiples."
   },
   "portfolio_sentinel_summary": {
-    "material_alerts": ["CVX"],
-    "watch_alerts": ["NVDA", "MSFT", "VUUA", "VWCE"],
-    "info_alerts": ["MU"],
-    "reinforced_theses": ["CVX", "MU"],
-    "volatility_risk": ["NVDA", "MSFT"]
+    "material_alerts": ["CVX (03-Jun thesis reinforced)", "MU (04-Jun below $1000)"],
+    "watch_alerts": ["NVDA", "MU", "CVX"],
+    "info_alerts": ["MSFT", "VUUA", "VWCE", "NVDA (04-Jun positivo)"],
+    "reinforced_theses": ["CVX (structural LT)", "MU (HBM LT)", "NVDA (force relativa)", "VUUA (Dow record)"],
+    "volatility_risk": ["MU (below $1000, earnings Jun 24)", "AVGO (oversold -12.59%)"]
   },
   "key_macro_events": [
     "2026-05-29: Iran ceasefire (60-day) — oil premium removed",
     "2026-06-01: HPE record earnings — AI capex confirmed",
     "2026-06-02: PANW + ULTA beats — enterprise spend + consumer solid",
-    "2026-06-03: Iran ceasefire collapsed — missiles Kuwait+Bahrain — Brent +4.24% to $97.79"
+    "2026-06-03: Iran ceasefire collapsed — missiles Kuwait+Bahrain — Brent +4.24% to $97.79",
+    "2026-06-04: Dow Jones record 51,561 (+1.73%). Sell-the-news AVGO (-12.59%) + CRWD (-3.82%). Value rotation. Oil premium dissipated."
   ],
   "system_health": {
-    "r1_reliability": "POOR — 2 consecutive missing days (Jun 2-3)",
-    "av_calls_efficiency": "3/5 used (NVDA, CVX, AVGO) — within budget",
-    "finnhub_reliability": "GOOD — 10 tickers, VIX failed",
-    "data_quality_overall": "PARTIAL — R1 gaps reduce cycle value significantly"
-  }
+    "r1_reliability": "CRITICAL — 3 consecutive missing days (Jun 2-3-4). 4 total esta semana.",
+    "av_calls_efficiency": "3/5 used semana passada (NVDA, CVX, AVGO) — 0 usados em 04-Jun",
+    "finnhub_reliability": "GOOD — 13 tickers 04-Jun, VIX failed (proxy via VIXY)",
+    "data_quality_overall": "PARTIAL — R1 gaps críticos. Volume indisponível. Preço único disponível.",
+    "recommendation": "CRÍTICO: Restaurar trigger R1 imediatamente. Implementar R1 fallback mínimo."
+  },
+  "upcoming_catalysts": [
+    { "date": "2026-06-05", "event": "LULU gap down esperado (AH -9.7%)", "priority": "MEDIUM" },
+    { "date": "2026-06-05", "event": "AVGO bounce ou continuação selloff", "priority": "HIGH" },
+    { "date": "~2026-06-24", "event": "MU earnings — catalisador chave para HBM thesis", "priority": "HIGH" }
+  ]
 }
