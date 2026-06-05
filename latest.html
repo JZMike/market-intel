@@ -13,6 +13,22 @@
       line-height: 1.5;
       padding: 12px;
     }
+    .r1-section { border-left: 4px solid #fd7e14; }
+    .r1-header { background: linear-gradient(135deg, #fd7e14 0%, #e55a00 100%); }
+    .score-bar { display: inline-block; height: 8px; border-radius: 4px; background: #667eea; vertical-align: middle; margin-left: 4px; }
+    .score-bar.bearish { background: #dc3545; }
+    .score-bar.bullish { background: #28a745; }
+    .score-bar.portfolio { background: #fd7e14; }
+    .tag { display: inline-block; font-size: 10px; padding: 2px 6px; border-radius: 3px; font-weight: 700; text-transform: uppercase; margin-left: 4px; }
+    .tag.bull { background: #d4edda; color: #155724; }
+    .tag.bear { background: #f8d7da; color: #721c24; }
+    .tag.port { background: #fff3cd; color: #856404; }
+    .tag.neu { background: #e2e3e5; color: #383d41; }
+    .tag.watch { background: #d1ecf1; color: #0c5460; }
+    .tag.avoid { background: #f5c6cb; color: #491217; }
+    .conf-high { color: #155724; font-weight: 700; }
+    .conf-med { color: #856404; font-weight: 700; }
+    .conf-low { color: #721c24; font-weight: 700; }
     .container { max-width: 1200px; margin: 0 auto; }
     header {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -482,9 +498,432 @@
       </div>
     </div>
 
+    <!-- ===== R1 PRE-OPEN FINAL ===== -->
+    <div style="background: linear-gradient(135deg, #fd7e14 0%, #e55a00 100%); color: white; padding: 16px; border-radius: 8px; margin: 24px 0 16px;">
+      <h2 style="font-size: 18px; margin-bottom: 6px;">🔄 Pre-Open Final — 15:23 Lisboa</h2>
+      <div style="font-size: 12px; opacity: 0.9;">
+        Run: R1_PRE_OPEN_FINAL &nbsp;|&nbsp; 15:23 Lisboa / 10:23 ET &nbsp;|&nbsp; <strong style="background:rgba(255,255,255,0.2); padding: 2px 6px; border-radius:3px;">LATE — mercado aberto há 53 min</strong><br>
+        Preços: LIVE (Finnhub) &nbsp;|&nbsp; AV calls: 2/5 &nbsp;|&nbsp; Earnings: CONFIRMED
+      </div>
+    </div>
+
+    <!-- Tape Atualizado -->
+    <div class="section r1-section">
+      <h2>📡 Tape Atualizado — 10:23 ET</h2>
+      <div class="macro-grid">
+        <div class="macro-card">
+          <div class="label">SPY</div>
+          <div class="value" style="color:#dc3545;">$749.93</div>
+          <div class="status">−0.95% live</div>
+        </div>
+        <div class="macro-card">
+          <div class="label">QQQ</div>
+          <div class="value" style="color:#dc3545;">$726.24</div>
+          <div class="status">−1.94% live</div>
+        </div>
+        <div class="macro-card">
+          <div class="label">VIX</div>
+          <div class="value">~16</div>
+          <div class="status">stale Jun 1</div>
+        </div>
+        <div class="macro-card">
+          <div class="label">10Y Yield</div>
+          <div class="value">4.46%</div>
+          <div class="status">−4bps bonds bid</div>
+        </div>
+        <div class="macro-card">
+          <div class="label">DXY</div>
+          <div class="value">—</div>
+          <div class="status">indisponível</div>
+        </div>
+        <div class="macro-card">
+          <div class="label">Bias</div>
+          <div class="value" style="color:#dc3545; font-size: 14px;">RISK-OFF</div>
+          <div class="status">chip sector drag</div>
+        </div>
+      </div>
+      <div style="margin-top: 12px; background: #fff3cd; padding: 10px; border-radius: 4px; font-size: 12px; border-left: 3px solid #ffc107;">
+        <strong>Tema da sessão:</strong> S&amp;P 500 cai arrastado por semis (NVDA −3.1%). QQQ −1.94%. Bonds e petróleo mais fracos (Israel-Líbano ceasefire). Jobs report forte (Mai) mantém risco de subida Fed (Out). Consumer discretionary partido pelo LULU (guidance cut).
+      </div>
+    </div>
+
+    <!-- Earnings BMO Confirmados -->
+    <div class="section r1-section">
+      <h2>✅ Earnings BMO Confirmados</h2>
+      <div class="earnings-grid">
+        <div class="earnings-card" style="border-left-color: #28a745;">
+          <div class="earnings-ticker" style="color: #28a745;">ABM</div>
+          <div class="earnings-meta">
+            <div class="company">ABM Industries — <span style="color:#28a745; font-weight:700;">BEAT</span></div>
+            <div class="details">EPS: $0.90 vs $0.88 est (+2.3%) &nbsp;|&nbsp; Rev: $2.29B vs $2.24B est (+2.4%)</div>
+            <div class="details">Guidance: sem alteração material &nbsp;|&nbsp; Reação: <strong style="color:#28a745;">+4.99%</strong> ($41.84)</div>
+            <div class="why">Facilities services; beat modesto mas confirma resiliência em sector sensível ao ciclo.</div>
+          </div>
+        </div>
+        <div class="earnings-card" style="border-left-color: #28a745;">
+          <div class="earnings-ticker" style="color: #28a745;">GIII</div>
+          <div class="earnings-meta">
+            <div class="company">G-III Apparel — <span style="color:#28a745; font-weight:700;">BEAT + GUIDANCE RAISE</span></div>
+            <div class="details">Q1 FY2027: beat top &amp; bottom vs guidance &nbsp;|&nbsp; Rev est: $541M</div>
+            <div class="details">FY27 EPS guidance elevado: <strong>$3.85–$3.95</strong> &nbsp;|&nbsp; Reação: <strong style="color:#28a745;">+7.71%</strong> ($34.51)</div>
+            <div class="why">Apparel beat + guidance raise = catalisador forte. Sector peer LULU em colapso — força relativa notável.</div>
+          </div>
+        </div>
+        <div class="earnings-card" style="border-left-color: #aaa;">
+          <div class="earnings-ticker" style="color: #aaa;">GASS / HERE / TOUR</div>
+          <div class="earnings-meta">
+            <div class="company">Gulfport / HERE Global / Tutor Perini — <span style="color:#aaa;">PENDING</span></div>
+            <div class="details">Resultados não encontrados nas pesquisas. Possível reporting privado ou timing adiado.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Earnings AMC Watch -->
+    <div class="section r1-section">
+      <h2>🔔 Earnings AMC — Atualização Crítica</h2>
+      <div style="background: #f8d7da; padding: 12px; border-radius: 4px; border-left: 3px solid #dc3545; font-size: 13px;">
+        <strong>⚠️ CFLT REMOVIDO — ADQUIRIDA PELA IBM</strong><br>
+        IBM completou a aquisição da Confluent Inc. no Q1 2026 ($11.59B). A empresa já não é cotada publicamente.
+        Não há earnings AMC independentes hoje.<br>
+        <em>Ação: Monitorizar IBM nos próximos earnings para métricas de integração Confluent.</em>
+      </div>
+      <div style="margin-top: 8px; font-size: 12px; color: #666;">
+        R0 tinha CFLT como high-importance AMC watch. Esta é uma correção de dados no R1.
+      </div>
+    </div>
+
+    <!-- Portfolio Sentinel Update -->
+    <div class="section r1-section">
+      <h2>🛡️ Portfolio Sentinel — Update R1</h2>
+      <div style="display: grid; gap: 8px; font-size: 13px;">
+        <div style="background: #fff3cd; padding: 10px; border-radius: 4px; border-left: 3px solid #fd7e14;">
+          <strong>🟡 NVDA — INFO → WATCH</strong> &nbsp;<span style="font-size:11px; color:#666;">($211.94, −3.07%)</span><br>
+          Pressão de sector nos chips. Headline: <em>"S&amp;P 500 falls on chip stock weakness"</em>. Apesar dos produtos Cosmos 3 / Alpamayo 2 (R0), mercado prioriza rotação setorial.<br>
+          <strong>Watch:</strong> Suporte $210 &nbsp;|&nbsp; Recuperação: reclaim $215+ &nbsp;|&nbsp; Analistas: Buy, PT $298
+        </div>
+        <div style="background: #fff3cd; padding: 10px; border-radius: 4px; border-left: 3px solid #ffc107;">
+          <strong>🟡 MU — NONE → WATCH (inferred)</strong><br>
+          Exposição ao mesmo sector de semis. Não verificado diretamente mas provável rotação similar.
+        </div>
+        <div style="background: #d4edda; padding: 10px; border-radius: 4px; border-left: 3px solid #28a745;">
+          <strong>🟢 VUUA</strong> — SPY proxy, −0.95%. Sem breakdown estrutural.<br>
+          <strong>🟢 MSFT, CVX, VWCE</strong> — Sem alertas materiais hoje.
+        </div>
+      </div>
+    </div>
+
+    <!-- Master Pre-Open Table -->
+    <div class="section r1-section">
+      <h2>📊 Master Pre-Open Table</h2>
+
+      <!-- Mobile cards -->
+      <div class="mobile-only" style="display: grid; gap: 10px;">
+        <div style="background:#f9f9f9; padding:12px; border-radius:4px; border-left:4px solid #28a745;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-size:16px; font-weight:bold; color:#667eea;">GIII</span>
+            <span class="tag bull">BULLISH OBS</span>
+          </div>
+          <div style="font-size:12px; color:#666; margin-bottom:4px;">$34.51 &nbsp;<strong style="color:#28a745;">+7.71%</strong> &nbsp;|&nbsp; Score: 68 &nbsp;<span class="conf-med">MEDIUM</span></div>
+          <div style="font-size:12px;">BMO beat + FY27 guidance raise $3.85–$3.95 &nbsp;|&nbsp; Mid-cap Consumer</div>
+        </div>
+        <div style="background:#f9f9f9; padding:12px; border-radius:4px; border-left:4px solid #dc3545;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-size:16px; font-weight:bold; color:#667eea;">LULU</span>
+            <span class="tag bear">BEARISH OBS</span>
+          </div>
+          <div style="font-size:12px; color:#666; margin-bottom:4px;">$115.12 &nbsp;<strong style="color:#dc3545;">−7.85%</strong> &nbsp;|&nbsp; Score: 64 &nbsp;<span class="conf-med">MEDIUM</span></div>
+          <div style="font-size:12px;">Guidance cut; premarket −13% → −7.85%; sinal consumer discretionary</div>
+        </div>
+        <div style="background:#f9f9f9; padding:12px; border-radius:4px; border-left:4px solid #28a745;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-size:16px; font-weight:bold; color:#667eea;">ABM</span>
+            <span class="tag bull">BULLISH OBS</span>
+          </div>
+          <div style="font-size:12px; color:#666; margin-bottom:4px;">$41.84 &nbsp;<strong style="color:#28a745;">+4.99%</strong> &nbsp;|&nbsp; Score: 56 &nbsp;<span class="conf-med">MEDIUM</span></div>
+          <div style="font-size:12px;">BMO beat EPS+Rev; Industrials mid-cap confirma ciclo</div>
+        </div>
+        <div style="background:#f9f9f9; padding:12px; border-radius:4px; border-left:4px solid #fd7e14;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-size:16px; font-weight:bold; color:#667eea;">NVDA</span>
+            <span class="tag port">PORTFOLIO ALERT</span>
+          </div>
+          <div style="font-size:12px; color:#666; margin-bottom:4px;">$211.94 &nbsp;<strong style="color:#dc3545;">−3.07%</strong> &nbsp;|&nbsp; Score: 53 &nbsp;<span class="conf-med">MEDIUM</span></div>
+          <div style="font-size:12px;">Rotação sector chips; suporte $210; thesis longo prazo intacta</div>
+        </div>
+        <div style="background:#f9f9f9; padding:12px; border-radius:4px; border-left:4px solid #dc3545;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-size:16px; font-weight:bold; color:#667eea;">GWRE</span>
+            <span class="tag bear">BEARISH OBS</span>
+          </div>
+          <div style="font-size:12px; color:#666; margin-bottom:4px;">$140.70 &nbsp;<strong style="color:#dc3545;">−6.93%</strong> &nbsp;|&nbsp; Score: 49 &nbsp;<span class="conf-med">MEDIUM</span></div>
+          <div style="font-size:12px;">Software enterprise sob pressão; sinal sector tech</div>
+        </div>
+        <div style="background:#f9f9f9; padding:12px; border-radius:4px; border-left:4px solid #aaa;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-size:16px; font-weight:bold; color:#667eea;">FAF</span>
+            <span class="tag neu">NEUTRAL / WAIT</span>
+          </div>
+          <div style="font-size:12px; color:#666; margin-bottom:4px;">$66.29 &nbsp;<strong>+0.59%</strong> &nbsp;|&nbsp; Score: 35 &nbsp;<span class="conf-low">LOW</span></div>
+          <div style="font-size:12px;">Premarket +13% totalmente apagado — gap-and-trap. Evitar.</div>
+        </div>
+      </div>
+
+      <!-- Desktop table -->
+      <div class="desktop-only">
+        <table style="width:100%; font-size:12px; border-collapse:collapse;">
+          <thead>
+            <tr style="border-bottom:2px solid #fd7e14; background:#fff8f3;">
+              <th style="text-align:left; padding:8px;">Ticker</th>
+              <th style="text-align:left; padding:8px;">Classificação</th>
+              <th style="text-align:right; padding:8px;">Preço</th>
+              <th style="text-align:right; padding:8px;">Gap%</th>
+              <th style="text-align:center; padding:8px;">Score</th>
+              <th style="text-align:center; padding:8px;">Confiança</th>
+              <th style="text-align:left; padding:8px;">Catalisador</th>
+              <th style="text-align:left; padding:8px;">Data Q.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #ddd;">
+              <td style="padding:8px; font-weight:bold; color:#667eea;">GIII</td>
+              <td style="padding:8px;"><span class="tag bull">BULLISH OBS</span></td>
+              <td style="padding:8px; text-align:right;">$34.51</td>
+              <td style="padding:8px; text-align:right; color:#28a745; font-weight:bold;">+7.71%</td>
+              <td style="padding:8px; text-align:center;">68</td>
+              <td style="padding:8px; text-align:center;" class="conf-med">MEDIUM</td>
+              <td style="padding:8px;">BMO beat + FY27 guidance raise $3.85–$3.95</td>
+              <td style="padding:8px;"><span class="badge valid">CONFIRMED</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #ddd;">
+              <td style="padding:8px; font-weight:bold; color:#667eea;">LULU</td>
+              <td style="padding:8px;"><span class="tag bear">BEARISH OBS</span></td>
+              <td style="padding:8px; text-align:right;">$115.12</td>
+              <td style="padding:8px; text-align:right; color:#dc3545; font-weight:bold;">−7.85%</td>
+              <td style="padding:8px; text-align:center;">64</td>
+              <td style="padding:8px; text-align:center;" class="conf-med">MEDIUM</td>
+              <td style="padding:8px;">Guidance cut; premarket −13% → −7.85%</td>
+              <td style="padding:8px;"><span class="badge valid">LIVE</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #ddd;">
+              <td style="padding:8px; font-weight:bold; color:#667eea;">ABM</td>
+              <td style="padding:8px;"><span class="tag bull">BULLISH OBS</span></td>
+              <td style="padding:8px; text-align:right;">$41.84</td>
+              <td style="padding:8px; text-align:right; color:#28a745; font-weight:bold;">+4.99%</td>
+              <td style="padding:8px; text-align:center;">56</td>
+              <td style="padding:8px; text-align:center;" class="conf-med">MEDIUM</td>
+              <td style="padding:8px;">EPS $0.90 vs $0.88 est; Rev $2.29B vs $2.24B</td>
+              <td style="padding:8px;"><span class="badge valid">CONFIRMED</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #ddd;">
+              <td style="padding:8px; font-weight:bold; color:#667eea;">NVDA</td>
+              <td style="padding:8px;"><span class="tag port">PORTFOLIO ALERT</span></td>
+              <td style="padding:8px; text-align:right;">$211.94</td>
+              <td style="padding:8px; text-align:right; color:#dc3545; font-weight:bold;">−3.07%</td>
+              <td style="padding:8px; text-align:center;">53</td>
+              <td style="padding:8px; text-align:center;" class="conf-med">MEDIUM</td>
+              <td style="padding:8px;">Chip sector rotation; suporte $210</td>
+              <td style="padding:8px;"><span class="badge valid">LIVE</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #ddd;">
+              <td style="padding:8px; font-weight:bold; color:#667eea;">GWRE</td>
+              <td style="padding:8px;"><span class="tag bear">BEARISH OBS</span></td>
+              <td style="padding:8px; text-align:right;">$140.70</td>
+              <td style="padding:8px; text-align:right; color:#dc3545; font-weight:bold;">−6.93%</td>
+              <td style="padding:8px; text-align:center;">49</td>
+              <td style="padding:8px; text-align:center;" class="conf-med">MEDIUM</td>
+              <td style="padding:8px;">Software enterprise; sector tech pressure</td>
+              <td style="padding:8px;"><span class="badge valid">LIVE</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #ddd;">
+              <td style="padding:8px; font-weight:bold; color:#999;">FAF</td>
+              <td style="padding:8px;"><span class="tag neu">NEUTRAL / WAIT</span></td>
+              <td style="padding:8px; text-align:right;">$66.29</td>
+              <td style="padding:8px; text-align:right;">+0.59%</td>
+              <td style="padding:8px; text-align:center;">35</td>
+              <td style="padding:8px; text-align:center;" class="conf-low">LOW</td>
+              <td style="padding:8px;">Gap +13% premarket → totalmente apagado</td>
+              <td style="padding:8px;"><span class="badge valid">LIVE</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid #ddd; background:#f9f9f9;">
+              <td style="padding:8px; font-weight:bold; color:#aaa;">SPY</td>
+              <td style="padding:8px; color:#aaa;">SECTOR REF</td>
+              <td style="padding:8px; text-align:right;">$749.93</td>
+              <td style="padding:8px; text-align:right; color:#dc3545;">−0.95%</td>
+              <td style="padding:8px; text-align:center;">—</td>
+              <td style="padding:8px; text-align:center;">—</td>
+              <td style="padding:8px;">S&amp;P 500 chip drag</td>
+              <td style="padding:8px;"><span class="badge valid">LIVE</span></td>
+            </tr>
+            <tr style="background:#f9f9f9;">
+              <td style="padding:8px; font-weight:bold; color:#aaa;">QQQ</td>
+              <td style="padding:8px; color:#aaa;">SECTOR REF</td>
+              <td style="padding:8px; text-align:right;">$726.24</td>
+              <td style="padding:8px; text-align:right; color:#dc3545;">−1.94%</td>
+              <td style="padding:8px; text-align:center;">—</td>
+              <td style="padding:8px; text-align:center;">—</td>
+              <td style="padding:8px;">Nasdaq tech/semi drag</td>
+              <td style="padding:8px;"><span class="badge valid">LIVE</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Top Observation -->
+    <div class="section r1-section">
+      <h2>🎯 Top Observation para o Open</h2>
+      <div style="background:#fff3cd; padding:8px; border-radius:4px; font-size:11px; margin-bottom:12px; border-left:3px solid #ffc107;">
+        ⚠️ R1 late (15:23 Lisboa): janela pré-abertura passou. Estes são os tickers a acompanhar no <strong>R2 (15:50)</strong>.
+      </div>
+
+      <!-- GIII #1 -->
+      <div style="background:#f9f9f9; padding:14px; border-radius:6px; border-left:4px solid #28a745; margin-bottom:12px;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+          <div>
+            <span style="font-size:20px; font-weight:bold; color:#667eea;">GIII</span>
+            <span class="tag bull" style="font-size:11px;">BULLISH OBS</span>
+            <span style="font-size:11px; margin-left:8px; color:#28a745; font-weight:bold;">Score: 68</span>
+            <span class="conf-med" style="font-size:11px; margin-left:6px;">MEDIUM</span>
+          </div>
+          <div style="text-align:right; font-size:13px;">
+            <strong style="color:#28a745;">$34.51</strong> &nbsp;<span style="color:#28a745;">+7.71%</span>
+          </div>
+        </div>
+        <div style="font-size:12px; margin-bottom:8px; color:#333;"><strong>Hipótese:</strong> BMO beat + FY27 guidance raise sustenta gap. Apparel bate quando peer (LULU) colapsa — força relativa nítida.</div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; font-size:11px;">
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Catalisador:</strong> Q1 FY2027 beat; EPS guide $3.85–$3.95</div>
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Gap 53 min:</strong> Mantém-se +7.71% ✓</div>
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Validar R2:</strong> VWAP hold? Volume sustentado?</div>
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Invalidação:</strong> Close abaixo $32.50</div>
+        </div>
+      </div>
+
+      <!-- LULU #2 -->
+      <div style="background:#f9f9f9; padding:14px; border-radius:6px; border-left:4px solid #dc3545; margin-bottom:12px;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+          <div>
+            <span style="font-size:20px; font-weight:bold; color:#667eea;">LULU</span>
+            <span class="tag bear" style="font-size:11px;">BEARISH OBS</span>
+            <span style="font-size:11px; margin-left:8px; color:#dc3545; font-weight:bold;">Score: 64</span>
+            <span class="conf-med" style="font-size:11px; margin-left:6px;">MEDIUM</span>
+          </div>
+          <div style="text-align:right; font-size:13px;">
+            <strong style="color:#dc3545;">$115.12</strong> &nbsp;<span style="color:#dc3545;">−7.85%</span>
+          </div>
+        </div>
+        <div style="font-size:12px; margin-bottom:8px; color:#333;"><strong>Hipótese:</strong> Guidance cut severo = selloff estrutural. Recuperação de −13% para −7.85% pode ser distribuição institucional.</div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; font-size:11px;">
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Catalisador:</strong> Full-year guidance cut; Q2 fraco</div>
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Gap 53 min:</strong> Parcial (−13% → −7.85%)</div>
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Validar R2:</strong> Abaixo $115 ou bounce?</div>
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Invalidação bear:</strong> Reclaim $120+</div>
+        </div>
+      </div>
+
+      <!-- ABM #3 -->
+      <div style="background:#f9f9f9; padding:14px; border-radius:6px; border-left:4px solid #28a745; margin-bottom:12px;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+          <div>
+            <span style="font-size:20px; font-weight:bold; color:#667eea;">ABM</span>
+            <span class="tag bull" style="font-size:11px;">BULLISH OBS</span>
+            <span style="font-size:11px; margin-left:8px; color:#28a745; font-weight:bold;">Score: 56</span>
+            <span class="conf-med" style="font-size:11px; margin-left:6px;">MEDIUM</span>
+          </div>
+          <div style="text-align:right; font-size:13px;">
+            <strong style="color:#28a745;">$41.84</strong> &nbsp;<span style="color:#28a745;">+4.99%</span>
+          </div>
+        </div>
+        <div style="font-size:12px; margin-bottom:8px; color:#333;"><strong>Hipótese:</strong> Beat modesto em sector sensível ao ciclo confirma resiliência. Mid-cap sustenta gap 53 min.</div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; font-size:11px;">
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Catalisador:</strong> EPS +2.3% beat; Rev +2.4% beat</div>
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Gap 53 min:</strong> Mantém-se +4.99% ✓</div>
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Validar R2:</strong> Volume confirma? $41 aguenta?</div>
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Invalidação:</strong> Abaixo $41.00</div>
+        </div>
+      </div>
+
+      <!-- NVDA #4 -->
+      <div style="background:#f9f9f9; padding:14px; border-radius:6px; border-left:4px solid #fd7e14; margin-bottom:0;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+          <div>
+            <span style="font-size:20px; font-weight:bold; color:#667eea;">NVDA</span>
+            <span class="tag port" style="font-size:11px;">PORTFOLIO ALERT</span>
+            <span style="font-size:11px; margin-left:8px; color:#fd7e14; font-weight:bold;">Score: 53</span>
+            <span class="conf-med" style="font-size:11px; margin-left:6px;">MEDIUM</span>
+          </div>
+          <div style="text-align:right; font-size:13px;">
+            <strong style="color:#dc3545;">$211.94</strong> &nbsp;<span style="color:#dc3545;">−3.07%</span>
+          </div>
+        </div>
+        <div style="font-size:12px; margin-bottom:8px; color:#333;"><strong>Hipótese:</strong> Rotação chips pressiona posição de portfolio. Thesis long-term intacta mas $210 é nível crítico intraday.</div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; font-size:11px;">
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Catalisador neg.:</strong> Semi rotation; QQQ −1.94%</div>
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Suporte:</strong> $210.00 chave</div>
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Validar R2:</strong> $210 aguenta? QQQ recupera?</div>
+          <div style="background:white; padding:6px; border-radius:3px;"><strong>Recuperação:</strong> Reclaim $215+ = alerta diminui</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- R2 Tracking Placeholder -->
+    <div class="section r1-section">
+      <h2>📋 R2 Tracking Placeholder — 15:50 Lisboa</h2>
+      <table style="width:100%; font-size:12px; border-collapse:collapse;">
+        <thead>
+          <tr style="border-bottom:2px solid #fd7e14; background:#fff8f3;">
+            <th style="padding:8px; text-align:left;">Ticker</th>
+            <th style="padding:8px; text-align:right;">Preço R1</th>
+            <th style="padding:8px; text-align:left;">Hipótese</th>
+            <th style="padding:8px; text-align:left;">O que validar no R2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #ddd;">
+            <td style="padding:8px; font-weight:bold; color:#28a745;">GIII</td>
+            <td style="padding:8px; text-align:right;">$34.51</td>
+            <td style="padding:8px;">Gap hold acima $33</td>
+            <td style="padding:8px;">Gap &gt;$33? Volume? VWAP? Sellers?</td>
+          </tr>
+          <tr style="border-bottom:1px solid #ddd;">
+            <td style="padding:8px; font-weight:bold; color:#dc3545;">LULU</td>
+            <td style="padding:8px; text-align:right;">$115.12</td>
+            <td style="padding:8px;">Fraqueza persiste; bounce poss.</td>
+            <td style="padding:8px;">Abaixo $115? Contágio sector? $120 = bounce</td>
+          </tr>
+          <tr style="border-bottom:1px solid #ddd;">
+            <td style="padding:8px; font-weight:bold; color:#28a745;">ABM</td>
+            <td style="padding:8px; text-align:right;">$41.84</td>
+            <td style="padding:8px;">Gap hold acima $41</td>
+            <td style="padding:8px;">Gap &gt;$41? Volume institucional?</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; font-weight:bold; color:#fd7e14;">NVDA</td>
+            <td style="padding:8px; text-align:right;">$211.94</td>
+            <td style="padding:8px;">$210 suporte crítico</td>
+            <td style="padding:8px;">$210 aguenta? QQQ direcção? Break $208?</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- R1 Data Quality -->
+    <div class="section r1-section">
+      <h2>🔬 Data Quality R1</h2>
+      <div style="display:grid; gap:6px; font-size:12px;">
+        <div>Preços: <span class="badge valid">LIVE (Finnhub 10:23 ET)</span> &nbsp; Earnings BMO: <span class="badge valid">CONFIRMED</span> &nbsp; Volume: <span class="badge partial">PARTIAL</span> &nbsp; VIX: <span class="badge stale">STALE (Jun 1)</span> &nbsp; DXY: <span class="badge stale">MISSING</span></div>
+        <div>Alpha Vantage: 2/5 calls usados (GIII + NVDA prev-close confirmation)</div>
+        <div style="background:#f8d7da; padding:8px; border-radius:4px; border-left:3px solid #dc3545;">⚠️ CFLT removido — adquirida IBM Q1 2026. R0 data estava desatualizada neste ponto.</div>
+        <div style="background:#fff3cd; padding:8px; border-radius:4px; border-left:3px solid #ffc107;">⚠️ R1 executado com atraso: 15:23 Lisboa / 10:23 ET (mercado aberto há 53 min). Pré-abertura não foi capturada. R2 deve correr às 15:50.</div>
+      </div>
+      <div style="margin-top:8px; font-size:11px; color:#666;">
+        Fontes: Finnhub API · Alpha Vantage API (2 calls) · TheStreet · StockTitan · Quiver Quantitative · Web search Jun 5 2026
+      </div>
+    </div>
+
     <div class="footer">
-      Generated: 2026-06-05 09:38 Lisbon (04:38 ET) | Run mode: NORMAL_MARKET_RADAR<br>
-      Sources: Finnhub, Yahoo Finance, CNBC, Federal Reserve, Web search<br>
+      R0 gerado: 2026-06-05 09:38 Lisboa (04:38 ET) &nbsp;|&nbsp; R1 gerado: 2026-06-05 15:23 Lisboa (10:23 ET)<br>
+      Sources: Finnhub, Alpha Vantage, TheStreet, StockTitan, Quiver Quantitative, Web search<br>
       <a href="https://jzmike.github.io/market-intel/latest.html" style="color: #667eea;">Latest report</a> |
       <a href="https://jzmike.github.io/market-intel/reports/2026/06/2026-06-05.html" style="color: #667eea;">This report</a>
     </div>
