@@ -1,29 +1,21 @@
 {
-  "last_updated": "2026-06-05",
-  "week_current": "2026-W23",
-  "period_current": "2026-06-01 to 2026-06-05",
-  "r1_runs_this_week": [],
-  "r1_missing_this_week": ["2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05"],
-  "r3_runs_this_week": ["2026-06-03", "2026-06-05"],
-  "r0_runs_this_week": ["2026-06-05"],
-  "r1_absence_streak": 4,
+  "last_updated": "2026-06-08",
+  "week_current": "2026-W24",
+  "period_current": "2026-06-08",
+  "r1_runs_this_week": ["2026-06-08"],
+  "r1_missing_this_week": [],
+  "r2_runs_this_week": ["2026-06-08"],
+  "r3_runs_this_week": ["2026-06-08"],
+  "r0_runs_this_week": ["2026-06-08"],
+  "r1_absence_streak": 0,
   "system_health": {
-    "r1_reliability": "CRITICAL — 4 consecutive missing days (Jun 2-5). System operating in degraded mode.",
-    "av_calls_efficiency": "0/5 used this week — Finnhub sufficient for all price data",
-    "finnhub_reliability": "GOOD — VIX direct unavailable; VIXY proxy used",
-    "data_quality_overall": "DEGRADED — R1 gaps severely reduce cycle value"
+    "r1_reliability": "GOOD — Full R0+R1+R2+R3 cycle completed on 2026-06-08. Streak broken after 4 consecutive missing days.",
+    "av_calls_efficiency": "5/5 used today — R1: 2 (NVDA+MU), R3: 3 (NVDA+MU+MSFT)",
+    "finnhub_reliability": "GOOD — VIX direct unavailable; VIXY proxy used. Quote endpoint reliable for all tickers.",
+    "data_quality_overall": "GOOD — Full data cycle; minor gaps in VIX direct and 10Y refresh"
   },
-  "week_previous": "2026-W22",
-  "period_previous": "2026-05-29 to 2026-06-03",
-  "total_tickers_validated_w22": 5,
-  "outcomes_w22": {
-    "worked": 3,
-    "partially_worked": 1,
-    "no_tradeable_signal": 1,
-    "failed": 0,
-    "not_tracked": 2,
-    "data_insufficient": 0
-  },
+  "week_previous": "2026-W23",
+  "period_previous": "2026-06-01 to 2026-06-05",
   "total_tickers_validated_w23": 4,
   "outcomes_w23": {
     "worked": 2,
@@ -32,52 +24,87 @@
     "data_insufficient": 1,
     "no_signal": 0
   },
-  "worked_tickers_w23": ["ABM", "GIII"],
-  "failed_tickers_w23": ["NVDA"],
-  "data_insufficient_tickers_w23": ["CFLT"],
-  "most_repeated_tickers": ["NVDA", "MU", "CVX", "QQQ", "SPY"],
+  "total_tickers_validated_w24_so_far": 5,
+  "outcomes_w24": {
+    "worked": 1,
+    "partially_worked": 2,
+    "failed": 2,
+    "no_tradeable_signal": 2,
+    "data_insufficient": 0
+  },
+  "worked_tickers_w24": ["QQQ"],
+  "partially_worked_w24": ["SPY", "MU"],
+  "failed_tickers_w24": ["NVDA", "CPB"],
+  "no_signal_w24": ["STI", "BGMS"],
+  "most_repeated_tickers": ["NVDA", "MU", "QQQ", "SPY", "MSFT"],
   "best_catalyst_types": [
-    "bmo_earnings_beat_guidance_raise",
-    "earnings_double_miss_no_guidance",
-    "broad_macro_record_close"
+    "qqq_spy_relative_strength_tech_recovery",
+    "capitulation_bottom_identification_macro_shock",
+    "new_catalyst_at_open_large_cap_institutional"
   ],
   "weakest_catalyst_types": [
-    "product_launch_vs_macro_headwind",
-    "post_earnings_recovery_inline_with_index",
-    "geopolitical_oil_premium_vs_strong_USD"
+    "premarket_selling_narrative_for_strong_fundamental_names",
+    "defensive_sector_accumulation_in_bounce_tape",
+    "monday_vix_estimate_from_friday_close"
   ],
-  "amc_calendar_watches_w23": {
-    "total": 1,
+  "amc_calendar_watches_w24": {
+    "total": 4,
+    "beats": 1,
+    "misses": 1,
+    "mixed": 1,
+    "pending_unconfirmed": 1,
+    "beat_tickers": ["GLOO"],
+    "miss_tickers": ["AVO"],
+    "mixed_tickers": ["CPB"],
+    "unconfirmed_tickers": ["MIND"]
+  },
+  "bmo_calendar_watches_w24": {
+    "total": 5,
     "beats": 0,
     "misses": 0,
-    "pending": 1,
-    "pending_tickers": ["CFLT"]
+    "pending": 5,
+    "note": "All 5 BMO micro-caps (GMHS, ZEPP, WDH, FTRS, ASGI) had no published results by R1 time"
   },
-  "bmo_calendar_watches_w23": {
-    "total": 2,
-    "beats": 2,
-    "misses": 0,
-    "beat_tickers": ["ABM", "GIII"]
+  "portfolio_sentinel_summary_w24": {
+    "material_alerts": [],
+    "watch_alerts": ["MU (recovery underway; still -12.1% from pre-NFP)"],
+    "critical_alerts": [],
+    "info_alerts": ["NVDA (+1.73% new Corning catalyst)", "MSFT (-1.18% underperform)"],
+    "reinforced_theses": ["NVDA (analyst upgrade + new infrastructure deal)", "MU (HBM structural demand intact)"],
+    "weakened_theses": [],
+    "volatility_risk": [],
+    "dca_watch_labels": ["MU (surveillance only — not a recommendation)"]
   },
-  "portfolio_sentinel_summary_w23": {
-    "material_alerts": ["NVDA (2-day selloff)", "MU (2-day -20%)"],
-    "watch_alerts": ["CVX", "MSFT", "VUUA", "VWCE"],
-    "critical_alerts": ["MU"],
-    "reinforced_theses": [],
-    "weakened_theses": ["MU (near-term HBM demand uncertainty from AVGO guidance)"],
-    "volatility_risk": ["NVDA", "MSFT", "VUUA", "VWCE"]
-  },
-  "key_macro_events_w23": [
-    "2026-06-03: Iran ceasefire collapsed — missiles Kuwait+Bahrain — Brent +4.24% to $97.79",
-    "2026-06-04: AVGO -15.2% despite AI beat — guidance concerns triggered chip selloff",
-    "2026-06-04: CRWD -7.11% sell-the-news post split+beat",
-    "2026-06-05: NFP May +172K (beat) — Fed rate hike bets rekindled — Nasdaq -4.18% worst day since April 2025",
-    "2026-06-05: NVDA -6.20%, MU -13.25% — 2nd day chip selloff amplified by macro",
-    "2026-06-05: ABM +6.67%, GIII +5.21% — earnings beats resilient in bear tape"
+  "key_macro_events_w24": [
+    "2026-06-08: NFP-shock recovery day — Nasdaq +0.86%, QQQ +1.56% vs SPY +0.23%",
+    "2026-06-08: VIX compressed to 15.40 (vs Friday spike 21.51) — weekend absorption confirmed",
+    "2026-06-08: NVDA $3.2B Corning manufacturing deal — new AI infrastructure catalyst",
+    "2026-06-08: MU +9.87% — explosive institutional mean-reversion after macro-panic selloff",
+    "2026-06-08: CPB AMC — EPS beat $0.50 vs $0.48; revenue miss $2.366B vs $2.405B; soup -8%, snacks -4%"
   ],
-  "week_theme": "CHIP_SECTOR_REPRICING — AVGO guidance concern + NFP macro shock triggered 2-day AI chip selloff. BMO earnings beats proved resilient against macro headwinds.",
-  "portfolio_drawdown_alert": {
-    "MU": {"2day_drawdown_pct": -19.97, "from_price": 1079.57, "to_price": 864.01, "alert": "CRITICAL"},
-    "NVDA": {"2day_drawdown_pct": -4.50, "from_price": 214.75, "to_price": 205.10, "alert": "MATERIAL"}
+  "week_theme": "NFP_SHOCK_RECOVERY — Monday reversal after Friday's -4.18% Nasdaq shock. VIX compressed as expected (weekend effect). Chip stocks led recovery (MU +9.87%, NVDA +1.73%). Model errors: VIX regime overestimate and premarket selling narrative overweight.",
+  "model_accuracy_w24": {
+    "directional_correct": 3,
+    "directional_wrong": 2,
+    "accuracy_pct": 60,
+    "note": "QQQ, SPY, MU directional calls correct (QQQ worked cleanly, MU bottom correctly identified). NVDA and CPB direction calls failed."
+  },
+  "portfolio_drawdown_recovery": {
+    "MU": {
+      "pre_nfp_price": 1079.57,
+      "friday_close": 864.01,
+      "today_close": 949.28,
+      "recovery_pct_from_low": 9.87,
+      "still_below_pre_nfp_pct": -12.08,
+      "alert": "WATCH"
+    },
+    "NVDA": {
+      "pre_nfp_price": 214.75,
+      "friday_close": 205.10,
+      "today_close": 208.64,
+      "recovery_pct_from_low": 1.73,
+      "still_below_pre_nfp_pct": -2.84,
+      "alert": "INFO"
+    }
   }
 }

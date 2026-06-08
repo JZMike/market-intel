@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Market Intel R0+R1+R2 — 2026-06-08</title>
+  <title>Market Intel R3 EOD — 2026-06-08</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.6; }
@@ -89,6 +89,7 @@
         <span class="badge">Monday</span>
         <span class="badge bullish">Setup: RISK-ON RALLY</span>
         <span class="badge">Target: 2026-06-08</span>
+        <span class="badge bullish">R3: EOD Learning 22:06 (17:06 ET)</span>
       </div>
     </header>
 
@@ -879,6 +880,319 @@
         <div>• Fontes: Finnhub API, web search (TheStreet/Schwab/CNBC), R1 JSON</div>
       </div>
     </div>
+
+  <!-- ===== R3 EOD LEARNING — 22h06 ===== -->
+  <h2>🎯 EOD Learning — 22h06 Lisboa / 17h06 ET</h2>
+
+  <!-- 1. Market Close Snapshot -->
+  <h3>1. Market Close Snapshot</h3>
+  <div class="macro-grid" style="margin-bottom:1rem;">
+    <div class="macro-card">
+      <div class="macro-label">SPY</div>
+      <div class="macro-value">$739.22</div>
+      <div class="macro-change up">+0.23%</div>
+      <div style="font-size:0.8rem;color:#8b949e;margin-top:0.25rem;">H $745.34 / L $738.19</div>
+    </div>
+    <div class="macro-card">
+      <div class="macro-label">QQQ</div>
+      <div class="macro-value">$716.07</div>
+      <div class="macro-change up">+1.56%</div>
+      <div style="font-size:0.8rem;color:#8b949e;margin-top:0.25rem;">H $723.03 / L $713.07</div>
+    </div>
+    <div class="macro-card">
+      <div class="macro-label">VIX (proxy)</div>
+      <div class="macro-value">~15.40</div>
+      <div class="macro-change up">VIXY -1.65%</div>
+      <div style="font-size:0.8rem;color:#8b949e;margin-top:0.25rem;">vs R1 est. ~21.51</div>
+    </div>
+    <div class="macro-card">
+      <div class="macro-label">DXY</div>
+      <div class="macro-value">~100</div>
+      <div class="macro-change">Stable</div>
+    </div>
+    <div class="macro-card">
+      <div class="macro-label">10Y Yield</div>
+      <div class="macro-value">~4.57%</div>
+      <div class="macro-change">No update</div>
+      <div style="font-size:0.8rem;color:#8b949e;margin-top:0.25rem;">Market ignoring</div>
+    </div>
+  </div>
+  <div style="background:#161b22;border-left:3px solid #3fb950;padding:1rem;border-radius:4px;margin-bottom:1.5rem;">
+    <span style="color:#3fb950;font-weight:600;">Tape: RISK-ON RECOVERY</span> — Nasdaq +0.86% liderado por chips (MU +9.87%, NVDA +1.73%). QQQ outperformed SPY por 1.33pp (+1.56% vs +0.23%). Dow -0.16% (value underperformed). VIX muito abaixo da estimativa R1 (15.40 vs ~21.51) — weekend absorveu o VIX spike de sexta-feira. S&P fechou $739.22 bem abaixo do intraday high $745.34 — bounce faded through session.
+  </div>
+
+  <!-- 2. Resultado das Hipóteses -->
+  <h3>2. Resultado das Hipóteses do Dia</h3>
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Ticker</th>
+          <th>Hipótese R1</th>
+          <th>Status R2</th>
+          <th>Fecho EOD</th>
+          <th>Var. Dia</th>
+          <th>Resultado EOD</th>
+          <th>Lição</th>
+          <th>Data Quality</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>SPY</strong></td>
+          <td>Bounce holds, teste $738 VWAP</td>
+          <td style="color:#3fb950;">CONFIRMED +0.69%</td>
+          <td>$739.22</td>
+          <td style="color:#3fb950;">+0.23%</td>
+          <td><span style="color:#f0883e;font-weight:600;">PARTIALLY_WORKED</span></td>
+          <td>Bounce direção correta, magnitude faded (high $745 → close $739)</td>
+          <td style="color:#3fb950;">VALID (Finnhub)</td>
+        </tr>
+        <tr>
+          <td><strong>NVDA</strong></td>
+          <td>Selling pressure; watch $204 suporte</td>
+          <td style="color:#3fb950;">REVERSED +1.87% (Corning $3.2B)</td>
+          <td>$208.64</td>
+          <td style="color:#3fb950;">+1.73%</td>
+          <td><span style="color:#f85149;font-weight:600;">FAILED</span> (hipótese) / Portfolio ✅</td>
+          <td>Narrativa premarket completamente errada. Novo catalisador (Corning deal) invalidou setup.</td>
+          <td style="color:#3fb950;">VALID (AV: vol 137.5M)</td>
+        </tr>
+        <tr>
+          <td><strong>MU</strong></td>
+          <td>Possível capitulação; HBM LT intact; watch $850</td>
+          <td style="color:#3fb950;">REVERSED +8.66% (high $952.50)</td>
+          <td>$949.28</td>
+          <td style="color:#3fb950;">+9.87%</td>
+          <td><span style="color:#f0883e;font-weight:600;">PARTIALLY_WORKED</span></td>
+          <td>Bottom corretamente identificado; magnitude +9.87% não antecipada. Reversão institucional explosiva.</td>
+          <td style="color:#3fb950;">VALID (AV: vol 53.5M)</td>
+        </tr>
+        <tr>
+          <td><strong>CPB</strong></td>
+          <td>Acumulação defensiva pré-AMC</td>
+          <td style="color:#f0883e;">WEAKENED -1.29% (faded from gap)</td>
+          <td>$21.49</td>
+          <td style="color:#f85149;">-0.88%</td>
+          <td><span style="color:#f85149;font-weight:600;">FAILED</span></td>
+          <td>Tese defensiva incompatível com tape risk-on. AMC: EPS beat +$0.02, revenue miss -1.6%.</td>
+          <td style="color:#3fb950;">VALID (Finnhub + AMC API)</td>
+        </tr>
+        <tr>
+          <td><strong>QQQ</strong></td>
+          <td>NDX bounce mais forte que SPY</td>
+          <td style="color:#3fb950;">CONFIRMED +1.64% vs SPY +0.69%</td>
+          <td>$716.07</td>
+          <td style="color:#3fb950;">+1.56%</td>
+          <td><span style="color:#3fb950;font-weight:600;">WORKED ✅</span></td>
+          <td>Tese de força relativa executada de forma limpa. QQQ outperformou SPY por 1.33pp todo o dia.</td>
+          <td style="color:#3fb950;">VALID (Finnhub)</td>
+        </tr>
+        <tr>
+          <td><strong style="color:#8b949e;">STI / BGMS</strong></td>
+          <td>AVOID — extreme gap +74.7% / +163.6%</td>
+          <td>AVOID</td>
+          <td>N/T</td>
+          <td>N/T</td>
+          <td><span style="color:#8b949e;">NO_SIGNAL ✅</span></td>
+          <td>AVOID correto. Micro-caps extreme gap — não rastreados.</td>
+          <td style="color:#8b949e;">NOT_TRACKED</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Resultados summary boxes -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:1rem 0;">
+    <div style="background:#161b22;border:1px solid #3fb950;padding:1rem;border-radius:6px;">
+      <div style="color:#3fb950;font-weight:600;margin-bottom:0.5rem;">✅ WORKED (1)</div>
+      <div style="font-size:0.9rem;">QQQ</div>
+    </div>
+    <div style="background:#161b22;border:1px solid #f0883e;padding:1rem;border-radius:6px;">
+      <div style="color:#f0883e;font-weight:600;margin-bottom:0.5rem;">➖ PARTIAL (2)</div>
+      <div style="font-size:0.9rem;">SPY, MU</div>
+    </div>
+    <div style="background:#161b22;border:1px solid #f85149;padding:1rem;border-radius:6px;">
+      <div style="color:#f85149;font-weight:600;margin-bottom:0.5rem;">❌ FAILED (2)</div>
+      <div style="font-size:0.9rem;">NVDA, CPB</div>
+    </div>
+    <div style="background:#161b22;border:1px solid #30363d;padding:1rem;border-radius:6px;opacity:0.7;">
+      <div style="color:#8b949e;font-weight:600;margin-bottom:0.5rem;">❔ NO SIGNAL (2)</div>
+      <div style="font-size:0.9rem;">STI, BGMS</div>
+    </div>
+  </div>
+
+  <!-- 3. Earnings AMC -->
+  <h3>3. Earnings AMC — Resultados</h3>
+  <div class="earnings-grid">
+    <div class="earnings-card" style="border-left-color:#f0883e;">
+      <div class="earnings-ticker">CPB <span style="font-size:0.85rem;color:#f0883e;">MIXED BEAT</span></div>
+      <div class="earnings-company">Campbell's Company — Q3 FY2026</div>
+      <div class="earnings-meta">
+        <div>EPS: <strong style="color:#3fb950;">$0.50</strong> vs est. $0.48 <span style="color:#3fb950;">(+4.2% beat)</span></div>
+        <div>Revenue: <strong style="color:#f85149;">$2.366B</strong> vs est. $2.405B <span style="color:#f85149;">(miss -1.6%)</span></div>
+        <div>Margem bruta adj.: 27.7% <span style="color:#f85149;">(-240 bps YoY)</span></div>
+        <div>Sopas -8% YoY | Snacks -4% YoY</div>
+        <div>Guidance FY2026: reafirmada (EPS $2.15–$2.25)</div>
+        <div>After-hours: <strong style="color:#3fb950;">+0.60%</strong></div>
+        <div style="margin-top:0.5rem;color:#8b949e;font-size:0.85rem;">Classificação: TOMORROW WATCH — EPS beat via cost cuts, volume fraco, pressão de procura estrutural</div>
+      </div>
+    </div>
+    <div class="earnings-card" style="border-left-color:#8b949e;">
+      <div class="earnings-ticker">GLOO <span style="font-size:0.85rem;color:#f0883e;">SLIGHT BEAT</span></div>
+      <div class="earnings-company">Gloo Holdings — Q1 FY2027</div>
+      <div class="earnings-meta">
+        <div>EPS: <strong>-$0.22</strong> vs est. -$0.2244 <span style="color:#3fb950;">(slight beat)</span></div>
+        <div>Revenue: $41.5M (+238% YoY)</div>
+        <div>Guidance FY2026: revenue raised to $195.0M</div>
+        <div>After-hours: Estável</div>
+        <div style="margin-top:0.5rem;color:#8b949e;font-size:0.85rem;">LOW RELEVANCE — Ed-tech hypergrowth; losses persistem; micro-cap</div>
+      </div>
+    </div>
+    <div class="earnings-card" style="border-left-color:#f85149;">
+      <div class="earnings-ticker">AVO <span style="font-size:0.85rem;color:#f85149;">MISS</span></div>
+      <div class="earnings-company">Mission Produce — Q2 FY2026</div>
+      <div class="earnings-meta">
+        <div>EPS: <strong style="color:#f85149;">$0.01</strong> vs est. $0.0556 <span style="color:#f85149;">(-82%)</span></div>
+        <div>Revenue: $290.9M (-24% YoY)</div>
+        <div>Net loss: -$7.2M</div>
+        <div>Calavo acquisition completed</div>
+        <div>Q3 guidance: Adj. EBITDA $28–32M (recovery)</div>
+        <div style="margin-top:0.5rem;color:#8b949e;font-size:0.85rem;">LOW RELEVANCE — Seasonal agri; Calavo integration story</div>
+      </div>
+    </div>
+    <div class="earnings-card" style="border-left-color:#30363d;opacity:0.7;">
+      <div class="earnings-ticker">MIND <span style="font-size:0.85rem;color:#8b949e;">NOT CONFIRMED</span></div>
+      <div class="earnings-company">Mind Medicine</div>
+      <div class="earnings-meta">
+        <div>Timing AMC 8 Jun não confirmado em pesquisa web</div>
+        <div style="color:#8b949e;font-size:0.85rem;">LOW RELEVANCE — speculative pre-profitable biotech</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Portfolio Sentinel EOD -->
+  <h3>4. Portfolio Sentinel EOD</h3>
+  <div class="portfolio-item" style="border-left-color:#3fb950;">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <span class="portfolio-symbol">NVDA</span>
+      <span class="badge bullish">INFO ↑ Thesis reinforced</span>
+    </div>
+    <div class="portfolio-alert">Fecho: <strong style="color:#3fb950;">$208.64 (+1.73%)</strong> | Vol: 137.5M | Prev: $205.10</div>
+    <div class="portfolio-alert" style="margin-top:0.5rem;font-size:0.85rem;">Novo catalisador: $3.2B manufacturing deal com a Corning para produção de chips AI. Ciclo de upgrade analistas dominant (Needham Buy + múltiplos PT lifts Blackwell). Narrativa de venda premarket completamente revertida. Monitor $207 como novo suporte. <em style="color:#8b949e;">Tese reforçada — sem ação recomendada.</em></div>
+  </div>
+  <div class="portfolio-item watch">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <span class="portfolio-symbol">MU</span>
+      <span class="badge warning">WATCH — DCA watch (vigilância)</span>
+    </div>
+    <div class="portfolio-alert">Fecho: <strong style="color:#3fb950;">$949.28 (+9.87%)</strong> | Vol: 53.5M | Prev: $864.01</div>
+    <div class="portfolio-alert" style="margin-top:0.5rem;font-size:0.85rem;">Recuperação explosiva após venda de pânico macro (NFP). Contexto 2 dias: $1079.57 → $864.01 → $949.28 (ainda -12.1% do pré-NFP). Tese HBM/AI infra estruturalmente intacta — compra institucional absorveu vendas de pânico. <strong style="color:#f0883e;">«DCA watch» é etiqueta de vigilância estratégica, não recomendação de ação.</strong></div>
+  </div>
+  <div class="portfolio-item" style="border-left-color:#79c0ff;">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <span class="portfolio-symbol">MSFT</span>
+      <span class="badge">INFO — Monitor only</span>
+    </div>
+    <div class="portfolio-alert">Fecho: <strong style="color:#f85149;">$411.74 (-1.18%)</strong> | Vol: 31.6M | Prev: $416.67</div>
+    <div class="portfolio-alert" style="margin-top:0.5rem;font-size:0.85rem;">Underperformou QQQ (+1.56%) e SPY (+0.23%). Tese Azure upgrade intact. Fraqueza pode ser rotação para semis (NVDA/MU) e não MSFT-específico. Monitorar se persiste terça-feira. Sem ação.</div>
+  </div>
+  <div class="portfolio-item none">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <span class="portfolio-symbol">CVX</span>
+      <span class="badge">NONE</span>
+    </div>
+    <div class="portfolio-alert" style="font-size:0.85rem;color:#8b949e;">Sem catalisador ou dados hoje. Tese dividendo energia inalterada.</div>
+  </div>
+  <div class="portfolio-item none">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <span class="portfolio-symbol">VUUA / VWCE</span>
+      <span class="badge">NONE</span>
+    </div>
+    <div class="portfolio-alert" style="font-size:0.85rem;color:#8b949e;">SPY +0.23% — recovery day. VUUA beneficiou modestamente. VWCE: global risk-on positivo. Sem alertas.</div>
+  </div>
+
+  <!-- 5. Lições do Dia -->
+  <h3>5. Lições do Dia</h3>
+  <div style="display:grid;gap:0.75rem;margin:1rem 0;">
+    <div style="background:#161b22;border-left:3px solid #f85149;padding:1rem;border-radius:4px;">
+      <div style="color:#f85149;font-weight:600;font-size:0.85rem;">⚠️ HIGH — VIX REGIME ERROR</div>
+      <div style="margin-top:0.5rem;">R1 estimou VIX ~21.51 (fecho de sexta). VIX real era 15.40 na abertura — erro de 39%. O <strong>weekend absorve spikes de volatilidade</strong>. Nas segundas após um VIX spike por evento único (NFP), aplicar fator 0.5–0.7x no fecho de sexta para estimar Monday VIX.</div>
+    </div>
+    <div style="background:#161b22;border-left:3px solid #f85149;padding:1rem;border-radius:4px;">
+      <div style="color:#f85149;font-weight:600;font-size:0.85rem;">⚠️ HIGH — PREMARKET SELLING NARRATIVES</div>
+      <div style="margin-top:0.5rem;">MU e NVDA descritos como "alvos de venda premarket" em R1. Ambos fecharam fortemente positivos (+9.87% e +1.73%). <strong>Narrativas premarket em liquidez fina são sinais pouco fiáveis</strong> para a sessão regular, especialmente para large-caps com tese fundamental forte. Para nomes com AV score ≥65 + ciclo de upgrade, pesar narrativa premarket &lt;30%.</div>
+    </div>
+    <div style="background:#161b22;border-left:3px solid #f0883e;padding:1rem;border-radius:4px;">
+      <div style="color:#f0883e;font-weight:600;font-size:0.85rem;">⚠️ MEDIUM — TESE DEFENSIVA INCOMPATÍVEL</div>
+      <div style="margin-top:0.5rem;">CPB: acumulação defensiva pré-AMC foi framed para tape risk-off, mas a tape tornou-se risk-on. <strong>Tese defensiva e bounce de oversold são mutuamente exclusivos na mesma sessão.</strong> Nunca incluir acumulação defensiva quando o viés de mercado é "bounce possível de oversold".</div>
+    </div>
+    <div style="background:#161b22;border-left:3px solid #3fb950;padding:1rem;border-radius:4px;">
+      <div style="color:#3fb950;font-weight:600;font-size:0.85rem;">✅ POSITIVO — QQQ/SPY FORÇA RELATIVA</div>
+      <div style="margin-top:0.5rem;">QQQ +1.56% vs SPY +0.23% — call mais limpa do dia. <strong>Em recuperações tech-led de selloffs macro, QQQ outperformance é altamente fiável</strong> quando os movers primários (semis) estão em modo de reversão. Reforçar este padrão como tese primária em setups similares.</div>
+    </div>
+    <div style="background:#161b22;border-left:3px solid #58a6ff;padding:1rem;border-radius:4px;">
+      <div style="color:#58a6ff;font-weight:600;font-size:0.85rem;">ℹ️ INFO — CATALISADOR NOVO NA ABERTURA</div>
+      <div style="margin-top:0.5rem;">Deal Corning $3.2B da NVDA emergiu na abertura e invalidou a narrativa premarket. <strong>R2 é o checkpoint crítico para capturar catalisadores da hora de abertura</strong> — são a principal fonte de invalidação de hipóteses R1 em large-caps com cobertura institucional elevada.</div>
+    </div>
+    <div style="background:#161b22;border-left:3px solid #f85149;padding:1rem;border-radius:4px;">
+      <div style="color:#f85149;font-weight:600;font-size:0.85rem;">⚠️ HIGH — MACRO SHOCK RECOVERY PATTERN</div>
+      <div style="margin-top:0.5rem;">Selloff de sexta (NFP) foi macro-driven, não fundamental. <strong>Após macro shock, nomes com tese fundamental forte revertem explosivamente</strong> (MU +9.87%). Para nomes MATERIAL/CRITICAL após macro shock: downgrade para WATCH no R1 seguinte, não manter MATERIAL. Adicionar tag "macro_shock_recovery_probability: HIGH".</div>
+    </div>
+    <div style="background:#161b22;border-left:3px solid #8b949e;padding:1rem;border-radius:4px;">
+      <div style="color:#8b949e;font-weight:600;font-size:0.85rem;">ℹ️ INFO — CONSUMER STAPLES: EPS BEAT / REVENUE MISS PATTERN</div>
+      <div style="margin-top:0.5rem;">CPB AMC: EPS beat por cost cuts mas revenue miss (-1.6%), sopas -8% YoY, snacks -4%, margem -240 bps. <strong>EPS beat via otimização de custos + revenue miss + compressão de margem = alerta de fraqueza de procura estrutural</strong>. Padrão aplicável a CPB/GIS/HRL em 2026.</div>
+    </div>
+  </div>
+
+  <!-- 6. Tomorrow Watch -->
+  <h3>6. Tomorrow Watch</h3>
+  <div style="background:#161b22;border:1px solid #30363d;padding:1.25rem;border-radius:6px;margin:1rem 0;">
+    <div style="display:grid;gap:0.75rem;">
+      <div style="display:flex;gap:1rem;align-items:start;">
+        <span style="color:#f0883e;font-weight:600;min-width:80px;">HIGH</span>
+        <div><strong>MACRO 10Y</strong> — Yield ~4.57%. Se cair abaixo de 4.50%, rally growth/tech acelera. Se subir para 4.60%+, bounce de segunda pode retrair. Binário principal para a sessão de terça.</div>
+      </div>
+      <div style="display:flex;gap:1rem;align-items:start;">
+        <span style="color:#f0883e;font-weight:600;min-width:80px;">HIGH</span>
+        <div><strong>NVDA</strong> — Continuação watch acima de $207. Catalisador Corning $3.2B fresco + ciclo upgrade analistas. Monitor se $208–210 se torna novo suporte ou resistência.</div>
+      </div>
+      <div style="display:flex;gap:1rem;align-items:start;">
+        <span style="color:#f0883e;font-weight:600;min-width:80px;">HIGH</span>
+        <div><strong>MU</strong> — Recuperação: monitor zona resistência $950. Acima de $950 → bullish continuation. Rejeição → segunda onda de consolidação antes de retest de $1000.</div>
+      </div>
+      <div style="display:flex;gap:1rem;align-items:start;">
+        <span style="color:#79c0ff;font-weight:600;min-width:80px;">MEDIUM</span>
+        <div><strong>CPB</strong> — Reação AMC: +0.60% after-hours. Possível gap up mas limitado por fraqueza de volume estrutural. Sinal de setor: pricing power consumer staples sob pressão.</div>
+      </div>
+      <div style="display:flex;gap:1rem;align-items:start;">
+        <span style="color:#79c0ff;font-weight:600;min-width:80px;">MEDIUM</span>
+        <div><strong>MSFT</strong> — Underperformou hoje (-1.18% vs QQQ +1.56%). Monitorar se fraqueza persiste terça em tape positiva — se sim, investigar causa específica.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. Data Quality R3 -->
+  <h3>7. Data Quality / Limitações</h3>
+  <div style="background:#161b22;padding:1.25rem;border-radius:6px;margin:1rem 0;">
+    <div style="margin-bottom:0.75rem;">
+      <span class="badge bullish">Preços EOD: Finnhub</span>
+      <span class="badge bullish">AV: 3 calls (NVDA+MU+MSFT)</span>
+      <span class="badge bullish">AMC: CPB+GLOO+AVO confirmados</span>
+      <span class="badge warning">VIX: VIXY proxy</span>
+      <span class="badge warning">10Y: sem atualização</span>
+    </div>
+    <div style="font-size:0.85rem;color:#8b949e;">
+      <div>• Alpha Vantage total dia: 5/5 (R1: 2 NVDA+MU | R3: 3 NVDA+MU+MSFT) — AT LIMIT</div>
+      <div>• VIX direto Finnhub indisponível — VIXY proxy ($23.91 -1.65%); 15.40 confirmado de R2 web search</div>
+      <div>• 10Y yield mantido ~4.57% de R1/R2; DXY stable ~100</div>
+      <div>• CPB AMC: confirmado Finnhub earnings API (actual $0.50 vs est $0.4833) + web search (Quiver Quant, Yahoo Finance)</div>
+      <div>• GLOO AMC: confirmado Finnhub (-$0.22 vs -$0.2244 est)</div>
+      <div>• AVO AMC: confirmado Finnhub ($0.01 vs $0.0556 est)</div>
+      <div>• MIND AMC: timing 8 Jun não confirmado em pesquisa web — NOT_FOUND</div>
+      <div>• MSFT volume: AV confirma 31.6M (razoável para sessão regular)</div>
+    </div>
+  </div>
 
   </div>
 </body>
